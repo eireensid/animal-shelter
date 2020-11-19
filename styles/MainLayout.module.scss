@@ -1,0 +1,23 @@
+.nav {
+  height: 75px;
+  background: #FFC393;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.logo-wrapper {
+  margin-left: -20px;
+}
+.menu-wrapper {
+  margin-right: 15px;
+}

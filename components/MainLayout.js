@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
+import styles from '../styles/MainLayout.module.scss'
+// import '../styles/main.scss'
 
-export function MainLayout({children, title='Next App'}) {
+export function MainLayout({children, title='Animal shelter'}) {
   return (
     <>
       <Head>
@@ -10,34 +13,19 @@ export function MainLayout({children, title='Next App'}) {
         <meta name="description" content="This is next tutorial" />
         <meta charSet="utf-8" />
       </Head>
-      <nav>        
-        <Link href="/"><a>Home</a></Link>
-        <Link href="/about"><a>About</a></Link>
-        <h1></h1>
+      <nav className={styles.nav}>   
+        <div className={styles.container}>
+          <div className="styles['logo-wrapper']">
+            <Image src="/img/logo.svg" alt="logo" width="100%" height="59" />
+          </div>
+          <div className={styles['menu-wrapper']}>
+            <Image src="/img/burger.svg" alt="menu" width="19" height="13" />
+          </div>
+        </div>     
       </nav>
       <main>
         {children}
       </main>
-      <style jsx>{`
-        nav {
-          position: fixed;
-          height: 60px;
-          left: 0;
-          top: 0;
-          right: 0;
-          background: darkblue;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-        }
-        nav a {
-          color: white;
-          text-decoration: none;
-        }
-        main {
-          margin-top: 60px;
-        }
-      `}</style>
     </>
   )
 }
