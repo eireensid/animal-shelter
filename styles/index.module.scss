@@ -1,0 +1,38 @@
+@import 'variables.scss';
+
+.firstBlock {
+  background: $navBg;
+  // background-image: url(/img/first-block-animals.png);
+  padding: {
+    left: 11%;
+    top: 140px;
+  }
+  display: flex;
+  position: relative;
+}
+.firstBlockTitle {
+  flex-basis: 38%;
+}
+.titleDesc {
+  width: 80%;
+  margin-top: 45px;
+}
+.firstBlockImg {
+  z-index: 10;
+}
+.waveBlock {
+  position: absolute;
+  top: 62%;
+  left: 0;
+}
+
+.findHomeBlock {
+  background: #FFF5DA;
+}
+.findHomeTitle {
+  padding: {
+    top: 160px;
+    left: 11%;
+    bottom: 100px;
+  }
+}

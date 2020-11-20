@@ -1,13 +1,11 @@
+@import 'variables.scss';
+
 .nav {
   height: 75px;
-  background: #FFC393;
+  background: $navBg;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.nav a {
-  color: white;
-  text-decoration: none;
 }
 .container {
   display: flex;
@@ -20,4 +18,8 @@
 }
 .menu-wrapper {
   margin-right: 15px;
+}
+
+@media (min-width: 768px) {
+  
 }
