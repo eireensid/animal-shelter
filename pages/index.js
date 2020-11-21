@@ -13,7 +13,7 @@ export default function Index(title='Home Page') {
         <div className={styles.firstBlockImg}>
           <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/>
         </div>
-        <div className={styles.waveBlock}>
+        <div className={`${styles.waveBlock} ${styles.waveFirst}`}>
           <img className={styles.wave} src="/img/yellow-wave.png" />
         </div>
       </div>
@@ -90,15 +90,35 @@ export default function Index(title='Home Page') {
         </div>
 
         <div className={styles.bubbleBlock}>
-          <img className={styles.photoForPhraseBubble} src="/img/photo-for-phrase-bubble.png" alt="спасибо"/>
+          <div className={styles.photoForPhraseBubbleWrapper}>
+            <img className={styles.photoForPhraseBubble} src="/img/photo-for-phrase-bubble.png" alt="спасибо"/>
+          </div>
           <div className={styles.phraseBubbleWrapper}>
-            <div className={styles.phraseBubble}>
-              <img className={styles.phraseBubbleImg} src="/img/phrase-bubble.png"/>
-            </div>
+            <img className={styles.phraseBubble} src="/img/phrase-bubble.png"/>
             <div className={styles.textBubble}>
               <p>Я не могу отблагодарить<br/>услугой за услугу...</p>
               <p>Но я могу дать лапу)</p>
             </div>
+          </div>
+        </div>
+        <div className={`${styles.waveBlock} ${styles.waveSecond}`}>
+          <img className={styles.wave} src="/img/white-wave.png" />
+        </div>
+        <h2 className={styles.waysToHelpTitle}>Как вы можете нам помочь:</h2>
+      </div>
+    </section>
+
+    <section>
+      <div className={`${styles.waysToHelpBlock} ${styles.pagePaddings}`}>
+        <div className={styles.waysToHelp}>
+          <div className={styles.waysToHelpDesc}>
+            <h3>Финансовая помощь</h3>
+            <p>Приют существует за счёт пожертвований. Для нас важна любая сумма! Помогите нам поддерживать качество жизни хвостиков.</p>
+            <span>*Отчеты о затраченных средствах вы можете посмотреть здесь</span>
+            <button>Пожертвовать</button>
+          </div>
+          <div>
+            <img src="/img/ways-to-help/financial-help.png" alt=""/>
           </div>
         </div>
       </div>

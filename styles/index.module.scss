@@ -1,5 +1,6 @@
 @import 'variables.scss';
 
+// Hero
 .firstBlock {
   background: $navBg;
   // background-image: url(/img/first-block-animals.png);
@@ -22,9 +23,11 @@
 }
 .waveBlock {
   position: absolute;
-  top: 62%;
   left: 0;
   width: 100%;
+}
+.waveFirst {
+  top: 62%;
 }
 .wave {
   width: 100%;
@@ -37,13 +40,15 @@
   }
 }
 
+
+// Look for home 
 .findHomeBlock {
   background: $pageBg;
   position: relative;
 }
 .findHomeTitle {
   padding: {
-    top: 160px;
+    top: 145px;
     bottom: 260px;
   }
 }
@@ -127,6 +132,9 @@
   position: relative;
   padding-bottom: 372px;
 }
+.photoForPhraseBubbleWrapper {
+  position: relative;
+}
 .photoForPhraseBubble {
   padding-left: 22%;
 }
@@ -134,9 +142,6 @@
   position: absolute;
   left: 52%;
   bottom: 65%;
-}
-.phraseBubble {
-  position: relative;
 }
 .textBubble {
   position: absolute;
@@ -149,3 +154,25 @@
 .textBubble p:last-child {
   margin-top: 25px;
 }
+.waveSecond {
+  bottom: -1%;
+}
+.waysToHelpTitle {
+  position: absolute;
+  bottom: 5.8%;
+}
+
+
+// Ways to help
+.waysToHelpBlock {
+  background: #fff;
+}
+.waysToHelp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.waysToHelpDesc {
+  flex-basis: 44%;
+}
+
