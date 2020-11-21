@@ -102,7 +102,7 @@ export default function Index(title='Home Page') {
           </div>
         </div>
         <div className={`${styles.waveBlock} ${styles.waveSecond}`}>
-          <img className={styles.wave} src="/img/white-wave.png" />
+          <img className={styles.wave} src="/img/white-wave-cut1.png" />
         </div>
         <h2 className={styles.waysToHelpTitle}>Как вы можете нам помочь:</h2>
       </div>
@@ -112,13 +112,18 @@ export default function Index(title='Home Page') {
       <div className={`${styles.waysToHelpBlock} ${styles.pagePaddings}`}>
         <div className={styles.waysToHelp}>
           <div className={styles.waysToHelpDesc}>
-            <h3>Финансовая помощь</h3>
-            <p>Приют существует за счёт пожертвований. Для нас важна любая сумма! Помогите нам поддерживать качество жизни хвостиков.</p>
-            <span>*Отчеты о затраченных средствах вы можете посмотреть здесь</span>
-            <button>Пожертвовать</button>
+            <div className={styles.waysToHelpDescTitleWrapper}>
+              <img src="/img/ways-to-help/ellipse.png"/>
+              <h3>Финансовая помощь</h3>
+            </div>
+            <div className={styles.waysToHelpDescBtnWrapper}>
+              <p>Приют существует за счёт пожертвований. Для нас важна любая сумма! Помогите нам поддерживать качество жизни хвостиков.</p>
+              <span className={styles.spendingsReport}>*Отчеты о затраченных средствах вы можете посмотреть <span>здесь</span></span>
+              <button>Пожертвовать</button>
+            </div>
           </div>
           <div>
-            <img src="/img/ways-to-help/financial-help.png" alt=""/>
+            <img src="/img/ways-to-help/financial-help.png" alt="финансовая помощь"/>
           </div>
         </div>
       </div>
