@@ -11,7 +11,7 @@ export default function Index(title='Home Page') {
           <h3 className={styles.titleDesc}>Подари хвостикам надежду на новую жизнь с командой волонтеров “Теремка”</h3>
         </div>
         <div className={styles.firstBlockImg}>
-          <img src="/img/first-block-animals-cut.png" alt="животные"/>
+          <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/>
         </div>
         <div className={styles.waveBlock}>
           <img className={styles.wave} src="/img/yellow-wave.png" />
@@ -92,7 +92,9 @@ export default function Index(title='Home Page') {
         <div className={styles.bubbleBlock}>
           <img className={styles.photoForPhraseBubble} src="/img/photo-for-phrase-bubble.png" alt="спасибо"/>
           <div className={styles.phraseBubbleWrapper}>
-            <img className={styles.phraseBubble} src="/img/phrase-bubble.png"/>
+            <div className={styles.phraseBubble}>
+              <img className={styles.phraseBubbleImg} src="/img/phrase-bubble.png"/>
+            </div>
             <div className={styles.textBubble}>
               <p>Я не могу отблагодарить<br/>услугой за услугу...</p>
               <p>Но я могу дать лапу)</p>

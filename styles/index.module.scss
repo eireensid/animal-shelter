@@ -112,6 +112,9 @@
 .videoText {
   flex-basis: 40%;
 }
+.videoText p:last-child {
+  margin-top: 25px;
+}
 .videoWrapper {
   background: #fff;
   flex-basis: 44%;
@@ -142,4 +145,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.textBubble p:last-child {
+  margin-top: 25px;
 }
