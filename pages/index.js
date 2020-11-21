@@ -14,7 +14,7 @@ export default function Index(title='Home Page') {
           <img src="/img/first-block-animals-cut.png" alt="животные"/>
         </div>
         <div className={styles.waveBlock}>
-          <img src="/img/yellow-wave.png" />
+          <img className={styles.wave} src="/img/yellow-wave.png" />
         </div>
       </div>
     </section>
