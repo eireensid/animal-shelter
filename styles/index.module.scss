@@ -26,13 +26,116 @@
   left: 0;
 }
 
+.pagePaddings {
+  padding: {
+    left: 11%;
+    right: 11%;
+  }
+}
+
 .findHomeBlock {
-  background: #FFF5DA;
+  background: $pageBg;
+  position: relative;
 }
 .findHomeTitle {
   padding: {
     top: 160px;
-    left: 11%;
-    bottom: 100px;
+    bottom: 260px;
   }
+}
+.findCarouselBlock {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.findCarouselCard {
+  position: relative;
+}
+.findCarouselArrow {
+  position: absolute;
+  top: 24%;
+}
+.findCarouselArrowLeft {
+  left: 5%;
+}
+.findCarouselArrowRight {
+  right: 5%;
+}
+.findCarouselCardDesc {
+  background: #fff;
+  padding: {
+    top: 185px;
+    left: 35px;
+    right: 35px;
+    bottom: 60px;
+  };
+  border-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+.findCarouselCardDesc h3 {
+  display: inline-block;
+}
+.findCarouselCard {
+  width: 31%;
+}
+.findCarouselCardDescRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.findCarouselCardDescRow:first-child {
+  padding-bottom: 35px;
+}
+.petImgBlock {
+  width: 100%;
+  position: absolute;
+  bottom: 55%;
+  display: flex;
+  justify-content: center;
+}
+.petSex {
+  padding-right: 12px;
+}
+
+.videoBlock {
+  display: flex;
+  padding: {
+    top: 200px;
+    bottom: 140px;
+  }
+  justify-content: space-between;
+}
+.videoText {
+  flex-basis: 40%;
+}
+.videoWrapper {
+  background: #fff;
+  flex-basis: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubbleBlock {
+  position: relative;
+  padding-bottom: 372px;
+}
+.photoForPhraseBubble {
+  padding-left: 22%;
+}
+.phraseBubbleWrapper {
+  position: absolute;
+  left: 52%;
+  bottom: 65%;
+}
+.phraseBubble {
+  position: relative;
+}
+.textBubble {
+  position: absolute;
+  top: 23%;
+  left: 23%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
