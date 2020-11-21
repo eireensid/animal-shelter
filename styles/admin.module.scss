@@ -1,0 +1,24 @@
+.authBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.authPaper {
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.authInputField {
+  width: 100%;
+  margin-top: 15px !important;
+}
+
+.authButton {
+  margin-top: 15px !important;
+  width: 35%;
+}
