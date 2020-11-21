@@ -130,7 +130,7 @@
 
 .bubbleBlock {
   position: relative;
-  padding-bottom: 372px;
+  padding-bottom: 380px;
 }
 .photoForPhraseBubbleWrapper {
   position: relative;
@@ -155,11 +155,11 @@
   margin-top: 25px;
 }
 .waveSecond {
-  bottom: -1%;
+  bottom: -0.25%;
 }
 .waysToHelpTitle {
   position: absolute;
-  bottom: 5.8%;
+  bottom: 6.28%;
 }
 
 
@@ -172,7 +172,50 @@
   justify-content: space-between;
   align-items: center;
 }
-.waysToHelpDesc {
-  flex-basis: 44%;
+.waysToHelpReversed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
 }
-
+.waysToHelp:not(:last-child) {
+  padding-bottom: 100px;
+}
+.waysToHelpReversed:not(:last-child) {
+  padding-bottom: 100px;
+}
+.waysToHelpDesc {
+  flex-basis: 43.5%;
+}
+.waysToHelpDescTitleWrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.waysToHelpDescTitleWrapper img {
+  padding-right: 15px;
+}
+.spendingsReport {
+  display: inline-block;
+  padding: {
+    top: 20px;
+  }
+  color: #2E2E2E;
+  font-size: 13px;
+}
+.spendingsReport span {
+  border-bottom: 1px solid #2E2E2E;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+.waysToHelpDescBtnWrapper {
+  padding-left: 40px;
+}
+.waysToHelpDescBtnWrapper button {
+  margin-top: 40px;
+}
+.socialsBlock {
+  padding-top: 50px;
+}
+.socialsBlock img:not(:last-child) {
+  margin-right: 15px;
+}

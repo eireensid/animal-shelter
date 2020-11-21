@@ -102,7 +102,7 @@ export default function Index(title='Home Page') {
           </div>
         </div>
         <div className={`${styles.waveBlock} ${styles.waveSecond}`}>
-          <img className={styles.wave} src="/img/white-wave.png" />
+          <img className={styles.wave} src="/img/white-wave-cut1.png" />
         </div>
         <h2 className={styles.waysToHelpTitle}>Как вы можете нам помочь:</h2>
       </div>
@@ -112,15 +112,109 @@ export default function Index(title='Home Page') {
       <div className={`${styles.waysToHelpBlock} ${styles.pagePaddings}`}>
         <div className={styles.waysToHelp}>
           <div className={styles.waysToHelpDesc}>
-            <h3>Финансовая помощь</h3>
-            <p>Приют существует за счёт пожертвований. Для нас важна любая сумма! Помогите нам поддерживать качество жизни хвостиков.</p>
-            <span>*Отчеты о затраченных средствах вы можете посмотреть здесь</span>
-            <button>Пожертвовать</button>
+            <div className={styles.waysToHelpDescTitleWrapper}>
+              <img src="/img/ways-to-help/ellipse.png"/>
+              <h3>Финансовая помощь</h3>
+            </div>
+            <div className={styles.waysToHelpDescBtnWrapper}>
+              <p>Приют существует за счёт пожертвований. Для нас важна любая сумма! Помогите нам поддерживать качество жизни хвостиков.</p>
+              <span className={styles.spendingsReport}>*Отчеты о затраченных средствах вы можете посмотреть <span>здесь</span></span>
+              <button>Пожертвовать</button>
+            </div>
           </div>
           <div>
-            <img src="/img/ways-to-help/financial-help.png" alt=""/>
+            <img src="/img/ways-to-help/financial-help.png" alt="финансовая помощь"/>
           </div>
         </div>
+
+        <div className={styles.waysToHelpReversed}>
+          <div className={styles.waysToHelpDesc}>
+            <div className={styles.waysToHelpDescTitleWrapper}>
+              <img src="/img/ways-to-help/ellipse.png"/>
+              <h3>Забрать питомца домой</h3>
+            </div>
+            <div className={styles.waysToHelpDescBtnWrapper}>
+              <p>Подарите дом одному из них. Наблюдать каждый день этот счастливый и благодарный взгляд — бесценно!</p>
+              <button>Питомцы</button>
+            </div>
+          </div>
+          <div>
+            <img src="/img/ways-to-help/take-home.png" alt="забрать домой"/>
+          </div>
+        </div>
+
+        <div className={styles.waysToHelp}>
+          <div className={styles.waysToHelpDesc}>
+            <div className={styles.waysToHelpDescTitleWrapper}>
+              <img src="/img/ways-to-help/ellipse.png"/>
+              <h3>Стать опекуном или помочь с адаптацией</h3>
+            </div>
+            <div className={styles.waysToHelpDescBtnWrapper}>
+              <p>Приют очень сильно нуждается в опекунах! Если у вас нет возможности забрать животное, но очень хочется окружить его заботой и вниманием, 
+                станьте опекуном (временным хозяином), навещайте питомца в приюте и не дайте его взгляду потухнуть без человеческого внимания.</p>
+              <button>Подробнее</button>
+            </div>
+          </div>
+          <div>
+            <img src="/img/ways-to-help/become-caretaker.png" alt="стать опекуном"/>
+          </div>
+        </div>
+
+        <div className={styles.waysToHelpReversed}>
+          <div className={styles.waysToHelpDesc}>
+            <div className={styles.waysToHelpDescTitleWrapper}>
+              <img src="/img/ways-to-help/ellipse.png"/>
+              <h3>Прогулки с собаками</h3>
+            </div>
+            <div className={styles.waysToHelpDescBtnWrapper}>
+              <p>Не секрет, что собакам просто необходимы регулярные прогулки. В нашем приюте больше 250 собак и выгуливать каждую мы физически не успеваем. 
+                Поэтому ждем всех, кто хочет порадовать песиков и получить массу положительных эмоций в ответ.</p>
+              <button>Подробнее</button>
+            </div>
+          </div>
+          <div>
+            <img src="/img/ways-to-help/walking-with-dogs.png" alt="прогулки с собаками"/>
+          </div>
+        </div>
+
+        <div className={styles.waysToHelp}>
+          <div className={styles.waysToHelpDesc}>
+            <div className={styles.waysToHelpDescTitleWrapper}>
+              <img src="/img/ways-to-help/ellipse.png"/>
+              <h3>Принести нужные вещи</h3>
+            </div>
+            <div className={styles.waysToHelpDescBtnWrapper}>
+              <p>Животные постоянно нуждаются в средствах по уходу, кормах, лекарствах и других необходимых вещах. Вы можете привезти нужды самостоятельно 
+                или передать волонтерам в городе.</p>
+              <button>Список нужд</button>
+            </div>
+          </div>
+          <div>
+            <img src="/img/ways-to-help/bring-stuff.png" alt="принести нужные вещи"/>
+          </div>
+        </div>
+
+        <div className={styles.waysToHelpReversed}>
+          <div className={styles.waysToHelpDesc}>
+            <div className={styles.waysToHelpDescTitleWrapper}>
+              <img src="/img/ways-to-help/ellipse.png"/>
+              <h3>Помощь с пиаром</h3>
+            </div>
+            <div className={styles.waysToHelpDescBtnWrapper}>
+              <p>Репосты — наше всё. 90% животных находят дом только благодаря этому. Подписывайтесь на нас в социальных сетях и помогайте распространять информацию 
+                о наших питомцах. Возможно, именно вы поможете кому-то из них стать счастливым домашним любимцем.</p>
+              <div className={styles.socialsBlock}>
+                <img src="/img/whatsapp.svg" alt="what's app"/>
+                <img src="/img/vk.svg" alt="vk"/>
+                <img src="/img/instagram.svg" alt="instagram"/>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="/img/ways-to-help/pr-help.png" alt="помощь с пиаром"/>
+          </div>
+        </div>
+
       </div>
     </section>
   </MainLayout>
