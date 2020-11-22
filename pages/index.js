@@ -13,7 +13,7 @@ export default function Index(title='Home Page') {
         <div className={styles.firstBlockImg}>
           <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/>
         </div>
-        <div className={`${styles.waveBlock} ${styles.waveFirst}`}>
+        <div className={styles.waveBlock}>
           <img className={styles.wave} src="/img/yellow-wave.png" />
         </div>
       </div>
@@ -100,9 +100,6 @@ export default function Index(title='Home Page') {
               <p>Но я могу дать лапу)</p>
             </div>
           </div>
-        </div>
-        <div className={`${styles.waveBlock} ${styles.waveSecond}`}>
-          <img className={styles.wave} src="/img/white-wave-cut1.png" />
         </div>
         <h2 className={styles.waysToHelpTitle}>Как вы можете нам помочь:</h2>
       </div>
@@ -214,7 +211,13 @@ export default function Index(title='Home Page') {
             <img src="/img/ways-to-help/pr-help.png" alt="помощь с пиаром"/>
           </div>
         </div>
+      </div>
+      
+    </section>
 
+    <section>
+      <div className={`${styles.ourPetsBlock} ${styles.pagePaddings}`}>
+        <h2>Наши питомцы</h2>
       </div>
     </section>
   </MainLayout>
