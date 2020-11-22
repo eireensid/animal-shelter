@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { MainLayout } from '../components/MainLayout'
-import styles from '../styles/index.module.scss'
+import { MainLayout } from '~/components/MainLayout'
+import styles from '~/styles/index.module.scss'
 
 export default function Index(title='Home Page') {
   return <MainLayout>
