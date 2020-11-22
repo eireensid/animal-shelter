@@ -226,7 +226,11 @@
 // Our Pets
 .ourPetsBlock {
   background: $pageBg;
-  padding-bottom: 210px;
+  background-image: url(/img/orange-wave-cut.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  padding-bottom: 290px;
 }
 .ourPetsBlock h2 {
   padding: {
@@ -289,6 +293,8 @@
   justify-content: center;
 }
 
+
+// Donation block
 .bankCardWrapper {
   display: flex;
   justify-content: center;
