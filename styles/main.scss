@@ -44,6 +44,16 @@ button {
   }
   width: 300px;
 }
+button:hover {
+  background: #E48244;
+}
+button:active {
+  background: #131313;
+}
+
+a:hover {
+  color: #7C6035!important;
+}
 
 @media (min-width: 1440px) {
   // body {

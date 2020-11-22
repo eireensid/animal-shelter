@@ -51,3 +51,22 @@
 .footerBlock a {
   color: $secondColor;
 }
+.footerBlock h4 {
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+.footerBlock ul {
+  line-height: 2;
+}
+.contacts h4 {
+  padding-bottom: 30px;
+}
+.phone {
+  padding-bottom: 20px;
+}
+.socialsBlockFooter {
+  padding-bottom: 5px;
+}
+.socialsBlockFooter img:not(:last-child) {
+  margin-right: 15px;
+}

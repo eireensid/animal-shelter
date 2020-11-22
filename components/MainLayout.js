@@ -24,7 +24,7 @@ export function MainLayout({children, title='Animal shelter'}) {
             <Link href="/"><a>Отчеты</a></Link>
           </nav>
           <div className={styles.btnWrapper}>
-            <button class={styles.donationBtnHeader}>Пожертвовать</button>
+            <button className={styles.donationBtnHeader}>Пожертвовать</button>
           </div>
         </div>   
       </header>
@@ -59,10 +59,10 @@ export function MainLayout({children, title='Animal shelter'}) {
           </nav>
           <nav className={styles.contacts}>
             <h4>Контакты</h4>
-            <p><a href="#">+7 (921) 432-00-35</a></p>
-            <p>г. Санкт-Петербург, поселок под Гатчиной</p>
+            <p className={styles.phone}><a href="#">+7 (921) 432-00-35</a></p>
+            <p>г. Санкт-Петербург,<br/>поселок под Гатчиной</p>
             <h4>Помочь с пиаром</h4>
-            <div className={styles.socialsBlock}>
+            <div className={styles.socialsBlockFooter}>
               <img src="/img/whatsapp.svg" alt="what's app"/>
               <img src="/img/vk.svg" alt="vk"/>
               <img src="/img/instagram.svg" alt="instagram"/>
