@@ -3,7 +3,6 @@
 // Hero
 .firstBlock {
   background: $navBg;
-  // background-image: url(/img/first-block-animals.png);
   padding: {
     left: 11%;
     top: 140px;
@@ -25,8 +24,6 @@
   position: absolute;
   left: 0;
   width: 100%;
-}
-.waveFirst {
   top: 62%;
 }
 .wave {
@@ -44,6 +41,10 @@
 // Look for home 
 .findHomeBlock {
   background: $pageBg;
+  background-image: url(/img/white-wave.png);
+  background-position-y: 107.8%;
+  background-repeat: no-repeat;
+  background-size: contain;
   position: relative;
 }
 .findHomeTitle {
@@ -55,7 +56,7 @@
 .findCarouselBlock {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .findCarouselCard {
   position: relative;
@@ -130,7 +131,7 @@
 
 .bubbleBlock {
   position: relative;
-  padding-bottom: 380px;
+  padding-bottom: 220px;
 }
 .photoForPhraseBubbleWrapper {
   position: relative;
@@ -154,18 +155,19 @@
 .textBubble p:last-child {
   margin-top: 25px;
 }
-.waveSecond {
-  bottom: -0.25%;
-}
 .waysToHelpTitle {
-  position: absolute;
-  bottom: 6.28%;
+  margin-bottom: 110px;
 }
 
 
 // Ways to help
 .waysToHelpBlock {
   background: #fff;
+  background-image: url(/img/yellow-wave.png);
+  background-position-y: 105%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 45px;
 }
 .waysToHelp {
   display: flex;
@@ -218,4 +220,122 @@
 }
 .socialsBlock img:not(:last-child) {
   margin-right: 15px;
+}
+
+
+// Our Pets
+.ourPetsBlock {
+  background: $pageBg;
+  background-image: url(/img/orange-wave-cut.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  padding-bottom: 290px;
+}
+.ourPetsBlock h2 {
+  padding: {
+    top: 160px;
+    bottom: 110px;
+  }
+}
+.animalFiltersBlock {
+  padding-bottom: 70px;
+}
+.animalFilterInput, .animalFilter {
+  background: #fff;
+  border-radius: 100px;
+}
+.animalFilterInput {
+  display: flex;
+  align-items: center;
+  padding: {
+    top: 14px;
+    bottom: 14px;
+    left: 20px;
+    right: 25px;
+  }
+  width: 26%;
+  justify-content: space-between;
+}
+.animalFilter {
+  display: flex;
+  align-items: center;
+  padding: {
+    top: 12px;
+    bottom: 12px;
+    left: 15px;
+    right: 15px;
+  }
+}
+.animalFilter img {
+  padding-right: 18px;
+}
+.animalFilterWrapperTop {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  margin: {
+    top: 30px;
+    bottom: 30px;
+  }
+}
+.animalFilterWrapperBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+}
+.ourPetsBlock .findCarouselBlock {
+  margin-top: 165px;
+}
+.morePetsBtn {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+
+// Donation block
+.bankCardWrapper {
+  display: flex;
+  justify-content: center;
+}
+.bankCard {
+  background: #fff;
+  background-image: url(/img/paws-top.png), url(/img/paws-bottom.png);
+  background-repeat: no-repeat;
+  background-position: top center, bottom center;
+  display: flex;
+  align-items: center;
+  width: 59%;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  padding: {
+    top: 130px;
+    bottom: 105px;
+  }
+}
+.bankCardNumber {
+  display: flex;
+  align-items: center;
+  background: $pageBg;
+  border-radius: 100px;
+  padding: {
+    top: 13px;
+    bottom: 13px;
+    left: 40px;
+    right: 40px;
+  }
+}
+.bankCardNumber img {
+  padding-right: 20px;
+}
+.bankCardNumber span {
+  color: #131313;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+.bankCardBtn {
+  padding-top: 30px;
 }

@@ -13,7 +13,7 @@ export default function Index(title='Home Page') {
         <div className={styles.firstBlockImg}>
           <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/>
         </div>
-        <div className={`${styles.waveBlock} ${styles.waveFirst}`}>
+        <div className={styles.waveBlock}>
           <img className={styles.wave} src="/img/yellow-wave.png" />
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function Index(title='Home Page') {
             <div className={styles.findCarouselCardDesc}>
               <div className={styles.findCarouselCardDescRow}>
                 <h3>Миша</h3>
-                <img src="/img/looking-for-home.png"/>
+                <img src="/img/paws/looking-for-home.png"/>
               </div>
               <div className={styles.findCarouselCardDescRow}>
                 <span>10 лет</span>
@@ -50,7 +50,7 @@ export default function Index(title='Home Page') {
             <div className={styles.findCarouselCardDesc}>
               <div className={styles.findCarouselCardDescRow}>
                 <h3>Китти</h3>
-                <img src="/img/looking-for-home.png"/>
+                <img src="/img/paws/looking-for-home.png"/>
               </div>
               <div className={styles.findCarouselCardDescRow}>
                 <span>4 года</span>
@@ -66,7 +66,7 @@ export default function Index(title='Home Page') {
             <div className={styles.findCarouselCardDesc}>
               <div className={styles.findCarouselCardDescRow}>
                 <h3>Женя</h3>
-                <img src="/img/looking-for-home.png"/>
+                <img src="/img/paws/looking-for-home.png"/>
               </div>
               <div className={styles.findCarouselCardDescRow}>
                 <span>3 года</span>
@@ -100,9 +100,6 @@ export default function Index(title='Home Page') {
               <p>Но я могу дать лапу)</p>
             </div>
           </div>
-        </div>
-        <div className={`${styles.waveBlock} ${styles.waveSecond}`}>
-          <img className={styles.wave} src="/img/white-wave-cut1.png" />
         </div>
         <h2 className={styles.waysToHelpTitle}>Как вы можете нам помочь:</h2>
       </div>
@@ -214,7 +211,264 @@ export default function Index(title='Home Page') {
             <img src="/img/ways-to-help/pr-help.png" alt="помощь с пиаром"/>
           </div>
         </div>
+      </div>
+      
+    </section>
 
+    <section>
+      <div className={`${styles.ourPetsBlock} ${styles.pagePaddings}`}>
+        <h2>Наши питомцы</h2>
+        <div className={styles.animalFiltersBlock}>
+          <div className={styles.animalFilterInput}>
+            <h4>Все</h4>
+            <img src="img/input-arrow-down.png"/>
+          </div>
+          <div className={styles.animalFilterWrapper}>
+            <div className={styles.animalFilterWrapperTop}>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/looking-for-home.png"/>
+                <h4>Ищут дом</h4>
+              </div>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/need-adoptation.png"/>
+                <h4>Нужна адаптация</h4>
+              </div>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/baby-pets.png"/>
+                <h4>Малыши</h4>
+              </div>
+            </div>
+            <div className={styles.animalFilterWrapperBottom}>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/need-guardian.png"/>
+                <h4>Нужен опекун</h4>
+              </div>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/undergo-treatment.png"/>
+                <h4>Проходят лечение</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.findCarouselBlock}>
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Миша</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>10 лет</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Kitty.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Китти</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>4 года</span>
+                <span className={styles.petSex}>Ж</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Zhenya.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Женя</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>3 года</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.findCarouselBlock}>
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Миша</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>10 лет</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Kitty.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Китти</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>4 года</span>
+                <span className={styles.petSex}>Ж</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Zhenya.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Женя</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>3 года</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.findCarouselBlock}>
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Миша</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>10 лет</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Kitty.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Китти</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>4 года</span>
+                <span className={styles.petSex}>Ж</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Zhenya.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Женя</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>3 года</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.findCarouselBlock}>
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Миша</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>10 лет</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Kitty.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Китти</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>4 года</span>
+                <span className={styles.petSex}>Ж</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Zhenya.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Женя</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>3 года</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.morePetsBtn}>
+          <button>Больше питомцев</button>
+        </div>
+
+        <div className={styles.donationBlock}>
+          <h2>Для пожертвований:</h2>
+          <div className={styles.bankCardWrapper}>
+            <div className={styles.bankCard}>
+              <div className={styles.bankCardNumber}>
+                <img src="/img/banking-card-icon.png" alt="банковская карта для пожертвований"/>
+                <span>5469 5500 6217 8147</span>
+              </div>
+              <div className={styles.bankCardBtn}>
+                <button>Скопировать номер</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </MainLayout>
