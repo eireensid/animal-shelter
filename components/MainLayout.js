@@ -13,20 +13,63 @@ export function MainLayout({children, title='Animal shelter'}) {
         <meta charSet="utf-8" />
       </Head>
       <header>
-        <nav className={styles.nav}>   
-          <div className={styles.container}>
-            <div className="styles['logo-wrapper']">
-              <Image src="/img/logo.svg" alt="logo" width="100%" height="59" />
-            </div>
-            <div className={styles['menu-wrapper']}>
-              <Image src="/img/burger.svg" alt="menu" width="19" height="13" />
-            </div>
-          </div>     
-        </nav>
+        <div className={styles.headerBlock}>
+          <div className={styles.logoWrapperHeader}>
+            <img className={styles.logoHeader} src="/img/logo.svg" alt="лого"/>
+          </div>
+          <nav className={styles.menuWrapper}>
+            <Link href="/"><a>О приюте</a></Link>
+            <Link href="/"><a>Питомцы</a></Link>
+            <Link href="/"><a>Приветы из дома</a></Link>
+            <Link href="/"><a>Отчеты</a></Link>
+          </nav>
+          <div className={styles.btnWrapper}>
+            <button class={styles.donationBtnHeader}>Пожертвовать</button>
+          </div>
+        </div>   
       </header>
       <main>
         {children}
       </main>
+      <footer>
+        <div className={styles.footerBlock}>
+          <nav className={styles.aboutShelter}>
+            <img className={styles.logoFooter} src="/img/logo.svg" alt="лого"/>
+            <h4>О приюте</h4>
+            <ul>
+              <li><Link href="/"><a>Основные нужды Теремка</a></Link></li>
+              <li><Link href="/"><a>Опекунство и адаптация</a></Link></li>
+              <li><Link href="/"><a>Прогулки с собаками</a></Link></li>
+              <li><Link href="/"><a>Правила посещения приюта</a></Link></li>
+              <li><Link href="/"><a>Приветы из дома</a></Link></li>
+              <li><Link href="/"><a>Отчеты</a></Link></li>
+            </ul>
+          </nav>
+          <nav className={styles.ourPets}>
+            <h4>Наши питомцы</h4>
+            <ul>
+              <li><Link href="/"><a>Кошки</a></Link></li>
+              <li><Link href="/"><a>Собаки</a></Link></li>
+              <li><Link href="/"><a>Ищут дом</a></Link></li>
+              <li><Link href="/"><a>Проходят лечение</a></Link></li>
+              <li><Link href="/"><a>Нужен опекун</a></Link></li>
+              <li><Link href="/"><a>Нужна адаптация</a></Link></li>
+              <li><Link href="/"><a>Малыши</a></Link></li>
+            </ul>
+          </nav>
+          <nav className={styles.contacts}>
+            <h4>Контакты</h4>
+            <p><a href="#">+7 (921) 432-00-35</a></p>
+            <p>г. Санкт-Петербург, поселок под Гатчиной</p>
+            <h4>Помочь с пиаром</h4>
+            <div className={styles.socialsBlock}>
+              <img src="/img/whatsapp.svg" alt="what's app"/>
+              <img src="/img/vk.svg" alt="vk"/>
+              <img src="/img/instagram.svg" alt="instagram"/>
+            </div>
+          </nav>
+        </div>
+      </footer>
     </>
   )
 }

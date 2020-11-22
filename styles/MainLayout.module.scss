@@ -1,25 +1,53 @@
 @import 'variables.scss';
 
-.nav {
-  height: 75px;
+// Header
+.headerBlock {
   background: $navBg;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: {
+    left: 20px;
+    right: 40px;
+    bottom: 15px;
+    top: 15px;
+  }
 }
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.logoWrapperHeader {
+  flex-basis: 17%;
+}
+.headerBlock a {
+  color: $textColor;
+  font-size: 15px;
+}
+.headerBlock a:not(:last-child) {
+  margin-right: 40px;
+}
+.donationBtnHeader {
+  padding: {
+    top: 15px;
+    bottom: 15px;
+    left: 40px;
+    right: 40px;
+  }
   width: 100%;
 }
-.logo-wrapper {
-  margin-left: -20px;
-}
-.menu-wrapper {
-  margin-right: 15px;
-}
 
-@media (min-width: 768px) {
-  
+// Footer
+.footerBlock {
+  display: flex;
+  padding: {
+    left: 11%;
+    right: 11%;
+    bottom: 100px;
+  }
+  justify-content: space-between;
+  align-items: flex-end;
+  background: $navBg;
+}
+.logoFooter {
+  padding-bottom: 30px;
+}
+.footerBlock a {
+  color: $secondColor;
 }

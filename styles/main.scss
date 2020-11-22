@@ -5,7 +5,6 @@ body {
   margin: 0;
 }
 a {
-  color: white;
   text-decoration: none;
 }
 * {
@@ -22,7 +21,14 @@ img {
 }
 p {
   margin: 0;
+}
+p, span {
   color: #131313;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -37,6 +43,14 @@ button {
     bottom: 23px;
   }
   width: 300px;
+}
+
+@media (min-width: 1440px) {
+  // body {
+  //   max-width: 1440px;
+  //   display: flex;
+  //   justify-content: center;
+  // }
 }
 
 // Desktop styles 
