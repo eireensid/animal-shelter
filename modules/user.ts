@@ -40,7 +40,7 @@ export function getSuperUser (): Promise<User> {
   })
 }
 
-export function saveUser (user): Promise<null> {
+export function saveUser (user): Promise<void> {
   return new Promise(async (resolve, reject) => {
     usersDb.update({ _id: user._id }, user, { multi: true }, (err, doc) => {
       if (err) return reject(err)
