@@ -56,7 +56,7 @@
 .findCarouselBlock {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .findCarouselCard {
   position: relative;
@@ -226,10 +226,65 @@
 // Our Pets
 .ourPetsBlock {
   background: $pageBg;
+  padding-bottom: 210px;
 }
 .ourPetsBlock h2 {
   padding: {
     top: 160px;
     bottom: 110px;
   }
+}
+.animalFiltersBlock {
+  padding-bottom: 70px;
+}
+.animalFilterInput, .animalFilter {
+  background: #fff;
+  border-radius: 100px;
+}
+.animalFilterInput {
+  display: flex;
+  align-items: center;
+  padding: {
+    top: 14px;
+    bottom: 14px;
+    left: 20px;
+    right: 25px;
+  }
+  width: 26%;
+  justify-content: space-between;
+}
+.animalFilter {
+  display: flex;
+  align-items: center;
+  padding: {
+    top: 12px;
+    bottom: 12px;
+    left: 15px;
+    right: 15px;
+  }
+}
+.animalFilter img {
+  padding-right: 18px;
+}
+.animalFilterWrapperTop {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  margin: {
+    top: 30px;
+    bottom: 30px;
+  }
+}
+.animalFilterWrapperBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+}
+.ourPetsBlock .findCarouselBlock {
+  margin-top: 165px;
+}
+.morePetsBtn {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
 }

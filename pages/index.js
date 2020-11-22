@@ -34,7 +34,7 @@ export default function Index(title='Home Page') {
             <div className={styles.findCarouselCardDesc}>
               <div className={styles.findCarouselCardDescRow}>
                 <h3>Миша</h3>
-                <img src="/img/looking-for-home.png"/>
+                <img src="/img/paws/looking-for-home.png"/>
               </div>
               <div className={styles.findCarouselCardDescRow}>
                 <span>10 лет</span>
@@ -50,7 +50,7 @@ export default function Index(title='Home Page') {
             <div className={styles.findCarouselCardDesc}>
               <div className={styles.findCarouselCardDescRow}>
                 <h3>Китти</h3>
-                <img src="/img/looking-for-home.png"/>
+                <img src="/img/paws/looking-for-home.png"/>
               </div>
               <div className={styles.findCarouselCardDescRow}>
                 <span>4 года</span>
@@ -66,7 +66,7 @@ export default function Index(title='Home Page') {
             <div className={styles.findCarouselCardDesc}>
               <div className={styles.findCarouselCardDescRow}>
                 <h3>Женя</h3>
-                <img src="/img/looking-for-home.png"/>
+                <img src="/img/paws/looking-for-home.png"/>
               </div>
               <div className={styles.findCarouselCardDescRow}>
                 <span>3 года</span>
@@ -218,6 +218,243 @@ export default function Index(title='Home Page') {
     <section>
       <div className={`${styles.ourPetsBlock} ${styles.pagePaddings}`}>
         <h2>Наши питомцы</h2>
+        <div className={styles.animalFiltersBlock}>
+          <div className={styles.animalFilterInput}>
+            <h4>Все</h4>
+            <img src="img/input-arrow-down.png"/>
+          </div>
+          <div className={styles.animalFilterWrapper}>
+            <div className={styles.animalFilterWrapperTop}>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/looking-for-home.png"/>
+                <h4>Ищут дом</h4>
+              </div>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/need-adoptation.png"/>
+                <h4>Нужна адаптация</h4>
+              </div>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/baby-pets.png"/>
+                <h4>Малыши</h4>
+              </div>
+            </div>
+            <div className={styles.animalFilterWrapperBottom}>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/need-guardian.png"/>
+                <h4>Нужен опекун</h4>
+              </div>
+              <div className={styles.animalFilter}>
+                <img src="/img/paws/undergo-treatment.png"/>
+                <h4>Проходят лечение</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.findCarouselBlock}>
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Миша</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>10 лет</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Kitty.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Китти</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>4 года</span>
+                <span className={styles.petSex}>Ж</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Zhenya.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Женя</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>3 года</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.findCarouselBlock}>
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Миша</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>10 лет</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Kitty.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Китти</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>4 года</span>
+                <span className={styles.petSex}>Ж</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Zhenya.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Женя</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>3 года</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.findCarouselBlock}>
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Миша</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>10 лет</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Kitty.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Китти</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>4 года</span>
+                <span className={styles.petSex}>Ж</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Zhenya.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Женя</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>3 года</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.findCarouselBlock}>
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Миша</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>10 лет</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Kitty.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Китти</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>4 года</span>
+                <span className={styles.petSex}>Ж</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.findCarouselCard}>
+            <div className={styles.petImgBlock}>
+              <img className={styles.petImg} src="/img/Zhenya.png" alt="питомец"/>
+            </div>
+            <div className={styles.findCarouselCardDesc}>
+              <div className={styles.findCarouselCardDescRow}>
+                <h3>Женя</h3>
+                <img src="/img/paws/looking-for-home.png"/>
+              </div>
+              <div className={styles.findCarouselCardDescRow}>
+                <span>3 года</span>
+                <span className={styles.petSex}>М</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.morePetsBtn}>
+          <button>Больше питомцев</button>
+        </div>
+
       </div>
     </section>
   </MainLayout>
