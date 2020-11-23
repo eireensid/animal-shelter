@@ -38,6 +38,7 @@
 }
 
 
+
 // Look for home 
 .findHomeBlock {
   background: $pageBg;
@@ -129,25 +130,31 @@
   align-items: center;
 }
 
+
 .bubbleBlock {
-  position: relative;
   padding-bottom: 220px;
-}
-.photoForPhraseBubbleWrapper {
-  position: relative;
-}
-.photoForPhraseBubble {
+  display: flex;
   padding-left: 22%;
 }
 .phraseBubbleWrapper {
+  position: relative;
+  width: 70%; 
+}
+.phraseBubbleWrapper div {
   position: absolute;
-  left: 52%;
-  bottom: 65%;
+  left: -80px;
+  bottom: 35%;
+}
+.textBubbleWrapper {
+  position: absolute;
+  // top: 23%;
+  left: 53%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .textBubble {
-  position: absolute;
-  top: 23%;
-  left: 23%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -155,10 +162,10 @@
 .textBubble p:last-child {
   margin-top: 25px;
 }
+
 .waysToHelpTitle {
   margin-bottom: 110px;
 }
-
 
 // Ways to help
 .waysToHelpBlock {

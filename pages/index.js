@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { MainLayout } from '~/components/MainLayout'
 import styles from '~/styles/index.module.scss'
 
-export default function Index(title='Home Page') {
+export default function Index(title='Главная') {
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -94,7 +94,11 @@ export default function Index(title='Home Page') {
             <img className={styles.photoForPhraseBubble} src="/img/photo-for-phrase-bubble.png" alt="спасибо"/>
           </div>
           <div className={styles.phraseBubbleWrapper}>
-            <img className={styles.phraseBubble} src="/img/phrase-bubble.png"/>
+            <div>
+              <img className={styles.phraseBubble} src="/img/phrase-bubble.png"/>
+            </div>
+          </div>
+          <div className={styles.textBubbleWrapper}>
             <div className={styles.textBubble}>
               <p>Я не могу отблагодарить<br/>услугой за услугу...</p>
               <p>Но я могу дать лапу)</p>
