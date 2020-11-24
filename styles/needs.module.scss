@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.needsBlock {
+  background: $pageBg;
+}
+
+.breadCrumbs {
+  font-size: $breadCrumbsd;
+  font-weight: 500;
+}
+
+.needsWrapper {
+  display: flex;
+}
+.needsWrapper div {
+  flex-basis: 48%;
+}
+
+.bubbleBlock {
+  display: flex;
+  // padding-left: 22%;
+}
+.phraseBubbleWrapper {
+  position: relative;
+  width: 70%; 
+}
+.phraseBubbleWrapper div {
+  position: absolute;
+  left: -80px;
+  bottom: 35%;
+}
+.textBubbleWrapper {
+  position: absolute;
+  top: 33%;
+  left: 68%;
+}

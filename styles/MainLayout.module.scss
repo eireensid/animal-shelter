@@ -19,6 +19,7 @@
 .headerBlock a {
   color: $textColor;
   font-size: 15px;
+  font-weight: 500;
 }
 .headerBlock a:not(:last-child) {
   margin-right: 40px;
@@ -50,6 +51,7 @@
 }
 .footerBlock a {
   color: $secondColor;
+  font-weight: 500;
 }
 .footerBlock h4 {
   padding-bottom: 20px;
@@ -63,6 +65,9 @@
 }
 .phone {
   padding-bottom: 20px;
+}
+.address {
+  font-weight: 500;
 }
 .socialsBlockFooter {
   padding-bottom: 5px;
