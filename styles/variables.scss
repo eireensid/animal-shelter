@@ -4,17 +4,15 @@ $secondColor: #131313;
 $navBg: #FFC393;
 $pageBg: #FFF5DA;
 
-// Mobile styles
-$breadCrumbsm: 0.833em;
-$btnTxtm: 15px;
-$primaryTextm: 13px;
-
-// Tablet styles
-$breadCrumbst: 18px;
-$btnTxtt: 18px;
-$primaryTextt: 15px;
+$mediumWeight: 500;
 
 // Desktop styles
-$breadCrumbsd: 20px;
-$btnTxtd: 20px;
-$primaryTextd: 18px;
+$breadCrumbsAndBtnTxt: 20px;
+
+// Tablet styles
+$breadCrumbsAndBtnTxt: 18px;
+$primaryText: 15px;
+
+// Mobile styles
+$breadCrumbsAndBtnTxt: 0.833em;
+$primaryText: 13px;
