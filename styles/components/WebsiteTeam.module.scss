@@ -2,16 +2,23 @@
 
 .developersBlock h2 {
   font-size: 1.667em;
+  width: 63%;
 }
 .developersWrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 70px;
 }
 .developer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.developer h4 {
+  padding-bottom: 50px!important;
+}
 .developer span {
   display: block;
+  padding-top: 20px;
+  font-weight: $mediumWeight;
 }

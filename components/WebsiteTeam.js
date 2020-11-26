@@ -3,7 +3,7 @@ import styles from '~/styles/components/WebsiteTeam.module.scss'
 export default function WebsiteTeam() {
   return <>
     <div className={styles.developersBlock}>
-      <h2>Выражаем блогодарность всем, кто принимал участие в разработке сайта:</h2>
+      <h2>Выражаем благодарность всем, кто принимал участие в разработке сайта:</h2>
       <div className={styles.developersWrapper}>
         <div className={styles.developer}>
           <h4>Дизайн:</h4>
