@@ -1,0 +1,17 @@
+@import 'variables.scss';
+
+.developersBlock h2 {
+  font-size: 1.667em;
+}
+.developersWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.developer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.developer span {
+  display: block;
+}
