@@ -1,10 +1,10 @@
 import styles from '~/styles/components/AnimalCard.module.scss'
 
-export default function animalCard({name, age, sex}) {
+export default function animalCard({name, age, sex, photo}) {
   return <>
     <div className={styles.findCarouselCard}>
       <div className={styles.petImgBlock}>
-        <img className={styles.petImg} src="/img/Misha.png" alt="питомец"/>
+        <img className={styles.petImg} src={`/img/${photo}`} alt="питомец"/>
       </div>
       <div className={styles.findCarouselCardDesc}>
         <div className={styles.findCarouselCardDescRow}>
