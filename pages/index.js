@@ -186,9 +186,11 @@ export default function Index(title='Главная') {
     <section>
       <div className={`${styles.ourPetsBlock} ${styles.pagePaddings}`}>
         <h2>Наши питомцы</h2>
+        <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
+        <p className={`${styles.ourPetsDesc} ${styles.ourPetsPadding}`}>Если вы уже знаете имя питомца, который вас заинтересовал, воспользуйтесь поиском по имени.</p>
         <div className={styles.animalFiltersBlock}>
           <div className={styles.animalFilterInput}>
-            <h4>Все</h4>
+            <h4>Все животные</h4>
             <img src="img/input-arrow-down.png"/>
           </div>
           <div className={styles.animalFilterWrapper}>

@@ -196,8 +196,15 @@
 .ourPetsBlock h2 {
   padding: {
     top: 160px;
-    bottom: 110px;
+    bottom: 30px;
   }
+}
+.ourPetsDesc {
+  width: 40%;
+}
+.ourPetsPadding {
+  padding-top: 30px;
+  padding-bottom: 110px;
 }
 .animalFiltersBlock {
   padding-bottom: 70px;
