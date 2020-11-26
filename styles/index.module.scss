@@ -255,48 +255,4 @@
 }
 
 
-// Donation block
-.bankCardWrapper {
-  display: flex;
-  justify-content: center;
-}
-.bankCard {
-  background: #fff;
-  background-image: url(/img/paws-top.png), url(/img/paws-bottom.png);
-  background-repeat: no-repeat;
-  background-position: top center, bottom center;
-  display: flex;
-  align-items: center;
-  width: 59%;
-  flex-direction: column;
-  border-radius: 20px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-  padding: {
-    top: 130px;
-    bottom: 105px;
-  }
-}
-.bankCardNumber {
-  display: flex;
-  align-items: center;
-  background: $pageBg;
-  border-radius: 100px;
-  padding: {
-    top: 13px;
-    bottom: 13px;
-    left: 40px;
-    right: 40px;
-  }
-}
-.bankCardNumber img {
-  padding-right: 20px;
-}
-.bankCardNumber span {
-  color: #131313;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: $mediumWeight;
-  font-size: 30px;
-}
-.bankCardBtn {
-  padding-top: 30px;
-}
+

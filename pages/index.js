@@ -2,6 +2,7 @@ import Link from 'next/link'
 import {useState} from 'react'
 import { MainLayout } from '~/components/MainLayout'
 import AnimalCard from '~/components/AnimalCard'
+import BankCard from '~/components/BankCard'
 import styles from '~/styles/index.module.scss'
 
 export default function Index(title='Главная') {
@@ -246,20 +247,7 @@ export default function Index(title='Главная') {
           <button>Больше питомцев</button>
         </div>
 
-        <div className={styles.donationBlock}>
-          <h2>Для пожертвований:</h2>
-          <div className={styles.bankCardWrapper}>
-            <div className={styles.bankCard}>
-              <div className={styles.bankCardNumber}>
-                <img src="/img/banking-card-icon.png" alt="банковская карта для пожертвований"/>
-                <span>5469 5500 6217 8147</span>
-              </div>
-              <div className={styles.bankCardBtn}>
-                <button>Скопировать номер</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <BankCard/>
       </div>
     </section>
   </MainLayout>
