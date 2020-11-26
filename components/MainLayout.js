@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/MainLayout.module.scss'
+import styles from '~/styles/MainLayout.module.scss'
 
 export function MainLayout({children, title='Animal shelter'}) {
   return (

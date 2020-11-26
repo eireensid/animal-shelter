@@ -1,8 +1,17 @@
 import Link from 'next/link'
+import {useState} from 'react'
 import { MainLayout } from '~/components/MainLayout'
+import AnimalCard from '~/components/AnimalCard'
 import styles from '~/styles/index.module.scss'
 
 export default function Index(title='Главная') {
+
+  const [animals, setAnimals] = useState([
+    {name: "Миша", age: "10 лет", sex: "М"},
+    {name: "Китти", age: "4 года", sex: "Ж"},
+    {name: "Женя", age: "3 года", sex: "М"}
+  ])
+
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -23,6 +32,18 @@ export default function Index(title='Главная') {
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
         <h2 className={styles.findHomeTitle}>Сейчас ищут дом:</h2>
         <div className={styles.findCarouselBlock}>
+          <div className={`${styles.findCarouselArrowLeft} ${styles.findCarouselArrow}`}>
+            <img src="/img/arrow-left.png" alt="влево"/>
+          </div>
+          {animals.map((animal, key) => (
+            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} key={Math.random()}/>
+          ))}
+          <div className={`${styles.findCarouselArrowRight} ${styles.findCarouselArrow}`}>
+            <img src="/img/arrow-right.png" alt="вправо"/>
+          </div>
+        </div>
+
+        {/* <div className={styles.findCarouselBlock}>
           <div className={`${styles.findCarouselArrowLeft} ${styles.findCarouselArrow}`}>
             <img src="/img/arrow-left.png" alt="влево"/>
           </div>
@@ -78,7 +99,7 @@ export default function Index(title='Главная') {
           <div className={`${styles.findCarouselArrowRight} ${styles.findCarouselArrow}`}>
             <img src="/img/arrow-right.png" alt="вправо"/>
           </div>
-        </div>
+        </div> */}
 
         <div className={styles.videoBlock}>
           <div className={styles.videoText}>

@@ -1,5 +1,5 @@
 import Router from 'next/router'
-import {MainLayout} from '../components/MainLayout'
+import {MainLayout} from '~/components/MainLayout'
 import styles from '~/styles/needs.module.scss'
 
 export default function About(title='Основные нужды приюта') {

@@ -1,0 +1,40 @@
+@import 'variables.scss';
+
+.findCarouselCard {
+  position: relative;
+}
+.findCarouselCardDesc {
+  background: #fff;
+  padding: {
+    top: 185px;
+    left: 35px;
+    right: 35px;
+    bottom: 60px;
+  };
+  border-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+.findCarouselCardDesc h3 {
+  display: inline-block;
+}
+.findCarouselCard {
+  width: 31%;
+}
+.findCarouselCardDescRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.findCarouselCardDescRow:first-child {
+  padding-bottom: 35px;
+}
+.petImgBlock {
+  width: 100%;
+  position: absolute;
+  bottom: 55%;
+  display: flex;
+  justify-content: center;
+}
+.petSex {
+  padding-right: 12px;
+}
