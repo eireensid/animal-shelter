@@ -38,17 +38,24 @@
 // Footer
 .footerBlock {
   display: flex;
+  flex-direction: column;
   padding: {
     left: 11%;
     right: 11%;
     bottom: 100px;
   }
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: space-between;
   background: $navBg;
 }
+.navBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 200px;
+}
 .logoFooter {
-  padding-bottom: 30px;
+  width: 10%;
 }
 .footerBlock a {
   color: $secondColor;
@@ -69,6 +76,9 @@
 }
 .address {
   font-weight: $mediumWeight;
+}
+.prHelp {
+  padding-bottom: 25px!important;
 }
 .socialsBlockFooter {
   padding-bottom: 5px;
