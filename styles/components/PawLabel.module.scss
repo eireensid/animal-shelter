@@ -1,0 +1,17 @@
+@import 'variables.scss';
+
+.animalFilter {
+  background: #fff;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding: {
+    top: 12px;
+    bottom: 12px;
+    left: 15px;
+    right: 15px;
+  }
+}
+.animalFilter img {
+  padding-right: 18px;
+}

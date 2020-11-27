@@ -4,6 +4,7 @@ import { MainLayout } from '~/components/MainLayout'
 import AnimalCard from '~/components/AnimalCard'
 import FindAnimalInput from '~/components/FindAnimalInput'
 import SearchInput from '~/components/SearchInput'
+import PawLabel from '~/components/PawLabel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/index.module.scss'
 
@@ -194,29 +195,14 @@ export default function Index(title='Главная') {
           <FindAnimalInput/>
           <SearchInput/>
           <div className={styles.animalFilterWrapper}>
-            <div className={styles.animalFilterWrapperTop}>
-              <div className={styles.animalFilter}>
-                <img src="/img/paws/looking-for-home.png"/>
-                <h4>Ищут дом</h4>
-              </div>
-              <div className={styles.animalFilter}>
-                <img src="/img/paws/need-adoptation.png"/>
-                <h4>Нужна адаптация</h4>
-              </div>
-              <div className={styles.animalFilter}>
-                <img src="/img/paws/baby-pets.png"/>
-                <h4>Малыши</h4>
-              </div>
+            <div className={styles.animalFilterWrapperTop}>            
+              <PawLabel pawColor="/img/paws/looking-for-home.png" pawMeaning="Ищут дом"/>
+              <PawLabel pawColor="/img/paws/need-adoptation.png" pawMeaning="Нужна адаптация"/>
+              <PawLabel pawColor="/img/paws/baby-pets.png" pawMeaning="Малыши"/>
             </div>
             <div className={styles.animalFilterWrapperBottom}>
-              <div className={styles.animalFilter}>
-                <img src="/img/paws/need-guardian.png"/>
-                <h4>Нужен опекун</h4>
-              </div>
-              <div className={styles.animalFilter}>
-                <img src="/img/paws/undergo-treatment.png"/>
-                <h4>Проходят лечение</h4>
-              </div>
+              <PawLabel pawColor="/img/paws/need-guardian.png" pawMeaning="Нужен опекун"/>
+              <PawLabel pawColor="/img/paws/undergo-treatment.png" pawMeaning="Проходят лечение"/>
             </div>
           </div>
         </div>
