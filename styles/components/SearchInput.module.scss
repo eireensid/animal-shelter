@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  padding: {
+    top: 14px;
+    bottom: 14px;
+    left: 20px;
+    right: 25px;
+  }
+  width: 26%;
+  height: 48px;
+  background: #fff;
+  border-radius: 100px;
+}
+.searchInput input {
+  margin-left: 5px;
+}
+.searchInput input[placeholder] {
+  // font-size: 0.722em;
+  color: rgba(66, 41, 4, 0.5);
+}
