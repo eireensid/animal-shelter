@@ -2,6 +2,7 @@ import Link from 'next/link'
 import {useState} from 'react'
 import { MainLayout } from '~/components/MainLayout'
 import AnimalCard from '~/components/AnimalCard'
+import FindAnimalInput from '~/components/FindAnimalInput'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/index.module.scss'
 
@@ -189,10 +190,7 @@ export default function Index(title='Главная') {
         <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
         <p className={`${styles.ourPetsDesc} ${styles.ourPetsPadding}`}>Если вы уже знаете имя питомца, который вас заинтересовал, воспользуйтесь поиском по имени.</p>
         <div className={styles.animalFiltersBlock}>
-          <div className={styles.animalFilterInput}>
-            <h4>Все животные</h4>
-            <img src="img/input-arrow-down.png"/>
-          </div>
+          <FindAnimalInput/>
           <div className={styles.animalFilterWrapper}>
             <div className={styles.animalFilterWrapperTop}>
               <div className={styles.animalFilter}>

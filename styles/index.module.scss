@@ -209,23 +209,21 @@
 .animalFiltersBlock {
   padding-bottom: 70px;
 }
-.animalFilterInput, .animalFilter {
+// .animalFilterInput {
+//   display: flex;
+//   align-items: center;
+//   padding: {
+//     top: 14px;
+//     bottom: 14px;
+//     left: 20px;
+//     right: 25px;
+//   }
+//   width: 26%;
+//   justify-content: space-between;
+// }
+.animalFilter {
   background: #fff;
   border-radius: 100px;
-}
-.animalFilterInput {
-  display: flex;
-  align-items: center;
-  padding: {
-    top: 14px;
-    bottom: 14px;
-    left: 20px;
-    right: 25px;
-  }
-  width: 26%;
-  justify-content: space-between;
-}
-.animalFilter {
   display: flex;
   align-items: center;
   padding: {

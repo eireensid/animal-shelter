@@ -1,6 +1,9 @@
 @import 'variables.scss';
 
 // Donation block
+.donationBlock h2 {
+  padding-bottom: 100px!important;
+}
 .bankCardWrapper {
   display: flex;
   justify-content: center;
