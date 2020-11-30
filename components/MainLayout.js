@@ -23,6 +23,9 @@ export function MainLayout({children, title='Animal shelter'}) {
             <Link href="/"><a>Приветы из дома</a></Link>
             <Link href="/"><a>Отчеты</a></Link>
           </nav>
+          <nav className={styles.menuWrapperBurger}>
+            <img className={styles.burger} src="/img/burger.svg" alt="меню"/>
+          </nav>
           <div className={styles.btnWrapper}>
             <button className={styles.donationBtnHeader}>Пожертвовать</button>
           </div>

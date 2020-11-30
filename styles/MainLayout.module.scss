@@ -16,6 +16,9 @@
 .logoWrapperHeader {
   flex-basis: 17%;
 }
+.menuWrapperBurger {
+  display: none;
+}
 .headerBlock a {
   color: $textColor;
   font-size: 0.833em;
@@ -85,4 +88,38 @@
 }
 .socialsBlockFooter img:not(:last-child) {
   margin-right: 15px;
+}
+
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .btnWrapper {
+    display: none;
+  }
+  .menuWrapper {
+    display: none;
+  }
+  .menuWrapperBurger {
+    display: block;
+  }
+  .logoHeader {
+    width: 156px;
+    height: 140px;
+  }
+  .burger {
+    width: 59px;
+    height: 39px;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .logoHeader {
+    width: 54px;
+    height: 49px;
+  }
+  .burger {
+    width: 19px;
+    height: 13px;
+  }
 }
