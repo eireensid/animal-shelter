@@ -60,15 +60,7 @@ export default function Index(title='Главная') {
 
         <div className={styles.bubbleBlock}>
           <div className={styles.photoWithPhraseBubbleWrapper}>
-            <img className={styles.photoWithPhraseBubble} src="/img/dog-with-bubble-phrase.png" alt="спасибо"/>
-          </div>
-          <div className={styles.textBubbleWrapper}>
-            <div>
-              <div className={styles.textBubble}>
-                <p>Я не могу отблагодарить<br/>услугой за услугу...</p>
-                <p>Но я могу дать лапу)</p>
-              </div>
-            </div>
+            <img className={styles.photoWithPhraseBubble} src="/img/dog-with-bubble.svg" alt="спасибо"/>
           </div>
         </div>
         <h2 className={styles.waysToHelpTitle}>Как вы можете нам помочь:</h2>
