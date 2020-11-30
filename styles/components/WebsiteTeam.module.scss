@@ -22,3 +22,52 @@
   padding-top: 20px;
   font-weight: $mediumWeight;
 }
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .developersBlock h2 {
+    font-size: 1.111em;
+    width: 73%;
+  }
+  .developersWrapper {
+    padding-top: 50px;
+  }
+  .developer h4 {
+    font-size: 1em;
+    padding-bottom: 40px!important;
+  }
+  .developer img {
+    width: 70px;
+    height: 70px;
+  }
+  .developer span {
+    font-size: 0.833em;
+    padding-top: 13px;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .developersBlock h2 {
+    font-size: 1em;
+    width: 100%;
+  }
+  .developersWrapper {
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .developer h4 {
+    font-size: 1em;
+    padding-bottom: 30px!important;
+  }
+  .developer img {
+    width: 70px;
+    height: 70px;
+  }
+  .developer span {
+    font-size: 0.833em;
+    padding-top: 13px;
+  }
+}
