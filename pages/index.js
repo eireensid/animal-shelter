@@ -59,18 +59,15 @@ export default function Index(title='Главная') {
         </div>
 
         <div className={styles.bubbleBlock}>
-          <div className={styles.photoForPhraseBubbleWrapper}>
-            <img className={styles.photoForPhraseBubble} src="/img/photo-for-phrase-bubble.png" alt="спасибо"/>
-          </div>
-          <div className={styles.phraseBubbleWrapper}>
-            <div>
-              <img className={styles.phraseBubble} src="/img/phrase-bubble.png"/>
-            </div>
+          <div className={styles.photoWithPhraseBubbleWrapper}>
+            <img className={styles.photoWithPhraseBubble} src="/img/dog-with-bubble-phrase.png" alt="спасибо"/>
           </div>
           <div className={styles.textBubbleWrapper}>
-            <div className={styles.textBubble}>
-              <p>Я не могу отблагодарить<br/>услугой за услугу...</p>
-              <p>Но я могу дать лапу)</p>
+            <div>
+              <div className={styles.textBubble}>
+                <p>Я не могу отблагодарить<br/>услугой за услугу...</p>
+                <p>Но я могу дать лапу)</p>
+              </div>
             </div>
           </div>
         </div>

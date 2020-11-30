@@ -58,7 +58,7 @@
   padding-bottom: 200px;
 }
 .logoFooter {
-  width: 10%;
+  width: 9.1%;
 }
 .footerBlock a {
   color: $secondColor;
@@ -69,7 +69,7 @@
   padding-top: 40px;
 }
 .footerBlock ul {
-  line-height: 2;
+  line-height: 2.2;
 }
 .contacts h4 {
   padding-bottom: 30px;
@@ -93,6 +93,7 @@
 
 // Tablet styles
 @media (max-width: 1024px) {
+  // Header
   .btnWrapper {
     display: none;
   }
@@ -114,6 +115,7 @@
 
 // Mobile styles
 @media (max-width: 414px) {
+  // Header
   .logoHeader {
     width: 54px;
     height: 49px;

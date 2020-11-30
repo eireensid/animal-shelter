@@ -95,22 +95,13 @@
 
 .bubbleBlock {
   padding-bottom: 220px;
-  display: flex;
   padding-left: 22%;
-}
-.phraseBubbleWrapper {
   position: relative;
-  width: 70%; 
-}
-.phraseBubbleWrapper div {
-  position: absolute;
-  left: -80px;
-  bottom: 35%;
 }
 .textBubbleWrapper {
   position: absolute;
-  // top: 23%;
-  left: 53%;
+  top: 12%;
+  left: 60%;
 }
 .textBubble p:last-child {
   margin-top: 25px;
