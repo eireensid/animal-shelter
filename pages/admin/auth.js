@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button'
 import { useState } from 'react'
 import axios from 'axios'
 
-export default function About(title='Auth') {
+export default function Auth() {
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
   const [errorText, setErrorText] = useState('')
@@ -31,7 +31,7 @@ export default function About(title='Auth') {
 
   return <>
     <Head>
-      <title>Admin</title>
+      <title>Auth</title>
     </Head>
     <Container maxWidth="sm">
       <Box className={styles.authBox}>
