@@ -1,7 +1,20 @@
 @import 'variables.scss';
 
+.pagePaddings {
+  padding: {
+    left: 11%;
+    right: 11%;
+  }
+}
+
+
 .needsBlock {
   background: $pageBg;
+  padding: {
+    left: 11%;
+    right: 40px;
+    top: 100px;
+  }
 }
 
 .breadCrumbs {
@@ -11,26 +24,16 @@
 
 .needsWrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -40px;
+  padding-bottom: 80px;
 }
-.needsWrapper div {
+.needsDesc {
   flex-basis: 48%;
+  margin-top: 20px;
 }
-
-.bubbleBlock {
-  display: flex;
-  // padding-left: 22%;
-}
-.phraseBubbleWrapper {
-  position: relative;
-  width: 70%; 
-}
-.phraseBubbleWrapper div {
-  position: absolute;
-  left: -80px;
-  bottom: 35%;
-}
-.textBubbleWrapper {
-  position: absolute;
-  top: 33%;
-  left: 68%;
+.needsDesc p {
+  width: 83%;
+  margin-top: 40px;
 }

@@ -26,9 +26,6 @@ export default function Index(title='Главная') {
         <div className={styles.firstBlockImg}>
           <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/>
         </div>
-        {/* <div className={styles.waveBlock}>
-          <img className={styles.wave} src="/img/yellow-wave.png" />
-        </div> */}
       </div>
     </section>
 
