@@ -53,7 +53,9 @@ export default function Index(title='Главная') {
               Почти все нужды, такие как лечение и содержание животных, строительство новых вольеров, зарплаты сотрудникам приюта, — обеспечиваются за счёт пожертвований.</p>
             <p>Вы тоже можете внести свой вклад! Читайте информацию ниже и выберите тот способ, который будет для вас удобнее.</p>
           </div>
-          <div className={styles.videoWrapper}>insert video here</div>
+          <div className={styles.videoWrapper}>
+            <iframe id="video1" width="484" height="271" src="https://youtube.com/embed/9g_novIz3Uc"/>
+          </div>
         </div>
 
         <div className={styles.bubbleBlock}>
