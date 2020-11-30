@@ -3,6 +3,10 @@
 // Hero
 .firstBlock {
   background: $navBg;
+  background-image: url(/img/yellow-wave.png);
+  background-position-y: 410px;
+  background-repeat: no-repeat;
+  background-size: contain;
   padding: {
     left: 11%;
     top: 140px;
@@ -219,6 +223,15 @@
   margin-top: 80px;
   display: flex;
   justify-content: center;
+}
+
+
+// Tablet styles
+@media (max-width: 1024px) {
+}
+
+// Mobile styles
+@media (max-width: 414px) {
 }
 
 
