@@ -196,13 +196,20 @@
   padding-top: 30px;
   padding-bottom: 110px;
 }
+.animalInputsBlock {
+  display: flex;
+}
+.animalInputsBlock div {
+  margin-right: 30px;
+}
+
 .animalFiltersBlock {
   padding-bottom: 70px;
 }
 .animalFilterWrapperTop {
   display: flex;
   justify-content: space-between;
-  width: 82%;
+  width: 64%;
   margin: {
     top: 30px;
     bottom: 30px;
@@ -211,7 +218,7 @@
 .animalFilterWrapperBottom {
   display: flex;
   justify-content: space-between;
-  width: 55%;
+  width: 50%;
 }
 .ourPetsBlock .findCarouselBlock {
   margin-top: 165px;

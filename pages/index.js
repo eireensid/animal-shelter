@@ -191,8 +191,11 @@ export default function Index(title='Главная') {
         <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
         <p className={`${styles.ourPetsDesc} ${styles.ourPetsPadding}`}>Если вы уже знаете имя питомца, который вас заинтересовал, воспользуйтесь поиском по имени.</p>
         <div className={styles.animalFiltersBlock}>
-          <FindAnimalInput/>
-          <SearchInput/>
+          <div className={styles.animalInputsBlock}>
+            <FindAnimalInput inputTitle="Все животные"/>
+            <FindAnimalInput inputTitle="Все возраста"/>
+            <SearchInput/>
+          </div>
           <div className={styles.animalFilterWrapper}>
             <div className={styles.animalFilterWrapperTop}>            
               <PawLabel pawColor="/img/paws/looking-for-home.png" pawMeaning="Ищут дом"/>
