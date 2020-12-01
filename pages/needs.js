@@ -86,10 +86,13 @@ export default function About(title='Основные нужды приюта') 
             <span>Синулокс 500 и 250 мг</span>
           </div>
         </div>
-        <div className={styles.visitingRulesWrapper}>
+        
+      </div>
+    </section>
+    <section>
+    <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
           <VisitingRules/>
         </div>
-      </div>
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
