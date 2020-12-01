@@ -1,0 +1,18 @@
+@import 'variables.scss';
+
+.callBtn {
+  margin-bottom: 20px;
+}
+.callBtn, .whatsappBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: {
+    top: 13px;
+    bottom: 13px;
+  };
+}
+.callBtn span, .whatsappBtn span {
+  color: #fff;
+  margin-left: 15px;
+}

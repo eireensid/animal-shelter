@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -40px;
+  margin-top: -50px;
   padding-bottom: 80px;
 }
 .needsDesc {
@@ -36,4 +36,17 @@
 .needsDesc p {
   width: 83%;
   margin-top: 40px;
+}
+
+
+.needsListWrapper {
+  padding-bottom: 210px;
+}
+.needsListItem {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.needsListItem img {
+  margin-right: 15px;
 }
