@@ -5,12 +5,12 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/needs.module.scss'
 
-export default function About(title='Основные нужды приюта') {
+export default function Needs({title='Основные нужды приюта'}) {
   return <MainLayout>
     <section>
       <div className={styles.needsBlock}>
         <div className={styles.breadCrumbs}>
-          <span>Главная</span><span> / </span><span>Нужды приюта</span>
+          <span>Главная</span><span> / </span><span>{title}</span>
         </div>
 
         <div className={styles.needsWrapper}>

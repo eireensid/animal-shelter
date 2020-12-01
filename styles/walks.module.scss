@@ -1,0 +1,78 @@
+@import 'variables.scss';
+
+.pagePaddings {
+  padding: {
+    left: 11%;
+    right: 11%;
+  }
+}
+
+.walksBlock {
+  background: $pageBg;
+  padding: {
+    left: 11%;
+    right: 3%;
+    top: 100px;
+  }
+}
+
+.breadCrumbs {
+  font-size: $breadCrumbsAndBtnTxt;
+  font-weight: $mediumWeight;
+}
+
+.walksWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -50px;
+  padding-bottom: 80px;
+}
+.walksDesc {
+  flex-basis: 48%;
+  margin-top: 20px;
+}
+.walksDesc p {
+  width: 83%;
+  margin-top: 40px;
+}
+
+
+.walksGalleryBlock {
+  background: $pageBg;
+}
+.walksGallery {
+  display: flex;
+  justify-content: space-between;
+}
+.walksGalleryLeft {
+  flex-basis: 210%;
+}
+.walksGalleryRight {
+  flex-basis: 138%;
+}
+.insideGalleryLeftMiddle {
+  display: flex;
+}
+
+
+
+.visitingRulesWrapper {
+  padding-bottom: 200px;
+  background: $pageBg;
+}
+
+
+.animalCarouselWrapper {
+  background: $pageBg;
+  padding-bottom: 200px;
+}
+
+.bankCardWrapper {
+  background: $pageBg;
+  padding-bottom: 290px;
+  background-image: url(/img/orange-wave-cut.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}

@@ -32,7 +32,7 @@ export default function VisitingRules() {
         <CallWriteBtns/>
       </div>
 
-      <div className={styles.paddingRight}>
+      <div>
         {visitingRules.map((rule, key) => (
           <CardVisitingRules ruleImg={rule.ruleImg} rule={rule.rule} key={Math.random()}/>
         ))}
