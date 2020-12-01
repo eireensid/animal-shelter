@@ -2,6 +2,7 @@ import Router from 'next/router'
 import {MainLayout} from '~/components/MainLayout'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
+import BankCard from '~/components/BankCard'
 import styles from '~/styles/needs.module.scss'
 
 export default function About(title='Основные нужды приюта') {
@@ -93,6 +94,11 @@ export default function About(title='Основные нужды приюта') 
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
         <AnimalCarousel/>
+      </div>
+    </section>
+    <section>
+      <div className={`${styles.bankCardWrapper} ${styles.pagePaddings}`}>
+        <BankCard/>
       </div>
     </section>
   </MainLayout>
