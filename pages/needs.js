@@ -84,7 +84,6 @@ export default function About(title='Основные нужды приюта') 
             <span>Синулокс 500 и 250 мг</span>
           </div>
         </div>
-
         <VisitingRules/>
       </div>
     </section>

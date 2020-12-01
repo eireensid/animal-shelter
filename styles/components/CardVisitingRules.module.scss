@@ -1,0 +1,25 @@
+@import 'variables.scss';
+
+.visitingRulesCardsBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.visitingRulesCardWrapper {
+  display: flex;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  padding: 65px;
+  align-items: center;
+  flex-basis: 84%;
+}
+.visitingRulesCardWrapper img {
+  margin-right: 30px;
+}
+
+// Arrows
+.visitingRulesArrow img {
+  width: 40px;
+  height: 40px;
+}
