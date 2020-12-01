@@ -2,6 +2,7 @@ import Link from 'next/link'
 import {useState} from 'react'
 import { MainLayout } from '~/components/MainLayout'
 import AnimalCard from '~/components/AnimalCard'
+import AnimalCarousel from '~/components/AnimalCarousel'
 import FindAnimalInput from '~/components/FindAnimalInput'
 import SearchInput from '~/components/SearchInput'
 import PawLabel from '~/components/PawLabel'
@@ -31,7 +32,8 @@ export default function Index(title='Главная') {
 
     <section>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
-        <h2 className={styles.findHomeTitle}>Сейчас ищут дом:</h2>
+        <AnimalCarousel/>
+        {/* <h2 className={styles.findHomeTitle}>Сейчас ищут дом:</h2>
         <div className={styles.findCarouselBlock}>
           <div className={`${styles.findCarouselArrowLeft} ${styles.findCarouselArrow}`}>
             <img src="/img/arrow-left.png" alt="влево"/>
@@ -42,7 +44,7 @@ export default function Index(title='Главная') {
           <div className={`${styles.findCarouselArrowRight} ${styles.findCarouselArrow}`}>
             <img src="/img/arrow-right.png" alt="вправо"/>
           </div>
-        </div>
+        </div> */}
 
         <div className={styles.videoBlock}>
           <div className={styles.videoText}>

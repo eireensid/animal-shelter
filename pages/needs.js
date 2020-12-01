@@ -1,6 +1,7 @@
 import Router from 'next/router'
 import {MainLayout} from '~/components/MainLayout'
 import VisitingRules from '~/components/VisitingRules'
+import AnimalCarousel from '~/components/AnimalCarousel'
 import styles from '~/styles/needs.module.scss'
 
 export default function About(title='Основные нужды приюта') {
@@ -84,7 +85,14 @@ export default function About(title='Основные нужды приюта') 
             <span>Синулокс 500 и 250 мг</span>
           </div>
         </div>
-        <VisitingRules/>
+        <div className={styles.visitingRulesWrapper}>
+          <VisitingRules/>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
+        <AnimalCarousel/>
       </div>
     </section>
   </MainLayout>

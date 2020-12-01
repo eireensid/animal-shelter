@@ -1,0 +1,30 @@
+.findHomeTitle {
+  padding: {
+    top: 145px;
+    bottom: 260px;
+  }
+}
+.findCarouselBlock {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.findCarouselArrow {
+  position: absolute;
+  top: 24%;
+}
+.findCarouselArrowLeft {
+  left: -7%;
+}
+.findCarouselArrowRight {
+  right: -7%;
+}
+
+// .findHomeBlock {
+//   position: relative;
+// }
+
+
+

@@ -12,7 +12,7 @@
   background: $pageBg;
   padding: {
     left: 11%;
-    right: 40px;
+    right: 3%;
     top: 100px;
   }
 }
@@ -49,4 +49,14 @@
 }
 .needsListItem img {
   margin-right: 15px;
+}
+
+.visitingRulesWrapper {
+  padding-bottom: 200px;
+}
+
+
+.animalCarouselWrapper {
+  background: $pageBg;
+  padding-bottom: 200px;
 }
