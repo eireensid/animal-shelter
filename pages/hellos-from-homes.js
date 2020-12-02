@@ -3,7 +3,7 @@ import {MainLayout} from '~/components/MainLayout'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
-import styles from '~/styles/HellosFromHomes.module.scss'
+import styles from '~/styles/hellosFromHomes.module.scss'
 
 export default function HellosFromHomes({title='Приветы из дома'}) {
   return <MainLayout>
