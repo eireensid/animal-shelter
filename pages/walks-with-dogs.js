@@ -3,9 +3,9 @@ import {MainLayout} from '~/components/MainLayout'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
-import styles from '~/styles/walks.module.scss'
+import styles from '~/styles/walksWithDogs.module.scss'
 
-export default function Walks({title='Прогулки с собаками'}) {
+export default function WalksWithDogs({title='Прогулки с собаками'}) {
   return <MainLayout>
     <section>
       <div className={styles.walksBlock}>
