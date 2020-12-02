@@ -38,6 +38,43 @@
   font-size: 0.833em;
 }
 
+// Dropdown for menu
+.menuWrapper {
+  position: relative;
+}
+.menuPetsLink:hover + .menuDropdown {
+  display:block;
+}
+.menuDropdown {
+  display: none;
+  position: absolute;
+  left: 12%;
+  z-index: 100;
+  width: 43%;
+  
+}
+.menuDropdownUl {  
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  margin-top: 20px;
+}
+.menuDropdown li {
+  font-size: 0.722em;
+  cursor: default;
+}
+.menuDropdown li:not(:last-child) {
+  padding-bottom: 18px;
+}
+.menuDropdown li:hover {
+  font-weight: $mediumWeight;
+  color: #7C6035;
+}
+.menuDropdown:hover {
+  display: block;
+}
+
+
 // Footer
 .footerBlock {
   display: flex;

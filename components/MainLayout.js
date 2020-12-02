@@ -3,7 +3,7 @@ import Head from 'next/head'
 import WebsiteTeam from '~/components/WebsiteTeam'
 import styles from '~/styles/MainLayout.module.scss'
 
-export function MainLayout({children, title='Animal shelter'}) {
+export function MainLayout({children, title='Теремок'}) {
   return (
     <>
       <Head>
@@ -19,13 +19,27 @@ export function MainLayout({children, title='Animal shelter'}) {
           </div>
           <nav className={styles.menuWrapper}>
             <Link href="/"><a>О приюте</a></Link>
-            <Link href="/"><a>Питомцы</a></Link>
-            <Link href="/"><a>Приветы из дома</a></Link>
-            <Link href="/"><a>Отчеты</a></Link>
+            <Link href="/"><a className={styles.menuPetsLink}>Питомцы</a></Link>
+            <div className={styles.menuDropdown}>
+              <ul className={styles.menuDropdownUl}>
+                <li>Кошки</li>
+                <li>Собаки</li>
+                <li>Ищут дом</li>
+                <li>Проходят лечение</li>
+                <li>Нужен опекун</li>
+                <li>Нужна адаптация</li>
+                <li>Малыши</li>
+              </ul>
+            </div>
+            <Link href="/hellos-from-homes"><a>Приветы из дома</a></Link>
+            <Link href="/shelter-reports"><a>Отчеты</a></Link>
           </nav>
+
+          {/* Mobile menu */}
           <nav className={styles.menuWrapperBurger}>
             <img className={styles.burger} src="/img/burger.svg" alt="меню"/>
           </nav>
+
           <div className={styles.btnWrapper}>
             <button className={styles.donationBtnHeader}>Пожертвовать</button>
           </div>
@@ -41,24 +55,24 @@ export function MainLayout({children, title='Animal shelter'}) {
             <nav className={styles.aboutShelter}>
               <h4>О приюте</h4>
               <ul>
-                <li><Link href="/"><a>Основные нужды Теремка</a></Link></li>
-                <li><Link href="/"><a>Опекунство и адаптация</a></Link></li>
-                <li><Link href="/"><a>Прогулки с собаками</a></Link></li>
-                <li><Link href="/"><a>Правила посещения приюта</a></Link></li>
-                <li><Link href="/"><a>Приветы из дома</a></Link></li>
-                <li><Link href="/"><a>Отчеты</a></Link></li>
+                <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
+                <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
+                <li><Link href="/walks-with-dogs"><a>Прогулки с собаками</a></Link></li>
+                <li><Link href="/rules-for-shelter-visiting"><a>Правила посещения приюта</a></Link></li>
+                <li><Link href="/hellos-from-homes"><a>Приветы из дома</a></Link></li>
+                <li><Link href="/shelter-reports"><a>Отчеты</a></Link></li>
               </ul>
             </nav>
             <nav className={styles.ourPets}>
               <h4>Наши питомцы</h4>
               <ul>
-                <li><Link href="/"><a>Кошки</a></Link></li>
-                <li><Link href="/"><a>Собаки</a></Link></li>
-                <li><Link href="/"><a>Ищут дом</a></Link></li>
-                <li><Link href="/"><a>Проходят лечение</a></Link></li>
-                <li><Link href="/"><a>Нужен опекун</a></Link></li>
-                <li><Link href="/"><a>Нужна адаптация</a></Link></li>
-                <li><Link href="/"><a>Малыши</a></Link></li>
+                <li><Link href="/cats"><a>Кошки</a></Link></li>
+                <li><Link href="/dogs"><a>Собаки</a></Link></li>
+                <li><Link href="/looking-for-home"><a>Ищут дом</a></Link></li>
+                <li><Link href="/undergo-treatment"><a>Проходят лечение</a></Link></li>
+                <li><Link href="/need-guardian"><a>Нужен опекун</a></Link></li>
+                <li><Link href="/need-adoptation"><a>Нужна адаптация</a></Link></li>
+                <li><Link href="/baby-pets"><a>Малыши</a></Link></li>
               </ul>
             </nav>
             <nav className={styles.contacts}>
