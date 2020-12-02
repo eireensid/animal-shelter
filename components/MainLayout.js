@@ -15,20 +15,30 @@ export function MainLayout({children, title='Теремок'}) {
       <header>
         <div className={styles.headerBlock}>
           <div className={styles.logoWrapperHeader}>
-            <img className={styles.logoHeader} src="/img/logo.svg" alt="лого"/>
+            <Link href="/"><img className={styles.logoHeader} src="/img/logo.svg" alt="лого"/></Link>
           </div>
           <nav className={styles.menuWrapper}>
-            <Link href="/"><a>О приюте</a></Link>
-            <Link href="/"><a className={styles.menuPetsLink}>Питомцы</a></Link>
-            <div className={styles.menuDropdown}>
+            <a className={styles.menuAboutLink}>О приюте</a>
+            <div className={`${styles.menuDropdown} ${styles.menuAboutDropdown}`}>
               <ul className={styles.menuDropdownUl}>
-                <li>Кошки</li>
-                <li>Собаки</li>
-                <li>Ищут дом</li>
-                <li>Проходят лечение</li>
-                <li>Нужен опекун</li>
-                <li>Нужна адаптация</li>
-                <li>Малыши</li>
+                <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
+                <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
+                <li><Link href="/walks-with-dogs"><a>Прогулки с собаками</a></Link></li>
+                <li><Link href="/rules-for-shelter-visiting"><a>Правила посещения приюта</a></Link></li>
+                <li><Link href="/hellos-from-homes"><a>Приветы из дома</a></Link></li>
+                <li><Link href="/shelter-reports"><a>Отчеты</a></Link></li>
+              </ul>
+            </div>
+            <a className={styles.menuPetsLink}>Питомцы</a>
+            <div className={`${styles.menuDropdown} ${styles.menuPetsDropdown}`}>
+              <ul className={styles.menuDropdownUl}>
+                <li><Link href="/cats"><a>Кошки</a></Link></li>
+                <li><Link href="/dogs"><a>Собаки</a></Link></li>
+                <li><Link href="/basic-needs-of-teremok"><a>Ищут дом</a></Link></li>
+                <li><Link href="/undergo-treatment"><a>Проходят лечение</a></Link></li>
+                <li><Link href="/need-guardian"><a>Нужен опекун</a></Link></li>
+                <li><Link href="/need-adoptation"><a>Нужна адаптация</a></Link></li>
+                <li><Link href="/baby-pets"><a>Малыши</a></Link></li>
               </ul>
             </div>
             <Link href="/hellos-from-homes"><a>Приветы из дома</a></Link>

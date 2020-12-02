@@ -42,16 +42,24 @@
 .menuWrapper {
   position: relative;
 }
-.menuPetsLink:hover + .menuDropdown {
+.menuAboutLink:hover + .menuAboutDropdown {
+  display:block;
+}
+.menuPetsLink:hover + .menuPetsDropdown {
   display:block;
 }
 .menuDropdown {
-  display: none;
   position: absolute;
-  left: 12%;
   z-index: 100;
-  width: 43%;
-  
+  display: none;
+}
+.menuAboutDropdown {
+  left: -19%;
+  width: 58%; 
+}
+.menuPetsDropdown {
+  left: 12%;
+  width: 43%; 
 }
 .menuDropdownUl {  
   background: #fff;
@@ -59,16 +67,16 @@
   padding: 35px;
   margin-top: 20px;
 }
-.menuDropdown li {
+.menuDropdown a {
   font-size: 0.722em;
-  cursor: default;
+  font-weight: normal;
+}
+.menuDropdown a:hover {
+  font-weight: $mediumWeight;
+  color: #7C6035;
 }
 .menuDropdown li:not(:last-child) {
   padding-bottom: 18px;
-}
-.menuDropdown li:hover {
-  font-weight: $mediumWeight;
-  color: #7C6035;
 }
 .menuDropdown:hover {
   display: block;
