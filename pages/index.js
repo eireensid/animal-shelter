@@ -32,7 +32,7 @@ export default function Index(title='Главная') {
 
     <section>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
-        <AnimalCarousel/>
+        <AnimalCarousel animals={animals}/>
 
         <div className={styles.videoBlock}>
           <div className={styles.videoText}>

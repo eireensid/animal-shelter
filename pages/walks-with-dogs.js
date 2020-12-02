@@ -1,4 +1,5 @@
 import Router from 'next/router'
+import {useState} from 'react'
 import {MainLayout} from '~/components/MainLayout'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
@@ -6,7 +7,12 @@ import BankCard from '~/components/BankCard'
 import styles from '~/styles/walksWithDogs.module.scss'
 
 export default function WalksWithDogs({title='Прогулки с собаками'}) {
-  return <MainLayout>
+  const [animals, setAnimals] = useState([
+    {name: "Миша", age: "10 лет", sex: "М", photo: "Misha.png"},
+    {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
+    {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"}
+  ])
+  return <MainLayout title={title}>
     <section>
       <div className={styles.walksBlock}>
         <div className={styles.breadCrumbs}>
@@ -65,7 +71,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel/>
+        <AnimalCarousel animals={animals}/>
       </div>
     </section>
     <section>

@@ -2,13 +2,13 @@ import {useState} from 'react'
 import AnimalCard from '~/components/AnimalCard'
 import styles from '~/styles/components/AnimalCarousel.module.scss'
 
-export default function AnimalCarousel() {
+export default function AnimalCarousel({animals}) {
 
-  const [animals, setAnimals] = useState([
-    {name: "Миша", age: "10 лет", sex: "М", photo: "Misha.png"},
-    {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
-    {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"}
-  ])
+  // const [animals, setAnimals] = useState([
+  //   {name: "Миша", age: "10 лет", sex: "М", photo: "Misha.png"},
+  //   {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
+  //   {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"}
+  // ])
 
   return <>
     <div className={styles.findCarouselCard}>
