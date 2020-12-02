@@ -12,7 +12,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
     {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
     {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"}
   ])
-  return <MainLayout title={title}>
+  return <MainLayout>
     <section>
       <div className={styles.needsBlock}>
         <div className={styles.breadCrumbs}>

@@ -12,7 +12,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
     {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
     {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"}
   ])
-  return <MainLayout title={title}>
+  return <MainLayout>
     <section>
       <div className={styles.walksBlock}>
         <div className={styles.breadCrumbs}>
