@@ -11,7 +11,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
   const [animals, setAnimals] = useState([
     {name: "Миша", age: "10 лет", sex: "М", photo: "Misha.png"},
     {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
-    {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"}
+    {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"},
   ])
   return <MainLayout>
     <section>
@@ -33,7 +33,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
       <div className={`${styles.walksGalleryBlock} ${styles.pagePaddings}`}>
         <h2>Кадры с прогулок</h2>
         <div className={styles.walksGallery}>
-          <div className={styles.walksGalleryLeft}>
+          {/* <div className={styles.walksGalleryLeft}>
             <img src="/img/walksPage/left1.png" alt="прогулка"/>
             <div className={styles.insideGalleryLeftMiddle}>
               <img src="/img/walksPage/left2.png" alt="прогулка"/>
@@ -58,7 +58,8 @@ export default function WalksWithDogs({title='Прогулки с собакам
             <img src="/img/walksPage/right2.png" alt="прогулка"/>
             <img src="/img/walksPage/right3.png" alt="прогулка"/>
             <img src="/img/walksPage/right4.png" alt="прогулка"/>
-          </div>
+          </div> */}
+          <img src="/img/walksPage/walkGalleryPhotos.png" alt="прогулка"/>
         </div>
       </div>
     </section>
