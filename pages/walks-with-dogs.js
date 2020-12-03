@@ -1,6 +1,7 @@
 import Router from 'next/router'
 import {useState} from 'react'
 import {MainLayout} from '~/components/MainLayout'
+import BreadCrumbs from '~/components/BreadCrumbs'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
@@ -15,10 +16,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
   return <MainLayout>
     <section>
       <div className={styles.walksBlock}>
-        <div className={styles.breadCrumbs}>
-          <span>Главная</span><span> / </span><span>{title}</span>
-        </div>
-
+        <BreadCrumbs title={title}/>
         <div className={styles.walksWrapper}>
           <div className={styles.walksDesc}>
             <h2>Прогулки с собаками</h2>
@@ -65,9 +63,9 @@ export default function WalksWithDogs({title='Прогулки с собакам
       </div>
     </section>
     <section>
-    <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
-          <VisitingRules/>
-        </div>
+      <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
+        <VisitingRules/>
+      </div>
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>

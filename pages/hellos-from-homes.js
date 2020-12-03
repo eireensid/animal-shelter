@@ -1,12 +1,13 @@
 import Router from 'next/router'
 import {useState} from 'react'
 import {MainLayout} from '~/components/MainLayout'
+import BreadCrumbs from '~/components/BreadCrumbs'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/hellosFromHomes.module.scss'
 
-export default function HellosFromHomes({title='Приветы из дома'}) {
+export default function HellosFromHomes({title='Привет из дома'}) {
   const [animals, setAnimals] = useState([
     {name: "Миша", age: "10 лет", sex: "М", photo: "Misha.png"},
     {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
@@ -15,10 +16,7 @@ export default function HellosFromHomes({title='Приветы из дома'}) 
   return <MainLayout>
     <section>
       <div className={styles.needsBlock}>
-        <div className={styles.breadCrumbs}>
-          <span>Главная</span><span> / </span><span>{title}</span>
-        </div>
-
+        <BreadCrumbs title={title}/>
         <div className={styles.needsWrapper}>
           <div className={styles.needsDesc}>
             <h2>Основные нужды Теремка</h2>
@@ -96,9 +94,9 @@ export default function HellosFromHomes({title='Приветы из дома'}) 
       </div>
     </section>
     <section>
-    <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
-          <VisitingRules/>
-        </div>
+      <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
+        <VisitingRules/>
+      </div>
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>

@@ -1,6 +1,7 @@
 import Router from 'next/router'
 import {useState} from 'react'
 import {MainLayout} from '~/components/MainLayout'
+import BreadCrumbs from '~/components/BreadCrumbs'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
@@ -15,10 +16,7 @@ export default function ShelterReports({title='Отчеты'}) {
   return <MainLayout>
     <section>
       <div className={styles.needsBlock}>
-        <div className={styles.breadCrumbs}>
-          <span>Главная</span><span> / </span><span>{title}</span>
-        </div>
-
+        <BreadCrumbs title={title}/>
         <div className={styles.needsWrapper}>
           <div className={styles.needsDesc}>
             <h2>Основные нужды Теремка</h2>
@@ -96,9 +94,9 @@ export default function ShelterReports({title='Отчеты'}) {
       </div>
     </section>
     <section>
-    <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
-          <VisitingRules/>
-        </div>
+      <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
+        <VisitingRules/>
+      </div>
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>

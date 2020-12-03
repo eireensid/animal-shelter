@@ -1,6 +1,7 @@
 import Router from 'next/router'
 import {useState} from 'react'
 import {MainLayout} from '~/components/MainLayout'
+import BreadCrumbs from '~/components/BreadCrumbs'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
@@ -15,10 +16,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
   return <MainLayout>
     <section>
       <div className={styles.guardianshipAdoptationBlock}>
-        <div className={styles.breadCrumbs}>
-          <span>Главная</span><span> / </span><span>{title}</span>
-        </div>
-
+        <BreadCrumbs title={title}/>
         <div className={styles.guardianshipAdoptationWrapper}>
           <div className={styles.guardianshipAdoptationDesc}>
             <h2>{title}</h2>

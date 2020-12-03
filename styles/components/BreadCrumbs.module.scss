@@ -1,0 +1,10 @@
+@import 'variables.scss';
+
+.breadCrumbs span {
+  font-size: $breadCrumbsAndBtnTxt;
+  font-weight: $mediumWeight;
+  &:hover {
+    color: #7C6035;
+    cursor: default;
+  }
+}
