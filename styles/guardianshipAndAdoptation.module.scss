@@ -39,9 +39,62 @@
 }
 
 // About guardianship
+.aboutGuardianshipAdoptationBlocks {
+  background: $pageBg;
+}
+.aboutGuardianshipBlock {
+  padding-bottom: 200px;
+}
+.aboutGuardianshipBlockDesc {
+  padding: {
+    top: 38px;
+    bottom: 100px;
+  };
+  width: 53%;
+}
 .aboutGuardianshipGalleryRow {
   display: flex;
   align-items: center;
+}
+.aboutGuardianshipGalleryRow:not(:last-child) {
+  padding-bottom: 100px;
+}
+.aboutGuardianshipGalleryRow h3 {
+  padding-bottom: 35px;
+}
+.aboutGuardianshipGalleryRowTextRight {
+  padding-left: 9%;
+  width: 60%;
+}
+.aboutGuardianshipGalleryRowTextLeft {
+  padding-right: 9%;
+  width: 60%;
+}
+.afterGuardianshipGalleryDesc {
+  padding: {
+    top: 100px;
+    bottom: 43px;
+  };
+  width: 53%;
+}
+
+// About adaptation
+.aboutAdaptationBlock {
+  padding-bottom: 200px;
+}
+.aboutAdaptationBlock h2 {
+  padding-bottom: 105px;
+}
+.aboutAdaptationBlockDesc {
+  display: flex;
+  align-items: center;
+}
+.aboutAdaptationBlockText {
+  padding-left: 9%;
+  width: 60%;
+}
+.aboutAdaptationBlockText button {
+  margin-top: 43px;
 }
 
 
