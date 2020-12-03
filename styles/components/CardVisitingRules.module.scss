@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-.visitingRulesCardsBlock {
+.visitingRulesCard {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,6 +20,45 @@
 
 // Arrows
 .visitingRulesArrow img {
-  width: 40px;
-  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+.visitingRulesArrowRight img {
+  padding: {
+    top: 11px;
+    right: 13px;
+    bottom: 11px;
+    left: 15px;
+  }
+}
+.visitingRulesArrowLeft img {
+  padding: {
+    top: 11px;
+    right: 15px;
+    bottom: 11px;
+    left: 13px;
+  }
+}
+.visitingRulesArrow img:hover {
+  background: #FFB78E;
+}
+.visitingRulesArrow img:active {
+  background: #E48244;
+}
+
+// Rounds
+.visitingRulesRounds {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.visitingRulesRound {
+  width: 11px;
+  height: 11px;
+  background: #c4c4c4;
+  border-radius: 50%;
+}
+.visitingRulesRound:not(:last-child) {
+  margin-right: 10px;
 }

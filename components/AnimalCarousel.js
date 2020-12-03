@@ -15,13 +15,13 @@ export default function AnimalCarousel({animals}) {
       <h2 className={styles.findHomeTitle}>Сейчас ищут дом:</h2>
       <div className={styles.findCarouselBlock}>
         <div className={`${styles.findCarouselArrowLeft} ${styles.findCarouselArrow}`}>
-          <img src="/img/arrow-left.png" alt="влево"/>
+          <img src="/img/arrow-left.svg" alt="влево"/>
         </div>
         {animals.map((animal, key) => (
           <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={Math.random()}/>
         ))}
         <div className={`${styles.findCarouselArrowRight} ${styles.findCarouselArrow}`}>
-          <img src="/img/arrow-right.png" alt="вправо"/>
+          <img src="/img/arrow-right.svg" alt="вправо"/>
         </div>
       </div>
     </div>

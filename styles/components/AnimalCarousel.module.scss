@@ -21,10 +21,34 @@
 .findCarouselArrowRight {
   right: -7%;
 }
+.findCarouselArrow img {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+.findCarouselArrowLeft img {
+  padding: {
+    top: 11px;
+    right: 15px;
+    bottom: 11px;
+    left: 13px;
+  }
+}
+.findCarouselArrowRight img {
+  padding: {
+    top: 11px;
+    right: 13px;
+    bottom: 11px;
+    left: 15px;
+  }
+}
 
-// .findHomeBlock {
-//   position: relative;
-// }
+.findCarouselArrow img:hover {
+  background: #FFB78E;
+}
+.findCarouselArrow img:active {
+  background: #E48244;
+}
 
 
 
