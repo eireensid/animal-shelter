@@ -1,0 +1,67 @@
+@import 'variables.scss';
+
+.pagePaddings {
+  padding: {
+    left: 11%;
+    right: 11%;
+  }
+}
+
+
+.breadCrumbs {
+  font-size: $breadCrumbsAndBtnTxt;
+  font-weight: $mediumWeight;
+}
+
+.guardianshipAdoptationBlock {
+  background: $pageBg;
+  padding: {
+    left: 11%;
+    right: 3%;
+    top: 100px;
+  }
+}
+
+.guardianshipAdoptationWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -50px;
+  padding-bottom: 80px;
+}
+.guardianshipAdoptationDesc {
+  flex-basis: 48%;
+  margin-top: 20px;
+}
+.guardianshipAdoptationDesc p {
+  width: 83%;
+  margin-top: 40px;
+}
+
+// About guardianship
+.aboutGuardianshipGalleryRow {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.visitingRulesWrapper {
+  padding-bottom: 200px;
+  background: $pageBg;
+}
+
+
+.animalCarouselWrapper {
+  background: $pageBg;
+  padding-bottom: 200px;
+}
+
+.bankCardWrapper {
+  background: $pageBg;
+  padding-bottom: 290px;
+  background-image: url(/img/orange-wave-cut.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
