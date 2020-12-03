@@ -114,9 +114,9 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
     </section>
 
     <section>
-    <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
-          <VisitingRules/>
-        </div>
+      <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
+        <VisitingRules/>
+      </div>
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>

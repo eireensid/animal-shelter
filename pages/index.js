@@ -189,26 +189,26 @@ export default function Index(title='Главная') {
         </div>
 
         <div className={styles.findCarouselBlock}>
-          {animals.map((animal, key) => (
-            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={Math.random()}/>
+          {animals.map((animal, index) => (
+            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={index}/>
           ))}
         </div>
 
         <div className={styles.findCarouselBlock}>
-          {animals.map((animal, key) => (
-            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={Math.random()}/>
+          {animals.map((animal, index) => (
+            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={index}/>
           ))}
         </div>
 
         <div className={styles.findCarouselBlock}>
-          {animals.map((animal, key) => (
-            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={Math.random()}/>
+          {animals.map((animal, index) => (
+            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={index}/>
           ))}
         </div>
 
         <div className={styles.findCarouselBlock}>
-          {animals.map((animal, key) => (
-            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={Math.random()}/>
+          {animals.map((animal, index) => (
+            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={index}/>
           ))}
         </div>
 

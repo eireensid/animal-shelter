@@ -1,11 +1,11 @@
 @import 'variables.scss';
 
-.visitingRulesCard {
+.visitingRulesCarousel {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.visitingRulesCardWrapper {
+.visitingRulesCard {
   display: flex;
   background: #fff;
   border-radius: 30px;
@@ -14,7 +14,7 @@
   align-items: center;
   flex-basis: 84%;
 }
-.visitingRulesCardWrapper img {
+.visitingRulesCard img {
   margin-right: 3.3%;
 }
 
@@ -58,6 +58,9 @@
   height: 11px;
   background: #c4c4c4;
   border-radius: 50%;
+}
+.visitingRulesRoundActive {
+  background: black;
 }
 .visitingRulesRound:not(:last-child) {
   margin-right: 10px;
