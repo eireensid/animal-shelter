@@ -46,8 +46,12 @@
   padding-bottom: 105px;
 }
 .walksGallery {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
+  width: 100%;
+}
+.walksGallery img {
+  width: 100%;
 }
 // .walksGalleryLeft {
 //   flex-basis: 210%;

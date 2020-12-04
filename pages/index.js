@@ -12,9 +12,9 @@ import styles from '~/styles/index.module.scss'
 export default function Index(title='Главная') {
 
   const [animals, setAnimals] = useState([
-    {name: "Миша", age: "10 лет", sex: "М", photo: "Misha.png"},
-    {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
-    {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"}
+    {name: "Миша", paw: "looking-for-home.png", age: "10 лет", sex: "М", photo: "Misha.png"},
+    {name: "Китти", paw: "looking-for-home.png", age: "4 года", sex: "Ж", photo: "Kitty.png"},
+    {name: "Женя", paw: "looking-for-home.png", age: "3 года", sex: "М", photo: "Zhenya.png"}
   ])
 
   return <MainLayout>
