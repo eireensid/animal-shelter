@@ -1,5 +1,4 @@
 import Router from 'next/router'
-import {useState} from 'react'
 import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import VisitingRules from '~/components/VisitingRules'
@@ -7,12 +6,7 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/guardianshipAndAdoptation.module.scss'
 
-export default function GuardianshipAndAdoptation({title='Опекунство и адаптация'}) {
-  const [animals, setAnimals] = useState([
-    {name: "Миша", age: "10 лет", sex: "М", photo: "Misha.png"},
-    {name: "Китти", age: "4 года", sex: "Ж", photo: "Kitty.png"},
-    {name: "Женя", age: "3 года", sex: "М", photo: "Zhenya.png"}
-  ])
+export default function GuardianshipAndAdoptation({title='Опекунство и адаптация', animals}) {
   return <MainLayout>
     <section>
       <div className={styles.guardianshipAdoptationBlock}>

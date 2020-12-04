@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import {useState} from 'react'
 import { MainLayout } from '~/components/MainLayout'
 import AnimalCard from '~/components/AnimalCard'
 import AnimalCarousel from '~/components/AnimalCarousel'
@@ -9,14 +8,7 @@ import PawLabel from '~/components/PawLabel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/index.module.scss'
 
-export default function Index(title='Главная') {
-
-  const [animals, setAnimals] = useState([
-    {name: "Миша", paw: "looking-for-home.png", age: "10 лет", sex: "М", photo: "Misha.png"},
-    {name: "Китти", paw: "looking-for-home.png", age: "4 года", sex: "Ж", photo: "Kitty.png"},
-    {name: "Женя", paw: "looking-for-home.png", age: "3 года", sex: "М", photo: "Zhenya.png"}
-  ])
-
+export default function Index({title='Главная', animals}) {
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
