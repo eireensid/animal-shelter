@@ -1,6 +1,11 @@
 import styles from '~/styles/components/BankCard.module.scss'
 
 export default function BankCard() {
+
+const copyText = () => {
+  navigator.clipboard.writeText("5469 5500 6217 8147")
+}
+
   return <>
     <div className={styles.donationBlock}>
       <h2>Для пожертвований:</h2>
@@ -11,7 +16,7 @@ export default function BankCard() {
             <span>5469 5500 6217 8147</span>
           </div>
           <div className={styles.bankCardBtn}>
-            <button>Скопировать номер</button>
+            <button onClick={copyText}>Скопировать номер</button>
           </div>
         </div>
       </div>
