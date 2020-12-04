@@ -1,23 +1,10 @@
-import {useState, useEffect} from 'react'
+import useCarousel from '~/hooks/useCarousel'
 import styles from '~/styles/components/VisitingRulesCarousel.module.scss'
 
 
 export default function VisitingRulesCarousel({visitingRules}) {
-
-  const len = visitingRules.length - 1
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [activeRule, setActiveRule] = useState(visitingRules[activeIndex]);
-
-  useEffect(() => {
-    setActiveRule(visitingRules[activeIndex])
-  }, [activeIndex])
-
-  const prevSlide = () => {
-    setActiveIndex(activeIndex < 1 ? len : activeIndex - 1)
-  }
-  const nextSlide = () => {
-    setActiveIndex(activeIndex === len ? 0 : activeIndex + 1)
-  }
+  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(visitingRules, 1)
+  const activeRule = curItems[0]
 
   const getRoundClasses = (index) => {
     const dynamicStyle = activeIndex === index ? styles.visitingRulesRoundActive : styles.visitingRulesRound
