@@ -1,0 +1,61 @@
+@import 'variables.scss';
+
+.pagePaddings {
+  padding: {
+    left: 11%;
+    right: 11%;
+  }
+}
+
+
+.reportsBlock {
+  background: $pageBg;
+  padding: {
+    left: 11%;
+    right: 11%;
+    top: 100px;
+  }
+}
+
+.reportsWrapper {
+  // margin-top: -50px;
+  padding-bottom: 200px;
+}
+.reportsDesc {
+  width: 57%;
+  margin-top: 65px;
+}
+.reportsDesc p {
+  width: 85%;
+  margin-top: 40px;
+}
+
+.reports {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.reportsBtns button:not(:last-child) {
+  margin-bottom: 35px;
+  display: block;
+}
+.reportsBtns span {
+  color: #fff;
+}
+
+
+
+.animalCarouselWrapper {
+  background: $pageBg;
+  padding-bottom: 200px;
+}
+
+.bankCardWrapper {
+  background: $pageBg;
+  padding-bottom: 290px;
+  background-image: url(/img/orange-wave-cut.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}

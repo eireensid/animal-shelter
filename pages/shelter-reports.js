@@ -7,94 +7,33 @@ import BankCard from '~/components/BankCard'
 import styles from '~/styles/shelterReports.module.scss'
 
 export default function ShelterReports({title='Отчеты', animals}) {
+  const filteredAnimals = animals.filter((item) => {
+    return item.paw === "need-adoptation.png"
+  })
   return <MainLayout>
     <section>
-      <div className={styles.needsBlock}>
+      <div className={styles.reportsBlock}>
         <BreadCrumbs title={title}/>
-        <div className={styles.needsWrapper}>
-          <div className={styles.needsDesc}>
-            <h2>Основные нужды Теремка</h2>
-            <p>Животные постоянно нуждаются в средствах по уходу, кормах, лекарствах и других необходимых вещах, которые вы можете самостоятельно принести 
-              или отправить в помощь приюту. На этой странице вы найдете список вещей, в которых постоянно нуждаются животные.</p>
+        <div className={styles.reportsWrapper}>
+          <div className={styles.reportsDesc}>
+            <h2>{title}</h2>
+            <p>За все время существования приюта мы собрали большое количество пожертвований на лечение и содержание хвостиков, а значит и много отчетов 
+              о затратах. Все отчеты вы всегда можете посмотреть в нашей группе ВКонтакте, а здесь мы разместили ссылки на самые актуальные из них.</p>
           </div>
-          <div className={styles.photoWithPhraseBubbleWrapper}>
-            <img className={styles.photoWithPhraseBubble} src="/img/needs-dog-with-bubble.svg" alt="спасибо"/>
-          </div>
-        </div>
-
-        <div className={styles.needsListWrapper}>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Перчатки тканевые и резиновые “М”</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Консервные ножи</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Ковшики для зачерпывания каши, желательно литые</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Капли от блох и глистогонка</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Крупа, предпочтительно гречневая</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Консервы для собак и кошек</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Сухой корм для собак и кошек</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Металлические вёдра 7-9 литров</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Поводки 3 метра брезентовые, широкие</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Мешки под мусор белые, строительные</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Ошейники на средних собак с большим колличеством дырочек</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Губки для мытья посуды</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Стиральный порошок</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Хозяйственное мыло</span>
-          </div>
-          <div className={styles.needsListItem}>
-            <img src="/img/ways-to-help/ellipse.png"/>
-            <span>Синулокс 500 и 250 мг</span>
+          <div className={styles.reports}>
+            <div className={styles.reportsBtns}>
+              <button><a href="https://vk.com/topic-188970721_39934359" target="_blank"><span>ФО Крупа</span></a></button>
+              <button><a href="https://vk.com/topic-188970721_40039637" target="_blank"><span>ФО Лечение</span></a></button>
+              <button><a href="https://vk.com/topic-188970721_40010432" target="_blank"><span>ФО Опилки</span></a></button>
+            </div>
+            <img src="/img/reports-photo.png" alt="отчеты"/>
           </div>
         </div>
-        
-      </div>
-    </section>
-    <section>
-      <div className={`${styles.visitingRulesWrapper} ${styles.pagePaddings}`}>
-        <VisitingRules/>
       </div>
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={animals}/>
+        <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:"/>
       </div>
     </section>
     <section>

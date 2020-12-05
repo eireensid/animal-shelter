@@ -3,12 +3,12 @@ import useCarousel from '~/hooks/useCarousel'
 import AnimalCard from '~/components/AnimalCard'
 import styles from '~/styles/components/AnimalCarousel.module.scss'
 
-export default function AnimalCarousel({animals, animalCarouselTitle}) {
+export default function AnimalCarousel({animals, title}) {
   const { curItems, prevSlide, nextSlide } = useCarousel(animals, 3)
 
   return <>
     <div className={styles.findCarouselCard}>
-      <h2 className={styles.findHomeTitle}>{animalCarouselTitle}</h2>
+      <h2 className={styles.findHomeTitle}>{title}</h2>
       <div className={styles.findCarouselBlock}>
         <div onClick={prevSlide} className={`${styles.findCarouselArrowLeft} ${styles.findCarouselArrow}`}>
           <img src="/img/arrow-left.svg" alt="влево"/>

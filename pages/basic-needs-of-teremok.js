@@ -97,7 +97,7 @@ export default function BasicNeedsOfTeremok({title='Нужды приюта', an
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} animalCarouselTitle="Сейчас ищут дом:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:"/>
       </div>
     </section>
     <section>

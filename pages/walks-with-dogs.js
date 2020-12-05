@@ -67,7 +67,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} animalCarouselTitle="Им срочно нужна адаптация:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:"/>
       </div>
     </section>
     <section>

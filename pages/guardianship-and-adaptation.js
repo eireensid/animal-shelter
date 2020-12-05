@@ -115,7 +115,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} animalCarouselTitle="Им нужен опекун:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Им нужен опекун:"/>
       </div>
     </section>
     <section>

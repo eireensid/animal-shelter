@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+.pagePaddings {
+  padding: {
+    left: 11%;
+    right: 11%;
+  }
+}
+
+
+.hellosBlock {
+  background: $pageBg;
+  padding: {
+    left: 11%;
+    right: 3%;
+    top: 100px;
+  }
+}
+
+.hellosWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -50px;
+  padding-bottom: 80px;
+}
+.hellosDesc {
+  flex-basis: 48%;
+  margin-top: 20px;
+}
+.hellosDesc p {
+  width: 85%;
+  margin-top: 40px;
+}
+
+.foundHomeBlock {
+  background: $pageBg;
+  padding-bottom: 200px;
+}
+
+.animalCarouselWrapper {
+  background: $pageBg;
+  padding-bottom: 200px;
+}
+
+.bankCardWrapper {
+  background: $pageBg;
+  padding-bottom: 290px;
+  background-image: url(/img/orange-wave-cut.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}

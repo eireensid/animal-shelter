@@ -30,7 +30,7 @@ export default function Index({title='Главная', animals}) {
 
     <section>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} animalCarouselTitle="Сейчас ищут дом:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:"/>
 
         <div className={styles.videoBlock}>
           <div className={styles.videoText}>
