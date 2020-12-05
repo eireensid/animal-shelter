@@ -16,6 +16,9 @@
 .logoWrapperHeader {
   flex-basis: 17%;
 }
+.logoHeader {
+  cursor: pointer;
+}
 .menuWrapperBurger {
   display: none;
 }
@@ -105,6 +108,7 @@
 }
 .logoFooter {
   width: 9.1%;
+  cursor: pointer;
 }
 .footerBlock a {
   color: $secondColor;
