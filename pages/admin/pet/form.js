@@ -109,7 +109,7 @@ export default function AddPet() {
             />
             <FormControlLabel className={styles.mr10}
               control={<Checkbox checked={sterilization} onChange={e => setSterilization(e.target.checked)} />}
-              label="Стериализация"
+              label="Стерилизация"
             />
           </Box>
           <TextField className={styles.inputField} label="Описание" variant="outlined" multiline={true}
