@@ -34,15 +34,15 @@ export default function Auth() {
       <title>Auth</title>
     </Head>
     <Container maxWidth="sm">
-      <Box className={styles.authBox}>
-        <Paper className={styles.authPaper}>
+      <Box className={styles.box}>
+        <Paper className={styles.paper}>
           <h3>Авторизация</h3>
-          <TextField className={styles.authInputField} label="Логин" variant="outlined"
+          <TextField className={styles.inputField} label="Логин" variant="outlined"
             value={login} onChange={e => setLogin(e.target.value)} />
-          <TextField className={styles.authInputField} label="Пароль" variant="outlined" type="password"
+          <TextField className={styles.inputField} label="Пароль" variant="outlined" type="password"
             value={password} onChange={e => setPassword(e.target.value)} />
-          {errorText && <div className={styles.authErrorText}>{errorText}</div>}
-          <Button className={styles.authButton} variant="contained" color="primary" disableElevation
+          {errorText && <div className={styles.errorText}>{errorText}</div>}
+          <Button className={styles.button} variant="contained" color="primary" disableElevation
             onClick={doLogin}>
             Вход
           </Button>

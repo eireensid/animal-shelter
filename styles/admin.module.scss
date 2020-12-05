@@ -9,14 +9,14 @@
   width: 35%;
 }
 
-.authBox {
+.box {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
-.authPaper {
+.paper {
   padding: 30px 15px;
   display: flex;
   flex-direction: column;
@@ -24,19 +24,23 @@
   width: 80%;
 }
 
-.authInputField {
+.inputField {
   width: 100%;
   margin-top: 15px !important;
 }
 
-.authButton {
+.button {
   margin-top: 15px !important;
   width: 35%;
 }
 
-.authErrorText {
+.errorText {
   margin-top: 15px !important;
   text-align: left;
   width: 100%;
   color: #f44336;
+}
+
+.mr10 {
+  margin-right: 10px;
 }
