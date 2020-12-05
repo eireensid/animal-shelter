@@ -5,6 +5,7 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import FindAnimalInput from '~/components/FindAnimalInput'
 import SearchInput from '~/components/SearchInput'
 import PawLabel from '~/components/PawLabel'
+import SocialBtns from '~/components/SocialBtns'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/index.module.scss'
 
@@ -12,6 +13,8 @@ export default function Index({title='Главная', animals}) {
   const filteredAnimals = animals.filter((item) => {
     return item.paw === "looking-for-home.png"
   })
+  const galleryAnimals = animals.slice(0, 12)
+
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -145,9 +148,7 @@ export default function Index({title='Главная', animals}) {
               <p>Репосты — наше всё. 90% животных находят дом только благодаря этому. Подписывайтесь на нас в социальных сетях и помогайте распространять информацию 
                 о наших питомцах. Возможно, именно вы поможете кому-то из них стать счастливым домашним любимцем.</p>
               <div className={styles.socialsBlock}>
-                <img src="/img/whatsapp.svg" alt="what's app"/>
-                <img src="/img/vk.svg" alt="vk"/>
-                <img src="/img/instagram.svg" alt="instagram"/>
+                <SocialBtns/>
               </div>
             </div>
           </div>
@@ -183,8 +184,8 @@ export default function Index({title='Главная', animals}) {
           </div>
         </div>
 
-        <div className={styles.findCarouselBlock}>
-          {animals.map((animal, index) => (
+        <div className={styles.ourPetsGallery}>
+          {galleryAnimals.map((animal, index) => (
             <AnimalCard animal={animal} key={index}/>
           ))}
         </div>
