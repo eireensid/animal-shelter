@@ -1,7 +1,10 @@
 import styles from '~/styles/components/AnimalCard.module.scss'
 
-export default function AnimalCard({photo, name, paw, age, sex}) {
-  
+export default function AnimalCard({animal}) {
+  if (!animal) return <>
+    <div className={styles.findCarouselCard} style={{ opacity: 0 }}></div>
+  </>
+  const {photo, name, paw, age, sex} = animal
   return <>
     <div className={styles.findCarouselCard}>
       <div className={styles.petImgBlock}>

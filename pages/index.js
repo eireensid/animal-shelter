@@ -9,6 +9,9 @@ import BankCard from '~/components/BankCard'
 import styles from '~/styles/index.module.scss'
 
 export default function Index({title='Главная', animals}) {
+  const filteredAnimals = animals.filter((item) => {
+    return item.paw === "looking-for-home.png"
+  })
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -24,7 +27,7 @@ export default function Index({title='Главная', animals}) {
 
     <section>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={animals}/>
+        <AnimalCarousel animals={filteredAnimals} animalCarouselTitle="Сейчас ищут дом:"/>
 
         <div className={styles.videoBlock}>
           <div className={styles.videoText}>
@@ -182,25 +185,7 @@ export default function Index({title='Главная', animals}) {
 
         <div className={styles.findCarouselBlock}>
           {animals.map((animal, index) => (
-            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={index}/>
-          ))}
-        </div>
-
-        <div className={styles.findCarouselBlock}>
-          {animals.map((animal, index) => (
-            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={index}/>
-          ))}
-        </div>
-
-        <div className={styles.findCarouselBlock}>
-          {animals.map((animal, index) => (
-            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={index}/>
-          ))}
-        </div>
-
-        <div className={styles.findCarouselBlock}>
-          {animals.map((animal, index) => (
-            <AnimalCard name={animal.name} age={animal.age} sex={animal.sex} photo={animal.photo} key={index}/>
+            <AnimalCard animal={animal} key={index}/>
           ))}
         </div>
 

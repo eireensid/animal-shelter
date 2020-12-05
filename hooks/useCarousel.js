@@ -12,6 +12,9 @@ export default function useCarousel (items, count) {
       endIndex = items.length
     }
     const newCurItems = items.slice(startIndex, endIndex)
+    while (newCurItems.length < count) {
+      newCurItems.push(null)
+    }
     setCurItems(newCurItems)
   }, [activeIndex])
 
