@@ -22,14 +22,14 @@ export default function Admin() {
     }
   }, [])
 
-  function addPet () {
+  function formPet () {
     console.log('addPet')
-    Router.push('/admin/pet/add')
+    Router.push('/admin/pet/form')
   }
 
-  function etitPets () {
+  function listPets () {
     console.log('etitPets')
-    Router.push('/admin/pet/edit')
+    Router.push('/admin/pet/list')
   }
 
   return <>
@@ -39,12 +39,12 @@ export default function Admin() {
     <Container>
       <Box className={styles.mainBox}>
         <Button className={styles.mainButton} variant="contained" color="primary" disableElevation
-          onClick={addPet}>
+          onClick={formPet}>
           Добавить питомца
         </Button>
         <Button className={styles.mainButton} variant="contained" color="primary" disableElevation
-          onClick={etitPets}>
-          Редактировать питомцев
+          onClick={listPets}>
+          Список питомцев
         </Button>
       </Box>
     </Container>
