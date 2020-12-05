@@ -1,4 +1,5 @@
-import { petsDb } from '~/modules/db'
+const Datastore = require('nedb')
+const petsDb: Nedb = new Datastore({ filename: './databases/pets.db', autoload: true })
 
 export type Pet = {
   name: string,
