@@ -192,11 +192,17 @@
   justify-content: space-between;
   width: 50%;
 }
-.ourPetsBlock .findCarouselBlock {
+.ourPetsGallery {
   margin-top: 165px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ourPetsGallery > * {
+  margin-bottom: 155px;
 }
 .morePetsBtn {
-  margin-top: 80px;
+  margin-top: -75px;
   display: flex;
   justify-content: center;
 }

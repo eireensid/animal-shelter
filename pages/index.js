@@ -13,6 +13,8 @@ export default function Index({title='Главная', animals}) {
   const filteredAnimals = animals.filter((item) => {
     return item.paw === "looking-for-home.png"
   })
+  const galleryAnimals = animals.slice(0, 12)
+
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -182,8 +184,8 @@ export default function Index({title='Главная', animals}) {
           </div>
         </div>
 
-        <div className={styles.findCarouselBlock}>
-          {animals.map((animal, index) => (
+        <div className={styles.ourPetsGallery}>
+          {galleryAnimals.map((animal, index) => (
             <AnimalCard animal={animal} key={index}/>
           ))}
         </div>
