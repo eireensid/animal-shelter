@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import SocialBtns from '~/components/SocialBtns'
 import WebsiteTeam from '~/components/WebsiteTeam'
 import styles from '~/styles/MainLayout.module.scss'
 
@@ -91,9 +92,7 @@ export function MainLayout({children, title='Теремок'}) {
               <p className={styles.address}>г. Санкт-Петербург,<br/>поселок под Гатчиной</p>
               <h4 className={styles.prHelp}>Помочь с пиаром</h4>
               <div className={styles.socialsBlockFooter}>
-                <img src="/img/whatsapp.svg" alt="what's app"/>
-                <img src="/img/vk.svg" alt="vk"/>
-                <img src="/img/instagram.svg" alt="instagram"/>
+                <SocialBtns/>
               </div>
             </nav>
           </div>
