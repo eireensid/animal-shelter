@@ -1,0 +1,31 @@
+@import 'variables.scss';
+
+.bankCardModalBlock {
+  background: $pageBg;
+  width: 77%;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bankCardModal {
+  width: 100%;
+}
+.bankCardModalClose {
+  display: flex;
+  justify-content: flex-end;
+  padding: {
+    right: 45px;
+  };
+}
+.bankCardModal p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.39em;
+  font-family: 'Montserrat Medium', sans-serif;
+  width: 45%;
+  padding-bottom: 5%;
+  padding-top: 3%;
+}
+

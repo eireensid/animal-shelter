@@ -8,6 +8,7 @@ import SearchInput from '~/components/SearchInput'
 import PawLabel from '~/components/PawLabel'
 import SocialBtns from '~/components/SocialBtns'
 import BankCard from '~/components/BankCard'
+import BankCardModal from '~/components/BankCardModal'
 import styles from '~/styles/index.module.scss'
 
 export default function Index({title='Главная', animals}) {
@@ -28,7 +29,7 @@ export default function Index({title='Главная', animals}) {
         </div>
       </div>
     </section>
-
+    {/* <BankCardModal/> */}
     <section>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
         <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:"/>
