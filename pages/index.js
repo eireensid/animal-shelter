@@ -1,3 +1,4 @@
+import Router from 'next/router'
 import Link from 'next/link'
 import { MainLayout } from '~/components/MainLayout'
 import AnimalCard from '~/components/AnimalCard'
@@ -62,7 +63,7 @@ export default function Index({title='Главная', animals}) {
             </div>
             <div className={styles.waysToHelpDescBtnWrapper}>
               <p>Приют существует за счёт пожертвований. Для нас важна любая сумма! Помогите нам поддерживать качество жизни хвостиков.</p>
-              <span className={styles.spendingsReport}>*Отчеты о затраченных средствах вы можете посмотреть <span>здесь</span></span>
+              <span className={styles.spendingsReport}>*Отчеты о затраченных средствах вы можете посмотреть <Link href="/shelter-reports"><span>здесь</span></Link></span>
               <button>Пожертвовать</button>
             </div>
           </div>
@@ -96,7 +97,7 @@ export default function Index({title='Главная', animals}) {
             <div className={styles.waysToHelpDescBtnWrapper}>
               <p>Приют очень сильно нуждается в опекунах! Если у вас нет возможности забрать животное, но очень хочется окружить его заботой и вниманием, 
                 станьте опекуном (временным хозяином), навещайте питомца в приюте и не дайте его взгляду потухнуть без человеческого внимания.</p>
-              <button>Подробнее</button>
+              <button onClick={() => Router.push('/guardianship-and-adaptation').then(() => window.scrollTo(0, 0))}>Подробнее</button>
             </div>
           </div>
           <div>
@@ -113,7 +114,7 @@ export default function Index({title='Главная', animals}) {
             <div className={styles.waysToHelpDescBtnWrapper}>
               <p>Не секрет, что собакам просто необходимы регулярные прогулки. В нашем приюте больше 250 собак, и выгуливать каждую мы физически не успеваем. 
                 Поэтому ждем всех, кто хочет порадовать песиков и получить массу положительных эмоций в ответ.</p>
-              <button>Подробнее</button>
+              <button onClick={() => Router.push('/walks-with-dogs').then(() => window.scrollTo(0, 0))}>Подробнее</button>
             </div>
           </div>
           <div>
@@ -130,7 +131,7 @@ export default function Index({title='Главная', animals}) {
             <div className={styles.waysToHelpDescBtnWrapper}>
               <p>Животные постоянно нуждаются в средствах по уходу, кормах, лекарствах и других необходимых вещах. Вы можете привезти нужды самостоятельно 
                 или передать волонтерам в городе.</p>
-              <button>Список нужд</button>
+              <button onClick={() => Router.push('/basic-needs-of-teremok').then(() => window.scrollTo(0, 0))}>Список нужд</button>
             </div>
           </div>
           <div>

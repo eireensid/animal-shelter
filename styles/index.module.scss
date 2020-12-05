@@ -135,11 +135,19 @@
   border-bottom: 1px solid #2E2E2E;
   font-family: 'Montserrat Medium', sans-serif;
 }
+.spendingsReport span:hover {
+  color: #7C6035;
+  border-bottom: 1px solid #7C6035;
+  cursor: default;
+}
 .waysToHelpDescBtnWrapper {
   padding-left: 40px;
 }
 .waysToHelpDescBtnWrapper button {
   margin-top: 40px;
+}
+.waysToHelpDescBtnWrapper button span {
+  color: #fff;
 }
 .socialsBlock {
   padding-top: 50px;
