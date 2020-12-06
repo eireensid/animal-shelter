@@ -19,20 +19,24 @@ const customStyles = {
 
 Modal.setAppElement('#__next')
 
-export default function BankCardModal() {
-  var subtitle;
+export default function BankCardModal({parent}) {
   const [modalIsOpen,setIsOpen] = useState(false);
-  function openModal() {
+  const openModal = () => {
     setIsOpen(true);
   }
  
-  function closeModal(){
+  const closeModal = () => {
     setIsOpen(false);
+  }
+
+  const btnStyle = () => {
+    const dynamicStyle = parent === "header" ? styles.donationBtnHeader : ''
+    return dynamicStyle
   }
 
   return <>  
     <div>
-      <button onClick={openModal}>Пожертвовать</button>
+      <button className={btnStyle()} onClick={openModal}>Пожертвовать</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

@@ -65,7 +65,7 @@ export default function Index({title='Главная', animals}) {
             <div className={styles.waysToHelpDescBtnWrapper}>
               <p>Приют существует за счёт пожертвований. Для нас важна любая сумма! Помогите нам поддерживать качество жизни хвостиков.</p>
               <span className={styles.spendingsReport}>*Отчеты о затраченных средствах вы можете посмотреть <Link href="/shelter-reports"><span>здесь</span></Link></span>              
-              <BankCardModal/>
+              <BankCardModal parent={"index"}/>
             </div>
           </div>
           <div>
@@ -81,7 +81,7 @@ export default function Index({title='Главная', animals}) {
             </div>
             <div className={styles.waysToHelpDescBtnWrapper}>
               <p>Подарите дом одному из них. Наблюдать каждый день этот счастливый и благодарный взгляд — бесценно!</p>
-              <button>Питомцы</button>
+              <button onClick={() => Router.push('/pets').then(() => window.scrollTo(0, 0))}>Питомцы</button>
             </div>
           </div>
           <div>
@@ -193,7 +193,7 @@ export default function Index({title='Главная', animals}) {
         </div>
 
         <div className={styles.morePetsBtn}>
-          <button>Больше питомцев</button>
+          <button onClick={() => Router.push('/pets').then(() => window.scrollTo(0, 0))}>Больше питомцев</button>
         </div>
 
         <div className={styles.bankCardWrapper}>

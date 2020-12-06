@@ -36,3 +36,15 @@
 .btnClose:active {
   background: none;
 }
+
+// Dynamic style for header
+.donationBtnHeader {
+  padding: {
+    top: 15px;
+    bottom: 15px;
+    left: 40px;
+    right: 40px;
+  }
+  width: 100%;
+  font-size: 0.833em;
+}

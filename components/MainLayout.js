@@ -53,7 +53,7 @@ export function MainLayout({children, title='Теремок'}) {
           </nav>
 
           <div className={styles.btnWrapper}>
-            <BankCardModal/>
+            <BankCardModal parent={"header"}/>
           </div>
         </div>   
       </header>
