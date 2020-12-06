@@ -16,7 +16,8 @@ const copyText = () => {
             <span>5469 5500 6217 8147</span>
           </div>
           <div className={styles.bankCardBtn}>
-            <button onClick={copyText}>Скопировать номер</button>
+            <button className={styles.btnTextDesktop} onClick={copyText}>Скопировать номер</button>
+            <button className={styles.btnTextMobile} onClick={copyText}>Скопировать</button>
           </div>
         </div>
       </div>

@@ -191,6 +191,12 @@
 
 // Mobile styles
 @media (max-width: 414px) {
+  .pagePaddings {
+    padding: {
+      left: 14px;
+      right: 14px;
+    }
+  }
 }
 
 

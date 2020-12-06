@@ -36,12 +36,67 @@
 .bankCardNumber img {
   padding-right: 20px;
 }
-.bankCardNumber span {
+.btnTextDesktop {
   color: #131313;
   font-family: 'Montserrat', sans-serif;
   font-weight: $mediumWeight;
-  font-size: 30px;
+  font-size: 1.667em;
 }
 .bankCardBtn {
   padding-top: 30px;
+}
+.btnTextMobile {
+  display: none;
+}
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .bankCard {
+    width: 100%;
+    margin-left: 15px;
+    height: 85vh;
+    justify-content: center;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .bankCard {
+    width: 100%;
+    margin-left: 0px;
+    height: 30vh;
+    background-size: 50%;
+  }
+  .btnTextDesktop {
+    display: none;
+  }
+  .bankCardNumber {
+    justify-content: center;
+    padding: {
+      top: 7px;
+      bottom: 7px;
+      left: 19px;
+      right: 19px;
+    }
+  }
+  .bankCardNumber img {
+    width: 15%;
+    padding-right: 9px;
+  }
+  .bankCardBtn {
+    padding-top: 10px;
+  }
+  .bankCardBtn button {
+    width: 156px;
+    padding: {
+      top: 13px;
+      bottom: 13px;
+      left: 33px;
+      right: 33px;
+    }
+  }
+  .btnTextMobile {
+    display: block;
+    font-size: 0.722em;
+  }
 }
