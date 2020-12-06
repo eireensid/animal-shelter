@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { User, findUser } from '~/modules/user'
+import { User, findUser } from '~/modules/back/user'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
