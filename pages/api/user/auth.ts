@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { User, findUser, createUser, saveUser, getSuperUser } from '~/modules/user'
+import { User, findUser, saveUser, getSuperUser } from '~/modules/back/user'
 import { v4 as uuidv4 } from 'uuid'
 import bcrypt from 'bcrypt'
 

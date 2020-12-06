@@ -1,8 +1,7 @@
 import bcrypt from 'bcrypt'
 
 const Datastore = require('nedb')
-const usersDb: Nedb = new Datastore({ filename: './databases/users.db'})
-usersDb.loadDatabase()
+const usersDb: Nedb = new Datastore({ filename: './databases/users.db', autoload: true})
 
 export type User = {
   login: string,

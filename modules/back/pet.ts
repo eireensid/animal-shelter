@@ -1,6 +1,5 @@
 const Datastore = require('nedb')
-const petsDb: Nedb = new Datastore({ filename: './databases/pets.db' })
-petsDb.loadDatabase()
+const petsDb: Nedb = new Datastore({ filename: './databases/pets.db', autoload: true })
 
 export type Pet = {
   name: string,
