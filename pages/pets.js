@@ -2,7 +2,7 @@ import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
-import styles from '~/styles/Pets.module.scss'
+// import styles from '~/styles/pets.module.scss'
 
 export default function Pets({title='Отчеты', animals}) {
   const filteredAnimals = animals.filter((item) => {
