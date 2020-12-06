@@ -4,3 +4,11 @@
 .socialsBlock a:not(:last-child) {
   margin-right: 15px;
 }
+
+// Mobile styles
+@media (max-width: 414px) {
+  .socialsBlock img {
+    width: 30px;
+    height: 30px;
+  }
+}

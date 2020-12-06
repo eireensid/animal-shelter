@@ -87,15 +87,19 @@ export function MainLayout({children, title='Теремок'}) {
                 <li><Link href="/baby-pets"><a>Малыши</a></Link></li>
               </ul>
             </nav>
-            <nav className={styles.contacts}>
-              <h4>Контакты</h4>
-              <p className={styles.phone}><a href="tel:+79214320035">+7 (921) 432-00-35</a></p>
-              <p className={styles.address}>г. Санкт-Петербург,<br/>поселок под Гатчиной</p>
-              <h4 className={styles.prHelp}>Помочь с пиаром</h4>
-              <div className={styles.socialsBlockFooter}>
-                <SocialBtns/>
+            <div className={styles.contactsPrBlock}>
+              <div className={styles.contacts}>
+                <h4>Контакты</h4>
+                <p className={styles.phone}><a href="tel:+79214320035">+7 (921) 432-00-35</a></p>
+                <p className={styles.address}>г. Санкт-Петербург,<br/>поселок под Гатчиной</p>             
               </div>
-            </nav>
+              <div className={styles.pr}>
+                <h4 className={styles.prHelp}>Помочь с пиаром</h4>
+                <div className={styles.socialsBlockFooter}>
+                  <SocialBtns/>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div>

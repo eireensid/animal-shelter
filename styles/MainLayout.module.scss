@@ -148,6 +148,35 @@
     width: 59px;
     height: 39px;
   }
+
+  // Footer
+  .logoFooter {
+    width: 26%;
+  }
+  .navBlock {
+    flex-wrap: wrap;
+  }
+  .nav-block {
+    flex-wrap: wrap;
+  }
+  .aboutShelter, .contacts {
+    flex-basis: 60%;
+  }
+  .ourPets, .pr {
+    flex-basis: 40%;
+  }
+  .contactsPrBlock {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+  }
+  .socialsBlockFooter {
+    padding-bottom: 0px;
+    margin-bottom: -5px;
+  }
+  .contacts h4 {
+    padding-top: 20px;
+  }
 }
 
 // Mobile styles
@@ -157,8 +186,29 @@
     width: 54px;
     height: 49px;
   }
+  .navBlock {
+    padding-bottom: 100px;
+  }
   .burger {
     width: 19px;
     height: 13px;
+  }
+
+  // Footer
+  .logoFooter {
+    width: 33%;
+    margin: 0 auto;
+  }
+  .contactsPrBlock {
+    flex-wrap: wrap;
+  }
+  .aboutShelter, .contacts, .ourPets, .pr {
+    flex-basis: 100%;
+  }
+  .aboutShelter h4 {
+    padding-top: 55px;
+  }
+  .contacts h4 {
+    padding-top: 40px;
   }
 }
