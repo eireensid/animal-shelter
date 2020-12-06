@@ -15,6 +15,7 @@ export default function Index({title='Главная', animals}) {
   const filteredAnimals = animals.filter((item) => {
     return item.paw === "looking-for-home.png"
   })
+
   const galleryAnimals = animals.slice(0, 12)
 
   return <MainLayout>
@@ -29,7 +30,6 @@ export default function Index({title='Главная', animals}) {
         </div>
       </div>
     </section>
-    {/* <BankCardModal/> */}
     <section>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
         <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:"/>
@@ -64,8 +64,8 @@ export default function Index({title='Главная', animals}) {
             </div>
             <div className={styles.waysToHelpDescBtnWrapper}>
               <p>Приют существует за счёт пожертвований. Для нас важна любая сумма! Помогите нам поддерживать качество жизни хвостиков.</p>
-              <span className={styles.spendingsReport}>*Отчеты о затраченных средствах вы можете посмотреть <Link href="/shelter-reports"><span>здесь</span></Link></span>
-              <button>Пожертвовать</button>
+              <span className={styles.spendingsReport}>*Отчеты о затраченных средствах вы можете посмотреть <Link href="/shelter-reports"><span>здесь</span></Link></span>              
+              <BankCardModal/>
             </div>
           </div>
           <div>
@@ -196,7 +196,10 @@ export default function Index({title='Главная', animals}) {
           <button>Больше питомцев</button>
         </div>
 
-        <BankCard/>
+        <div className={styles.bankCardWrapper}>
+          <h2>Для пожертвований:</h2>
+          <BankCard/>
+        </div>
       </div>
     </section>
   </MainLayout>

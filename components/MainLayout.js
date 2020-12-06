@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import BankCardModal from '~/components/BankCardModal'
 import SocialBtns from '~/components/SocialBtns'
 import WebsiteTeam from '~/components/WebsiteTeam'
 import styles from '~/styles/MainLayout.module.scss'
@@ -52,7 +53,7 @@ export function MainLayout({children, title='Теремок'}) {
           </nav>
 
           <div className={styles.btnWrapper}>
-            <button className={styles.donationBtnHeader}>Пожертвовать</button>
+            <BankCardModal/>
           </div>
         </div>   
       </header>

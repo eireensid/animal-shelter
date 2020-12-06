@@ -8,7 +8,7 @@ const copyText = () => {
 
   return <>
     <div className={styles.donationBlock}>
-      {/* <h2>Для пожертвований:</h2> */}
+      
       <div className={styles.bankCardWrapper}>
         <div className={styles.bankCard}>
           <div className={styles.bankCardNumber}>

@@ -1,22 +1,18 @@
 @import 'variables.scss';
 
-.bankCardModalBlock {
-  background: $pageBg;
-  width: 77%;
-  height: 80vh;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.modalBlock {
+  z-index: 1000;
 }
 .bankCardModal {
-  width: 100%;
+  background: $pageBg;
+  padding-bottom: 5%;
 }
 .bankCardModalClose {
   display: flex;
   justify-content: flex-end;
   padding: {
     right: 45px;
+    top: 45px;
   };
 }
 .bankCardModal p {
@@ -29,3 +25,14 @@
   padding-top: 3%;
 }
 
+.btnClose {
+  background: none;
+  padding: 0;
+  width: 35px;
+}
+.btnClose:hover {
+  background: none;
+}
+.btnClose:active {
+  background: none;
+}

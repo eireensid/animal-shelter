@@ -119,6 +119,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
     </section>
     <section>
       <div className={`${styles.bankCardWrapper} ${styles.pagePaddings}`}>
+        <h2>Для пожертвований:</h2>
         <BankCard/>
       </div>
     </section>

@@ -36,6 +36,7 @@ export default function HellosFromHomes({title='Привет из дома', ani
     </section>
     <section>
       <div className={`${styles.bankCardWrapper} ${styles.pagePaddings}`}>
+        <h2>Для пожертвований:</h2>
         <BankCard/>
       </div>
     </section>

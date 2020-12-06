@@ -71,6 +71,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
     </section>
     <section>
       <div className={`${styles.bankCardWrapper} ${styles.pagePaddings}`}>
+        <h2>Для пожертвований:</h2>
         <BankCard/>
       </div>
     </section>
