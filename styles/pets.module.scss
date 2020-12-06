@@ -1,0 +1,62 @@
+@import 'variables.scss';
+
+.pagePaddings {
+  padding: {
+    left: 11%;
+    right: 11%;
+  }
+}
+
+
+.petsBlock {
+  background: $pageBg;
+  padding: {
+    left: 11%;
+    right: 3%;
+    top: 100px;
+  }
+}
+
+.petsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -50px;
+  padding-bottom: 80px;
+}
+.petsDesc {
+  flex-basis: 48%;
+  margin-top: 20px;
+}
+.petsDesc p {
+  width: 85%;
+  margin-top: 40px;
+}
+
+.ourPetsBlock {
+  background: $pageBg;
+}
+.ourPetsBlock h2 {
+  padding: {
+    bottom: 30px;
+  }
+}
+.ourPetsDesc {
+  width: 40%;
+}
+.ourPetsPadding {
+  padding-top: 30px;
+  padding-bottom: 110px;
+}
+
+.bankCardWrapper {
+  background: $pageBg;
+  padding-bottom: 290px;
+  background-image: url(/img/orange-wave-cut.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+.bankCardWrapper h2 {
+  padding-bottom: 100px;
+}

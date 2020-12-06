@@ -1,11 +1,8 @@
 import Router from 'next/router'
 import Link from 'next/link'
 import { MainLayout } from '~/components/MainLayout'
-import AnimalCard from '~/components/AnimalCard'
 import AnimalCarousel from '~/components/AnimalCarousel'
-import FindAnimalInput from '~/components/FindAnimalInput'
-import SearchInput from '~/components/SearchInput'
-import PawLabel from '~/components/PawLabel'
+import AnimalsList from '~/components/AnimalsList'
 import SocialBtns from '~/components/SocialBtns'
 import BankCard from '~/components/BankCard'
 import BankCardModal from '~/components/BankCardModal'
@@ -15,8 +12,6 @@ export default function Index({title='Главная', animals}) {
   const filteredAnimals = animals.filter((item) => {
     return item.paw === "looking-for-home.png"
   })
-
-  const galleryAnimals = animals.slice(0, 12)
 
   return <MainLayout>
     <section>
@@ -167,30 +162,8 @@ export default function Index({title='Главная', animals}) {
         <h2>Наши питомцы</h2>
         <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
         <p className={`${styles.ourPetsDesc} ${styles.ourPetsPadding}`}>Если вы уже знаете имя питомца, который вас заинтересовал, воспользуйтесь поиском по имени.</p>
-        <div className={styles.animalFiltersBlock}>
-          <div className={styles.animalInputsBlock}>
-            <FindAnimalInput inputTitle="Все животные"/>
-            <FindAnimalInput inputTitle="Все возраста"/>
-            <SearchInput/>
-          </div>
-          <div className={styles.animalFilterWrapper}>
-            <div className={styles.animalFilterWrapperTop}>            
-              <PawLabel pawColor="/img/paws/looking-for-home.png" pawMeaning="Ищут дом"/>
-              <PawLabel pawColor="/img/paws/need-adoptation.png" pawMeaning="Нужна адаптация"/>
-              <PawLabel pawColor="/img/paws/baby-pets.png" pawMeaning="Малыши"/>
-            </div>
-            <div className={styles.animalFilterWrapperBottom}>
-              <PawLabel pawColor="/img/paws/need-guardian.png" pawMeaning="Нужен опекун"/>
-              <PawLabel pawColor="/img/paws/undergo-treatment.png" pawMeaning="Проходят лечение"/>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.ourPetsGallery}>
-          {galleryAnimals.map((animal, index) => (
-            <AnimalCard animal={animal} key={index}/>
-          ))}
-        </div>
+        
+        <AnimalsList animals={animals}/>
 
         <div className={styles.morePetsBtn}>
           <button onClick={() => Router.push('/pets').then(() => window.scrollTo(0, 0))}>Больше питомцев</button>

@@ -1,0 +1,33 @@
+.animalInputsBlock {
+  display: flex;
+}
+.animalInputsBlock div {
+  margin-right: 30px;
+}
+
+.animalFiltersBlock {
+  padding-bottom: 70px;
+}
+.animalFilterWrapperTop {
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+  margin: {
+    top: 30px;
+    bottom: 30px;
+  }
+}
+.animalFilterWrapperBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.ourPetsGallery {
+  margin-top: 165px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ourPetsGallery > * {
+  margin-bottom: 155px;
+}
