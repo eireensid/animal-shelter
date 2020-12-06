@@ -20,9 +20,9 @@ export default function ShelterReports({title='Отчеты', animals}) {
           </div>
           <div className={styles.reports}>
             <div className={styles.reportsBtns}>
-              <button><a href="https://vk.com/topic-188970721_39934359" target="_blank"><span>ФО Крупа</span></a></button>
-              <button><a href="https://vk.com/topic-188970721_40039637" target="_blank"><span>ФО Лечение</span></a></button>
-              <button><a href="https://vk.com/topic-188970721_40010432" target="_blank"><span>ФО Опилки</span></a></button>
+              <button onClick={() => window.open('https://vk.com/topic-188970721_39934359', '_blank')}><span>ФО Крупа</span></button>
+              <button onClick={() => window.open('https://vk.com/topic-188970721_40039637', '_blank')}><span>ФО Лечение</span></button>
+              <button onClick={() => window.open('https://vk.com/topic-188970721_40010432', '_blank')}><span>ФО Опилки</span></button>
             </div>
             <img src="/img/reports-photo.png" alt="отчеты"/>
           </div>

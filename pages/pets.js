@@ -15,7 +15,7 @@ export default function Pets({title='Питомцы', animals}) {
               домашнюю жизнь одному из наших подопечных?</p>
           </div>
           <div className={styles.photoWithPhraseBubbleWrapper}>
-            <img className={styles.photoWithPhraseBubble} src="/img/hellos-from-homes-dog-with-bubble.svg" alt="спасибо"/>
+            <img className={styles.photoWithPhraseBubble} src="/img/pets-cat-with-bubble.svg" alt="спасибо"/>
           </div>
         </div>
       </div>

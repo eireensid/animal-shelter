@@ -13,7 +13,9 @@ const customStyles = {
     padding: '0',
     border: 'none',
     borderRadius: '0',
-    width: '77%'
+    width: '77%',
+    height: '90vh',
+    background: '#FFF5DA'
   },
 }
 

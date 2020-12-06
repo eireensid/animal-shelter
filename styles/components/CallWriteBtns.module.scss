@@ -6,15 +6,13 @@
 .callBtn, .whatsappBtn {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: {
     top: 13px;
     bottom: 13px;
   };
 }
-.callBtn a, .whatsappBtn a {
-  display: flex;
-  align-items: center;
-}
+
 .callBtn span, .whatsappBtn span {
   color: #fff;
   margin-left: 15px;
