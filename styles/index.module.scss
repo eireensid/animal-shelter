@@ -187,6 +187,26 @@
 
 // Tablet styles
 @media (max-width: 1024px) {
+  .firstBlock {
+    flex-direction: column;
+    padding-left: 50px;
+    align-items: flex-end;
+    padding-top: 100px;
+  }
+  .titleDesc {
+    width: 45%;
+  }
+  .firstBlockImg {
+    width: 60%;
+  }
+
+  .videoWrapper iframe {
+    height: 166px;
+    width: 300px;
+  }
+  .bubbleBlock {
+    padding-left: 0;
+  }
 }
 
 // Mobile styles

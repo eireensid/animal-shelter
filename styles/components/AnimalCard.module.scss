@@ -38,3 +38,15 @@
 .petSex {
   padding-right: 12px;
 }
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .findCarouselCard {
+    flex-basis: 45%;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  
+}

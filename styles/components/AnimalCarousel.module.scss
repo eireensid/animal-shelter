@@ -49,5 +49,16 @@
   background: #E48244;
 }
 
+// Tablet styles
+@media (max-width: 1024px) {
+  .findCarouselBlock {
+    flex-wrap: wrap;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  
+}
 
 

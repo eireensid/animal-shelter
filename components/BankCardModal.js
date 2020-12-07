@@ -14,7 +14,7 @@ const customStyles = {
     border: 'none',
     borderRadius: '0',
     width: '77%',
-    height: '90vh',
+    // height: '90vh',
     background: '#FFF5DA'
   },
 }
