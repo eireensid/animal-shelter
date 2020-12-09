@@ -17,7 +17,7 @@
 .firstBlockTitle {
   flex-basis: 38%;
 }
-.firstBlocImgTablet {
+.firstBlockImgTablet {
   display: none;
 }
 .titleDesc {
@@ -192,38 +192,72 @@
 @media (max-width: 1024px) {
   .firstBlock {
     flex-direction: column;
-    padding-left: 50px;
+    padding-left: 45px;
     align-items: flex-end;
-    padding-top: 100px;
+    padding-top: 160px;
     background-image: url(/img/tablet/yellow-wave-tablet.png);
+    background-position-y: 135%;
+  }
+  .firstBlockTitle {
+    padding-bottom: 107px;
   }
   .titleDesc {
     width: 45%;
+    margin-top: 37px;
   }
   .firstBlockImg {
     display: none;
   }
-  .firstBlocImgTablet {
+  .firstBlockImgTablet {
     display: block;
   }
 
+
+  .findHomeBlock {
+    padding: {
+      // left: 45px;
+      // right: 45px;
+      top: 110px;
+    }
+  }
+  
+
+  .videoBlock {
+    padding-top: 190px;
+    padding-bottom: 120px;
+  }
+  .videoText {
+    flex-basis: 51%;
+  }
   .videoWrapper iframe {
     height: 166px;
     width: 300px;
   }
   .bubbleBlock {
-    padding-left: 0;
+    padding-left: 25px;
   }
 
   .findHomeBlock {
     background-image: url(/img/tablet/white-wave-tablet.png);
+    background-position-y: 113%;
+  }
+  .waysToHelpTitle {
+    padding-bottom: 170px;
   }
   .waysToHelpBlock {
     background-image: url(/img/tablet/yellow-wave-tablet.png);
+    margin-top: -130px;
   }
   .ourPetsBlock {
     background-image: url(/img/tablet/orange-wave-tablet.png);
     background-position-y: 104.75%;
+  }
+
+  .pagePaddings {
+    padding: {
+      left: 45px;
+      right: 45px;
+    }
   }
 }
 
@@ -234,6 +268,13 @@
       left: 14px;
       right: 14px;
     }
+  }
+
+  .videoBlock {
+    flex-direction: column;
+  }
+  .bubbleBlock {
+    padding-left: 0;
   }
 }
 

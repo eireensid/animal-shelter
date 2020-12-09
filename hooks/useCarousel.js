@@ -8,7 +8,7 @@ export default function useCarousel (items, count) {
   useEffect(() => {
     setActiveIndex(0)
     setCurItems(items.slice(0, count))
-  }, [items])
+  }, [items, count])
 
   useEffect(() => {
     const startIndex = activeIndex * count

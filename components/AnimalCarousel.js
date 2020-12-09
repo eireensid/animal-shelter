@@ -1,10 +1,29 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import useCarousel from '~/hooks/useCarousel'
 import AnimalCard from '~/components/AnimalCard'
 import styles from '~/styles/components/AnimalCarousel.module.scss'
 
 export default function AnimalCarousel({animals, title}) {
-  const { curItems, prevSlide, nextSlide } = useCarousel(animals, 3)
+  const [count, setCount] = useState(3)
+  const { curItems, prevSlide, nextSlide } = useCarousel(animals, count)
+
+  function setCountByWidth () {
+    let count = 3
+    if (window.screen.width > 414 && window.screen.width <= 1024) {
+      count = 2 
+    }
+    setCount(count)
+  }
+
+  useEffect(() => {
+    setCountByWidth()
+    window.addEventListener('resize', setCountByWidth)
+    return () => {
+      window.removeEventListener('resize', setCountByWidth)
+    }
+  }, [])
+
+  
 
   return <>
     <div className={styles.findCarouselCard}>

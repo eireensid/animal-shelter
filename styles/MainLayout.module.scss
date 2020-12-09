@@ -131,6 +131,10 @@
 // Tablet styles
 @media (max-width: 1024px) {
   // Header
+  .headerBlock {
+    padding-left: 35px;
+    padding-right: 45px;
+  }
   .btnWrapper {
     display: none;
   }
