@@ -13,7 +13,7 @@ const copyText = () => {
         <div className={styles.bankCard}>
           <div className={styles.bankCardNumber}>
             <img src="/img/banking-card-icon.png" alt="банковская карта для пожертвований"/>
-            <span>5469 5500 6217 8147</span>
+            5469 5500 6217 8147
           </div>
           <div className={styles.bankCardBtn}>
             <button className={styles.btnTextDesktop} onClick={copyText}>Скопировать номер</button>

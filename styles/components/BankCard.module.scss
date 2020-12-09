@@ -37,12 +37,11 @@
 .bankCardNumber img {
   padding-right: 20px;
 }
-.bankCardNumber span {
+.bankCardNumber  {
   color: #131313;
   font-family: 'Montserrat', sans-serif;
   font-weight: $mediumWeight;
   font-size: 1.667em;
-  user-select: none;
 }
 .bankCardBtn {
   padding-top: 30px;
