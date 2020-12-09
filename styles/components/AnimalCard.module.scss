@@ -42,7 +42,10 @@
 // Tablet styles
 @media (max-width: 1024px) {
   .findCarouselCard {
-    flex-basis: 45%;
+    flex-basis: 46%;
+  }
+  .petImgBlock img {
+    width: 80%;
   }
 }
 

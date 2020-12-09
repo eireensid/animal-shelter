@@ -10,6 +10,7 @@
   background-image: url(/img/paws-top.png), url(/img/paws-bottom.png);
   background-repeat: no-repeat;
   background-position: top center, bottom center;
+  // background-size: 55%;
   display: flex;
   align-items: center;
   width: 59%;
@@ -41,6 +42,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: $mediumWeight;
   font-size: 1.667em;
+  user-select: none;
 }
 .bankCardBtn {
   padding-top: 30px;

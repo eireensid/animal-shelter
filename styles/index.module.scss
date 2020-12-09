@@ -17,6 +17,9 @@
 .firstBlockTitle {
   flex-basis: 38%;
 }
+.firstBlocImgTablet {
+  display: none;
+}
 .titleDesc {
   width: 80%;
   margin-top: 45px;
@@ -192,12 +195,16 @@
     padding-left: 50px;
     align-items: flex-end;
     padding-top: 100px;
+    background-image: url(/img/tablet/yellow-wave-tablet.png);
   }
   .titleDesc {
     width: 45%;
   }
   .firstBlockImg {
-    width: 60%;
+    display: none;
+  }
+  .firstBlocImgTablet {
+    display: block;
   }
 
   .videoWrapper iframe {
@@ -206,6 +213,17 @@
   }
   .bubbleBlock {
     padding-left: 0;
+  }
+
+  .findHomeBlock {
+    background-image: url(/img/tablet/white-wave-tablet.png);
+  }
+  .waysToHelpBlock {
+    background-image: url(/img/tablet/yellow-wave-tablet.png);
+  }
+  .ourPetsBlock {
+    background-image: url(/img/tablet/orange-wave-tablet.png);
+    background-position-y: 104.75%;
   }
 }
 
@@ -216,6 +234,13 @@
       left: 14px;
       right: 14px;
     }
+  }
+}
+
+
+@media (min-width: 1800px) {
+  .waysToHelpBlock {
+    background-position-y: 110%;
   }
 }
 

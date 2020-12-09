@@ -23,6 +23,9 @@ export default function Index({title='Главная', animals}) {
         <div className={styles.firstBlockImg}>
           <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/>
         </div>
+        <div className={styles.firstBlockImgTablet}>
+          <img src="/img/tablet/first-block-photo-tablet.png" alt="животные"/>
+        </div>
       </div>
     </section>
     <section>
