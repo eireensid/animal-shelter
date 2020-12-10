@@ -14,7 +14,7 @@ export default function Index({title='Главная', animals}) {
   })
 
   return <MainLayout>
-    <section>
+    <section className={styles.firstBlockSection}>
       <div className={styles.firstBlock}>
         <div className={styles.firstBlockTitle}>
           <h1>Помогать легко!</h1>
@@ -27,8 +27,11 @@ export default function Index({title='Главная', animals}) {
           <img src="/img/tablet/first-block-photo-tablet.png" alt="животные"/>
         </div>
       </div>
+      <svg className={styles.waveDesktop} viewBox="0 0 1440 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M848.411 95.4772C629.058 70.6965 450.479 -28.8145 221.037 8.13269C105.85 26.6814 58.8155 59.5476 0.200227 95.551L0.184691 253.285L1444.17 253.16L1444.19 30.473C1320.11 -28.8791 1035.12 116.57 848.411 95.4772Z" fill="#FFF5DA"/>
+      </svg>  
     </section>
-    <section>
+    <section className={styles.findHomeBlockSection}>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
         <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:"/>
 
@@ -50,9 +53,12 @@ export default function Index({title='Главная', animals}) {
         </div>
         <h2 className={styles.waysToHelpTitle}>Как вы можете нам помочь:</h2>
       </div>
+      <svg className={styles.waveDesktop} viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M848.411 95.4772C629.058 70.6965 450.479 -28.8145 221.037 8.13269C105.85 26.6814 58.8155 59.5476 0.200227 95.551L0.184691 253.285L1444.17 253.16L1444.19 30.473C1320.11 -28.8791 1035.12 116.57 848.411 95.4772Z" fill="white"/>
+      </svg>
     </section>
 
-    <section>
+    <section className={styles.waysToHelpBlockSection}>
       <div className={`${styles.waysToHelpBlock} ${styles.pagePaddings}`}>
         <div className={styles.waysToHelp}>
           <div className={styles.waysToHelpDesc}>
@@ -152,15 +158,17 @@ export default function Index({title='Главная', animals}) {
               </div>
             </div>
           </div>
-          <div>
+          <div className={styles.waysToHelpImg}>
             <img src="/img/ways-to-help/pr-help.png" alt="помощь с пиаром"/>
           </div>
         </div>
       </div>
-      
+      <svg className={styles.waveDesktop} viewBox="0 0 1440 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M848.411 95.4772C629.058 70.6965 450.479 -28.8145 221.037 8.13269C105.85 26.6814 58.8155 59.5476 0.200227 95.551L0.184691 253.285L1444.17 253.16L1444.19 30.473C1320.11 -28.8791 1035.12 116.57 848.411 95.4772Z" fill="#FFF5DA"/>
+      </svg>     
     </section>
 
-    <section>
+    <section className={styles.ourPetsBlockSection}>
       <div className={`${styles.ourPetsBlock} ${styles.pagePaddings}`}>
         <h2>Наши питомцы</h2>
         <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
@@ -177,6 +185,9 @@ export default function Index({title='Главная', animals}) {
           <BankCard/>
         </div>
       </div>
+      <svg className={styles.waveDesktop} viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M848.411 95.4772C629.058 70.6965 450.479 -28.8145 221.037 8.13269C105.85 26.6814 58.8155 59.5476 0.200227 95.551L0.184691 253.285L1444.17 253.16L1444.19 30.473C1320.11 -28.8791 1035.12 116.57 848.411 95.4772Z" fill="#FFC393"/>
+      </svg>
     </section>
   </MainLayout>
 }

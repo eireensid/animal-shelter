@@ -1,12 +1,11 @@
 @import 'variables.scss';
 
 // Hero
+.firstBlockSection {
+  position: relative;
+}
 .firstBlock {
   background: $navBg;
-  background-image: url(/img/yellow-wave.png);
-  background-position-y: 410px;
-  background-repeat: no-repeat;
-  background-size: contain;
   padding: {
     left: 11%;
     top: 140px;
@@ -17,21 +16,16 @@
 .firstBlockTitle {
   flex-basis: 38%;
 }
+.firstBlockImg {
+  z-index: 100;
+}
 .firstBlockImgTablet {
   display: none;
+  z-index: 100;
 }
 .titleDesc {
   width: 80%;
   margin-top: 45px;
-}
-.waveBlock {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  top: 62%;
-}
-.wave {
-  width: 100%;
 }
 
 .pagePaddings {
@@ -41,17 +35,23 @@
   }
 }
 
+.waveDesktop {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  // height: 200px;
+}
+
 
 
 // Look for home 
+.findHomeBlockSection {
+  position: relative;
+}
 .findHomeBlock {
   background: $pageBg;
-  background-image: url(/img/white-wave.png);
-  background-position-y: 107.8%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  padding-top: 130px;
+  padding-top: 100px;
 }
 
 .videoBlock {
@@ -83,17 +83,19 @@
 }
 
 .waysToHelpTitle {
-  margin-bottom: 110px;
+  position: absolute;
+  z-index: 10;
+  bottom: -5px;
 }
 
 // Ways to help
+.waysToHelpBlockSection {
+  position: relative;
+  z-index: 10;
+}
 .waysToHelpBlock {
   background: #fff;
-  background-image: url(/img/yellow-wave.png);
-  background-position-y: 105%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-bottom: 45px;
+  padding-top: 105px;
 }
 .waysToHelp {
   display: flex;
@@ -114,6 +116,9 @@
 }
 .waysToHelpDesc {
   flex-basis: 43.5%;
+}
+.waysToHelpImg {
+  z-index: 100;
 }
 .waysToHelpDescTitleWrapper {
   display: flex;
@@ -151,21 +156,22 @@
 }
 .socialsBlock {
   padding-top: 50px;
+  z-index: 100;
+  position: relative;
 }
 
 
 // Our Pets
+.ourPetsBlockSection {
+  position: relative;
+}
 .ourPetsBlock {
   background: $pageBg;
-  background-image: url(/img/orange-wave-cut.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
-  padding-bottom: 290px;
+  padding-bottom: 280px;
 }
 .ourPetsBlock h2 {
   padding: {
-    top: 160px;
+    top: 200px;
     bottom: 30px;
   }
 }
