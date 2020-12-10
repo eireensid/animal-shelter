@@ -11,10 +11,12 @@ export default function WalksWithDogs({title='Прогулки с собакам
   })
   return <MainLayout>
     <section>
-      <div className={styles.walksBlock}>
-        <BreadCrumbs title={title}/>
-        <div className={styles.walksWrapper}>
-          <div className={styles.walksDesc}>
+      <div className={styles.firstBlock}>
+        <div className={styles.firstWrapper}>
+          <div className={styles.firstDesc}>
+            <div className={styles.breadCrumbsWrapper}>
+              <BreadCrumbs title={title}/>
+            </div>
             <h2>Прогулки с собаками</h2>
             <p>Это одно из самых позитивных занятий в нашем приюте! Хоть у этих собак пока нет хозяев, вы сможете дать им чувство нужности и веселья. 
               А сколько радости они дают в ответ, не передать словами. Мы с пёсиками ждем вас!</p>
@@ -69,11 +71,14 @@ export default function WalksWithDogs({title='Прогулки с собакам
         <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:"/>
       </div>
     </section>
-    <section>
+    <section className={styles.bankCardWrapperSection}>
       <div className={`${styles.bankCardWrapper} ${styles.pagePaddings}`}>
         <h2>Для пожертвований:</h2>
         <BankCard/>
       </div>
+      <svg className={styles.waveDesktop} viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M848.411 95.4772C629.058 70.6965 450.479 -28.8145 221.037 8.13269C105.85 26.6814 58.8155 59.5476 0.200227 95.551L0.184691 253.285L1444.17 253.16L1444.19 30.473C1320.11 -28.8791 1035.12 116.57 848.411 95.4772Z" fill="#FFC393"/>
+      </svg>
     </section>
   </MainLayout>
 }

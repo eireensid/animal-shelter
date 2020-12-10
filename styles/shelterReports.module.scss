@@ -18,7 +18,6 @@
 }
 
 .reportsWrapper {
-  // margin-top: -50px;
   padding-bottom: 200px;
 }
 .reportsDesc {
@@ -51,6 +50,9 @@
   padding-bottom: 200px;
 }
 
+.bankCardWrapperSection {
+  position: relative;
+}
 .bankCardWrapper {
   background: $pageBg;
   padding-bottom: 290px;
@@ -61,4 +63,12 @@
 }
 .bankCardWrapper h2 {
   padding-bottom: 100px;
+}
+
+.waveDesktop {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  // height: 200px;
 }

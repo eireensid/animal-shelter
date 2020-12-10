@@ -20,7 +20,7 @@ export function MainLayout({children, title='Теремок'}) {
             <Link href="/"><img className={styles.logoHeader} src="/img/logo.svg" alt="лого"/></Link>
           </div>
           <nav className={styles.menuWrapper}>
-            <a className={styles.menuAboutLink}>О приюте</a>
+            <Link href="/"><a className={styles.menuAboutLink}>О приюте</a></Link>
             <div className={`${styles.menuDropdown} ${styles.menuAboutDropdown}`}>
               <ul className={styles.menuDropdownUl}>
                 <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
@@ -31,7 +31,7 @@ export function MainLayout({children, title='Теремок'}) {
                 <li><Link href="/shelter-reports"><a>Отчеты</a></Link></li>
               </ul>
             </div>
-            <a className={styles.menuPetsLink}>Питомцы</a>
+            <Link href="/pets"><a className={styles.menuPetsLink}>Питомцы</a></Link>
             <div className={`${styles.menuDropdown} ${styles.menuPetsDropdown}`}>
               <ul className={styles.menuDropdownUl}>
                 <li><Link href="/cats"><a>Кошки</a></Link></li>
@@ -62,10 +62,10 @@ export function MainLayout({children, title='Теремок'}) {
       </main>
       <footer>
         <div className={styles.footerBlock}>
-          <img className={styles.logoFooter} src="/img/logo.svg" alt="лого"/>
+          <Link href="/"><img className={styles.logoFooter} src="/img/logo.svg" alt="лого"/></Link>
           <div className={styles.navBlock}>
             <nav className={styles.aboutShelter}>
-              <h4>О приюте</h4>
+              <Link href="/"><h4>О приюте</h4></Link>
               <ul>
                 <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
                 <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
@@ -76,7 +76,7 @@ export function MainLayout({children, title='Теремок'}) {
               </ul>
             </nav>
             <nav className={styles.ourPets}>
-              <h4>Наши питомцы</h4>
+              <Link href="/pets"><h4>Наши питомцы</h4></Link>
               <ul>
                 <li><Link href="/cats"><a>Кошки</a></Link></li>
                 <li><Link href="/dogs"><a>Собаки</a></Link></li>

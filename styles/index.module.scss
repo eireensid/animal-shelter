@@ -42,6 +42,12 @@
   width: 100%;
   // height: 200px;
 }
+.waveTablet {
+  display: none;
+}
+.waveMobile {
+  display: none;
+}
 
 
 
@@ -201,8 +207,6 @@
     padding-left: 45px;
     align-items: flex-end;
     padding-top: 160px;
-    background-image: url(/img/tablet/yellow-wave-tablet.png);
-    background-position-y: 135%;
   }
   .firstBlockTitle {
     padding-bottom: 107px;
@@ -216,6 +220,17 @@
   }
   .firstBlockImgTablet {
     display: block;
+  }
+
+  .waveDesktop{
+    display: none;
+  }
+  .waveTablet {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
   }
 
 
@@ -243,21 +258,11 @@
     padding-left: 25px;
   }
 
-  .findHomeBlock {
-    background-image: url(/img/tablet/white-wave-tablet.png);
-    background-position-y: 113%;
-  }
+  
   .waysToHelpTitle {
     padding-bottom: 170px;
   }
-  .waysToHelpBlock {
-    background-image: url(/img/tablet/yellow-wave-tablet.png);
-    margin-top: -130px;
-  }
-  .ourPetsBlock {
-    background-image: url(/img/tablet/orange-wave-tablet.png);
-    background-position-y: 104.75%;
-  }
+  
 
   .pagePaddings {
     padding: {
@@ -274,6 +279,17 @@
       left: 14px;
       right: 14px;
     }
+  }
+
+  .waveTablet {
+    display: none;
+  }
+  .waveMobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
   }
 
   .videoBlock {

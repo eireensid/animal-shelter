@@ -7,7 +7,8 @@
   }
 }
 
-.walksBlock {
+
+.firstBlock {
   background: $pageBg;
   padding: {
     left: 11%;
@@ -16,25 +17,25 @@
   }
 }
 
-.breadCrumbs {
-  font-size: $breadCrumbsAndBtnTxt;
-  font-weight: $mediumWeight;
-}
-
-.walksWrapper {
+.firstWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: -50px;
   padding-bottom: 80px;
 }
-.walksDesc {
+.firstDesc {
   flex-basis: 48%;
-  margin-top: 20px;
 }
-.walksDesc p {
-  width: 83%;
-  margin-top: 40px;
+.breadCrumbsWrapper {
+  padding-top: 40px;
+}
+.firstDesc h2 {
+  margin-top: 50px;
+}
+.firstDesc p {
+  width: 85%;
+  margin-top: 30px;
 }
 
 
@@ -77,6 +78,9 @@
   padding-bottom: 200px;
 }
 
+.bankCardWrapperSection {
+  position: relative;
+}
 .bankCardWrapper {
   background: $pageBg;
   padding-bottom: 290px;
@@ -87,4 +91,12 @@
 }
 .bankCardWrapper h2 {
   padding-bottom: 100px;
+}
+
+.waveDesktop {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  // height: 200px;
 }
