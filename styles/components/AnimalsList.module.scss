@@ -5,16 +5,15 @@
 }
 .findAnimalInputBlock { 
   display: flex;
-  width: 100%;
 }
 .findAnimalInputBlock >* {
   margin-right: 30px;
 }
 
-.searchInputBlock {
-  width: 100%;
-}
 
+.animalFilterWrapperMobile {
+  display: none;
+}
 .animalFiltersBlock {
   padding-bottom: 70px;
 }
@@ -48,11 +47,8 @@
 // Tablet styles
 @media (max-width: 1024px) {
   .animalInputsBlock {
-    justify-content: space-between;
     display: flex;
-  }
-  .animalInputsBlock div {
-    margin-right: 0;
+    flex-wrap: wrap;
   }
   .animalFilterWrapperTop {
     margin-top: 40px;
@@ -65,7 +61,38 @@
     flex-direction: column-reverse;
     align-items: flex-start;
   }
-  .animalInputsBlock >* {
+  .animalFilterWrapper {
+    display: none;
+  }
+  .animalFilterWrapperMobile {
+    display: block;
+    margin-top: 30px;
+  }
+  .animalFilterWrapperTopMobile {
+    display: flex;
+  }
+  .animalFilterWrapperMiddleMobile {
+    display: flex;
+    margin: {
+      top: 15px;
+      bottom: 15px;
+    }
+  }
+  .animalFilterWrapperBottomMobile {
+    display: flex;
+  }
+  .animalFilterWrapperTopMobile >*:not(:last-child) {
+    margin-right: 15px;
+  } 
+  .animalFilterWrapperMiddleMobile >*:not(:last-child) {
+    margin-right: 15px;
+  } 
+  .findAnimalInputBlock {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .findAnimalInputBlock >*:not(:last-child) {
     margin-bottom: 15px;
   }
 }

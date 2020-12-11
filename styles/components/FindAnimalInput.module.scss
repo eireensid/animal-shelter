@@ -9,7 +9,7 @@
     left: 20px;
     right: 25px;
   }
-  width: 34%;
+  width: 285px;
   justify-content: space-between;
   background: #fff;
   border-radius: 100px;
@@ -18,7 +18,7 @@
 // Tablet styles
 @media (max-width: 1024px) {
   .animalFilterInput {
-    width: 30%;
+    width: 206px;
     padding: {
       top: 16px;
       bottom: 16px;
@@ -34,7 +34,6 @@
 // Mobile styles
 @media (max-width: 414px) {
   .animalFilterInput {
-    width: 74%;
     height: 37px;
     padding: {
       top: 9px;

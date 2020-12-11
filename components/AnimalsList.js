@@ -14,9 +14,7 @@ export default function AnimalsList({animals}) {
             <FindAnimalInput inputTitle="Все животные"/>
             <FindAnimalInput inputTitle="Все возраста"/>
           </div>
-          <div className={styles.SearchInputBlock}>
-            <SearchInput/>
-          </div>
+          <SearchInput/>
         </div>
         <div className={styles.animalFilterWrapper}>
           <div className={styles.animalFilterWrapperTop}>            
@@ -26,6 +24,19 @@ export default function AnimalsList({animals}) {
           </div>
           <div className={styles.animalFilterWrapperBottom}>
             <PawLabel pawColor="/img/paws/need-guardian.png" pawMeaning="Нужен опекун"/>
+            <PawLabel pawColor="/img/paws/undergo-treatment.png" pawMeaning="Проходят лечение"/>
+          </div>
+        </div>
+        <div className={styles.animalFilterWrapperMobile}>
+          <div className={styles.animalFilterWrapperTopMobile}>            
+            <PawLabel pawColor="/img/paws/looking-for-home.png" pawMeaning="Ищут дом"/>
+            <PawLabel pawColor="/img/paws/need-adoptation.png" pawMeaning="Нужна адаптация"/>
+          </div>
+          <div className={styles.animalFilterWrapperMiddleMobile}>
+            <PawLabel pawColor="/img/paws/need-guardian.png" pawMeaning="Нужен опекун"/>
+            <PawLabel pawColor="/img/paws/baby-pets.png" pawMeaning="Малыши"/>
+          </div>
+          <div className={styles.animalFilterWrapperBottomMobile}>
             <PawLabel pawColor="/img/paws/undergo-treatment.png" pawMeaning="Проходят лечение"/>
           </div>
         </div>

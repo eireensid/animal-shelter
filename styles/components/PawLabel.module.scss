@@ -37,5 +37,14 @@
 
 // Mobile styles
 @media (max-width: 414px) {
-  
+  .animalFilter {
+    padding: 7px;
+  }
+  .animalFilter img {
+    padding-right: 3px;
+    height: 20px;
+  }
+  .animalFilter h4 {
+    font-size: 0.722rem;
+  }
 }

@@ -9,7 +9,7 @@
     left: 20px;
     right: 25px;
   }
-  width: 30%;
+  width: 285px;
   height: 48px;
   background: #fff;
   border-radius: 100px;
@@ -33,13 +33,13 @@
       left: 15px;
       right: 0;
     }
+    width: 206px;
   }
 }
 
 // Mobile styles
 @media (max-width: 414px) {
   .searchInput {
-    width: 74%;
     height: 37px;
   }
   .searchInput img {
