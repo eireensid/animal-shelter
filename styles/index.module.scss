@@ -194,6 +194,9 @@
   display: flex;
   justify-content: center;
 }
+.morePetsBtnTablet {
+  display: none;
+}
 
 .bankCardWrapper h2 {
   padding-bottom: 100px;
@@ -236,9 +239,8 @@
 
   .findHomeBlock {
     padding: {
-      // left: 45px;
-      // right: 45px;
       top: 110px;
+      bottom: 180px;
     }
   }
   
@@ -262,7 +264,58 @@
   .waysToHelpTitle {
     padding-bottom: 170px;
   }
-  
+  .waysToHelpBlock {
+    padding-top: 0;
+    padding-bottom: 200px;
+  }
+  .waysToHelpDesc {
+    flex-basis: 52%;
+  }
+  .waysToHelpImg {
+    width: 42.4%;
+  }
+  .waysToHelpDescTitleWrapper {
+    padding-bottom: 20px;
+  }
+  .waysToHelpDescTitleWrapper h3 {
+    font-size: 1.11rem;
+    letter-spacing: 1px;
+  }
+  .waysToHelpDescBtnWrapper p {
+    font-size: 0.833rem;
+    letter-spacing: 1px;
+  }
+  .waysToHelpDescBtnWrapper span {
+    width: 90%;
+    padding-top: 9px;
+  }
+
+  .ourPetsBlock {
+    padding-bottom: 240px;
+  }
+  .ourPetsBlock h2 {
+    padding-top: 0;
+  }
+  .ourPetsDesc {
+    width: 48%;
+  }
+  .ourPetsPadding {
+    padding-top: 20px;
+    padding-bottom: 100px;
+  }
+
+  .morePetsBtn {
+    display: none;
+  }
+  .morePetsBtnTablet {
+    display: block;
+    margin-top: -75px;
+    display: flex;
+    justify-content: center;
+  }
+  .bankCardWrapper {
+    margin-top: 190px;
+  }
 
   .pagePaddings {
     padding: {
