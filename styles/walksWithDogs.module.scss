@@ -100,3 +100,42 @@
   width: 100%;
   // height: 200px;
 }
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .pagePaddings {
+    padding: {
+      left: 45px;
+      right: 45px;
+    }
+  }
+
+  .firstWrapper {
+    flex-direction: column;
+  }
+  .firstBlock {
+    padding-left: 45px;
+  }
+  .firstDesc h2 {
+    margin-top: 50px;
+  }
+  .firstDesc p {
+    width: 73%;
+    margin-bottom: 40px;
+  }
+  .photoWithPhraseBubbleWrapper {
+    margin: 0 auto;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .pagePaddings {
+    padding: {
+      left: 14px;
+      right: 14px;
+    }
+  }
+
+
+}

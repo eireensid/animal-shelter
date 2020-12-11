@@ -218,6 +218,7 @@
   }
   .firstBlockImg {
     display: none;
+    margin-top: 107px;
   }
   .firstBlockImgTablet {
     display: block;
@@ -349,10 +350,10 @@
     padding-top: 100px;
   }
   .firstBlockTitle h1 {
-    font-size: 1.67rem;
+    font-size: 30px;
   }
   .firstBlockTitle h3 {
-    font-size: 0.83rem;
+    font-size: 15px;
     width: 70%;
   }
   .firstBlockImgTablet {
@@ -404,7 +405,7 @@
   }
   .waysToHelpImg img {
     border-radius: 30px;
-    width: 186px;
+    // width: 186px;
   }
   .waysToHelpImgMobile {
     position: absolute;

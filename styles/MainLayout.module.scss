@@ -189,6 +189,10 @@
 // Mobile styles
 @media (max-width: 414px) {
   // Header
+  .headerBlock {
+    padding-left: 10px;
+    padding-right: 14px;
+  }
   .logoHeader {
     width: 54px;
     height: 49px;

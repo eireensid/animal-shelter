@@ -17,6 +17,7 @@ const customStyles = {
     // height: '90vh',
     background: '#FFF5DA'
   },
+  overlay: {zIndex: 1000}
 }
 
 Modal.setAppElement('#__next')
