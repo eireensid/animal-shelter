@@ -51,6 +51,12 @@
 
 // Tablet styles
 @media (max-width: 1024px) {
+  .findCarouselArrow {
+    height: 30px;
+  }
+  // .findCarouselArrow img {
+  //   height: 100%;
+  // }
   .findCarouselBlock {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -66,7 +72,15 @@
 
 // Mobile styles
 @media (max-width: 414px) {
-  
+  .findCarouselArrow {
+    display: none;
+  }
+  .findCarouselBlock >* {
+    margin-top: 140px;
+  }
+  .findHomeTitle {
+    padding-bottom: 40px;
+  }
 }
 
 
