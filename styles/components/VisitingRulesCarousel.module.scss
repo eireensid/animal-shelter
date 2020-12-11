@@ -15,7 +15,7 @@
   flex-basis: 84%;
 }
 .visitingRulesCard img {
-  margin-right: 3.3%;
+  margin-right: 30px;
 }
 
 // Arrows
@@ -64,4 +64,64 @@
 }
 .visitingRulesRound:not(:last-child) {
   margin-right: 10px;
+}
+
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .visitingRulesCard {
+    height: 309px;
+    padding: 35px;
+  }
+  .visitingRulesCard img {
+    margin-right: 30px;
+    width: 242px;
+    height: 239px;
+  }
+  .visitingRulesCard p {
+    font-size: 0.833rem;
+    width: 100%;
+  }
+
+  .visitingRulesArrowRight img {
+    padding: {
+      top: 9px;
+      right: 10px;
+      bottom: 9px;
+      left: 14px;
+    }
+  }
+  .visitingRulesArrowLeft img {
+    padding: {
+      top: 9px;
+      right: 14px;
+      bottom: 9px;
+      left: 10px;
+    }
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .visitingRulesCard {
+    height: 278px;
+    padding: {
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+    }
+    flex-direction: column;
+    justify-content: center;
+  }
+  .visitingRulesCard img {
+    margin-right: 0;
+    width: 130px;
+    height: 130px;
+    border-radius: 30px;
+    margin-bottom: 18px;
+  }
+  .visitingRulesCard p {
+    font-size: 0.722rem;
+  }
 }

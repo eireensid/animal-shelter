@@ -6,7 +6,7 @@
 .visitingRulesBlock h3 {
   padding-bottom: 40px;
 }
-.visitingRulesBlock p {
+.visitingRule {
   padding-bottom: 45px;
   width: 47%;
 }
@@ -17,4 +17,27 @@
 // .visitingRulesCarouselWrapper {
 //   display: flex;
 // }
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .visitingRulesBlock h3 {
+    padding-bottom: 30px;
+  } 
+  .visitingRule {
+    padding-bottom: 40px;
+    width: 65%;
+  }
+  .callWriteBtnsWrapper {
+    padding-bottom: 90px;
+  }
+  .visitingRule {
+    padding-bottom: 0;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  
+}
+
 

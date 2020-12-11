@@ -17,3 +17,32 @@
   color: #fff;
   margin-left: 15px;
 }
+
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .callBtn, .whatsappBtn {
+    padding: {
+      top: 11px;
+      bottom: 11px;
+    };
+  }
+  .callBtn span, .whatsappBtn span {
+    margin-left: 10px;
+    font-size: 1em;
+  } 
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .callBtn, .whatsappBtn {
+    padding: {
+      top: 8px;
+      bottom: 8px;
+    };
+  }
+  .callBtn span, .whatsappBtn span {
+    margin-left: 8px;
+    font-size: 15px;
+  } 
+}
