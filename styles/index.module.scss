@@ -211,9 +211,6 @@
     align-items: flex-end;
     padding-top: 160px;
   }
-  .firstBlockTitle {
-    margin-bottom: 107px;
-  }
   .titleDesc {
     width: 45%;
     margin-top: 37px;
@@ -223,6 +220,7 @@
   }
   .firstBlockImgTablet {
     display: block;
+    margin-top: 107px;
   }
 
   .waveDesktop{
@@ -243,7 +241,7 @@
       bottom: 180px;
     }
   }
-  
+ 
 
   .videoBlock {
     padding-top: 190px;
@@ -345,11 +343,66 @@
     width: 100%;
   }
 
+  .firstBlock {
+    padding-left: 14px;
+    padding-top: 100px;
+  }
+  .firstBlockTitle h1 {
+    font-size: 1.67rem;
+  }
+  .firstBlockTitle h3 {
+    font-size: 0.83rem;
+    width: 70%;
+  }
+  .firstBlockImgTablet {
+    display: none;
+  }
+  .firstBlockImg {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
   .videoBlock {
     flex-direction: column;
+    padding-top: 95px;
+    padding-bottom: 80px;
+  }
+  .videoText {
+    width: 86%;
+    padding-bottom: 80px;
+  }
+  .videoWrapper iframe {
+    height: 136px;
+    width: 243px;
   }
   .bubbleBlock {
     padding-left: 0;
+    padding-bottom: 140px;
+  }
+
+  .waysToHelpBlock {
+    padding-top: 180px;
+  }
+  .waysToHelp {
+    flex-direction: column-reverse;
+  }
+  .waysToHelpReversed {
+    flex-direction: column-reverse;
+  }
+  .waysToHelpImg {
+    width: 60%;
+  }
+  .waysToHelpImg img {
+    border-radius: 30px;
+  }
+  .waysToHelpImgMobile {
+    position: absolute;
+    bottom: 95.8%;
+  }
+  .waysToHelpTitle {
+    padding-bottom: 160px;
   }
 }
 

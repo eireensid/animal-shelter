@@ -1,3 +1,6 @@
+// .findCarouselCard {
+//   position: relative;
+// }
 .findHomeTitle {
   padding: {
     bottom: 260px;
@@ -77,6 +80,9 @@
   }
   .findCarouselBlock >* {
     margin-top: 140px;
+  }
+  .findCarouselCard {
+    padding: 0;
   }
   .findHomeTitle {
     padding-bottom: 40px;
