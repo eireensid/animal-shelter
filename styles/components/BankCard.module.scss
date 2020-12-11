@@ -13,14 +13,12 @@
   // background-size: 55%;
   display: flex;
   align-items: center;
-  width: 59%;
+  width: 648px;
+  height: 405px;
   flex-direction: column;
   border-radius: 20px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-  padding: {
-    top: 13%;
-    bottom: 10%;
-  }
+  justify-content: center;
 }
 .bankCardNumber {
   display: flex;
@@ -53,9 +51,9 @@
 // Tablet styles
 @media (max-width: 1024px) {
   .bankCard {
-    width: 100%;
+    width: 648px;
     margin-left: 15px;
-    height: 85vh;
+    height: 405px;
     justify-content: center;
   }
 }
@@ -63,9 +61,9 @@
 // Mobile styles
 @media (max-width: 414px) {
   .bankCard {
-    width: 100%;
+    width: 290px;
     margin-left: 0px;
-    height: 30vh;
+    height: 182px;
     background-size: 50%;
   }
   .btnTextDesktop {
@@ -76,12 +74,13 @@
     padding: {
       top: 7px;
       bottom: 7px;
-      left: 19px;
-      right: 19px;
+      left: 15px;
+      right: 15px;
     }
+    font-size: 0.722rem;
   }
   .bankCardNumber img {
-    width: 15%;
+    width: 16.5%;
     padding-right: 9px;
   }
   .bankCardBtn {
@@ -90,14 +89,12 @@
   .bankCardBtn button {
     width: 156px;
     padding: {
-      top: 13px;
-      bottom: 13px;
-      left: 33px;
-      right: 33px;
+      top: 10px;
+      bottom: 10px;
     }
   }
   .btnTextMobile {
     display: block;
-    font-size: 0.722rem;
+    font-size: 13px;
   }
 }
