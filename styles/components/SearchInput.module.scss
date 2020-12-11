@@ -9,15 +9,43 @@
     left: 20px;
     right: 25px;
   }
-  width: 25.4%;
+  width: 30%;
   height: 48px;
   background: #fff;
   border-radius: 100px;
 }
 .searchInput input {
   margin-left: 5px;
+  width: 100%;
 }
-.searchInput input[placeholder] {
-  // font-size: 0.722em;
+.searchInput input::placeholder {
+  // font-size: 0.722rem;
   color: rgba(66, 41, 4, 0.5);
+  letter-spacing: 1px;
+}
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .searchInput {
+    padding: {
+      top: 16px;
+      bottom: 16px;
+      left: 15px;
+      right: 0;
+    }
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .searchInput {
+    width: 74%;
+    height: 37px;
+  }
+  .searchInput img {
+    height: 12px;
+  }
+  .searchInput input::placeholder {
+    font-size: 11px;
+  }
 }

@@ -15,3 +15,27 @@
 .animalFilter img {
   padding-right: 18px;
 }
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .animalFilter {
+    padding: {
+      top: 10px;
+      bottom: 10px;
+      left: 12px;
+      right: 12px;
+    }
+  }
+  .animalFilter img {
+    padding-right: 13px;
+    height: 30px;
+  }
+  .animalFilter h4 {
+    font-size: 1rem;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  
+}

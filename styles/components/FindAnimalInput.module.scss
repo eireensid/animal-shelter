@@ -9,8 +9,45 @@
     left: 20px;
     right: 25px;
   }
-  width: 25.4%;
+  width: 34%;
   justify-content: space-between;
   background: #fff;
   border-radius: 100px;
+}
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .animalFilterInput {
+    width: 30%;
+    padding: {
+      top: 16px;
+      bottom: 16px;
+      left: 20px;
+      right: 14px;
+    }
+  }
+  .animalFilterInput h4 {
+    font-size: 1rem;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .animalFilterInput {
+    width: 74%;
+    height: 37px;
+    padding: {
+      top: 9px;
+      bottom: 9px;
+      left: 15px;
+      right: 10px;
+    }
+  }
+  .animalFilterInput h4 {
+    font-size: 0.722rem;
+  }
+  .animalFilterInput img {
+    height: 14px;
+    width: 17px;
+  }
 }

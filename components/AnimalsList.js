@@ -10,9 +10,13 @@ export default function AnimalsList({animals}) {
     <div className={styles.animalsListBlock}>
       <div className={styles.animalFiltersBlock}>
         <div className={styles.animalInputsBlock}>
-          <FindAnimalInput inputTitle="Все животные"/>
-          <FindAnimalInput inputTitle="Все возраста"/>
-          <SearchInput/>
+          <div className={styles.findAnimalInputBlock}>
+            <FindAnimalInput inputTitle="Все животные"/>
+            <FindAnimalInput inputTitle="Все возраста"/>
+          </div>
+          <div className={styles.SearchInputBlock}>
+            <SearchInput/>
+          </div>
         </div>
         <div className={styles.animalFilterWrapper}>
           <div className={styles.animalFilterWrapperTop}>            
