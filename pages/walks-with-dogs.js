@@ -31,33 +31,61 @@ export default function WalksWithDogs({title='Прогулки с собакам
       <div className={`${styles.walksGalleryBlock} ${styles.pagePaddings}`}>
         <h2>Кадры с прогулок</h2>
         <div className={styles.walksGallery}>
-          {/* <div className={styles.walksGalleryLeft}>
-            <img src="/img/walksPage/left1.png" alt="прогулка"/>
-            <div className={styles.insideGalleryLeftMiddle}>
-              <img src="/img/walksPage/left2.png" alt="прогулка"/>
-              <img src="/img/walksPage/middle1.png" alt="прогулка"/>
+          <div className={styles.walksGalleryLeft}>
+            <div className={styles.photo1}>
+              <img src="/img/walksPage/left1.png" alt="прогулка"/>
             </div>
             <div className={styles.insideGalleryLeftMiddle}>
-              <div>
-                <img src="/img/walksPage/left3.png" alt="прогулка"/>
-                <img src="/img/walksPage/left4.png" alt="прогулка"/>
-                <img src="/img/walksPage/left5.png" alt="прогулка"/>
+              <div className={styles.photo2}>
+                <img src="/img/walksPage/left2.png" alt="прогулка"/>
               </div>
-              <div>
-                <img src="/img/walksPage/middle2.png" alt="прогулка"/>
-                <img src="/img/walksPage/middle3.png" alt="прогулка"/>
-                <img src="/img/walksPage/middle4.png" alt="прогулка"/>
+              <div className={styles.photo3}>
+                <img src="/img/walksPage/middle1.png" alt="прогулка"/>
               </div>
             </div>
-            <img src="/img/walksPage/left6.png" alt="прогулка"/>
+            <div className={styles.insideGalleryLeftMiddle}>
+              <div className={styles.insideGalleryLeftMiddleLeft}>
+                <div className={styles.photo4}>
+                  <img src="/img/walksPage/left3.png" alt="прогулка"/>
+                </div>
+                <div className={styles.photo5}>
+                  <img src="/img/walksPage/left4.png" alt="прогулка"/>
+                </div>
+                <div className={styles.photo6}>
+                  <img src="/img/walksPage/left5.png" alt="прогулка"/>
+                </div>
+              </div>
+              <div className={styles.insideGalleryLeftMiddleRight}>
+                <div className={styles.photo7}>
+                  <img src="/img/walksPage/middle2.png" alt="прогулка"/>
+                </div>
+                <div className={styles.photo8}>
+                  <img src="/img/walksPage/middle3.png" alt="прогулка"/>
+                </div>
+                <div className={styles.photo9}>
+                  <img src="/img/walksPage/middle4.png" alt="прогулка"/>
+                </div>
+              </div>
+            </div>
+            <div className={styles.photo10}>
+              <img src="/img/walksPage/left6.png" alt="прогулка"/>
+            </div>  
           </div>
           <div className={styles.walksGalleryRight}>
-            <img src="/img/walksPage/right1.png" alt="прогулка"/>
-            <img src="/img/walksPage/right2.png" alt="прогулка"/>
-            <img src="/img/walksPage/right3.png" alt="прогулка"/>
-            <img src="/img/walksPage/right4.png" alt="прогулка"/>
-          </div> */}
-          <img src="/img/walksPage/walkGalleryPhotos.png" alt="прогулка"/>
+            <div className={styles.photo11}>
+              <img src="/img/walksPage/right1.png" alt="прогулка"/>
+            </div>
+            <div className={styles.photo12}>
+              <img src="/img/walksPage/right2.png" alt="прогулка"/>
+            </div>
+            <div className={styles.photo13}>
+              <img src="/img/walksPage/right3.png" alt="прогулка"/>
+            </div>
+            <div className={styles.photo14}>
+              <img src="/img/walksPage/right4.png" alt="прогулка"/>
+            </div>
+          </div>
+          {/* <img src="/img/walksPage/walkGalleryPhotos.png" alt="прогулка"/> */}
         </div>
       </div>
     </section>

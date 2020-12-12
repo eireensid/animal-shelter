@@ -47,23 +47,94 @@
   padding-bottom: 105px;
 }
 .walksGallery {
-  // display: flex;
-  // justify-content: space-between;
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 .walksGallery img {
   width: 100%;
 }
-// .walksGalleryLeft {
-//   flex-basis: 210%;
-// }
-// .walksGalleryRight {
-//   flex-basis: 138%;
-// }
-// .insideGalleryLeftMiddle {
-//   display: flex;
-//   // justify-content: space-between;
-// }
+.walksGalleryLeft {
+  margin-right: 15px;
+  .photo1 {
+    width: 635px;
+    height: 428px;
+  }
+  .photo2 {
+    width: 350px;
+    height: 373px;
+    margin-right: 30px;
+  }
+  .photo3 {
+    width: 255px;
+    height: 373px;
+  }
+  .photo4 {
+    width: 255px;
+    height: 438px;
+  }
+  .photo5 {
+    width: 255px;
+    height: 262px;
+  }
+  .photo6 {
+    width: 255px;
+    height: 387px;
+  }
+  .photo7 {
+    width: 350px;
+    height: 380px;
+  }
+  .photo8 {
+    width: 350px;
+    height: 481px;
+  }
+  .photo9 {
+    width: 350px;
+    height: 226px;
+  }
+  .photo10 {
+    width: 635px;
+    height: 381px;
+  }
+}
+.walksGalleryRight {
+  margin-left: 15px;
+  .photo11 {
+    width: 445px;
+    height: 561px;
+  }
+  .photo12 {
+    width: 445px;
+    height: 498px;
+  }
+  .photo13 {
+    width: 445px;
+    height: 557px;
+  }
+  .photo14 {
+    width: 445px;
+    height: 713px;
+  }
+}
+.insideGalleryLeftMiddle {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  // justify-content: space-between;
+}
+.insideGalleryLeftMiddleLeft div:not(:last-child) {
+  margin-bottom: 30px;
+}
+.insideGalleryLeftMiddleRight div:not(:last-child) {
+  margin-bottom: 30px;
+}
+.insideGalleryLeftMiddleLeft {
+  margin-right: 30px;
+}
+.walksGalleryRight div:not(:last-child) {
+  margin-bottom: 30px;
+}
 
 
 
@@ -84,10 +155,6 @@
 .bankCardWrapper {
   background: $pageBg;
   padding-bottom: 290px;
-  background-image: url(/img/orange-wave-cut.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
 }
 .bankCardWrapper h2 {
   padding-bottom: 100px;
@@ -104,6 +171,88 @@
 }
 .waveMobile {
   display: none;
+}
+
+@media (max-width: 1439px) {
+  .walksGalleryLeft {
+    margin-right: 9px;
+    .photo1 {
+      width: 388px;
+      height: 261px;
+    }
+    .photo2 {
+      width: 214px;
+      height: 228px;
+      margin-right: 18px;
+    }
+    .photo3 {
+      width: 156px;
+      height: 228px;
+    }
+    .photo4 {
+      width: 156px;
+      height: 267px;
+    }
+    .photo5 {
+      width: 156px;
+      height: 160px;
+    }
+    .photo6 {
+      width: 156px;
+      height: 236px;
+    }
+    .photo7 {
+      width: 214px;
+      height: 232px;
+    }
+    .photo8 {
+      width: 214px;
+      height: 294px;
+    }
+    .photo9 {
+      width: 214px;
+      height: 138px;
+    }
+    .photo10 {
+      width: 388px;
+      height: 233px;
+    }
+  }
+  .walksGalleryRight {
+    margin-left: 9px;
+    .photo11 {
+      width: 272px;
+      height: 342px;
+    }
+    .photo12 {
+      width: 272px;
+      height: 304px;
+    }
+    .photo13 {
+      width: 272px;
+      height: 340px;
+    }
+    .photo14 {
+      width: 272px;
+      height: 435px;
+    }
+  }
+  .insideGalleryLeftMiddle {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .insideGalleryLeftMiddleLeft div:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  .insideGalleryLeftMiddleRight div:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  .insideGalleryLeftMiddleLeft {
+    margin-right: 18px;
+  }
+  .walksGalleryRight div:not(:last-child) {
+    margin-bottom: 18px;
+  }
 }
 
 // Tablet styles
@@ -132,6 +281,9 @@
   .firstBlock {
     padding-left: 45px;
   }
+  .firstDesc {
+    flex-basis: 100%;
+  }
   .firstDesc h2 {
     margin-top: 50px;
   }
@@ -141,6 +293,176 @@
   }
   .photoWithPhraseBubbleWrapper {
     margin: 0 auto;
+  }
+
+  
+  
+  .walksGalleryLeft {
+    margin-right: 9px;
+    .photo1 {
+      width: 388px;
+      height: 261px;
+    }
+    .photo2 {
+      width: 214px;
+      height: 228px;
+      margin-right: 18px;
+    }
+    .photo3 {
+      width: 156px;
+      height: 228px;
+    }
+    .photo4 {
+      width: 156px;
+      height: 267px;
+    }
+    .photo5 {
+      width: 156px;
+      height: 160px;
+    }
+    .photo6 {
+      width: 156px;
+      height: 236px;
+    }
+    .photo7 {
+      width: 214px;
+      height: 232px;
+    }
+    .photo8 {
+      width: 214px;
+      height: 294px;
+    }
+    .photo9 {
+      width: 214px;
+      height: 138px;
+    }
+    .photo10 {
+      width: 388px;
+      height: 233px;
+    }
+  }
+  .walksGalleryRight {
+    margin-left: 9px;
+    .photo11 {
+      width: 272px;
+      height: 342px;
+    }
+    .photo12 {
+      width: 272px;
+      height: 304px;
+    }
+    .photo13 {
+      width: 272px;
+      height: 340px;
+    }
+    .photo14 {
+      width: 272px;
+      height: 435px;
+    }
+  }
+  .insideGalleryLeftMiddle {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .insideGalleryLeftMiddleLeft div:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  .insideGalleryLeftMiddleRight div:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  .insideGalleryLeftMiddleLeft {
+    margin-right: 18px;
+  }
+  .walksGalleryRight div:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+@media(max-width:767px) {
+  .walksGalleryBlock {
+    padding-bottom: 100px;
+  }
+  .walksGalleryBlock h2 {
+    padding-bottom: 83px;
+  }
+  .walksGalleryLeft {
+    margin-right: 4px;
+    .photo1 {
+      width: 166px;
+      height: 111px;
+    }
+    .photo2 {
+      width: 91px;
+      height: 97px;
+      margin-right: 8px;
+    }
+    .photo3 {
+      width: 66px;
+      height: 97px;
+    }
+    .photo4 {
+      width: 66px;
+      height: 113px;
+    }
+    .photo5 {
+      width: 66px;
+      height: 68px;
+    }
+    .photo6 {
+      width: 66px;
+      height: 102px;
+    }
+    .photo7 {
+      width: 91px;
+      height: 99px;
+    }
+    .photo8 {
+      width: 91px;
+      height: 125px;
+    }
+    .photo9 {
+      width: 91px;
+      height: 59px;
+    }
+    .photo10 {
+      width: 167px;
+      height: 100px;
+    }
+  }
+  .walksGalleryRight {
+    margin-left: 4px;
+    .photo11 {
+      width: 116px;
+      height: 146px;
+    }
+    .photo12 {
+      width: 116px;
+      height: 130px;
+    }
+    .photo13 {
+      width: 116px;
+      height: 145px;
+    }
+    .photo14 {
+      width: 116px;
+      height: 186px;
+    }
+  }
+  .insideGalleryLeftMiddle {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .insideGalleryLeftMiddleLeft div:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .insideGalleryLeftMiddleRight div:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .insideGalleryLeftMiddleLeft {
+    margin-right: 8px;
+  }
+  .walksGalleryRight div:not(:last-child) {
+    margin-bottom: 8px;
   }
 }
 
@@ -180,5 +502,91 @@
   }
   .breadCrumbsWrapper {
     padding-top: 0;
+  }
+
+  .walksGalleryBlock {
+    padding-bottom: 100px;
+  }
+  .walksGalleryBlock h2 {
+    padding-bottom: 83px;
+  }
+  .walksGalleryLeft {
+    margin-right: 4px;
+    .photo1 {
+      width: 166px;
+      height: 111px;
+    }
+    .photo2 {
+      width: 91px;
+      height: 97px;
+      margin-right: 8px;
+    }
+    .photo3 {
+      width: 66px;
+      height: 97px;
+    }
+    .photo4 {
+      width: 66px;
+      height: 113px;
+    }
+    .photo5 {
+      width: 66px;
+      height: 68px;
+    }
+    .photo6 {
+      width: 66px;
+      height: 102px;
+    }
+    .photo7 {
+      width: 91px;
+      height: 99px;
+    }
+    .photo8 {
+      width: 91px;
+      height: 125px;
+    }
+    .photo9 {
+      width: 91px;
+      height: 59px;
+    }
+    .photo10 {
+      width: 167px;
+      height: 100px;
+    }
+  }
+  .walksGalleryRight {
+    margin-left: 4px;
+    .photo11 {
+      width: 116px;
+      height: 146px;
+    }
+    .photo12 {
+      width: 116px;
+      height: 130px;
+    }
+    .photo13 {
+      width: 116px;
+      height: 145px;
+    }
+    .photo14 {
+      width: 116px;
+      height: 186px;
+    }
+  }
+  .insideGalleryLeftMiddle {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .insideGalleryLeftMiddleLeft div:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .insideGalleryLeftMiddleRight div:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .insideGalleryLeftMiddleLeft {
+    margin-right: 8px;
+  }
+  .walksGalleryRight div:not(:last-child) {
+    margin-bottom: 8px;
   }
 }

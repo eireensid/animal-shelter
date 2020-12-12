@@ -216,6 +216,10 @@
     width: 45%;
     margin-top: 37px;
   }
+  .firstBlockTitle {
+    flex-basis: 0;
+    flex: 1;
+  }
   .firstBlockImg {
     display: none;
     // margin-top: 107px;
@@ -349,9 +353,7 @@
     padding-left: 14px;
     padding-top: 100px;
   }
-  .firstBlockTitle {
-    flex-basis: 100%;
-  }
+  
   .firstBlockTitle h1 {
     font-size: 30px;
   }
