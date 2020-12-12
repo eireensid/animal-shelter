@@ -1,18 +1,20 @@
 import Link from 'next/link'
+import {useState} from 'react'
 import BankCardModal from '~/components/BankCardModal'
 import styles from '~/styles/components/MobileMenu.module.scss'
 
 export default function MobileMenu() {
+  const [menuStyle, setMenuStyle] = useState({display: "block"})
   const closeMenu = () => {
-  }
+  } 
 
   return <>
     <div className={styles.mobileMenuBlock}>
       <div className={styles.menuAndBtnBlock}>
-        <nav className={styles.menuWrapper}>
+        <nav className={styles.menuWrapperMobile}>
           <a className={styles.menuAboutLink}>О приюте</a>
-          <div className={`${styles.menuDropdown} ${styles.menuAboutDropdown}`}>
-            <ul className={styles.menuDropdownUl}>
+          <div className={`${styles.menuDropdownMobile} ${styles.menuAboutDropdown}`}>
+            <ul className={styles.menuDropdownMobileUl}>
               <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
               <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
               <li><Link href="/walks-with-dogs"><a>Прогулки с собаками</a></Link></li>
@@ -22,8 +24,8 @@ export default function MobileMenu() {
             </ul>
           </div>
           <a className={styles.menuPetsLink}>Питомцы</a>
-          <div className={`${styles.menuDropdown} ${styles.menuPetsDropdown}`}>
-            <ul className={styles.menuDropdownUl}>
+          <div className={`${styles.menuDropdownMobile} ${styles.menuPetsDropdown}`}>
+            <ul className={styles.menuDropdownMobileUl}>
               <li><Link href="/cats"><a>Кошки</a></Link></li>
               <li><Link href="/dogs"><a>Собаки</a></Link></li>
               <li><Link href="/basic-needs-of-teremok"><a>Ищут дом</a></Link></li>

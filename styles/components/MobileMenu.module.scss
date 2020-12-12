@@ -1,8 +1,5 @@
 @import 'variables.scss';
 
-.mobileMenuBlock {
-  display: none;
-}
 
 
 // Tablet styles
@@ -10,9 +7,13 @@
   .mobileMenuBlock {
     display: flex;
     z-index: 1000;
-    // position: fixed;
+    position: absolute;
+    top: 147px;
+    left: 0;
+    right: 0;
     width: 100%;
-    height: calc(max(100vh, 174px));
+    height: 100vh;
+    background: $pageBg;
   }
 
   .menuAndBtnBlock {
@@ -28,16 +29,16 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .menuWrapper {
+  .menuWrapperMobile {
     display: flex;
     flex-direction: column;
   }
-  .menuWrapper a {
+  .menuWrapperMobile a {
     color: $textColor;
-    font-size: 30px;
+    font-size: 30px!important;
     font-weight: $mediumWeight;
   }
-  .menuWrapper a:not(:first-child) {
+  .menuWrapperMobile a:not(:first-child) {
     margin-top: 45px;
   }
   .btnWrapper * {
@@ -69,6 +70,10 @@
   }
   .socialsWrapper a:not(:last-child) {
     margin-bottom: 13px;
+    margin-right: 0!important;
+  }
+  .socialsWrapper img {
+    width: 40px;
   }
 
 
@@ -80,22 +85,22 @@
   .menuPetsLink:hover + .menuPetsDropdown {
     display:block;
   }
-  .menuDropdown {
+  .menuDropdownMobile {
     z-index: 200;
     display: none;
   }
-  .menuDropdownUl {
+  .menuDropdownMobileUl {
     padding: {
       top: 27px;
       bottom: 8px;
     };
   }
   
-  .menuDropdown a {
-    font-size: 18px;
+  .menuDropdownMobile a {
+    font-size: 18px!important;
     font-weight: normal;
   }
-  .menuDropdown li:not(:last-child) {
+  .menuDropdownMobile li:not(:last-child) {
     padding-bottom: 15px;
   }
 

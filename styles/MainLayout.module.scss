@@ -76,6 +76,14 @@
   display: block;
 }
 
+.mobileMenuWrapper {
+  display: none;
+}
+.openBtn {
+  background: none!important;
+  padding: 0;
+  width: 59px;
+}
 
 // Footer
 .footerBlock {

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import {useState} from 'react'
 import MobileMenu from '~/components/MobileMenu'
 import BankCardModal from '~/components/BankCardModal'
 import SocialBtns from '~/components/SocialBtns'
@@ -7,6 +8,15 @@ import WebsiteTeam from '~/components/WebsiteTeam'
 import styles from '~/styles/MainLayout.module.scss'
 
 export function MainLayout({children, title='Теремок'}) {
+  const [menuStyle, setMenuStyle] = useState({display: "none"})
+  const openMenu = () => {
+    if (menuStyle.display === "none") {
+      setMenuStyle({display: "block"})
+    } else {
+      setMenuStyle({display: "none"})
+    }
+  } 
+
   return (
     <>
       <Head>
@@ -50,7 +60,10 @@ export function MainLayout({children, title='Теремок'}) {
 
           {/* Mobile menu */}
           <nav className={styles.menuWrapperBurger}>
-            <img className={styles.burger} src="/img/burger.svg" alt="меню"/>
+            <button className={styles.openBtn} onClick={openMenu}><img className={styles.burger} src="/img/burger.svg" alt="меню"/></button>
+            <div style={menuStyle} className={styles.mobileMenuWrapper}>
+              <MobileMenu/>
+            </div>
           </nav>
 
           <div className={styles.btnWrapper}>
@@ -58,7 +71,6 @@ export function MainLayout({children, title='Теремок'}) {
           </div>
         </div>   
       </header>
-      <MobileMenu/>
       <main>
         {children}
       </main>
