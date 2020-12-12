@@ -83,6 +83,13 @@
   background: none!important;
   padding: 0;
   width: 59px;
+  border-radius: 0;
+}
+.openBtn:hover {
+  background: none
+}
+.openBtn:active {
+  background: none;
 }
 
 // Footer

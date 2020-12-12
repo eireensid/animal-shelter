@@ -3,17 +3,32 @@ import {useState} from 'react'
 import BankCardModal from '~/components/BankCardModal'
 import styles from '~/styles/components/MobileMenu.module.scss'
 
-export default function MobileMenu() {
-  const [menuStyle, setMenuStyle] = useState({display: "block"})
-  const closeMenu = () => {
-  } 
+export default function MobileMenu({closeMenu}) {
+  const [aboutDrodownStyle, setAboutDrodownStyle] = useState({display: "none"})
+  const [petsDropdownStyle, setPetsDropdownStyle] = useState({display: "none"})
+  const openAboutDropdown = (e) => {
+    e.preventDefault()
+    if (aboutDrodownStyle.display === "none") {
+      setAboutDrodownStyle({display: "block"})
+    } else {
+      setAboutDrodownStyle({display: "none"})
+    }
+  }
+  const openPetsDropdown = (e) => {
+    e.preventDefault()
+    if (petsDropdownStyle.display === "none") {
+      setPetsDropdownStyle({display: "block"})
+    } else {
+      setPetsDropdownStyle({display: "none"})
+    }
+  }
 
   return <>
     <div className={styles.mobileMenuBlock}>
       <div className={styles.menuAndBtnBlock}>
         <nav className={styles.menuWrapperMobile}>
-          <a className={styles.menuAboutLink}>О приюте</a>
-          <div className={`${styles.menuDropdownMobile} ${styles.menuAboutDropdown}`}>
+          <a onClick={openAboutDropdown} className={styles.menuAboutLink}>О приюте</a>
+          <div style={aboutDrodownStyle} className={styles.menuDropdownMobile}>
             <ul className={styles.menuDropdownMobileUl}>
               <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
               <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
@@ -23,8 +38,8 @@ export default function MobileMenu() {
               <li><Link href="/shelter-reports"><a>Отчеты</a></Link></li>
             </ul>
           </div>
-          <a className={styles.menuPetsLink}>Питомцы</a>
-          <div className={`${styles.menuDropdownMobile} ${styles.menuPetsDropdown}`}>
+          <a onClick={openPetsDropdown} className={styles.menuPetsLink}>Питомцы</a>
+          <div style={petsDropdownStyle} className={styles.menuDropdownMobile}>
             <ul className={styles.menuDropdownMobileUl}>
               <li><Link href="/cats"><a>Кошки</a></Link></li>
               <li><Link href="/dogs"><a>Собаки</a></Link></li>

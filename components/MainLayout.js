@@ -15,7 +15,10 @@ export function MainLayout({children, title='Теремок'}) {
     } else {
       setMenuStyle({display: "none"})
     }
-  } 
+  }
+  const closeMenu = () => {
+    setMenuStyle({display: "none"})
+  }
 
   return (
     <>
@@ -62,7 +65,7 @@ export function MainLayout({children, title='Теремок'}) {
           <nav className={styles.menuWrapperBurger}>
             <button className={styles.openBtn} onClick={openMenu}><img className={styles.burger} src="/img/burger.svg" alt="меню"/></button>
             <div style={menuStyle} className={styles.mobileMenuWrapper}>
-              <MobileMenu/>
+              <MobileMenu closeMenu={closeMenu}/>
             </div>
           </nav>
 
