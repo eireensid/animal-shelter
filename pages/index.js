@@ -24,7 +24,7 @@ export default function Index({title='Главная', animals}) {
           <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/>
         </div>
         <div className={styles.firstBlockImgTablet}>
-          <img src="/img/tablet/first-block-photo-tablet.png" alt="животные"/>
+          <img src="/img/tablet/first-block-animals-tablet-cut1.png" alt="животные"/>
         </div>
       </div>
       <svg className={styles.waveDesktop} viewBox="0 0 1440 170" fill="none" xmlns="http://www.w3.org/2000/svg">
