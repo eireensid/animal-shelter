@@ -1,0 +1,111 @@
+@import 'variables.scss';
+
+.mobileMenuBlock {
+  display: none;
+}
+
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .mobileMenuBlock {
+    display: flex;
+    z-index: 1000;
+    // position: fixed;
+    width: 100%;
+    height: calc(max(100vh, 174px));
+  }
+
+  .menuAndBtnBlock {
+    border-radius: 20px 0 0 20px;
+    background: white;
+    flex-basis: 85%;
+    padding: {
+      top: 80px;
+      bottom: 80px;
+      left: 48px;
+    };
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .menuWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .menuWrapper a {
+    color: $textColor;
+    font-size: 30px;
+    font-weight: $mediumWeight;
+  }
+  .menuWrapper a:not(:first-child) {
+    margin-top: 45px;
+  }
+  .btnWrapper * {
+    letter-spacing: 0;
+    font-size: 18px;
+  }
+
+  .closeAndSocialsBlock {
+    background: $navBg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 43px;
+    border-radius: 0 20px 20px 0;
+  }
+  .btnClose {
+    background: none;
+    padding: 0;
+    width: 35px;
+  }
+  .socialsWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .socialsWrapper a {
+    cursor: pointer;
+  }
+  .socialsWrapper a:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+
+
+  // Dropdown for menu
+  .menuAboutLink:hover + .menuAboutDropdown {
+    display:block;
+  }
+  .menuPetsLink:hover + .menuPetsDropdown {
+    display:block;
+  }
+  .menuDropdown {
+    z-index: 200;
+    display: none;
+  }
+  .menuDropdownUl {
+    padding: {
+      top: 27px;
+      bottom: 8px;
+    };
+  }
+  
+  .menuDropdown a {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .menuDropdown li:not(:last-child) {
+    padding-bottom: 15px;
+  }
+
+}
+  
+
+// Mobile styles
+@media (max-width: 414px) {
+  .socialsWrapper img {
+    width: 30px;
+    height: 30px;
+  }
+}

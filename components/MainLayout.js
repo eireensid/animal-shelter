@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import MobileMenu from '~/components/MobileMenu'
 import BankCardModal from '~/components/BankCardModal'
 import SocialBtns from '~/components/SocialBtns'
 import WebsiteTeam from '~/components/WebsiteTeam'
@@ -57,6 +58,7 @@ export function MainLayout({children, title='Теремок'}) {
           </div>
         </div>   
       </header>
+      <MobileMenu/>
       <main>
         {children}
       </main>
