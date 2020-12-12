@@ -14,9 +14,6 @@
   padding-bottom: 100px;
 }
 
-// .visitingRulesCarouselWrapper {
-//   display: flex;
-// }
 
 // Tablet styles
 @media (max-width: 1024px) {
@@ -34,7 +31,19 @@
 
 // Mobile styles
 @media (max-width: 414px) {
-  
+  .visitingRulesBlock h2 {
+    padding-bottom: 80px;
+  } 
+  .visitingRulesBlock h3 {
+    padding-bottom: 20px;
+  } 
+  .visitingRule {
+    padding-bottom: 25px;
+    width: 95%;
+  }
+  .callWriteBtnsWrapper {
+    padding-bottom: 80px;
+  }
 }
 
 

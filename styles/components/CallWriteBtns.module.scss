@@ -4,13 +4,16 @@
   margin-bottom: 20px;
 }
 .callBtn, .whatsappBtn {
+  padding: {
+    top: 14px;
+    bottom: 14px;
+  };
+  display: block;
+}
+.callBtnDiv, .whatsappBtnDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: {
-    top: 13px;
-    bottom: 13px;
-  };
 }
 
 .callBtn span, .whatsappBtn span {
@@ -26,7 +29,6 @@
       top: 10px;
       bottom: 10px;
     };
-    height: 60px;
   }
   .callBtn span, .whatsappBtn span {
     margin-left: 10px;
@@ -38,12 +40,15 @@
 @media (max-width: 414px) {
   .callBtn, .whatsappBtn {
     padding: {
-      top: 8px;
-      bottom: 8px;
+      top: 9px;
+      bottom: 9px;
     };
   }
   .callBtn span, .whatsappBtn span {
     margin-left: 8px;
     font-size: 15px;
   } 
+  .callBtn img, .whatsappBtn img {
+    height: 30px;
+  }
 }
