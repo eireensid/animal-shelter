@@ -8,3 +8,18 @@
     cursor: default;
   }
 }
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .breadCrumbs span {
+    font-size: $breadCrumbsAndBtnTxtTablet;
+  }
+}
+
+// Mobile styles
+@media (max-width: 414px) {
+  .breadCrumbs span {
+    font-size: $breadCrumbsAndBtnTxtMobile;
+    font-weight: $mediumWeight;
+  }
+}

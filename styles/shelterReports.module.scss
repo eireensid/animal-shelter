@@ -98,7 +98,27 @@
     width: 100%;
   }
 
-  
+  .reportsBlock {
+    padding: {
+      left: 45px;
+      right: 45px;
+    }
+  }
+  .reportsDesc {
+    width: 82%;
+    margin-top: 43px;
+  }
+  .reportsDesc p {
+    margin-top: 30px;
+  }
+  .reports img {
+    width: 354px;
+    height: 257px;
+    border-radius: 30px;
+  }
+  .reportsBtns button span {
+    font-size: 1em;
+  }
 }
 
 // Mobile styles
@@ -120,5 +140,38 @@
     width: 100%;
   }
 
-
+  .reportsBlock {
+    padding: {
+      left: 14px;
+      right: 14px;
+      top: 50px;
+    }
+  }
+  .reportsWrapper {
+    padding-bottom: 100px;
+  }
+  .reportsDesc {
+    width: 100%;
+    margin-top: 23px;
+  }
+  .reportsDesc p {
+    margin-top: 18px;
+    width: 95%;
+  }
+  .reports {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 75px;
+  }
+  .reports img {
+    width: 276px;
+    height: 199px;
+    margin-bottom: 50px;
+  }
+  .animalCarouselWrapper {
+    padding-bottom: 100px;
+  }
+  .bankCardWrapper {
+    padding-bottom: 160px;
+  }
 }
