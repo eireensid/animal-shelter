@@ -23,7 +23,7 @@
 
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .callBtn, .whatsappBtn {
     padding: {
       top: 10px;
@@ -37,7 +37,7 @@
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 767px) {
   .callBtn, .whatsappBtn {
     padding: {
       top: 9px;

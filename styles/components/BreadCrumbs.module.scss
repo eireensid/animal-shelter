@@ -10,14 +10,14 @@
 }
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .breadCrumbs span {
     font-size: $breadCrumbsAndBtnTxtTablet;
   }
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 767px) {
   .breadCrumbs span {
     font-size: $breadCrumbsAndBtnTxtMobile;
     font-weight: $mediumWeight;

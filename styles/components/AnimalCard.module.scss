@@ -39,7 +39,7 @@
 }
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .findCarouselCard {
     flex-basis: 275px;
   }
@@ -63,7 +63,7 @@
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 767px) {
   .findCarouselCard {
     flex-basis: 250px;
     width: 250px;
