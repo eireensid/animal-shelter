@@ -75,7 +75,7 @@
 
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .pagePaddings {
     padding: {
       left: 45px;
@@ -113,10 +113,14 @@
   .photoWithPhraseBubbleWrapper {
     margin: 0 auto;
   }
+
+  .bankCardWrapper {
+    padding-bottom: 240px;
+  }
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 767px) {
   .pagePaddings {
     padding: {
       left: 14px;
@@ -151,5 +155,19 @@
   }
   .breadCrumbsWrapper {
     padding-top: 0;
+  }
+
+  .foundHomeBlock {
+    padding-bottom: 100px;
+  }
+  .animalCarouselWrapper {
+    padding-bottom: 100px;
+  }
+
+  .bankCardWrapper {
+    padding-bottom: 160px;
+  }
+  .bankCardWrapper h2 {
+    padding-bottom: 80px;
   }
 }

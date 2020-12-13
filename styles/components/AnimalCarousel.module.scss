@@ -58,8 +58,6 @@
     // justify-content: space-around;
     width: 634px;
     margin: 0 auto;
-  }
-  .findCarouselCard {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -96,8 +94,6 @@
     // justify-content: space-around;
     width: 634px;
     margin: 0 auto;
-  }
-  .findCarouselCard {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -130,6 +126,8 @@
   }
   .findCarouselBlock {
     width: 251px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .findCarouselBlock >* {
     margin-top: 140px;
@@ -149,6 +147,8 @@
   }
   .findCarouselBlock {
     width: 251px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .findCarouselBlock >* {
     margin-top: 140px;

@@ -40,6 +40,7 @@
 
 .ourPetsBlock {
   background: $pageBg;
+  padding-bottom: 200px;
 }
 .ourPetsBlock h2 {
   padding: {
@@ -79,7 +80,7 @@
 }
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .pagePaddings {
     padding: {
       left: 45px;
@@ -117,10 +118,27 @@
   .photoWithPhraseBubbleWrapper {
     margin: 0 auto;
   }
+
+  .ourPetsBlock h2 {
+    padding-bottom: 25px;
+  }
+  .ourPetsDesc {
+    width: 48%;
+  }
+  .ourPetsPadding {
+    padding: {
+      top: 20px;
+      bottom: 100px;
+    }
+  }
+
+  .bankCardWrapper {
+    padding-bottom: 240px;
+  }
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 767px) {
   .pagePaddings {
     padding: {
       left: 14px;
@@ -155,5 +173,28 @@
   }
   .breadCrumbsWrapper {
     padding-top: 0;
+  }
+
+  .ourPetsBlock {
+    padding-bottom: 100px;
+  }
+  .ourPetsBlock h2 {
+    padding-bottom: 23px;
+  }
+  .ourPetsDesc {
+    width: 90%;
+  }
+  .ourPetsPadding {
+    padding: {
+      top: 15px;
+      bottom: 80px;
+    }
+  }
+
+  .bankCardWrapper {
+    padding-bottom: 160px;
+  }
+  .bankCardWrapper h2 {
+    padding-bottom: 80px;
   }
 }
