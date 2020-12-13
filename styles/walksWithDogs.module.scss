@@ -174,6 +174,46 @@
 }
 
 @media (max-width: 1439px) {
+  .pagePaddings {
+    padding: {
+      left: 45px;
+      right: 45px;
+    }
+  }
+  .waveDesktop{
+    display: none;
+  }
+  .waveTablet {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .firstWrapper {
+    flex-direction: column;
+    padding-bottom: 200px;
+  }
+  .firstBlock {
+    padding-left: 45px;
+  }
+  .firstDesc {
+    flex-basis: 0;
+  }
+  .firstDesc h2 {
+    margin-top: 50px;
+  }
+  .firstDesc p {
+    width: 73%;
+    margin-bottom: 40px;
+  }
+  .photoWithPhraseBubbleWrapper {
+    margin: 0 auto;
+  }
+
+  
+  
   .walksGalleryLeft {
     margin-right: 9px;
     .photo1 {
@@ -252,6 +292,11 @@
   }
   .walksGalleryRight div:not(:last-child) {
     margin-bottom: 18px;
+  }
+
+
+  .bankCardWrapper {
+    padding-bottom: 240px;
   }
 }
 
@@ -376,9 +421,50 @@
   .walksGalleryRight div:not(:last-child) {
     margin-bottom: 18px;
   }
+
+
+  .bankCardWrapper {
+    padding-bottom: 240px;
+  }
 }
 
 @media(max-width:767px) {
+  .pagePaddings {
+    padding: {
+      left: 14px;
+      right: 14px;
+    }
+  }
+  .waveTablet {
+    display: none;
+  }
+  .waveMobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .firstBlock {
+    padding-left: 14px;
+  }
+  .firstWrapper {
+    padding-bottom: 100px;
+  }
+  .firstDesc h2 {
+    margin-top: 25px;
+    width: 85%;
+  }
+  .firstDesc p {
+    width: 85%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .breadCrumbsWrapper {
+    padding-top: 0;
+  }
+
   .walksGalleryBlock {
     padding-bottom: 100px;
   }
@@ -463,6 +549,14 @@
   }
   .walksGalleryRight div:not(:last-child) {
     margin-bottom: 8px;
+  }
+
+
+  .bankCardWrapper {
+    padding-bottom: 160px;
+  }
+  .bankCardWrapper h2 {
+    padding-bottom: 80px;
   }
 }
 
@@ -588,5 +682,13 @@
   }
   .walksGalleryRight div:not(:last-child) {
     margin-bottom: 8px;
+  }
+
+
+  .bankCardWrapper {
+    padding-bottom: 160px;
+  }
+  .bankCardWrapper h2 {
+    padding-bottom: 80px;
   }
 }
