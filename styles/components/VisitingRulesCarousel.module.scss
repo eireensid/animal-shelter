@@ -19,6 +19,9 @@
 }
 
 // Arrows
+.visitingRulesArrowMobile {
+  display: none;
+}
 .visitingRulesArrow img {
   background: #fff;
   border-radius: 50%;
@@ -52,6 +55,7 @@
   display: flex;
   justify-content: center;
   padding-top: 20px;
+  user-select: none;  
 }
 .visitingRulesRound {
   width: 11px;
@@ -69,9 +73,13 @@
 
 // Tablet styles
 @media (max-width: 1024px) {
+  .visitingRulesCarousel {  
+    justify-content: center;
+  }
   .visitingRulesCard {
     height: 309px;
     padding: 35px;
+    position: relative;
   }
   .visitingRulesCard img {
     margin-right: 30px;
@@ -81,6 +89,17 @@
   .visitingRulesCard p {
     font-size: 0.833rem;
     width: 100%;
+  }
+
+  .visitingRulesArrow {
+    position: absolute;
+    z-index: 100;
+  }
+  .visitingRulesArrowRight {
+    left: 92%;
+  }
+  .visitingRulesArrowLeft {
+    right: 92%;
   }
 
   .visitingRulesArrowRight img {
@@ -99,20 +118,36 @@
       left: 10px;
     }
   }
+
+  .visitingRulesRounds {
+    padding-top: 14px;
+  }
+  .visitingRulesRound {
+    width: 7px;
+    height: 7px;
+  }
+  .visitingRulesRound:not(:last-child) {
+    margin-right: 7px;
+  }
 }
 
 // Mobile styles
 @media (max-width: 414px) {
+  .visitingRulesCarousel {  
+    display: block;
+  }
   .visitingRulesCard {
     height: 278px;
     padding: {
-      top: 0;
+      top: 30px;
       bottom: 0;
       left: 20px;
       right: 20px;
     }
     flex-direction: column;
-    justify-content: center;
+    width: 276px;
+    margin: 0 auto;
+    position: relative;
   }
   .visitingRulesCard img {
     margin-right: 0;
@@ -123,5 +158,55 @@
   }
   .visitingRulesCard p {
     font-size: 0.722rem;
+  }
+
+  .visitingRulesArrow {
+    display: none;
+  }
+  .visitingRulesArrowMobile {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    
+  }
+
+  .visitingRulesArrowRightMobile {
+    top: 45%;
+    right: -5%;
+  }
+  .visitingRulesArrowLeftMobile  {
+    top: 45%;
+    left: -5%;
+  }
+
+  .visitingRulesArrowMobile img {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+    width: auto;
+    height: auto;
+  }
+  .visitingRulesArrowMobile img:hover {
+    background: #FFB78E;
+  }
+  .visitingRulesArrowMobile img:active {
+    background: #E48244;
+  }
+
+  .visitingRulesArrowRightMobile  img {
+    padding: {
+      top: 5px;
+      right: 7px;
+      bottom: 5px;
+      left: 10px;
+    }
+  }
+  .visitingRulesArrowLeftMobile  img {
+    padding: {
+      top: 5px;
+      right: 10px;
+      bottom: 5px;
+      left: 7px;
+    }
   }
 }

@@ -20,6 +20,12 @@ export default function VisitingRulesCarousel({visitingRules}) {
         <div className={styles.visitingRulesCard}>
           <img src={`/img/visiting-rules/${activeRule.ruleImg}`} alt="правило"/>
           <p>{activeRule.rule}</p>
+          <div onClick={prevSlide} className={`${styles.visitingRulesArrowMobile} ${styles.visitingRulesArrowLeftMobile}`}>
+            <img src="/img/arrow-left.svg" alt="влево"/>
+          </div>
+          <div onClick={nextSlide} className={`${styles.visitingRulesArrowMobile} ${styles.visitingRulesArrowRightMobile}`}>
+            <img src="/img/arrow-right.svg" alt="вправо"/>
+          </div>
         </div>
         <div onClick={nextSlide} className={`${styles.visitingRulesArrow} ${styles.visitingRulesArrowRight}`}>
           <img src="/img/arrow-right.svg" alt="вправо"/>
