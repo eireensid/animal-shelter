@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: fit-content;
   }
   .menuWrapperMobile {
     display: flex;
@@ -38,7 +39,7 @@
     font-size: 30px!important;
     font-weight: $mediumWeight;
   }
-  .menuWrapperMobile a:not(:first-child) {
+  .menuWrapperMobile >*:not(:first-child) {
     margin-top: 45px;
   }
   .btnWrapper * {
@@ -111,8 +112,10 @@
 }
   
 
-// Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 767px) {
+  .mobileMenuBlock {
+    height: 90vh;
+  }
   .menuAndBtnBlock {
     flex-basis: 81%;
     padding: {
@@ -125,7 +128,64 @@
     color: $textColor;
     font-size: 20px!important;
   }
-  .menuWrapperMobile a:not(:first-child) {
+  .menuWrapperMobile >*:not(:first-child) {
+    margin-top: 30px;
+  }
+  .btnWrapper * {
+    font-size: 15px;
+  }
+
+  .closeAndSocialsBlock {
+    padding-top: 15px;
+    flex-basis: 19%;
+    padding-bottom: 50px;
+  }
+  .btnClose {
+    width: 15px;
+  }
+  .socialsWrapper a:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .socialsWrapper img {
+    height: 30px;
+    width: 30px;
+  }
+
+  // Dropdown for menu
+  .menuDropdownMobileUl {
+    padding: {
+      top: 20px;
+    };
+  }
+  
+  .menuDropdownMobile a {
+    font-size: 13px!important;
+    font-weight: normal;
+  }
+  .menuDropdownMobile li:not(:last-child) {
+    padding-bottom: 15px;
+  }
+}
+
+
+// Mobile styles
+@media (max-width: 414px) {
+  .mobileMenuBlock {
+    height: 90vh;
+  }
+  .menuAndBtnBlock {
+    flex-basis: 81%;
+    padding: {
+      top: 30px;
+      bottom: 50px;
+      left: 20px;
+    }
+  }
+  .menuWrapperMobile a {
+    color: $textColor;
+    font-size: 20px!important;
+  }
+  .menuWrapperMobile >*:not(:first-child) {
     margin-top: 30px;
   }
   .btnWrapper * {
