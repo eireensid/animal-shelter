@@ -86,6 +86,53 @@
   display: none;
 }
 
+@media (max-width: 1439px) {
+  .pagePaddings {
+    padding: {
+      left: 45px;
+      right: 45px;
+    }
+  }
+  .waveDesktop{
+    display: none;
+  }
+  .waveTablet {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .firstWrapper {
+    flex-direction: column;
+    padding-bottom: 200px;
+  }
+  .firstBlock {
+    padding-left: 45px;
+  }
+  .firstDesc {
+    flex-basis: 0;
+  }
+  .firstDesc h2 {
+    margin-top: 50px;
+  }
+  .firstDesc p {
+    width: 73%;
+    margin-bottom: 40px;
+  }
+  .photoWithPhraseBubbleWrapper {
+    margin: 0 auto;
+  }
+
+  .needsListWrapper {
+    padding-bottom: 190px;
+  }
+  .bankCardWrapper {
+    padding-bottom: 240px;
+  }
+}
+
 // Tablet styles
 @media (max-width: 1024px) {
   .pagePaddings {
@@ -129,7 +176,65 @@
   .needsListWrapper {
     padding-bottom: 190px;
   }
-  
+  .bankCardWrapper {
+    padding-bottom: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pagePaddings {
+    padding: {
+      left: 14px;
+      right: 14px;
+    }
+  }
+  .waveTablet {
+    display: none;
+  }
+  .waveMobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .firstBlock {
+    padding-left: 14px;
+  }
+  .firstWrapper {
+    padding-bottom: 100px;
+  }
+  .firstDesc h2 {
+    margin-top: 25px;
+    width: 85%;
+  }
+  .firstDesc p {
+    width: 85%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .breadCrumbsWrapper {
+    padding-top: 0;
+  }
+
+  .needsListWrapper {
+    padding-bottom: 95px;
+  }
+  .needsListItem img {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
+  .visitingRulesWrapper {
+    padding-bottom: 95px;
+  }
+  .animalCarouselWrapper {
+    padding-bottom: 100px;
+  }
+  .bankCardWrapper {
+    padding-bottom: 160px;
+  }
 }
 
 // Mobile styles
@@ -168,5 +273,23 @@
   }
   .breadCrumbsWrapper {
     padding-top: 0;
+  }
+
+  .needsListWrapper {
+    padding-bottom: 95px;
+  }
+  .needsListItem img {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
+  .visitingRulesWrapper {
+    padding-bottom: 95px;
+  }
+  .animalCarouselWrapper {
+    padding-bottom: 100px;
+  }
+  .bankCardWrapper {
+    padding-bottom: 160px;
   }
 }
