@@ -1,5 +1,4 @@
 import Link from 'next/link'
-// import {useEffect, useState, useRef} from 'react'
 import useDropdown from '~/hooks/useDropdown'
 import BankCardModal from '~/components/BankCardModal'
 import styles from '~/styles/components/MobileMenu.module.scss'

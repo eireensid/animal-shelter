@@ -59,9 +59,11 @@
   .ourPetsGallery {
     justify-content: space-around;
     padding: {
-      left: 5%;
-      right: 5%;
-    };
+      left: 4.5%;
+      right: 4.5%;
+    }
+    width: 678px;
+    margin: 165px auto 0 auto;
   }
 }
 
@@ -104,5 +106,8 @@
   }
   .findAnimalInputBlock >*:not(:last-child) {
     margin-bottom: 15px;
+  }
+  .ourPetsGallery {
+    width: 251px;
   }
 }

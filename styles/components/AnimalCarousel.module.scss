@@ -1,9 +1,6 @@
-// .findCarouselCard {
-//   position: relative;
-// }
 .findHomeTitle {
   padding: {
-    bottom: 260px;
+    bottom: 230px;
   }
 }
 .findCarouselBlock {
@@ -11,6 +8,10 @@
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
+  padding: {
+    left: 3.5%;
+    right: 3.5%;
+  }
 }
 
 .findCarouselArrow {
@@ -57,12 +58,11 @@
   .findCarouselArrow {
     height: 30px;
   }
-  // .findCarouselArrow img {
-  //   height: 100%;
-  // }
   .findCarouselBlock {
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
+    width: 634px;
+    margin: 0 auto;
   }
   .findCarouselCard {
     padding-left: 20px;
@@ -72,12 +72,32 @@
     padding-bottom: 200px;
     width: 90%;
   }
+
+  .findCarouselArrowRight img {
+    padding: {
+      top: 9px;
+      right: 10px;
+      bottom: 9px;
+      left: 14px;
+    }
+  }
+  .findCarouselArrowLeft img {
+    padding: {
+      top: 9px;
+      right: 14px;
+      bottom: 9px;
+      left: 10px;
+    }
+  }
 }
 
 // Mobile styles
 @media (max-width: 414px) {
   .findCarouselArrow {
     display: none;
+  }
+  .findCarouselBlock {
+    width: 251px;
   }
   .findCarouselBlock >* {
     margin-top: 140px;
@@ -86,7 +106,7 @@
     padding: 0;
   }
   .findHomeTitle {
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
 }
 
