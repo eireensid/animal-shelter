@@ -49,43 +49,9 @@
   background: #E48244;
 }
 
-@media (max-width: 1439px) {
-  .findCarouselArrow {
-    height: 30px;
-  }
-  .findCarouselBlock {
-    // flex-wrap: wrap;
-    justify-content: space-around;
-    width: 950px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .findHomeTitle {
-    padding-bottom: 200px;
-    width: 90%;
-  }
-
-  .findCarouselArrowRight img {
-    padding: {
-      top: 9px;
-      right: 10px;
-      bottom: 9px;
-      left: 14px;
-    }
-  }
-  .findCarouselArrowLeft img {
-    padding: {
-      top: 9px;
-      right: 14px;
-      bottom: 9px;
-      left: 10px;
-    }
-  }
-}
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .findCarouselArrow {
     height: 30px;
   }
@@ -120,28 +86,9 @@
   }
 }
 
-@media (max-width: 767px) {
-  .findCarouselArrow {
-    display: none;
-  }
-  .findCarouselBlock {
-    width: 251px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .findCarouselBlock >* {
-    margin-top: 140px;
-  }
-  .findCarouselCard {
-    padding: 0;
-  }
-  .findHomeTitle {
-    padding-bottom: 50px;
-  }
-}
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .findCarouselArrow {
     display: none;
   }

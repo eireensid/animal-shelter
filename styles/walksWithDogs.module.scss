@@ -173,139 +173,13 @@
   display: none;
 }
 
-@media (max-device-width: 1439px) {
-  .pagePaddings {
-    padding: {
-      left: 45px;
-      right: 45px;
-    }
-  }
-  .waveDesktop{
-    display: none;
-  }
-  .waveTablet {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .firstWrapper {
-    flex-direction: column;
-    padding-bottom: 200px;
-  }
-  .firstBlock {
-    padding-left: 45px;
-  }
-  .firstDesc {
-    flex-basis: 0;
-  }
-  .firstDesc h2 {
-    margin-top: 50px;
-  }
-  .firstDesc p {
-    width: 73%;
-    margin-bottom: 40px;
-  }
-  .photoWithPhraseBubbleWrapper {
-    margin: 0 auto;
-  }
-
-  
-  
-  .walksGalleryLeft {
-    margin-right: 9px;
-    .photo1 {
-      width: 388px;
-      height: 261px;
-    }
-    .photo2 {
-      width: 214px;
-      height: 228px;
-      margin-right: 18px;
-    }
-    .photo3 {
-      width: 156px;
-      height: 228px;
-    }
-    .photo4 {
-      width: 156px;
-      height: 267px;
-    }
-    .photo5 {
-      width: 156px;
-      height: 160px;
-    }
-    .photo6 {
-      width: 156px;
-      height: 236px;
-    }
-    .photo7 {
-      width: 214px;
-      height: 232px;
-    }
-    .photo8 {
-      width: 214px;
-      height: 294px;
-    }
-    .photo9 {
-      width: 214px;
-      height: 138px;
-    }
-    .photo10 {
-      width: 388px;
-      height: 233px;
-    }
-  }
-  .walksGalleryRight {
-    margin-left: 9px;
-    .photo11 {
-      width: 272px;
-      height: 342px;
-    }
-    .photo12 {
-      width: 272px;
-      height: 304px;
-    }
-    .photo13 {
-      width: 272px;
-      height: 340px;
-    }
-    .photo14 {
-      width: 272px;
-      height: 435px;
-    }
-  }
-  .insideGalleryLeftMiddle {
-    margin-top: 18px;
-    margin-bottom: 18px;
-  }
-  .insideGalleryLeftMiddleLeft div:not(:last-child) {
-    margin-bottom: 18px;
-  }
-  .insideGalleryLeftMiddleRight div:not(:last-child) {
-    margin-bottom: 18px;
-  }
-  .insideGalleryLeftMiddleLeft {
-    margin-right: 18px;
-  }
-  .walksGalleryRight div:not(:last-child) {
-    margin-bottom: 18px;
-  }
-
-
-  .bankCardWrapper {
-    padding-bottom: 240px;
-  }
-}
 
 // Tablet styles
-@media (max-device-width: 1024px) {
+@media (max-width: 1200px) {
   .pagePaddings {
     padding: {
-      left: 45px;
-      right: 45px;
+      left: 5.9%;
+      right: 5.9%;
     }
   }
   .waveDesktop{
@@ -324,7 +198,7 @@
     padding-bottom: 200px;
   }
   .firstBlock {
-    padding-left: 45px;
+    padding-left: 5.9%;
   }
   .firstDesc {
     flex-basis: 0;
@@ -428,144 +302,13 @@
   }
 }
 
-@media(max-device-width:767px) {
-  .pagePaddings {
-    padding: {
-      left: 14px;
-      right: 14px;
-    }
-  }
-  .waveTablet {
-    display: none;
-  }
-  .waveMobile {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .firstBlock {
-    padding-left: 14px;
-  }
-  .firstWrapper {
-    padding-bottom: 100px;
-  }
-  .firstDesc h2 {
-    margin-top: 25px;
-    width: 85%;
-  }
-  .firstDesc p {
-    width: 85%;
-    margin-bottom: 10px;
-    margin-top: 20px;
-  }
-  .breadCrumbsWrapper {
-    padding-top: 0;
-  }
-
-  .walksGalleryBlock {
-    padding-bottom: 100px;
-  }
-  .walksGalleryBlock h2 {
-    padding-bottom: 83px;
-  }
-  .walksGalleryLeft {
-    margin-right: 4px;
-    .photo1 {
-      width: 166px;
-      height: 111px;
-    }
-    .photo2 {
-      width: 91px;
-      height: 97px;
-      margin-right: 8px;
-    }
-    .photo3 {
-      width: 66px;
-      height: 97px;
-    }
-    .photo4 {
-      width: 66px;
-      height: 113px;
-    }
-    .photo5 {
-      width: 66px;
-      height: 68px;
-    }
-    .photo6 {
-      width: 66px;
-      height: 102px;
-    }
-    .photo7 {
-      width: 91px;
-      height: 99px;
-    }
-    .photo8 {
-      width: 91px;
-      height: 125px;
-    }
-    .photo9 {
-      width: 91px;
-      height: 59px;
-    }
-    .photo10 {
-      width: 167px;
-      height: 100px;
-    }
-  }
-  .walksGalleryRight {
-    margin-left: 4px;
-    .photo11 {
-      width: 116px;
-      height: 146px;
-    }
-    .photo12 {
-      width: 116px;
-      height: 130px;
-    }
-    .photo13 {
-      width: 116px;
-      height: 145px;
-    }
-    .photo14 {
-      width: 116px;
-      height: 186px;
-    }
-  }
-  .insideGalleryLeftMiddle {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-  .insideGalleryLeftMiddleLeft div:not(:last-child) {
-    margin-bottom: 8px;
-  }
-  .insideGalleryLeftMiddleRight div:not(:last-child) {
-    margin-bottom: 8px;
-  }
-  .insideGalleryLeftMiddleLeft {
-    margin-right: 8px;
-  }
-  .walksGalleryRight div:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-
-  .bankCardWrapper {
-    padding-bottom: 160px;
-  }
-  .bankCardWrapper h2 {
-    padding-bottom: 80px;
-  }
-}
 
 // Mobile styles
-@media (max-device-width: 414px) {
+@media (max-width: 480px) {
   .pagePaddings {
     padding: {
-      left: 14px;
-      right: 14px;
+      left: 4.4%;
+      right: 4.4%;
     }
   }
   .waveTablet {
@@ -580,7 +323,7 @@
   }
 
   .firstBlock {
-    padding-left: 14px;
+    padding-left: 4.4%;
   }
   .firstWrapper {
     padding-bottom: 100px;

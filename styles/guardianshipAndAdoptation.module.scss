@@ -139,102 +139,13 @@
   display: none;
 }
 
-@media (max-device-width: 1439px) {
-  .pagePaddings {
-    padding: {
-      left: 45px;
-      right: 45px;
-    }
-  }
-  .waveDesktop{
-    display: none;
-  }
-  .waveTablet {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .firstWrapper {
-    flex-direction: column;
-    padding-bottom: 200px;
-  }
-  .firstBlock {
-    padding-left: 45px;
-  }
-  .firstDesc {
-    flex-basis: 0;
-  }
-  .firstDesc h2 {
-    margin-top: 50px;
-  }
-  .firstDesc p {
-    width: 73%;
-    margin-bottom: 40px;
-  }
-  .photoWithPhraseBubbleWrapper {
-    margin: 0 auto;
-  }
-
-  .aboutGuardianshipBlock h2 {
-    font-size: 1.944rem;
-  }
-  .aboutGuardianshipBlockDesc {
-    padding: {
-      top: 26px;
-    }
-    width: 65%;
-  }
-  .aboutGuardianshipGalleryRow img {
-    width: 234px;
-    height: 244px;
-  }
-  .aboutGuardianshipGalleryRowTextRight {
-    padding-left: 40px!important;
-    width: 100%;
-  }
-  .aboutGuardianshipGalleryRowTextLeft {
-    padding-right: 40px!important;
-    width: 100%;
-  }
-  .aboutGuardianshipGalleryRowTextRight h3, .aboutGuardianshipGalleryRowTextLeft h3 {
-    font-size: 20px;
-    padding-bottom: 24px;
-  }
-
-  .afterGuardianshipGalleryDesc {
-    padding: {
-      bottom: 38px;
-    };
-    width: 53%;
-  }
-  .choosePetBtn {
-    letter-spacing: 2px;
-  }
-
-  .aboutAdaptationBlockDesc img {
-    width: 234px;
-    height: 347px;
-  }
-  .aboutAdaptationBlockText {
-    padding-left: 40px;
-    width: 100%;
-  }
-
-
-  .bankCardWrapper {
-    padding-bottom: 240px;
-  }
-}
 
 // Tablet styles
-@media (max-device-width: 1024px) {
+@media (max-width: 1200px) {
   .pagePaddings {
     padding: {
-      left: 45px;
-      right: 45px;
+      left: 5.9%;
+      right: 5.9%;
     }
   }
   .waveDesktop{
@@ -253,7 +164,7 @@
     padding-bottom: 200px;
   }
   .firstBlock {
-    padding-left: 45px;
+    padding-left: 5.9%;
   }
   .firstDesc {
     flex-basis: 0;
@@ -320,134 +231,13 @@
   }
 }
 
-@media (max-device-width: 767px) {
-  .pagePaddings {
-    padding: {
-      left: 14px;
-      right: 14px;
-    }
-  }
-  .waveTablet {
-    display: none;
-  }
-  .waveMobile {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .firstBlock {
-    padding-left: 14px;
-  }
-  .firstWrapper {
-    padding-bottom: 100px;
-  }
-  .firstDesc h2 {
-    margin-top: 25px;
-    width: 85%;
-  }
-  .firstDesc p {
-    width: 85%;
-    margin-bottom: 10px;
-    margin-top: 20px;
-  }
-  .breadCrumbsWrapper {
-    padding-top: 0;
-  } 
-
-  .aboutGuardianshipBlock {
-    padding-bottom: 20px;
-  }
-  .aboutGuardianshipBlock h2 {
-    font-size: 20px;
-  }
-  .aboutGuardianshipBlockDesc {
-    padding: {
-      top: 17px;
-      bottom: 80px;
-    }
-    width: 90%;
-  }
-  .aboutGuardianshipGalleryRow {
-    flex-direction: column;
-    padding-bottom: 80px!important;
-    align-items: flex-start;
-  }
-  .aboutGuardianshipGalleryRowReverse {
-    flex-direction: column-reverse;
-  }
-  .aboutGuardianshipGalleryRow img {
-    width: 188px;
-    height: 197px;
-    border-radius: 30px;
-    margin: 0 auto;
-  }
-  .aboutGuardianshipGalleryRowTextRight {
-    padding-left: 0!important;
-    width: 90%;
-  }
-  .aboutGuardianshipGalleryRowTextLeft {
-    padding-right: 0!important;
-    width: 90%;
-  }
-  .aboutGuardianshipGalleryRowTextRight h3, .aboutGuardianshipGalleryRowTextLeft h3 {
-    font-size: 20px;
-    padding-bottom: 24px;
-    padding-top: 45px;
-  }
-
-  .whereWeAreBlock {
-    display: none;
-  }
-
-  .aboutAdaptationBlock {
-    padding-bottom: 100px;
-  }
-  .aboutAdaptationBlock h2 {
-    padding-bottom: 80px;
-    width: 50%;
-  }
-  .aboutAdaptationBlockDesc {
-    flex-direction: column;
-  }
-  .aboutAdaptationBlockDesc img {
-    width: 189px;
-    height: 230px;
-    border-radius: 30px;
-  }
-  .aboutAdaptationBlockText {
-    padding-left: 0;
-    padding-top: 45px;
-    width: 100%;
-  }
-  .aboutAdaptationBlockText button {
-    margin-top: 30px;
-    letter-spacing: 2.5px;
-  }
-
-  .visitingRulesWrapper {
-    padding-bottom: 100px;
-  }
-  .animalCarouselWrapper {
-    padding-bottom: 100px;
-  }
-
-  .bankCardWrapper {
-    padding-bottom: 160px;
-  }
-  .bankCardWrapper h2 {
-    padding-bottom: 80px;
-  }
-}
 
 // Mobile styles
-@media (max-device-width: 414px) {
+@media (max-width: 480px) {
   .pagePaddings {
     padding: {
-      left: 14px;
-      right: 14px;
+      left: 4.4%;
+      right: 4.4%;
     }
   }
   .waveTablet {
@@ -462,7 +252,7 @@
   }
 
   .firstBlock {
-    padding-left: 14px;
+    padding-left: 4.4%;
   }
   .firstWrapper {
     padding-bottom: 100px;

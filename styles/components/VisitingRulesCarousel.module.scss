@@ -70,67 +70,9 @@
   margin-right: 10px;
 }
 
-@media (max-device-width: 1439px) {
-  .visitingRulesCarousel {  
-    justify-content: center;
-  }
-  .visitingRulesCard {
-    height: 309px;
-    padding: 35px;
-    position: relative;
-  }
-  .visitingRulesCard img {
-    margin-right: 30px;
-    width: 242px;
-    height: 239px;
-  }
-  .visitingRulesCard p {
-    font-size: 0.833rem;
-    width: 100%;
-  }
-
-  .visitingRulesArrow {
-    position: absolute;
-    z-index: 100;
-  }
-  .visitingRulesArrowRight {
-    left: 92%;
-  }
-  .visitingRulesArrowLeft {
-    right: 92%;
-  }
-
-  .visitingRulesArrowRight img {
-    padding: {
-      top: 9px;
-      right: 10px;
-      bottom: 9px;
-      left: 14px;
-    }
-  }
-  .visitingRulesArrowLeft img {
-    padding: {
-      top: 9px;
-      right: 14px;
-      bottom: 9px;
-      left: 10px;
-    }
-  }
-
-  .visitingRulesRounds {
-    padding-top: 14px;
-  }
-  .visitingRulesRound {
-    width: 7px;
-    height: 7px;
-  }
-  .visitingRulesRound:not(:last-child) {
-    margin-right: 7px;
-  }
-}
 
 // Tablet styles
-@media (max-device-width: 1024px) {
+@media (max-width: 1200px) {
   .visitingRulesCarousel {  
     justify-content: center;
   }
@@ -189,87 +131,9 @@
   }
 }
 
-@media (max-device-width: 767px) {
-  .visitingRulesCarousel {  
-    display: block;
-  }
-  .visitingRulesCard {
-    height: 278px;
-    padding: {
-      top: 30px;
-      bottom: 0;
-      left: 20px;
-      right: 20px;
-    }
-    flex-direction: column;
-    width: 276px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .visitingRulesCard img {
-    margin-right: 0;
-    width: 130px;
-    height: 130px;
-    border-radius: 30px;
-    margin-bottom: 18px;
-  }
-  .visitingRulesCard p {
-    font-size: 0.722rem;
-  }
-
-  .visitingRulesArrow {
-    display: none;
-  }
-  .visitingRulesArrowMobile {
-    display: block;
-    position: absolute;
-    z-index: 100;
-    
-  }
-
-  .visitingRulesArrowRightMobile {
-    top: 45%;
-    right: -5%;
-  }
-  .visitingRulesArrowLeftMobile  {
-    top: 45%;
-    left: -5%;
-  }
-
-  .visitingRulesArrowMobile img {
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
-    width: auto;
-    height: auto;
-  }
-  .visitingRulesArrowMobile img:hover {
-    background: #FFB78E;
-  }
-  .visitingRulesArrowMobile img:active {
-    background: #E48244;
-  }
-
-  .visitingRulesArrowRightMobile  img {
-    padding: {
-      top: 5px;
-      right: 7px;
-      bottom: 5px;
-      left: 10px;
-    }
-  }
-  .visitingRulesArrowLeftMobile  img {
-    padding: {
-      top: 5px;
-      right: 10px;
-      bottom: 5px;
-      left: 7px;
-    }
-  }
-}
 
 // Mobile styles
-@media (max-device-width: 414px) {
+@media (max-width: 480px) {
   .visitingRulesCarousel {  
     display: block;
   }

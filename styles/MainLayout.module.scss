@@ -144,7 +144,7 @@
 
 
 // Tablet styles
-@media (max-device-width: 1024px) {
+@media (max-width: 1024px) {
   // Header
   .headerBlock {
     padding-left: 35px;
@@ -202,7 +202,7 @@
 }
 
 // Mobile styles
-@media (max-device-width: 414px) {
+@media (max-width: 414px) {
   // Header
   .headerBlock {
     padding-left: 10px;

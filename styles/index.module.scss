@@ -202,135 +202,11 @@
   padding-bottom: 100px;
 }
 
-@media (max-device-width: 1439px) {
-  .firstBlock {
-    flex-direction: column;
-    padding-left: 45px;
-    align-items: flex-end;
-    padding-top: 160px;
-    justify-content: space-between;
-  }
-  .titleDesc {
-    width: 45%;
-    margin-top: 37px;
-  }
-  .firstBlockTitle {
-    flex-basis: 0;
-  }
-  .firstBlockImg {
-    display: none;
-    // margin-top: 107px;
-  }
-  .firstBlockImgTablet {
-    display: block;
-    // margin-top: 107px;
-  }
-
-  .waveDesktop{
-    display: none;
-  }
-  .waveTablet {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-
-  .findHomeBlock {
-    padding: {
-      top: 110px;
-      bottom: 180px;
-    }
-  }
- 
-
-  .videoBlock {
-    padding-top: 190px;
-    padding-bottom: 120px;
-  }
-  .videoText {
-    flex-basis: 51%;
-  }
-  .videoWrapper iframe {
-    height: 166px;
-    width: 300px;
-  }
-  .bubbleBlock {
-    padding-left: 25px;
-  }
-
-  
-  .waysToHelpTitle {
-    padding-bottom: 170px;
-  }
-  .waysToHelpBlock {
-    padding-top: 0;
-    padding-bottom: 200px;
-  }
-  .waysToHelpDesc {
-    flex-basis: 52%;
-  }
-  .waysToHelpImg {
-    width: 42.4%;
-  }
-  .waysToHelpDescTitleWrapper {
-    padding-bottom: 20px;
-  }
-  .waysToHelpDescTitleWrapper h3 {
-    font-size: 1.11rem;
-    letter-spacing: 1px;
-  }
-  .waysToHelpDescBtnWrapper p {
-    font-size: 0.833rem;
-    letter-spacing: 1px;
-  }
-  .waysToHelpDescBtnWrapper span {
-    width: 90%;
-    padding-top: 9px;
-  }
-
-  .ourPetsBlock {
-    padding-bottom: 240px;
-  }
-  .ourPetsBlock h2 {
-    padding-top: 0;
-  }
-  .ourPetsDesc {
-    width: 48%;
-  }
-  .ourPetsPadding {
-    padding-top: 20px;
-    padding-bottom: 100px;
-  }
-
-  .morePetsBtn {
-    display: none;
-  }
-  .morePetsBtnTablet {
-    display: block;
-    margin-top: -75px;
-    display: flex;
-    justify-content: center;
-  }
-  .bankCardWrapper {
-    margin-top: 190px;
-  }
-
-  .pagePaddings {
-    padding: {
-      left: 45px;
-      right: 45px;
-    }
-  }
-}
-
 // Tablet styles
-@media (max-device-width: 1024px) {
+@media (max-width: 1200px) {
   .firstBlock {
     flex-direction: column;
-    padding-left: 45px;
+    padding-left: 5.9%;
     align-items: flex-end;
     padding-top: 160px;
     justify-content: space-between;
@@ -445,168 +321,19 @@
 
   .pagePaddings {
     padding: {
-      left: 45px;
-      right: 45px;
+      left: 5.9%;
+      right: 5.9%;
     }
   }
 }
 
-@media (max-device-width: 767px) {
-  .pagePaddings {
-    padding: {
-      left: 14px;
-      right: 14px;
-    }
-  }
-
-  .waveTablet {
-    display: none;
-  }
-  .waveMobile {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .firstBlock {
-    padding-left: 14px;
-    padding-top: 100px;
-  }
-  
-  .firstBlockTitle h1 {
-    font-size: 30px;
-  }
-  .firstBlockTitle h3 {
-    font-size: 15px;
-    width: 70%;
-  }
-  .firstBlockImgTablet {
-    display: none;
-  }
-  .firstBlockImg {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 100px;
-  }
-
-  .videoBlock {
-    flex-direction: column;
-    padding-top: 95px;
-    padding-bottom: 80px;
-  }
-  .videoText {
-    width: 86%;
-    padding-bottom: 80px;
-  }
-  .videoWrapper iframe {
-    height: 136px;
-    width: 243px;
-  }
-  .bubbleBlock {
-    padding-left: 0;
-    padding-bottom: 140px;
-  }
-
-  .waysToHelpBlock {
-    padding-top: 130px;
-    padding-bottom: 35px;
-  }
-  .waysToHelp {
-    flex-direction: column-reverse;
-  }
-  .waysToHelp:not(:last-child) {
-    padding-bottom: 80px;
-  }
-  .waysToHelpReversed {
-    flex-direction: column-reverse;
-  }
-  .waysToHelpImg {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-  }
-  .waysToHelpImg img {
-    border-radius: 30px;
-    // width: 186px;
-    height: 200px;
-  }
-  .waysToHelpImgMobile {
-    position: absolute;
-    bottom: 95.8%;
-  }
-  .waysToHelpTitle {
-    padding-bottom: 160px;
-  }
-  .waysToHelpDescTitleWrapper img {
-    height: 10px;
-  }
-  .waysToHelpDescTitleWrapper h3 {
-    font-size: 18px;
-    letter-spacing: 0;
-  }
-  .waysToHelpDescBtnWrapper {
-    padding-left: 0;
-  }
-  .waysToHelpDescBtnWrapper p {
-    font-size: 13px;
-    letter-spacing: 0;
-    padding-left: 25px;
-    width: 93%;
-  }
-  .waysToHelpDescBtnWrapper span {
-    width: 95%;
-    padding-top: 10px;
-    font-size: 11px;
-  }
-  .waysToHelpDescBtnWrapper > span {
-    padding-left: 25px;
-  }
-  .waysToHelpDescBtnWrapper button {
-    margin-top: 30px;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-  }
-  .socialsBlock {
-    padding-left: 25px;
-    padding-top: 35px;
-  }
-
-  .ourPetsBlock {
-    padding-top: 80px;
-    padding-bottom: 160px;
-  }
-  .ourPetsBlock h2 {
-    font-size: 20px;
-  }
-  .ourPetsDesc {
-    width: 90%;
-  }
-  .ourPetsPadding {
-    padding-top: 15px;
-    padding-bottom: 80px;
-  }
-
-  .morePetsBtnTablet {
-    margin-top: -105px;
-  }
-  .bankCardWrapper {
-    margin-top: 100px;
-  }
-  .bankCardWrapper h2 {
-    padding-bottom: 80px;
-  }
-}
 
 // Mobile styles
-@media (max-device-width: 414px) {
+@media (max-width: 480px) {
   .pagePaddings {
     padding: {
-      left: 14px;
-      right: 14px;
+      left: 4.4%;
+      right: 4.4%;
     }
   }
 
@@ -622,7 +349,7 @@
   }
 
   .firstBlock {
-    padding-left: 14px;
+    padding-left: 4.4%;
     padding-top: 100px;
   }
   

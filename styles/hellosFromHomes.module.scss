@@ -75,11 +75,11 @@
 
 
 // Tablet styles
-@media (max-device-width: 1439px) {
+@media (max-width: 1200px) {
   .pagePaddings {
     padding: {
-      left: 45px;
-      right: 45px;
+      left: 5.9%;
+      right: 5.9%;
     }
   }
   .waveDesktop{
@@ -98,7 +98,7 @@
     padding-bottom: 200px;
   }
   .firstBlock {
-    padding-left: 45px;
+    padding-left: 5.9%;
   }
   .firstDesc {
     flex-basis: 0;
@@ -120,11 +120,11 @@
 }
 
 // Mobile styles
-@media (max-device-width: 767px) {
+@media (max-width: 480px) {
   .pagePaddings {
     padding: {
-      left: 14px;
-      right: 14px;
+      left: 4.4%;
+      right: 4.4%;
     }
   }
   .waveTablet {
@@ -139,7 +139,7 @@
   }
 
   .firstBlock {
-    padding-left: 14px;
+    padding-left: 4.4%;
   }
   .firstWrapper {
     padding-bottom: 100px;

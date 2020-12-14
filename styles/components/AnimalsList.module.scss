@@ -44,30 +44,9 @@
   margin-bottom: 155px;
 }
 
-@media (max-width: 1439px) {
-  .animalInputsBlock {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .animalFiltersBlock {
-    padding-bottom: 40px;
-  }
-  .animalFilterWrapperTop {
-    margin-top: 40px;
-  }
-  .ourPetsGallery {
-    justify-content: space-around;
-    // padding: {
-    //   left: 4.5%;
-    //   right: 4.5%;
-    // }
-    width: 678px;
-    margin: 165px auto 0 auto;
-  }
-}
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .animalInputsBlock {
     display: flex;
     flex-wrap: wrap;
@@ -89,52 +68,9 @@
   }
 }
 
-@media (max-width: 767px) {
-  .animalInputsBlock {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-  .animalFilterWrapper {
-    display: none;
-  }
-  .animalFilterWrapperMobile {
-    display: block;
-    margin-top: 30px;
-  }
-  .animalFilterWrapperTopMobile {
-    display: flex;
-  }
-  .animalFilterWrapperMiddleMobile {
-    display: flex;
-    margin: {
-      top: 15px;
-      bottom: 15px;
-    }
-  }
-  .animalFilterWrapperBottomMobile {
-    display: flex;
-  }
-  .animalFilterWrapperTopMobile >*:not(:last-child) {
-    margin-right: 15px;
-  } 
-  .animalFilterWrapperMiddleMobile >*:not(:last-child) {
-    margin-right: 15px;
-  } 
-  .findAnimalInputBlock {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-  .findAnimalInputBlock >*:not(:last-child) {
-    margin-bottom: 15px;
-  }
-  .ourPetsGallery {
-    width: 251px;
-  }
-}
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .animalInputsBlock {
     flex-direction: column-reverse;
     align-items: flex-start;
