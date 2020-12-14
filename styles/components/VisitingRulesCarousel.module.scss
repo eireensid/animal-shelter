@@ -70,7 +70,7 @@
   margin-right: 10px;
 }
 
-@media (max-width: 1439px) {
+@media (max-device-width: 1439px) {
   .visitingRulesCarousel {  
     justify-content: center;
   }
@@ -130,7 +130,7 @@
 }
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-device-width: 1024px) {
   .visitingRulesCarousel {  
     justify-content: center;
   }
@@ -189,7 +189,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-device-width: 767px) {
   .visitingRulesCarousel {  
     display: block;
   }
@@ -269,7 +269,7 @@
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-device-width: 414px) {
   .visitingRulesCarousel {  
     display: block;
   }
