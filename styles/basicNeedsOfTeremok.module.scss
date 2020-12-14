@@ -86,7 +86,7 @@
   display: none;
 }
 
-@media (max-width: 1439px) {
+@media (max-device-width: 1439px) {
   .pagePaddings {
     padding: {
       left: 45px;
@@ -134,7 +134,7 @@
 }
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-device-width: 1024px) {
   .pagePaddings {
     padding: {
       left: 45px;
@@ -181,7 +181,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-device-width: 767px) {
   .pagePaddings {
     padding: {
       left: 14px;
@@ -238,7 +238,7 @@
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-device-width: 414px) {
   .pagePaddings {
     padding: {
       left: 14px;

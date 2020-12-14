@@ -14,7 +14,7 @@
   position: relative;
 }
 .firstBlockTitle {
-  flex-basis: 38%;
+  flex-basis: 45%;
 }
 .firstBlockImg {
   z-index: 100;
@@ -202,7 +202,7 @@
   padding-bottom: 100px;
 }
 
-@media (max-width: 1439px) {
+@media (max-device-width: 1439px) {
   .firstBlock {
     flex-direction: column;
     padding-left: 45px;
@@ -327,7 +327,7 @@
 }
 
 // Tablet styles
-@media (max-width: 1024px) {
+@media (max-device-width: 1024px) {
   .firstBlock {
     flex-direction: column;
     padding-left: 45px;
@@ -451,7 +451,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-device-width: 767px) {
   .pagePaddings {
     padding: {
       left: 14px;
@@ -602,7 +602,7 @@
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-device-width: 414px) {
   .pagePaddings {
     padding: {
       left: 14px;

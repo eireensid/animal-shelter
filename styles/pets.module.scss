@@ -80,7 +80,7 @@
 }
 
 // Tablet styles
-@media (max-width: 1439px) {
+@media (max-device-width: 1439px) {
   .pagePaddings {
     padding: {
       left: 45px;
@@ -138,7 +138,7 @@
 }
 
 // Mobile styles
-@media (max-width: 767px) {
+@media (max-device-width: 767px) {
   .pagePaddings {
     padding: {
       left: 14px;
