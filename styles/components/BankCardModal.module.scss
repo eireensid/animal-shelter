@@ -63,7 +63,6 @@
     height: 100vh;
   }
   .bankCardModal {
-    padding-bottom: 5%;
     margin-left: 7%;
     margin-right: 7%;
   }
@@ -93,6 +92,9 @@
 }
 
 @media (max-width: 480px) {
+  .modal {
+    height: 90vh;
+  }
   .bankCardModalClose {
     padding: {
       top: 20px;
@@ -101,6 +103,7 @@
   .bankCardModal {
     margin-left: 5%;
     margin-right: 5%;
+    padding-bottom: 0;
   }
   .bankCardModal p {
     width: 88%;
