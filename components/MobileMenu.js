@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import useDropdown from '~/hooks/useDropdown'
 import BankCardModal from '~/components/BankCardModal'
+import VisitingRulesModal from '~/components/VisitingRulesModal'
 import styles from '~/styles/components/MobileMenu.module.scss'
 
 export default function MobileMenu({closeMenu}) {
@@ -17,7 +18,7 @@ export default function MobileMenu({closeMenu}) {
                 <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
                 <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
                 <li><Link href="/walks-with-dogs"><a>Прогулки с собаками</a></Link></li>
-                <li><Link href="/rules-for-shelter-visiting"><a>Правила посещения приюта</a></Link></li>
+                <li><VisitingRulesModal/></li>
                 <li><Link href="/hellos-from-homes"><a>Приветы из дома</a></Link></li>
                 <li><Link href="/shelter-reports"><a>Отчеты</a></Link></li>
               </ul>

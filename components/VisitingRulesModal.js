@@ -13,7 +13,7 @@ const customStyles = {
     padding: '0',
     border: 'none',
     borderRadius: '0',
-    width: '77%',
+    width: '83%',
     background: '#FFF5DA'
   },
   overlay: {zIndex: 1000}

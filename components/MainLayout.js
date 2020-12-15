@@ -90,10 +90,7 @@ export function MainLayout({children, title='Теремок'}) {
                 <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
                 <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
                 <li><Link href="/walks-with-dogs"><a>Прогулки с собаками</a></Link></li>
-                <li><a>Правила посещения приюта</a></li>
-                <div className={styles.visitingRulesModalWrapper}>
-                  <VisitingRulesModal/>
-                </div>
+                <li><VisitingRulesModal/></li>
                 <li><Link href="/hellos-from-homes"><a>Приветы из дома</a></Link></li>
                 <li><Link href="/shelter-reports"><a>Отчеты</a></Link></li>
               </ul>

@@ -8,13 +8,16 @@
 .visitingRulesModalWrapper {
   background: $pageBg;
   padding-bottom: 5%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 .visitingRulesModalClose {
   display: flex;
   justify-content: flex-end;
   padding: {
-    right: 45px;
+    right: 20px;
     top: 45px;
+    bottom: 6%;
   };
 }
 
@@ -39,8 +42,8 @@
     height: 100vh;
   }
   .visitingRulesModalWrapper {
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
   .visitingRulesModalClose {
     display: flex;
@@ -48,6 +51,7 @@
     padding: {
       right: 0;
       top: 45px;
+      bottom: 25%;
     };
   }
   
