@@ -43,6 +43,7 @@ export default function BankCardModal({parent}) {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
+        className={styles.modal}
         style={customStyles}
         contentLabel="Bank Card Modal"
       >
