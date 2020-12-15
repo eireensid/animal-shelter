@@ -5,6 +5,7 @@ import MobileMenu from '~/components/MobileMenu'
 import BankCardModal from '~/components/BankCardModal'
 import SocialBtns from '~/components/SocialBtns'
 import WebsiteTeam from '~/components/WebsiteTeam'
+import VisitingRulesModal from '~/components/VisitingRulesModal'
 import styles from '~/styles/MainLayout.module.scss'
 
 export function MainLayout({children, title='Теремок'}) {
@@ -19,6 +20,7 @@ export function MainLayout({children, title='Теремок'}) {
   const closeMenu = () => {
     setMenuStyle({display: "none"})
   }
+
 
   return (
     <>
@@ -40,7 +42,8 @@ export function MainLayout({children, title='Теремок'}) {
                 <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
                 <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
                 <li><Link href="/walks-with-dogs"><a>Прогулки с собаками</a></Link></li>
-                <li><Link href="/rules-for-shelter-visiting"><a>Правила посещения приюта</a></Link></li>
+                <li><VisitingRulesModal/></li>
+                
                 <li><Link href="/hellos-from-homes"><a>Приветы из дома</a></Link></li>
                 <li><Link href="/shelter-reports"><a>Отчеты</a></Link></li>
               </ul>
@@ -87,7 +90,10 @@ export function MainLayout({children, title='Теремок'}) {
                 <li><Link href="/basic-needs-of-teremok"><a>Основные нужды Теремка</a></Link></li>
                 <li><Link href="/guardianship-and-adaptation"><a>Опекунство и адаптация</a></Link></li>
                 <li><Link href="/walks-with-dogs"><a>Прогулки с собаками</a></Link></li>
-                <li><Link href="/rules-for-shelter-visiting"><a>Правила посещения приюта</a></Link></li>
+                <li><a>Правила посещения приюта</a></li>
+                <div className={styles.visitingRulesModalWrapper}>
+                  <VisitingRulesModal/>
+                </div>
                 <li><Link href="/hellos-from-homes"><a>Приветы из дома</a></Link></li>
                 <li><Link href="/shelter-reports"><a>Отчеты</a></Link></li>
               </ul>

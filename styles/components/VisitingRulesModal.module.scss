@@ -5,26 +5,17 @@
   outline: none;
 }
 
-.bankCardModal {
+.visitingRulesModalWrapper {
   background: $pageBg;
   padding-bottom: 5%;
 }
-.bankCardModalClose {
+.visitingRulesModalClose {
   display: flex;
   justify-content: flex-end;
   padding: {
     right: 45px;
     top: 45px;
   };
-}
-.bankCardModal p {
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1.39em;
-  font-family: 'Montserrat Medium', sans-serif;
-  width: 45%;
-  padding-bottom: 5%;
-  padding-top: 3%;
 }
 
 .btnClose {
@@ -39,18 +30,6 @@
   background: none;
 }
 
-// Dynamic style for header
-.donationBtnHeader {
-  padding: {
-    top: 15px;
-    bottom: 15px;
-    left: 40px;
-    right: 40px;
-  }
-  width: 100%;
-  font-size: 0.833em;
-}
-
 @media (max-width: 1024px) {
   .modal {
     width: 100%!important;
@@ -59,26 +38,17 @@
     position: absolute;
     height: 100vh;
   }
-  .bankCardModal {
+  .visitingRulesModalWrapper {
     margin-left: 7%;
     margin-right: 7%;
   }
-  .bankCardModalClose {
+  .visitingRulesModalClose {
     display: flex;
     justify-content: flex-end;
     padding: {
       right: 0;
       top: 45px;
     };
-  }
-  .bankCardModal p {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.39em;
-    font-family: 'Montserrat Medium', sans-serif;
-    width: 80%;
-    padding-bottom: 10%;
-    padding-top: 15%;
   }
   
   .btnClose {
@@ -92,21 +62,16 @@
   .modal {
     height: 90vh;
   }
-  .bankCardModalClose {
+  .visitingRulesModalClose {
     padding: {
       top: 20px;
       right: 20px;
     };
   }
-  .bankCardModal {
+  .visitingRulesModalWrapper {
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 0;
-  }
-  .bankCardModal p {
-    width: 284px;
-    padding-bottom: 20%;
-    padding-top: 35%;
   }
   .btnClose {
     width: 15px;
