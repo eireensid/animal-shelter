@@ -75,6 +75,7 @@
 @media (max-width: 1200px) {
   .visitingRulesCarousel {  
     justify-content: center;
+    position: relative;
   }
   .visitingRulesCard {
     height: 309px;
@@ -88,18 +89,18 @@
   }
   .visitingRulesCard p {
     font-size: 0.833rem;
-    width: 100%;
   }
 
   .visitingRulesArrow {
     position: absolute;
     z-index: 100;
+    top: 40%;
   }
   .visitingRulesArrowRight {
-    left: 92%;
+    right: -3%;
   }
   .visitingRulesArrowLeft {
-    right: 92%;
+    left: -3%;
   }
 
   .visitingRulesArrowRight img {
