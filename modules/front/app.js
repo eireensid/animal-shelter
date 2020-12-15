@@ -27,6 +27,15 @@ export const testAnimals = [
   {name: "22", paw: "need-guardian.png", age: "10 лет", sex: "М", photo: "Misha.png"}
 ]
 
+export const homePets = [
+  {name: "Ульяна", about: "У нас прекрасная новость! Наша красавица Ульяна  наконец поехала домой!!! Первый привет уже прилете. Улечке заботливая хозяйка навела красоту, вычесала ее роскошную шубку, а кошечка успешно освоила территорию и наслаждается прелестями домашней жизни. Все самое страшное позади!",
+  photo: "", gallery: []},
+]
+
+export const shelterPets = [
+  {name: "Муся", sex: "Ж", age: "4 года",  personality: "Ласковая игруля", paw: "looking-for-home.png", about: "", photo: "", gallery: []},
+]
+
 function ageEnding (val, measure) {
   let res = measure === 'days' ? 'дней' : (measure === 'mounts' ? 'месяцев' : 'лет')
   if (val === 11) {
