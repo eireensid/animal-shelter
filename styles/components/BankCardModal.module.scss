@@ -1,5 +1,10 @@
 @import 'variables.scss';
 
+.modal {
+  position: absolute;
+  outline: none;
+}
+
 .modalBlock {
   z-index: 1000;
 }
@@ -66,7 +71,7 @@
     display: flex;
     justify-content: flex-end;
     padding: {
-      right: 45px;
+      right: 0;
       top: 45px;
     };
   }
@@ -88,8 +93,19 @@
 }
 
 @media (max-width: 480px) {
+  .bankCardModalClose {
+    padding: {
+      top: 20px;
+    };
+  }
+  .bankCardModal {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
   .bankCardModal p {
-    width: 92%;
+    width: 88%;
+    padding-bottom: 20%;
+    padding-top: 40%;
   }
   .btnClose {
     width: 15px;
