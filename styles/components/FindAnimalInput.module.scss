@@ -1,5 +1,8 @@
 @import 'variables.scss';
 
+.animalFilterInputBlock {
+  position: relative;
+}
 .animalFilterInput {
   display: flex;
   align-items: center;
@@ -14,6 +17,48 @@
   background: #fff;
   border-radius: 100px;
 }
+.animalFilterInputBorder {
+  display: flex;
+  align-items: center;
+  padding: {
+    top: 14px;
+    bottom: 14px;
+    left: 20px;
+    right: 25px;
+  }
+  width: 285px;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.dropdownMenu {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  background: #fff;
+  width: 285px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: {
+    bottom: 25px;
+    left: 20px;
+    right: 20px;
+  }
+}
+.dropdownMenu li {
+  color: #131313;
+  font-size: 1.111rem;
+}
+.dropdownMenu li:not(:last-child) {
+  padding-bottom: 15px;
+}
+.dropdownMenu li:hover {
+  font-weight: $mediumWeight;
+  color: #7C6035;
+  cursor: default;
+}
 
 // Tablet styles
 @media (max-width: 1200px) {
@@ -26,7 +71,29 @@
       right: 14px;
     }
   }
+  .animalFilterInputBorder {
+    width: 206px;
+    padding: {
+      top: 16px;
+      bottom: 16px;
+      left: 20px;
+      right: 14px;
+    }
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   .animalFilterInput h4 {
+    font-size: 1rem;
+  }
+  .animalFilterInputBorder h4 {
+    font-size: 1rem;
+  }
+  .dropdownMenu {
+    top: 50px;
+    width: 206px;
+  }
+  .dropdownMenu li {
     font-size: 1rem;
   }
 }
@@ -42,11 +109,45 @@
       right: 10px;
     }
   }
+  .animalFilterInputBorder {
+    height: 37px;
+    padding: {
+      top: 9px;
+      bottom: 9px;
+      left: 15px;
+      right: 10px;
+    }
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   .animalFilterInput h4 {
     font-size: 0.722rem;
+  }
+  .animalFilterInputBorder h4 {
+    font-size: 0.722rem;
+  }
+  .animalFilterInputBorder img {
+    height: 14px;
+    width: 17px;
   }
   .animalFilterInput img {
     height: 14px;
     width: 17px;
+  }
+  .dropdownMenu {
+    top: 37px;
+    z-index: 10;
+    padding: {
+      bottom: 14px;
+      left: 15px;
+      right: 15px;
+    }
+  }
+  .dropdownMenu li {
+    font-size: 0.722rem;
+  }
+  .dropdownMenu li:not(:last-child) {
+    padding-bottom: 10px;
   }
 }

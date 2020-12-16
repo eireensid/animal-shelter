@@ -12,16 +12,16 @@ export default function FindAnimalInput({value, placeholder, options, onChange})
   }
 
   return <>
-    {wrapperRefs.map(wrapperRef => (
-      <div ref={wrapperRef} className={styles.animalFilterInputBlock}>
-          <div onClick={e => setOpen(!open)} className={styles.animalFilterInput}>
+    {wrapperRefs.map((wrapperRef, ind) => (
+      <div ref={wrapperRef} className={styles.animalFilterInputBlock} key={ind}>
+          <div onClick={e => setOpen(!open)} className={open === false ? styles.animalFilterInput : styles.animalFilterInputBorder}>
             <h4>{value || placeholder}</h4>
             <img src="img/input-arrow-down.png"/>
           </div>
           {open && (
-          <ul className="dropdown-menu">
-            {options.map(opt => (
-              <li className="dropdown-menu-item" onClick={e => handleChange(opt)}>
+          <ul className={styles.dropdownMenu}>
+            {options.map((opt, ind) => (
+              <li className={styles.dropdownMenuItem} onClick={e => handleChange(opt)} key={ind}>
                 {opt}
               </li>
             ))}
