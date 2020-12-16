@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import usePagination from '~/hooks/usePagination'
 import AnimalCard from '~/components/AnimalCard'
 import FindAnimalInput from '~/components/FindAnimalInput'
 import SearchInput from '~/components/SearchInput'

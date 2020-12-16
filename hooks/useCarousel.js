@@ -30,5 +30,6 @@ export default function useCarousel (items, count) {
     setActiveIndex(activeIndex === lastIndex ? 0 : activeIndex + 1)
   }
 
+
   return { activeIndex, curItems, prevSlide, nextSlide }
 }

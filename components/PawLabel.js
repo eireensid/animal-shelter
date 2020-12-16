@@ -7,10 +7,21 @@ export default function PawLabel({pawColor, pawMeaning}) {
 
   const changeStyle = () => {
     if (filterStyle.background === "white") {
-      setFilterStyle({background: "red"})
+      if (pawMeaning=="Ищут дом") {
+      setFilterStyle({background: "#108D0D", padding: "20px 42px"})
+      } else if (pawMeaning=="Малыши") {
+        setFilterStyle({background: "#FF3093", padding: "20px 42px"})
+      } else if (pawMeaning=="Нужна адаптация") {
+        setFilterStyle({background: "#FF6B00", padding: "20px 42px"})
+      } else if (pawMeaning=="Нужен опекун") {
+        setFilterStyle({background: "#0038FF", padding: "20px 42px"})
+      } else if (pawMeaning=="Проходят лечение") {
+        setFilterStyle({background: "#E4000E", padding: "20px 42px"})
+      }
     } else {
       setFilterStyle({background: "white"})
     }
+    
     if (imgStyle.display === "inline-block") {
       setImgStyle({display: "none"})
     } else {
@@ -19,7 +30,7 @@ export default function PawLabel({pawColor, pawMeaning}) {
   }
 
   return <>
-    <div onClick={changeStyle} style={filterStyle} className={styles.animalFilter}>
+    <div onClick={changeStyle} style={filterStyle} className={filterStyle.background !== "white" ? `${styles.animalFilter} ${styles.animalFilterFocus}` : styles.animalFilter}>
       <img style={imgStyle} src={`${pawColor}`}/>
       <h4>{pawMeaning}</h4>
     </div>
