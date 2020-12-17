@@ -1,10 +1,11 @@
 import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import AnimalCarousel from '~/components/AnimalCarousel'
+import FoundHomeList from '~/components/FoundHomeList'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/hellosFromHomes.module.scss'
 
-export default function HellosFromHomes({title='Привет из дома', animals}) {
+export default function HellosFromHomes({title='Привет из дома', animals, homePets}) {
   const filteredAnimals = animals.filter((item) => {
     return item.paw === "looking-for-home.png"
   })
@@ -29,6 +30,7 @@ export default function HellosFromHomes({title='Привет из дома', ani
     <section>
       <div className={`${styles.foundHomeBlock} ${styles.pagePaddings}`}>
         <h2>Они обрели семью:</h2>
+        <FoundHomeList animalsArr={homePets}/>
       </div>
     </section>
     <section>
