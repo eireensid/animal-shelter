@@ -37,6 +37,7 @@ export default function useDropdown (count) {
     for (let i = 0; i < count; i++) {
       const wrapperRef = wrapperRefs[i]
       if (wrapperRef.current.contains(e.target) || e.target === wrapperRef.current) {
+        console.log('handleClick retunr')
         return
       }
     }
