@@ -2,7 +2,6 @@
 
 .searchInput {
   display: flex;
-  align-items: center;
   padding: {
     top: 14px;
     bottom: 14px;
@@ -14,6 +13,42 @@
   background: #fff;
   border-radius: 100px;
 }
+.searchInputChange {
+  display: flex;
+  justify-content: space-between;
+  padding {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    // left: 20px!important;
+  }
+  width: 285px;
+  height: 48px;
+  background: #fff;
+  border-radius: 100px;
+  input {
+    margin-left: 20px;
+  }
+  input::placeholder {
+    color: white;
+  }
+  svg {
+    width: 21px;
+    height: 21px;
+  }
+}
+.searchInputImgDivChange {
+  padding: {
+    right: 20px;
+    top: 14px;
+    bottom: 14px;
+    left: 14px;
+  }
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 .searchInput input {
   margin-left: 5px;
   width: 100%;
@@ -23,6 +58,7 @@
   color: rgba(66, 41, 4, 0.5);
   letter-spacing: 1px;
 }
+
 
 // Tablet styles
 @media (max-width: 1200px) {
