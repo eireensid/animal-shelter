@@ -71,6 +71,34 @@
     }
     width: 206px;
   }
+  .searchInputChange {
+    padding {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      // left: 20px!important;
+    }
+    width: 206px;
+    input {
+      margin-left: 20px;
+    }
+    svg {
+      width: 21px;
+      height: 21px;
+    }
+  }
+  .searchInputImgDivChange {
+    padding: {
+      right: 20px;
+      top: 14px;
+      bottom: 14px;
+      left: 14px;
+    }
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 // Mobile styles
