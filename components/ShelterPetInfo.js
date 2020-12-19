@@ -1,0 +1,62 @@
+import PawLabel from '~/components/PawLabel'
+import SocialBtns from '~/components/SocialBtns'
+// import {useState} from 'react'
+// import AnimalCard from '~/components/AnimalCard'
+import {useRouter} from 'next/router'
+import styles from '~/styles/components/ShelterPetInfo.module.scss'
+
+export default function ShelterPetInfo({animals}) {
+  const router = useRouter()
+
+  const animal = animals.find(e => e.name === router.query.name) || {}
+  
+
+  return <>
+    <div className={styles.shelterPetInfoBlock}>
+      <div className={styles.titleBlock}>
+        <h2>{animal.name}</h2>
+        <PawLabel paw="/img/paws/looking-for-home.png" pawMeaning="Ищут дом"/>
+      </div>
+      <p>
+      Трогательное, мягкое и ласковое существо. Собачка среднего размера с густой шёрсткой и красивыми грустными глазками.<br/>
+      Девочке около 5 лет. Надюша доверчивая и очень нежная, ведёт себя прекрасно, внимательно относится к командам и очень послушна, отлично ходит на поводке. А ещё Надюша — великолепная охранница!<br/>
+      Девочка здоровая, у нее есть опекун, но она мечтает о доме. Пусть вас не обманывают её опущенные ушки, Надюше комфортно и хорошо с человеком
+      </p>
+    </div>
+    <div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div>
+          <span>Возраст</span>
+          <span> {animal.age}</span>
+        </div>
+        <div>
+          <span>Характер</span>
+          <span>Охранница</span>
+        </div>
+        <div>
+          <span>Пол</span>
+          <span>Ж</span>
+        </div>
+        <div>
+          <span>Прививки</span>
+          <img src="/img/yes.png"/>
+        </div>
+        <div>
+          <span>Стерилизация</span>
+          <img src="/img/yes.png"/>
+        </div>
+        <div>
+          <button>Забрать к себе</button>
+        </div>
+        <div>
+          <span>Расскажи о Надюше друзьям</span>
+          <SocialBtns/>
+        </div>
+      </div>
+    </div>
+  </>
+}
