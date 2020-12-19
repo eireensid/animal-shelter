@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import styles from '~/styles/components/PawLabel.module.scss'
 
-export default function PawLabel({pawColor, pawMeaning}) {
+export default function PawLabel({paw, pawMeaning, animals, filters, setFilters}) {
   const [filterStyle, setFilterStyle] = useState({background: "white"})
   const [imgStyle, setImgStyle] = useState({display: "inline-block"})
 
@@ -29,9 +29,23 @@ export default function PawLabel({pawColor, pawMeaning}) {
     }
   }
 
+  const setFilter = () => {
+    if (filters.indexOf(paw) === -1) {
+      setFilters([...filters, paw])
+    } else {
+      const newFilters = filters.filter(e => e !== paw)
+      setFilters(newFilters)
+    }
+  }
+
+  const filter = () => {
+    changeStyle()
+    setFilter()
+  }
+
   return <>
-    <div onClick={changeStyle} style={filterStyle} className={filterStyle.background !== "white" ? styles.animalFilterFocus : styles.animalFilter}>
-      <img style={imgStyle} src={`${pawColor}`}/>
+    <div onClick={filter} style={filterStyle} className={filterStyle.background !== "white" ? styles.animalFilterFocus : styles.animalFilter}>
+      <img style={imgStyle} src={'/img/paws/' + paw}/>
       <h4>{pawMeaning}</h4>
     </div>
   </>
