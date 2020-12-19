@@ -3,20 +3,19 @@ import useDropdown from '~/hooks/useDropdown'
 import styles from '~/styles/components/FindAnimalInput.module.scss'
 
 export default function FindAnimalInput({value, placeholder, options, onChange}) {
-  const { dropdownStyles, openDropdownClicks, wrapperRefs } = useDropdown(1)
+  const { dropdownStyles, openDropdownClicks, wrapperRefs, closeDropdown } = useDropdown(1)
 
-  const [open, setOpen] = useState(false);
   const handleChange = selectedValue => {
     onChange(selectedValue)
-    setOpen(false)
+    closeDropdown()
   }
 
   return <>
     <div ref={wrapperRefs[0]} className={styles.animalFilterInputBlock}>
-        <div onClick={openDropdownClicks[0]} className={open === false ? styles.animalFilterInput : styles.animalFilterInputBorder}>
+        <div onClick={openDropdownClicks[0]} className={dropdownStyles[0].display === "none" ? styles.animalFilterInput : styles.animalFilterInputBorder}>
           <h4>{value || placeholder}</h4>
           <img src="img/input-arrow-down.png"/>
-        </div>
+        </div>       
         <ul style={dropdownStyles[0]} className={styles.dropdownMenu}>
           {options.map((opt, ind) => (
             <li className={styles.dropdownMenuItem} onClick={e => handleChange(opt)} key={ind}>

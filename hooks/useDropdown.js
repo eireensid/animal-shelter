@@ -47,6 +47,13 @@ export default function useDropdown (count) {
     }
   }
 
+  const closeDropdown = () => {
+    for (let i = 0; i < count; i++) {
+      const setDropdownStyle = setDropdownStyles[i]
+      setDropdownStyle({display: "none"})
+    }
+  }
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClick)
 
@@ -55,5 +62,5 @@ export default function useDropdown (count) {
     }
   }, [])
 
-  return { dropdownStyles, openDropdownClicks, wrapperRefs }
+  return { dropdownStyles, openDropdownClicks, wrapperRefs, closeDropdown }
 }
