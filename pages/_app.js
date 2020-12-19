@@ -16,6 +16,7 @@ export default function MyApp({Component, pageProps}) {
     const pets = res.data.map(transformPets)
     console.log('pets', pets)
     // setAnimals(pets)
+    screen.orientation.lock('landscape');
   }, [])
 
   return (
