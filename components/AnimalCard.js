@@ -20,10 +20,13 @@ export default function AnimalCard({animal, parent}) {
 
   let linkHref = { pathname: '/pets/[name]', query: { name: name }}
 
-  if (parent === "shelter") {
-    linkHref = { pathname: '/pets/[name]', query: { name: name }}
-  } else if (parent === "home") {
+  if (parent === "home") {
     linkHref = { pathname: '/hellos-from-homes/[name]', query: { name: name }}
+  }
+
+  let imgSrc = `/img/paws/${paw}`
+  if (parent === "home") {
+    imgSrc = '/img/paws/heart.png'
   }
 
   return <>
@@ -35,7 +38,7 @@ export default function AnimalCard({animal, parent}) {
         <div className={styles.findCarouselCardDesc}>
           <div className={styles.findCarouselCardDescRow}>
             <h3>{name}</h3>
-            <img src={`/img/paws/${paw}`}/>
+            <img src={imgSrc}/>
           </div>
           <div style={lastRowVisibility} className={styles.findCarouselCardDescRow}>
             <span>{age}</span>

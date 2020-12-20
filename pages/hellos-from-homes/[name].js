@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router'
 import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
-import ShelterPetInfo from '~/components/ShelterPetInfo'
+// import HomePetInfo from '~/components/HomePetInfo'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/homePet.module.scss'
@@ -16,10 +16,10 @@ export default function HomePet({title, animals, shelterPets}) {
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
         <div className={styles.breadCrumbsWrapper}>
-          <BreadCrumbs title={`Питомцы / ` + router.query.name}/>
+          <BreadCrumbs title={`Привет из дома / ` + router.query.name}/>
         </div>
         <div>
-          <ShelterPetInfo animals={animals}/>
+          {/* <HomePetInfo shelterPets={shelterPets}/> */}
         </div>
         <div>
           <p>Так же вы можете прийти к питомцу в гости, принести ей вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>

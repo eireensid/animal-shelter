@@ -1,9 +1,7 @@
-import {useState} from 'react'
 import AnimalCard from '~/components/AnimalCard'
 import styles from '~/styles/components/FoundHomeList.module.scss'
 
 export default function FoundHomeList({pets}) {
-  console.log('pets', pets)
   return <>
     <div className={styles.animalsListBlock}>
 

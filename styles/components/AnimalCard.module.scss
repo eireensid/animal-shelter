@@ -33,6 +33,11 @@
   display: flex;
   justify-content: center;
 }
+.petImgBlock img {
+  border-radius: 30px;
+  width: 270px;
+  height: 270px;
+}
 .petSex {
   padding-right: 12px;
   color: rgba(19,19,19,0.6);;
