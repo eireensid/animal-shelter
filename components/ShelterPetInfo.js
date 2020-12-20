@@ -17,7 +17,7 @@ export default function ShelterPetInfo({animals}) {
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{animal.name}</h2>
-        <PawLabel animals={animals} paw={animal.paw} pawMeaning="Ищут дом"/>
+        <PawLabel animals={animals} paw={animal.paw}/>
       </div>
       <p>
       Трогательное, мягкое и ласковое существо. Собачка среднего размера с густой шёрсткой и красивыми грустными глазками.<br/>

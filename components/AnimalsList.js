@@ -49,26 +49,26 @@ const [filters, setFilters] = useState([])
         </div>
         <div className={styles.animalFilterWrapper}>
           <div className={styles.animalFilterWrapperTop}>            
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="looking-for-home.png" pawMeaning="Ищут дом"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-adoptation.png" pawMeaning="Нужна адаптация"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="baby-pets.png" pawMeaning="Малыши"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="looking-for-home.png"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-adoptation.png"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="baby-pets.png"/>
           </div>
           <div className={styles.animalFilterWrapperBottom}>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-guardian.png" pawMeaning="Нужен опекун"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="undergo-treatment.png" pawMeaning="Проходят лечение"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-guardian.png"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="undergo-treatment.png"/>
           </div>
         </div>
         <div className={styles.animalFilterWrapperMobile}>
           <div className={styles.animalFilterWrapperTopMobile}>            
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="looking-for-home.png" pawMeaning="Ищут дом"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-adoptation.png" pawMeaning="Нужна адаптация"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="looking-for-home.png"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-adoptation.png"/>
           </div>
           <div className={styles.animalFilterWrapperMiddleMobile}>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-guardian.png" pawMeaning="Нужен опекун"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="baby-pets.png" pawMeaning="Малыши"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-guardian.png"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="baby-pets.png"/>
           </div>
           <div className={styles.animalFilterWrapperBottomMobile}>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="undergo-treatment.png" pawMeaning="Проходят лечение"/>
+            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="undergo-treatment.png"/>
           </div>
         </div>
       </div>

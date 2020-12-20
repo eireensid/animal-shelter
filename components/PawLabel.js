@@ -1,9 +1,27 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import styles from '~/styles/components/PawLabel.module.scss'
 
-export default function PawLabel({paw, pawMeaning, animals, filters, setFilters}) {
+export default function PawLabel({paw, animals, filters, setFilters}) {
   const [filterStyle, setFilterStyle] = useState({background: "white"})
   const [imgStyle, setImgStyle] = useState({display: "inline-block"})
+
+  const [pawMeaning, setPawMeaning] = useState("")
+
+  const changePawMeaning = () => {
+    if (paw === "looking-for-home.png") {
+      setPawMeaning("Ищут дом")
+    } else if (paw === "need-adoptation.png") {
+      setPawMeaning("Нужна адаптация")
+    } else if (paw === "need-guardian.png") {
+      setPawMeaning("Нужен опекун")
+    } else if (paw === "undergo-treatment.png") {
+      setPawMeaning("Проходят лечение")
+    } else if (paw === "baby-pets.png") {
+      setPawMeaning("Малыши")
+    }
+  }
+
+  useEffect(changePawMeaning, [])
 
   const changeStyle = () => {
     if (filterStyle.background === "white") {

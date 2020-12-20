@@ -29,16 +29,69 @@ export const testAnimals = [
 
 export const homePets = [
   {
+    id: 1,
     name: "Ульяна", 
     about: "У нас прекрасная новость! Наша красавица Ульяна  наконец поехала домой!!! \n" +
           "Первый привет уже прилете. Улечке заботливая хозяйка навела красоту, вычесала ее роскошную шубку," +
           "а кошечка успешно освоила территорию и наслаждается прелестями домашней жизни. Все самое страшное позади!",
-    photo: "/img/photo-home-pets/1-1.jpg", gallery: []
+    photo: "/img/photo-home-pets/1-1.jpg", 
+    gallery: []
   },
 ]
 
 export const shelterPets = [
-  {name: "Муся", sex: "Ж", age: "4 года",  personality: "Ласковая игруля", paw: "looking-for-home.png", about: "", photo: "", gallery: []},
+  {
+    id: 1, 
+    type: "cat",
+    name: "Алик", 
+    sex: "М", 
+    age: "5 лет",  
+    personality: "Серьезный котик", 
+    paw: ["looking-for-home.png", "need-guardian.png", "need-adoptation.png"], 
+    about: 'Алик "бабушкин" - взрослый, серьезный котик. Характер спокойный и немного отстраненный. Приучен к туалету. Кастрирован и привит.', 
+    photo: "/img/photo-shelter-pets/1-1.jpg", 
+    gallery: ["/img/photo-shelter-pets/1-2.jpg"]
+  },
+  {
+    id: 2, 
+    type: "cat",
+    name: "Гром", 
+    sex: "М", 
+    age: "3 года",  
+    personality: "Ласковый игрун", 
+    paw: ["looking-for-home.png", "need-guardian.png"], 
+    about: "Гром - молодой и игривый котик. \n" +
+          "Очень ласковый и игривый. Кастрирован и привит. Так радуется приходу человека! \n" +
+          "100% домашний котик. И очень красивый, шерстка гладкая, приятная на ощупь. А уж в домашних условиях при должном уходе, ммм, ещё и заблестит! Скорее бы нашлись заботливые руки для него.", 
+    photo: "/img/photo-shelter-pets/2-1.jpg", 
+    gallery: []
+  },
+  {
+    id: 3, 
+    type: "cat",
+    name: "Гражданочка", 
+    sex: "Ж", 
+    age: "4 года",  
+    personality: "Общительная ласкуша", 
+    paw: ["looking-for-home.png", "need-guardian.png"], 
+    about: "Гражданочка - взрослая и красивая девочка. \n" +
+          "Ласковая, хорошо идёт на контакт, любит находиться рядом с человеком. Привита и стерилизована.", 
+    photo: "/img/photo-shelter-pets/3-1.jpg", 
+    gallery: []
+  },
+  {
+    id: 4, 
+    type: "cat",
+    name: "Гретта", 
+    sex: "Ж", 
+    age: "2 года",  
+    personality: "Молодая и симпатичная", 
+    paw: ["looking-for-home.png", "need-guardian.png", "need-adoptation.png"], 
+    about: "Гретта-Громовская собственной персоной! \n" +
+          "Молодая и симпатичная кошечка с нетерпением ждёт, когда же за ней придёт именно ЕЁ человек. Она ждёт и ждёт, а её человек до сих пор не приходит.. Может быть, вы присмотритесь и поймёте, что эта киса создана для вас? Кошечка стерилизована, привита и здорова.", 
+    photo: "/img/photo-shelter-pets/4-1.jpg", 
+    gallery: []
+  },
 ]
 
 function ageEnding (val, measure) {

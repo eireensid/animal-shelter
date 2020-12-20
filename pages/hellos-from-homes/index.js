@@ -35,7 +35,7 @@ export default function HellosFromHomes({title='Привет из дома', ani
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel parent="shelter" animals={filteredAnimals} title="Сейчас ищут дом:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>
