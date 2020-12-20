@@ -92,6 +92,21 @@ export const shelterPets = [
     photo: "/img/photo-shelter-pets/4-1.jpg", 
     gallery: []
   },
+  {
+    id: 5, 
+    type: "cat",
+    name: "Марточка", 
+    sex: "Ж", 
+    age: "2 года",  
+    personality: "Шаловливая особа", 
+    paw: ["need-adoptation.png", "looking-for-home.png", "need-guardian.png"], 
+    about: "Марточка - молодая кошечка, хулиганка редкостная, смешная и шаловливая особа, которая ищет хозяев с хорошим запасом терпения и чувством юмора! \n" +
+          "Марточка будет удивлять каждый день, веселить, скакать, беситься, играть, и тем самым заметно повышать уровень позитива в доме! \n" +
+          "Марточка великолепно ладит с другими кошками, ходит в лоток. \n" +
+          "Ну а мы очень-очень хотим ее пристроить в ответственные и добрые руки!", 
+    photo: "/img/photo-shelter-pets/5-1.jpg", 
+    gallery: ["/img/photo-shelter-pets/5-2.jpg", "/img/photo-shelter-pets/5-3.jpg"]
+  },
 ]
 
 function ageEnding (val, measure) {

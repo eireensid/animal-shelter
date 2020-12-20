@@ -12,10 +12,14 @@ export default function AnimalsList({animals}) {
   const [animal, setAnimal] = useState(undefined)
   const [age, setAge] = useState(undefined)
 
-  const [sortedAnimals, setSortedAnimals] = useState(animals)
+  const _animals = [...animals]
+  while (_animals.length % 3 !== 0) {
+    _animals.push(null)
+  }
+
+  const [sortedAnimals, setSortedAnimals] = useState(_animals)
 
 const [filter, setFilter] = useState(null)
-
   useEffect(() => {
     setSortedAnimals(animals)
   }, [animals])
@@ -28,7 +32,7 @@ const [filter, setFilter] = useState(null)
       newArr.push(null)
     }
     if (!filter) {
-      newArr = animals
+      newArr = _animals
     }
     setSortedAnimals(newArr)
   }
