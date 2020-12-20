@@ -9,10 +9,10 @@ export default function FoundHomeList({animalsArr}) {
 
       <div className={styles.ourPetsGallery}>
         {animalsArr.map((animal, index) => (
-          <>
+          <div key={index}>
             <div style={{whiteSpace: "pre-wrap"}}>{animal.about}</div>
-            <AnimalCard animal={animal} key={index}/>
-          </>
+            <AnimalCard parent="home" animal={animal}/>
+          </div>
         ))}
       </div>
     </div>

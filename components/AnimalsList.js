@@ -75,7 +75,7 @@ const [filters, setFilters] = useState([])
 
       <div className={styles.ourPetsGallery}>
         {sortedAnimals.map((animal, index) => (
-          <AnimalCard animal={animal} key={index}/>
+          <AnimalCard parent="shelter" animal={animal} key={index}/>
         ))}
       </div>
     </div>

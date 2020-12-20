@@ -33,7 +33,7 @@ export default function AnimalCarousel({animals, title}) {
           <img src="/img/arrow-left.svg" alt="влево"/>
         </div>
         {curItems.map((animal, index) => (
-          <AnimalCard animal={animal} key={index}/>
+          <AnimalCard parent="shelter" animal={animal} key={index}/>
         ))}
         <div onClick={nextSlide} className={`${styles.findCarouselArrowRight} ${styles.findCarouselArrow}`}>
           <img src="/img/arrow-right.svg" alt="вправо"/>
