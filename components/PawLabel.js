@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import styles from '~/styles/components/PawLabel.module.scss'
 
-export default function PawLabel({paw, animals, filters, setFilters}) {
+export default function PawLabel({paw, animals, filter, setFilter}) {
   const [filterStyle, setFilterStyle] = useState({background: "white"})
   const [imgStyle, setImgStyle] = useState({display: "inline-block"})
 
@@ -22,6 +22,8 @@ export default function PawLabel({paw, animals, filters, setFilters}) {
   }
 
   useEffect(changePawMeaning, [])
+
+
 
   const changeStyle = () => {
     if (filterStyle.background === "white") {
@@ -47,22 +49,29 @@ export default function PawLabel({paw, animals, filters, setFilters}) {
     }
   }
 
-  const setFilter = () => {
-    if (filters.indexOf(paw) === -1) {
-      setFilters([...filters, paw])
+  const changeStyleOff = () => {
+    setFilterStyle({background: "white"})
+    setImgStyle({display: "inline-block"})
+  }
+
+
+  const doFilter = () => {
+    changeStyle()
+    if (filter !== paw) {
+      setFilter(paw)
     } else {
-      const newFilters = filters.filter(e => e !== paw)
-      setFilters(newFilters)
+      setFilter(null)
     }
   }
 
-  const filter = () => {
-    changeStyle()
-    setFilter()
-  }
+  useEffect(() => {
+    if (filter !== paw) {
+      changeStyleOff()
+    }
+  }, [filter])
 
   return <>
-    <div onClick={filter} style={filterStyle} className={filterStyle.background !== "white" ? styles.animalFilterFocus : styles.animalFilter}>
+    <div onClick={doFilter} style={filterStyle} className={filterStyle.background !== "white" ? styles.animalFilterFocus : styles.animalFilter}>
       <img style={imgStyle} src={'/img/paws/' + paw}/>
       <h4>{pawMeaning}</h4>
     </div>

@@ -2,7 +2,7 @@ import styles from '~/styles/components/AnimalCard.module.scss'
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
 
-export default function AnimalCard({animal, parent}) {
+export default function AnimalCard({animal, filter, parent}) {
   if (!animal) return <>
     <div className={styles.findCarouselCard} style={{ opacity: 0 }}></div>
   </>
@@ -24,9 +24,16 @@ export default function AnimalCard({animal, parent}) {
     linkHref = { pathname: '/hellos-from-homes/[name]', query: { name: name }}
   }
 
-  let imgSrc = `/img/paws/${paw}`
-  if (parent === "home") {
-    imgSrc = '/img/paws/heart.png'
+  let pawSrc = ""
+
+  if (parent !== "home") {
+    let curPaw = paw[0]
+    if (paw.includes(filter)) {
+      curPaw = filter
+    }
+    pawSrc = `/img/paws/${curPaw}`
+  } else if (parent === "home") {
+    pawSrc = '/img/paws/heart.png'
   }
 
   return <>
@@ -38,7 +45,7 @@ export default function AnimalCard({animal, parent}) {
         <div className={styles.findCarouselCardDesc}>
           <div className={styles.findCarouselCardDescRow}>
             <h3>{name}</h3>
-            <img src={imgSrc}/>
+            <img src={pawSrc}/>
           </div>
           <div style={lastRowVisibility} className={styles.findCarouselCardDescRow}>
             <span>{age}</span>

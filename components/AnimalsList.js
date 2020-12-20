@@ -14,28 +14,28 @@ export default function AnimalsList({animals}) {
 
   const [sortedAnimals, setSortedAnimals] = useState(animals)
 
-const [filters, setFilters] = useState([])
+const [filter, setFilter] = useState(null)
 
   useEffect(() => {
     setSortedAnimals(animals)
   }, [animals])
 
-  const setFilter = () => {
+  const setFilter1 = () => {
     let newArr = animals.filter((animal, index) => {
-      return filters.includes(animal.paw)
+      return animal.paw.some(p => filter === p)
     })
     while (newArr.length % 3 !== 0) {
       newArr.push(null)
     }
-    if (!filters.length) {
+    if (!filter) {
       newArr = animals
     }
     setSortedAnimals(newArr)
   }
 
   useEffect(() => {
-    setFilter()
-  }, [filters])
+    setFilter1()
+  }, [filter])
   
   return <>
     <div className={styles.animalsListBlock}>
@@ -49,33 +49,33 @@ const [filters, setFilters] = useState([])
         </div>
         <div className={styles.animalFilterWrapper}>
           <div className={styles.animalFilterWrapperTop}>            
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="looking-for-home.png"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-adoptation.png"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="baby-pets.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="looking-for-home.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="need-adoptation.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="baby-pets.png"/>
           </div>
           <div className={styles.animalFilterWrapperBottom}>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-guardian.png"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="undergo-treatment.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="need-guardian.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="undergo-treatment.png"/>
           </div>
         </div>
         <div className={styles.animalFilterWrapperMobile}>
           <div className={styles.animalFilterWrapperTopMobile}>            
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="looking-for-home.png"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-adoptation.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="looking-for-home.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="need-adoptation.png"/>
           </div>
           <div className={styles.animalFilterWrapperMiddleMobile}>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="need-guardian.png"/>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="baby-pets.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="need-guardian.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="baby-pets.png"/>
           </div>
           <div className={styles.animalFilterWrapperBottomMobile}>
-            <PawLabel animals={animals} filters={filters} setFilters={setFilters} paw="undergo-treatment.png"/>
+            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="undergo-treatment.png"/>
           </div>
         </div>
       </div>
 
       <div className={styles.ourPetsGallery}>
         {sortedAnimals.map((animal, index) => (
-          <AnimalCard parent="shelter" animal={animal} key={index}/>
+          <AnimalCard parent="shelter" filter={filter} animal={animal} key={index}/>
         ))}
       </div>
     </div>

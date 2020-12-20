@@ -1,7 +1,5 @@
 import PawLabel from '~/components/PawLabel'
 import SocialBtns from '~/components/SocialBtns'
-// import {useState} from 'react'
-// import AnimalCard from '~/components/AnimalCard'
 import {useRouter} from 'next/router'
 import useCarousel from '~/hooks/useCarousel'
 import styles from '~/styles/components/ShelterPetInfo.module.scss'
@@ -17,7 +15,7 @@ export default function ShelterPetInfo({animals}) {
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{animal.name}</h2>
-        <PawLabel animals={animals} paw={animal.paw}/>
+        <PawLabel animals={animals} paw={animal.paw[0]}/>
       </div>
       <p>
       Трогательное, мягкое и ласковое существо. Собачка среднего размера с густой шёрсткой и красивыми грустными глазками.<br/>
