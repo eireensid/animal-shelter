@@ -18,11 +18,16 @@ export default function AnimalCard({animal, parent}) {
 
   useEffect(lastRowShow, [])
 
+  let linkHref = { pathname: '/pets/[name]', query: { name: name }}
+
+  if (parent === "shelter") {
+    linkHref = { pathname: '/pets/[name]', query: { name: name }}
+  } else if (parent === "home") {
+    linkHref = { pathname: '/hellos-from-homes/[name]', query: { name: name }}
+  }
+
   return <>
-    <Link href={{
-              pathname: '/pets/[name]',
-              query: { name: name },
-            }}>
+    <Link href={linkHref}>
       <div className={styles.findCarouselCard}>
         <div className={styles.petImgBlock}>
           <img className={styles.petImg} src={photo} alt="питомец"/>
