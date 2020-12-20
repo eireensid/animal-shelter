@@ -3,10 +3,12 @@ import SocialBtns from '~/components/SocialBtns'
 // import {useState} from 'react'
 // import AnimalCard from '~/components/AnimalCard'
 import {useRouter} from 'next/router'
+import useCarousel from '~/hooks/useCarousel'
 import styles from '~/styles/components/ShelterPetInfo.module.scss'
 
 export default function ShelterPetInfo({animals}) {
   const router = useRouter()
+  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(animals, 1)
 
   const animal = animals.find(e => e.name === router.query.name) || {}
   
@@ -15,7 +17,7 @@ export default function ShelterPetInfo({animals}) {
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{animal.name}</h2>
-        <PawLabel paw="/img/paws/looking-for-home.png" pawMeaning="Ищут дом"/>
+        <PawLabel animals={animals} paw={animal.paw} pawMeaning="Ищут дом"/>
       </div>
       <p>
       Трогательное, мягкое и ласковое существо. Собачка среднего размера с густой шёрсткой и красивыми грустными глазками.<br/>
@@ -23,12 +25,24 @@ export default function ShelterPetInfo({animals}) {
       Девочка здоровая, у нее есть опекун, но она мечтает о доме. Пусть вас не обманывают её опущенные ушки, Надюше комфортно и хорошо с человеком
       </p>
     </div>
-    <div>
-      <div>
-        <div></div>
-        <div></div>
+    <div className={styles.photoDescBlock}>
+      <div className={styles.photoCarouselBlock}>
+        <div className={styles.visitingRulesCard}>
+          {/* <img src={`/img/visiting-rules/${activeRule.ruleImg}`} alt="фото"/> */}
+          <div onClick={prevSlide} className={`${styles.findCarouselArrow} ${styles.findCarouselArrowLeft}`}>
+            <img src="/img/arrow-left.svg" alt="влево"/>
+          </div>
+          <div onClick={nextSlide} className={`${styles.findCarouselArrow} ${styles.findCarouselArrowRight}`}>
+            <img src="/img/arrow-right.svg" alt="вправо"/>
+          </div>
+        </div>
+        {/* <div className={styles.visitingRulesRounds}>
+          {visitingRules.map((rule, index) => (
+            <div className={getRoundClasses(index)} key={index}></div>
+          ))}
+        </div> */}
       </div>
-      <div>
+      <div className={styles.petDescBlock}>
         <div>
           <span>Возраст</span>
           <span> {animal.age}</span>
@@ -39,7 +53,7 @@ export default function ShelterPetInfo({animals}) {
         </div>
         <div>
           <span>Пол</span>
-          <span>Ж</span>
+          <span> {animal.sex}</span>
         </div>
         <div>
           <span>Прививки</span>
@@ -53,7 +67,7 @@ export default function ShelterPetInfo({animals}) {
           <button>Забрать к себе</button>
         </div>
         <div>
-          <span>Расскажи о Надюше друзьям</span>
+          <span>Расскажи о {animal.name} друзьям</span>
           <SocialBtns/>
         </div>
       </div>

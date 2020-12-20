@@ -6,17 +6,17 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/pet.module.scss'
 
-export default function Pet({title="pet", animals, shelterPets}) {
+export default function Pet({title, animals, shelterPets}) {
   const router = useRouter()
   const filteredAnimals = animals.filter((item) => {
     return item.paw === "looking-for-home.png"
   })
-  {/* <h1>{router.query.name}</h1> */}
+
   return <MainLayout>
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
         <div className={styles.breadCrumbsWrapper}>
-          <BreadCrumbs title={title}/>
+          <BreadCrumbs title={`Питомцы / ` + router.query.name}/>
         </div>
         <div>
           <ShelterPetInfo animals={animals}/>
