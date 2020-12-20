@@ -1,11 +1,10 @@
-import AnimalsList from '~/components/AnimalsList'
-import styles from '~/styles/components/AnimalsListPagination.module.scss'
+// import AnimalsList from '~/components/AnimalsList'
+import styles from '~/styles/components/Pagination.module.scss'
 
-export default function AnimalsListPagination({animals}) {
+export default function Pagination({animals}) {
   const galleryAnimals = animals.slice(0, 12)
   return <>
-    <div className={styles.animalsListPaginationBlock}>
-      <AnimalsList animals={animals}/>
+    <div className={styles.PaginationBlock}>
       <div className={styles.paginationPages}>
         <img src="/img/pagination-arrow-left.svg" alt="влево"/>
         <span>1</span>

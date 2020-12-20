@@ -31,5 +31,5 @@ export default function useCarousel (items, count) {
   }
 
 
-  return { activeIndex, curItems, prevSlide, nextSlide }
+  return { activeIndex, curItems, prevSlide, nextSlide, setActiveIndex }
 }

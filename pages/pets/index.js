@@ -1,6 +1,6 @@
 import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
-import AnimalsListPagination from '~/components/AnimalsListPagination'
+import AnimalsList from '~/components/AnimalsList'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/pets.module.scss'
 
@@ -30,7 +30,7 @@ export default function Pets({title='Питомцы', animals}) {
         <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
         <p className={`${styles.ourPetsDesc} ${styles.ourPetsPadding}`}>Если вы уже знаете имя питомца, который вас заинтересовал, воспользуйтесь поиском по имени.</p>
         
-        <AnimalsListPagination animals={animals}/>
+        <AnimalsList animals={animals}/>
       </div>
     </section>
 

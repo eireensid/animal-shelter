@@ -3,7 +3,7 @@ import styles from '~/styles/components/VisitingRulesCarousel.module.scss'
 
 
 export default function VisitingRulesCarousel({visitingRules}) {
-  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(visitingRules, 1)
+  const { activeIndex, curItems, prevSlide, nextSlide, setActiveIndex } = useCarousel(visitingRules, 1)
   const activeRule = curItems[0]
 
   const getRoundClasses = (index) => {
@@ -33,7 +33,7 @@ export default function VisitingRulesCarousel({visitingRules}) {
       </div>
       <div className={styles.visitingRulesRounds}>
         {visitingRules.map((rule, index) => (
-          <div className={getRoundClasses(index)} key={index}></div>
+          <div onClick={() => setActiveIndex(index)} className={getRoundClasses(index)} key={index}></div>
         ))}
       </div>
     </div>
