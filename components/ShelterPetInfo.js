@@ -1,5 +1,6 @@
 import PawLabel from '~/components/PawLabel'
 import SocialBtns from '~/components/SocialBtns'
+import {useState, useEffect} from 'react'
 import {useRouter} from 'next/router'
 import useCarousel from '~/hooks/useCarousel'
 import styles from '~/styles/components/ShelterPetInfo.module.scss'
@@ -8,37 +9,48 @@ export default function ShelterPetInfo({animals}) {
   const router = useRouter()
   const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(animals, 1)
 
+  const activePet = curItems[0]
+
   const animal = animals.find(e => e.name === router.query.name) || {}
+
+  const [tellAboutPet, setTellAboutPet] = useState(animal.name)
+
+  const changeTellAboutPet = () => {
+    setTellAboutPet(animal.name + 'е')
+  }
+
+  useEffect(changeTellAboutPet, [animal]) 
+  
   
 
   return <>
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{animal.name}</h2>
-        <PawLabel animals={animals} paw={animal.paw[0]}/>
+        {/* <PawLabel animals={animals} paw={animal.paw[0]}/> */}
       </div>
-      <p>
-      Трогательное, мягкое и ласковое существо. Собачка среднего размера с густой шёрсткой и красивыми грустными глазками.<br/>
-      Девочке около 5 лет. Надюша доверчивая и очень нежная, ведёт себя прекрасно, внимательно относится к командам и очень послушна, отлично ходит на поводке. А ещё Надюша — великолепная охранница!<br/>
-      Девочка здоровая, у нее есть опекун, но она мечтает о доме. Пусть вас не обманывают её опущенные ушки, Надюше комфортно и хорошо с человеком
-      </p>
+      <div>
+        {animal.about.map(item => (
+          <p>{item}</p>
+        ))}
+      </div>
     </div>
     <div className={styles.photoDescBlock}>
       <div className={styles.photoCarouselBlock}>
-        <div className={styles.visitingRulesCard}>
-          {/* <img src={`/img/visiting-rules/${activeRule.ruleImg}`} alt="фото"/> */}
-          <div onClick={prevSlide} className={`${styles.findCarouselArrow} ${styles.findCarouselArrowLeft}`}>
+        <div className={styles.galleryPhotosWrapper}>
+          <div className={styles.galleryPhotos}>
+            <img src={activePet.gallery[0]} alt="питомец"/>
+          </div>
+          <div onClick={prevSlide} className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}>
             <img src="/img/arrow-left.svg" alt="влево"/>
           </div>
-          <div onClick={nextSlide} className={`${styles.findCarouselArrow} ${styles.findCarouselArrowRight}`}>
+          <div onClick={nextSlide} className={`${styles.carouselArrow} ${styles.carouselArrowRight}`}>
             <img src="/img/arrow-right.svg" alt="вправо"/>
           </div>
         </div>
-        {/* <div className={styles.visitingRulesRounds}>
-          {visitingRules.map((rule, index) => (
-            <div className={getRoundClasses(index)} key={index}></div>
-          ))}
-        </div> */}
+        <div className={styles.galleryPhotoIndexBlock}>
+          <span>{activeIndex + 1} / {curItems.length}</span>
+        </div>
       </div>
       <div className={styles.petDescBlock}>
         <div>
@@ -47,7 +59,7 @@ export default function ShelterPetInfo({animals}) {
         </div>
         <div>
           <span>Характер</span>
-          <span>Охранница</span>
+          <span> {animal.personality}</span>
         </div>
         <div>
           <span>Пол</span>
@@ -65,7 +77,7 @@ export default function ShelterPetInfo({animals}) {
           <button>Забрать к себе</button>
         </div>
         <div>
-          <span>Расскажи о {animal.name} друзьям</span>
+          <span>Расскажи о {tellAboutPet} друзьям</span>
           <SocialBtns/>
         </div>
       </div>

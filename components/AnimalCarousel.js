@@ -6,6 +6,7 @@ import styles from '~/styles/components/AnimalCarousel.module.scss'
 export default function AnimalCarousel({animals, title}) {
   const [count, setCount] = useState(3)
   const { curItems, prevSlide, nextSlide } = useCarousel(animals, count)
+  const [filter, setFilter] = useState(null)
 
   function setCountByWidth () {
     let count = 3
@@ -33,7 +34,7 @@ export default function AnimalCarousel({animals, title}) {
           <img src="/img/arrow-left.svg" alt="влево"/>
         </div>
         {curItems.map((animal, index) => (
-          <AnimalCard parent="shelter" animal={animal} key={index}/>
+          <AnimalCard parent="shelter" filter={filter} animal={animal} key={index}/>
         ))}
         <div onClick={nextSlide} className={`${styles.findCarouselArrowRight} ${styles.findCarouselArrow}`}>
           <img src="/img/arrow-right.svg" alt="вправо"/>

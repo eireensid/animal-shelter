@@ -3,6 +3,7 @@
 }
 .photoDescBlock {
   display: flex;
+  justify-content: space-between;
 }
 .petDescBlock {
   background: #fff;
@@ -11,12 +12,22 @@
   padding: 50px;
 }
 
-.findCarouselArrow img {
+.carouselArrow {
+  position: absolute;
+  top: 40%;
+}
+.carouselArrowLeft {
+  left: -4%; 
+}
+.carouselArrowRight {
+  right: -4%;
+}
+.carouselArrow img {
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 4px 5px rgba(0,0,0,0.1);
 }
-.findCarouselArrowLeft img {
+.carouselArrowLeft img {
   padding: {
     top: 11px;
     right: 15px;
@@ -24,7 +35,7 @@
     left: 13px;
   }
 }
-.findCarouselArrowRight img {
+.carouselArrowRight img {
   padding: {
     top: 11px;
     right: 13px;
@@ -33,9 +44,23 @@
   }
 }
 
-.findCarouselArrow img:hover {
+.carouselArrow img:hover {
   background: #FFB78E;
 }
-.findCarouselArrow img:active {
+.carouselArrow img:active {
   background: #E48244;
+}
+
+.galleryPhotosWrapper {
+  position: relative;
+}
+.galleryPhotos {
+  width: 472px;
+  height: 576px;
+}
+
+.galleryPhotoIndexBlock {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.389rem;
 }
