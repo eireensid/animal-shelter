@@ -7,27 +7,30 @@ import styles from '~/styles/components/ShelterPetInfo.module.scss'
 
 export default function ShelterPetInfo({animals}) {
   const router = useRouter()
-  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(animals, 1)
-
-  const activePet = curItems[0]
 
   const animal = animals.find(e => e.name === router.query.name) || {}
+  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(animal.gallery, 1)
 
   const [tellAboutPet, setTellAboutPet] = useState(animal.name)
 
   const changeTellAboutPet = () => {
-    setTellAboutPet(animal.name + 'е')
+    const lastChar = animal.name.charAt(animal.name.length-1)
+    let remName = animal.name
+    if (lastChar === 'а' || lastChar === 'я' || lastChar === 'о' || lastChar === 'е' || lastChar === 'у' || lastChar === 'ю' || lastChar === 'и' || lastChar === 'э') {
+      remName = animal.name.slice(0, -1)
+    }
+    setTellAboutPet(remName + 'е')
   }
 
   useEffect(changeTellAboutPet, [animal]) 
   
-  
+  animals = curItems
 
   return <>
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{animal.name}</h2>
-        {/* <PawLabel animals={animals} paw={animal.paw[0]}/> */}
+        <PawLabel animals={animals} paw={animal.paw[0]}/>
       </div>
       <div>
         {animal.about.map(item => (
@@ -39,7 +42,10 @@ export default function ShelterPetInfo({animals}) {
       <div className={styles.photoCarouselBlock}>
         <div className={styles.galleryPhotosWrapper}>
           <div className={styles.galleryPhotos}>
-            <img src={activePet.gallery[0]} alt="питомец"/>
+          {curItems.map((a, index) => (
+            <img src={a} key={index} alt="питомец"/>
+          ))}
+            
           </div>
           <div onClick={prevSlide} className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}>
             <img src="/img/arrow-left.svg" alt="влево"/>
@@ -49,7 +55,7 @@ export default function ShelterPetInfo({animals}) {
           </div>
         </div>
         <div className={styles.galleryPhotoIndexBlock}>
-          <span>{activeIndex + 1} / {curItems.length}</span>
+          <span>{activeIndex + 1} / {animal.gallery.length}</span>
         </div>
       </div>
       <div className={styles.petDescBlock}>

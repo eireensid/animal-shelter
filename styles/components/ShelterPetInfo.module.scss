@@ -14,7 +14,7 @@
 
 .carouselArrow {
   position: absolute;
-  top: 40%;
+  top: 45%;
 }
 .carouselArrowLeft {
   left: -4%; 
@@ -57,7 +57,10 @@
 .galleryPhotos {
   width: 472px;
   height: 576px;
+  display: flex;
+  align-items: center;
 }
+
 
 .galleryPhotoIndexBlock {
   text-align: center;
