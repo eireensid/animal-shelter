@@ -34,7 +34,7 @@ export default function ShelterPetInfo({animals}) {
       </div>
       <div>
         {animal.about.map(item => (
-          <p>{item}</p>
+          <p className={styles.aboutPetText}>{item}</p>
         ))}
       </div>
     </div>
@@ -42,10 +42,12 @@ export default function ShelterPetInfo({animals}) {
       <div className={styles.photoCarouselBlock}>
         <div className={styles.galleryPhotosWrapper}>
           <div className={styles.galleryPhotos}>
-          {curItems.map((a, index) => (
-            <img src={a} key={index} alt="питомец"/>
-          ))}
-            
+            {curItems.map((a, index) => (
+              <img src={a} key={index} alt="питомец"/>
+            ))}
+            <div className={styles.galleryPhotoIndexBlock}>
+          <span>{activeIndex + 1} / {animal.gallery.length}</span>
+        </div>
           </div>
           <div onClick={prevSlide} className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}>
             <img src="/img/arrow-left.svg" alt="влево"/>
@@ -54,36 +56,34 @@ export default function ShelterPetInfo({animals}) {
             <img src="/img/arrow-right.svg" alt="вправо"/>
           </div>
         </div>
-        <div className={styles.galleryPhotoIndexBlock}>
-          <span>{activeIndex + 1} / {animal.gallery.length}</span>
-        </div>
+        
       </div>
       <div className={styles.petDescBlock}>
-        <div>
+        <div className={styles.petDescRow}>
           <span>Возраст</span>
-          <span> {animal.age}</span>
+          <span className={styles.petInfo}> {animal.age}</span>
         </div>
-        <div>
+        <div className={styles.petDescRow}>
           <span>Характер</span>
-          <span> {animal.personality}</span>
+          <span className={styles.petInfo}> {animal.personality}</span>
         </div>
-        <div>
+        <div className={styles.petDescRow}>
           <span>Пол</span>
-          <span> {animal.sex}</span>
+          <span className={styles.petInfo}> {animal.sex}</span>
         </div>
-        <div>
+        <div className={styles.petDescRow}>
           <span>Прививки</span>
           <img src="/img/yes.png"/>
         </div>
-        <div>
+        <div className={styles.petDescRow}>
           <span>Стерилизация</span>
           <img src="/img/yes.png"/>
         </div>
-        <div>
-          <button>Забрать к себе</button>
-        </div>
-        <div>
+        <button className={styles.takePet}>Забрать к себе</button>
+        <div className={styles.petDescRow}>
           <span>Расскажи о {tellAboutPet} друзьям</span>
+        </div>
+        <div className={styles.socialsWrapper}>
           <SocialBtns/>
         </div>
       </div>
