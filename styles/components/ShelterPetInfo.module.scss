@@ -9,9 +9,11 @@
     margin-right: 50px;
   }
 }
+.aboutPetText {
+  width: 58%;
+}
 .aboutPetText:not(:last-child) {
   padding-bottom: 25px;
-  width: 58%;
 }
 .photoDescBlock {
   display: flex;
@@ -52,6 +54,9 @@
   }
 }
 
+.carouselArrowTablet {
+  display: none;
+}
 .carouselArrow {
   position: absolute;
   top: 38%;
@@ -108,4 +113,112 @@
   font-weight: 500;
   font-size: 1.389rem;
   padding-top: 65px;
+}
+
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .titleBlock {
+    padding: {
+      top: 40px;
+      bottom: 25px;
+    }
+    h2 {
+      margin-right: 33px;
+    }
+  }
+  .aboutPetText {
+    width: 70%;
+  }
+  .aboutPetText:not(:last-child) {
+    padding-bottom: 20px;
+  }
+  .photoDescBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+  .petDescBlock {
+    margin-top: 100px;
+    width: 100%;
+    .petDescRow {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 40px;
+    }
+    .petDescRow span {
+      font-weight: 500;
+      font-size: 1.389rem;
+    }
+    .petInfo {
+      color: rgba(66,41,4,0.7)
+    }
+    .takePet {
+      margin: {
+        top: 15px;
+        bottom: 55px;
+      }
+      letter-spacing: 2px;
+    }
+    .socialsWrapper {
+      margin-top: -7px;
+    }
+  }
+
+  .galleryPhotosTablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .carouselArrow {
+    display: none;
+  }
+  .carouselArrowTablet {
+    display: block;
+  }
+  .carouselArrowTablet img {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  }
+  .carouselArrowLeftTablet img {
+    padding: {
+      top: 9px;
+      right: 14px;
+      bottom: 9px;
+      left: 10px;
+    }
+  }
+  .carouselArrowRightTablet img {
+    padding: {
+      top: 9px;
+      right: 10px;
+      bottom: 9px;
+      left: 14px;
+    }
+  }
+
+
+  .galleryPhotos {
+    width: 678px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .galleryPhoto {
+    width: 472px;
+  }
+  
+  
+  .galleryPhotoIndexBlock {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.389rem;
+    padding-top: 40px;
+  }
+}
+
+
+// Mobile styles
+@media (max-width: 480px) {
+  
 }

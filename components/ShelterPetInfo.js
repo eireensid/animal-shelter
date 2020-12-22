@@ -42,12 +42,23 @@ export default function ShelterPetInfo({animals}) {
       <div className={styles.photoCarouselBlock}>
         <div className={styles.galleryPhotosWrapper}>
           <div className={styles.galleryPhotos}>
-            {curItems.map((a, index) => (
-              <img src={a} key={index} alt="питомец"/>
-            ))}
+            <div className={styles.galleryPhotosTablet}>
+              <div onClick={prevSlide} className={`${styles.carouselArrowTablet} ${styles.carouselArrowLeftTablet}`}>
+                <img src="/img/arrow-left.svg" alt="влево"/>
+              </div>
+              <div className={styles.galleryPhoto}>
+              {curItems.map((a, index) => (
+                <img src={a} key={index} alt="питомец"/>
+              ))}
+              </div>
+              <div onClick={nextSlide} className={`${styles.carouselArrowTablet} ${styles.carouselArrowRightTablet}`}>
+                <img src="/img/arrow-right.svg" alt="вправо"/>
+              </div>
+            </div>
+
             <div className={styles.galleryPhotoIndexBlock}>
-          <span>{activeIndex + 1} / {animal.gallery.length}</span>
-        </div>
+              <span>{activeIndex + 1} / {animal.gallery.length}</span>
+            </div>
           </div>
           <div onClick={prevSlide} className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}>
             <img src="/img/arrow-left.svg" alt="влево"/>

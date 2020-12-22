@@ -1,4 +1,5 @@
 import {useRouter} from 'next/router'
+import Router from 'next/router'
 import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import ShelterPetInfo from '~/components/ShelterPetInfo'
@@ -6,10 +7,10 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/pet.module.scss'
 
-export default function Pet({title, animals, shelterPets}) {
+export default function Pet({title, animals}) {
   const router = useRouter()
   const filteredAnimals = animals.filter((item) => {
-    return item.paw === "looking-for-home.png"
+    return item.paw[0] === "looking-for-home.png"
   })
 
   return <MainLayout>
@@ -21,9 +22,9 @@ export default function Pet({title, animals, shelterPets}) {
         <div>
           <ShelterPetInfo animals={animals}/>
         </div>
-        <div>
-          <p>Так же вы можете прийти к питомцу в гости, принести ей вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>
-          <button>Подробнее</button>
+        <div className={styles.walkingsBlock}>
+          <p>Так же вы можете прийти к питомцу в гости, принести ему вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>
+          <button onClick={() => Router.push('/walks-with-dogs').then(() => window.scrollTo(0, 0))} className={styles.aboutWalkingsBtn}>Подробнее</button>
         </div>
       </div>
     </section>

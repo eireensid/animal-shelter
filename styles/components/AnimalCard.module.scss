@@ -46,10 +46,11 @@
 // Tablet styles
 @media (max-width: 1200px) {
   .findCarouselCard {
-    flex-basis: 275px;
+    width: 275px;
   }
   .petImgBlock img {
     width: 80%;
+    height: 212px;
   }
   .findCarouselCardDesc {
     padding-top: 140px;
@@ -70,12 +71,10 @@
 // Mobile styles
 @media (max-width: 480px) {
   .findCarouselCard {
-    flex-basis: 250px;
     width: 250px;
   }
   .petImgBlock img {
-    width: 85%;
-    height: 212px;
+    width: 85%; 
   }
   .findCarouselCardDesc {
     height: 208px;

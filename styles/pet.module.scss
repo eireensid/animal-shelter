@@ -19,6 +19,16 @@
   padding-top: 40px;
 }
 
+.walkingsBlock {
+  padding-bottom: 190px;
+  p {
+    width: 58%;
+  }
+  .aboutWalkingsBtn {
+    letter-spacing: 2px;
+    margin-top: 35px;
+  }
+}
 
 .animalCarouselWrapper {
   background: $pageBg;
@@ -69,6 +79,15 @@
     width: 100%;
   }
 
+  .walkingsBlock {
+    padding-bottom: 200px;
+    p {
+      width: 75%;
+    }
+    .aboutWalkingsBtn {
+      margin-top: 39px;
+    }
+  }
 
   .photoWithPhraseBubbleWrapper {
     margin: 0 auto;
