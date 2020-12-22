@@ -75,7 +75,7 @@ export default function SearchInput({animals, setSearchResult}) {
 
   useEffect(() => {
     const result = animals.map(animal =>
-      animal.name.toLowerCase().includes(searchTerm)
+      animal.name && animal.name.toLowerCase().includes(searchTerm)
     )
     setSearchResult(result)
   }, [searchTerm])

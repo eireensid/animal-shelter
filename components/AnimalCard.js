@@ -32,7 +32,7 @@ export default function AnimalCard({animal, filter, parent}) {
 
   if (parent !== "home") {
     let curPaw = paw && paw[0]
-    if (paw.includes(filter)) {
+    if (paw && paw.includes(filter)) {
       curPaw = filter
     }
     pawSrc = `/img/paws/${curPaw}`
