@@ -18,6 +18,10 @@ export default function AnimalCard({animal, filter, parent}) {
 
   useEffect(lastRowShow, [])
 
+  // useEffect(() => {
+  //   saveLocalPet()
+  // }, [animal])
+
   let linkHref = { pathname: '/pets/[name]', query: { name: name }}
 
   if (parent === "home") {
@@ -27,7 +31,7 @@ export default function AnimalCard({animal, filter, parent}) {
   let pawSrc = ""
 
   if (parent !== "home") {
-    let curPaw = paw[0]
+    let curPaw = paw && paw[0]
     if (paw.includes(filter)) {
       curPaw = filter
     }
@@ -36,9 +40,23 @@ export default function AnimalCard({animal, filter, parent}) {
     pawSrc = '/img/paws/heart.png'
   }
 
+  
+  // save to local
+  const saveLocalPet = () => { 
+    localStorage.setItem('pet', JSON.stringify(animal))
+  }
+  // const getLocalPet = () => {
+  //   if (localStorage.getItem('pet') === null) {
+  //     localStorage.setItem('pet', JSON.stringify([]))
+  //   } else {
+  //     let petLocal = JSON.parse(localStorage.getItem('pet'))
+  //     setPet(petLocal)
+  //   }
+  // }
+
   return <>
     <Link href={linkHref}>
-      <div className={styles.findCarouselCard}>
+      <div onClick={saveLocalPet} className={styles.findCarouselCard}>
         <div className={styles.petImgBlock}>
           <img className={styles.petImg} src={photo} alt="питомец"/>
         </div>
