@@ -1,15 +1,15 @@
 import {useRouter} from 'next/router'
 import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
-// import HomePetInfo from '~/components/HomePetInfo'
+import HomePetInfo from '~/components/HomePetInfo'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/homePet.module.scss'
 
-export default function HomePet({title, animals, shelterPets}) {
+export default function HomePet({title, animals, homePets}) {
   const router = useRouter()
   const filteredAnimals = animals.filter((item) => {
-    return item.paw === "looking-for-home.png"
+    return item.paw[0] === "looking-for-home.png"
   })
 
   return <MainLayout>
@@ -19,11 +19,11 @@ export default function HomePet({title, animals, shelterPets}) {
           <BreadCrumbs title={`Привет из дома / ` + router.query.name}/>
         </div>
         <div>
-          {/* <HomePetInfo shelterPets={shelterPets}/> */}
+          <HomePetInfo homePets={homePets}/>
         </div>
-        <div>
+        <div className={styles.walkingsBlock}>
           <p>Так же вы можете прийти к питомцу в гости, принести ей вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>
-          <button>Подробнее</button>
+          <button onClick={() => Router.push('/walks-with-dogs').then(() => window.scrollTo(0, 0))} className={styles.aboutWalkingsBtn}>Подробнее</button>
         </div>
       </div>
     </section>

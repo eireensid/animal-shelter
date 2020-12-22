@@ -1,0 +1,36 @@
+.ourPetsGallery {
+  margin-top: 220px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.ourPetsGallery > * {
+  margin-bottom: 155px;
+}
+
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .ourPetsGallery {
+    grid-template-columns: 1fr 1fr;
+    // padding: {
+    //   left: 4.5%;
+    //   right: 4.5%;
+    // }
+    width: 580px;
+    margin: 165px auto 0 auto;
+  }
+  .ourPetsGallery > * {
+    margin-bottom: 105px;
+  }
+}
+
+
+// Mobile styles
+@media (max-width: 767px) {
+  .ourPetsGallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 251px;
+  }
+}
