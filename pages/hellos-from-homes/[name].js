@@ -9,7 +9,7 @@ import styles from '~/styles/homePet.module.scss'
 export default function HomePet({title, animals, homePets}) {
   const router = useRouter()
   const filteredAnimals = animals.filter((item) => {
-    return item.paw[0] === "looking-for-home.png"
+    return item.paw && item.paw[0] === "looking-for-home.png"
   })
 
   return <MainLayout>

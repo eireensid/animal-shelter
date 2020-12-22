@@ -9,10 +9,21 @@ import styles from '~/styles/components/ShelterPetInfo.module.scss'
 export default function ShelterPetInfo({animals}) {
   const router = useRouter()
 
-  const animal = animals.find(e => e.name === router.query.name) || {}
-  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(animal.gallery, 1)
+  const [pet, setPet] = useState({})
+  const getLocalPet = () => {
+    let petLocal = JSON.parse(localStorage.getItem('pet'))
+    setPet(petLocal)
+  }
+  console.log('pet', pet)
 
-  const [tellAboutPet, setTellAboutPet] = useState(animal.name)
+  useEffect(() => {
+    getLocalPet()
+  }, [])
+
+  // const animal = animals.find(e => e.name === router.query.name) || {}
+  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(pet.gallery && pet.gallery, 1)
+
+  // const [tellAboutPet, setTellAboutPet] = useState(animal.name)
 
   const changeTellAboutPet = () => {
     const lastChar = animal.name.charAt(animal.name.length-1)
@@ -23,19 +34,22 @@ export default function ShelterPetInfo({animals}) {
     setTellAboutPet(remName + 'е')
   }
 
-  useEffect(changeTellAboutPet, [animal]) 
+  // useEffect(changeTellAboutPet, [animal]) 
   
   // animals = curItems
+
+  
+
 
   return <>
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
-        <h2>{animal.name}</h2>
-        <PawLabel animals={animals} paw={animal.paw[0]}/>
+        <h2>{pet.name}</h2>
+        <PawLabel animals={animals} paw={pet.paw && pet.paw[0]}/>
       </div>
       <div>
-        {animal.about.map(item => (
-          <p className={styles.aboutPetText}>{item}</p>
+        {pet.about && pet.about.map((item, index) => (
+          <p key={index} className={styles.aboutPetText}>{item}</p>
         ))}
       </div>
     </div>
@@ -48,7 +62,7 @@ export default function ShelterPetInfo({animals}) {
                 <img src="/img/arrow-left.svg" alt="влево"/>
               </div>
               <div className={styles.galleryPhoto}>
-              {curItems.map((a, index) => (
+              {curItems && curItems.map((a, index) => (
                 <img src={a} key={index} alt="питомец"/>
               ))}
               </div>
@@ -58,7 +72,7 @@ export default function ShelterPetInfo({animals}) {
             </div>
 
             <div className={styles.galleryPhotoIndexBlock}>
-              <span>{activeIndex + 1} / {animal.gallery.length}</span>
+              <span>{activeIndex + 1} / {pet.gallery && pet.gallery.length}</span>
             </div>
           </div>
           <div onClick={prevSlide} className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}>
@@ -70,18 +84,19 @@ export default function ShelterPetInfo({animals}) {
         </div>
         
       </div>
+      
       <div className={styles.petDescBlock}>
         <div className={styles.petDescRow}>
           <span>Возраст</span>
-          <span className={styles.petInfo}> {animal.age}</span>
+          <span className={styles.petInfo}> {pet.age}</span>
         </div>
         <div className={styles.petDescRow}>
           <span>Характер</span>
-          <span className={styles.petInfo}> {animal.personality}</span>
+          <span className={styles.petInfo}> {pet.personality}</span>
         </div>
         <div className={styles.petDescRow}>
           <span>Пол</span>
-          <span className={styles.petInfo}> {animal.sex}</span>
+          <span className={styles.petInfo}> {pet.sex}</span>
         </div>
         <div className={styles.petDescRow}>
           <span>Прививки</span>
@@ -93,7 +108,7 @@ export default function ShelterPetInfo({animals}) {
         </div>
         <button onClick={() => Router.push('/take-the-pet').then(() => window.scrollTo(0, 0))} className={styles.takePet}>Забрать к себе</button>
         <div className={styles.petDescRow}>
-          <span className={styles.tellAboutPetText}>Расскажи о {tellAboutPet} друзьям</span>
+          {/* <span className={styles.tellAboutPetText}>Расскажи о {tellAboutPet} друзьям</span> */}
         </div>
         <div className={styles.socialsWrapper}>
           <SocialBtns/>

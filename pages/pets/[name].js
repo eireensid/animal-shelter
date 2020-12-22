@@ -10,8 +10,9 @@ import styles from '~/styles/pet.module.scss'
 export default function Pet({title, animals}) {
   const router = useRouter()
   const filteredAnimals = animals.filter((item) => {
-    return item.paw[0] === "looking-for-home.png"
+    return item.paw && item.paw[0] === "looking-for-home.png"
   })
+
 
   return <MainLayout>
     <section>

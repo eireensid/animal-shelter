@@ -10,7 +10,7 @@ import styles from '~/styles/index.module.scss'
 
 export default function Index({title='Главная', animals}) {
   const filteredAnimals = animals.filter((item) => {
-    return item.paw[0] === "looking-for-home.png"
+    return item.paw && item.paw[0] === "looking-for-home.png"
   })
 
   return <MainLayout>

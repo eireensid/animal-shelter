@@ -5,6 +5,7 @@ import BankCard from '~/components/BankCard'
 import styles from '~/styles/pets.module.scss'
 
 export default function Pets({title='Питомцы', animals}) {
+
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>

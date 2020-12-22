@@ -10,19 +10,6 @@ export default function HomePetInfo({homePets}) {
 
   const animal = homePets.find(e => e.name === router.query.name) || {}
   const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(animal.gallery, 1)
-
-  const [tellAboutPet, setTellAboutPet] = useState(animal.name)
-
-  const changeTellAboutPet = () => {
-    const lastChar = animal.name.charAt(animal.name.length-1)
-    let remName = animal.name
-    if (lastChar === 'а' || lastChar === 'я' || lastChar === 'о' || lastChar === 'е' || lastChar === 'у' || lastChar === 'ю' || lastChar === 'и' || lastChar === 'э') {
-      remName = animal.name.slice(0, -1)
-    }
-    setTellAboutPet(remName + 'е')
-  }
-
-  useEffect(changeTellAboutPet, [animal]) 
   
   // animals = curItems
 
@@ -33,8 +20,8 @@ export default function HomePetInfo({homePets}) {
         {/* <PawLabel animals={homePets} paw={animal.paw[0]}/> */}
       </div>
       <div>
-        {animal.about.map(item => (
-          <p className={styles.aboutPetText}>{item}</p>
+        {animal.about && animal.about.map((item, index) => (
+          <p key={index} className={styles.aboutPetText}>{item}</p>
         ))}
       </div>
     </div>
@@ -47,7 +34,7 @@ export default function HomePetInfo({homePets}) {
                 <img src="/img/arrow-left.svg" alt="влево"/>
               </div>
               <div className={styles.galleryPhoto}>
-              {curItems.map((a, index) => (
+              {curItems && curItems.map((a, index) => (
                 <img src={a} key={index} alt="питомец"/>
               ))}
               </div>
@@ -57,7 +44,7 @@ export default function HomePetInfo({homePets}) {
             </div>
 
             <div className={styles.galleryPhotoIndexBlock}>
-              <span>{activeIndex + 1} / {animal.gallery.length}</span>
+              <span>{activeIndex + 1} / {animal.gallery && animal.gallery.length}</span>
             </div>
           </div>
           <div onClick={prevSlide} className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}>

@@ -7,7 +7,7 @@ import styles from '~/styles/hellosFromHomes.module.scss'
 
 export default function HellosFromHomes({title='Привет из дома', animals, homePets}) {
   const filteredAnimals = animals.filter((item) => {
-    return item.paw[0] === "looking-for-home.png"
+    return item.paw && item.paw[0] === "looking-for-home.png"
   })
   return <MainLayout>
     <section>
