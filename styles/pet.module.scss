@@ -118,9 +118,19 @@
     width: 100%;
   }
 
+  .walkingsBlock {
+    padding-bottom: 100px;
+    p {
+      width: 80%;
+    }
+    .aboutWalkingsBtn {
+      margin-top: 22px;
+      font-size: 0.833rem;
+    }
+  }
   
   .breadCrumbsWrapper {
-    padding-top: 0;
+    padding-top: 50px;
   }
 
   .animalCarouselWrapper {

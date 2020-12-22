@@ -92,7 +92,7 @@ export default function ShelterPetInfo({animals}) {
         </div>
         <button className={styles.takePet}>Забрать к себе</button>
         <div className={styles.petDescRow}>
-          <span>Расскажи о {tellAboutPet} друзьям</span>
+          <span className={styles.tellAboutPetText}>Расскажи о {tellAboutPet} друзьям</span>
         </div>
         <div className={styles.socialsWrapper}>
           <SocialBtns/>
