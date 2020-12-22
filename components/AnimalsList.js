@@ -19,7 +19,7 @@ export default function AnimalsList({animals}) {
 
   const [sortedAnimals, setSortedAnimals] = useState(animals)
 
-const [filter, setFilter] = useState(null)
+  const [filter, setFilter] = useState(null)
   useEffect(() => {
     setSortedAnimals(animals)
   }, [animals])
@@ -78,9 +78,9 @@ const [filter, setFilter] = useState(null)
       </div>
 
       <div className={styles.ourPetsGallery}>
-        {searchResult.map((animal, index) => (
+        {/* {searchResult.map((animal, index) => (
           <AnimalCard parent="shelter" filter={null} animal={animal} key={index}/>
-        ))}
+        ))} */}
         {sortedAnimals.map((animal, index) => (
           <AnimalCard parent="shelter" filter={filter} animal={animal} key={index}/>
         ))}

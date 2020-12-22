@@ -23,22 +23,18 @@ export default function ShelterPetInfo({animals}) {
   // const animal = animals.find(e => e.name === router.query.name) || {}
   const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(pet.gallery && pet.gallery, 1)
 
-  // const [tellAboutPet, setTellAboutPet] = useState(animal.name)
+  const [tellAboutPet, setTellAboutPet] = useState(pet.name && pet.name)
 
   const changeTellAboutPet = () => {
-    const lastChar = animal.name.charAt(animal.name.length-1)
-    let remName = animal.name
+    const lastChar = pet.name && pet.name.charAt(pet.name.length-1)
+    let remName = pet.name
     if (lastChar === 'а' || lastChar === 'я' || lastChar === 'о' || lastChar === 'е' || lastChar === 'у' || lastChar === 'ю' || lastChar === 'и' || lastChar === 'э') {
-      remName = animal.name.slice(0, -1)
+      remName = pet.name.slice(0, -1)
     }
     setTellAboutPet(remName + 'е')
   }
 
-  // useEffect(changeTellAboutPet, [animal]) 
-  
-  // animals = curItems
-
-  
+  useEffect(changeTellAboutPet, [pet]) 
 
 
   return <>
@@ -108,7 +104,7 @@ export default function ShelterPetInfo({animals}) {
         </div>
         <button onClick={() => Router.push('/take-the-pet').then(() => window.scrollTo(0, 0))} className={styles.takePet}>Забрать к себе</button>
         <div className={styles.petDescRow}>
-          {/* <span className={styles.tellAboutPetText}>Расскажи о {tellAboutPet} друзьям</span> */}
+          <span className={styles.tellAboutPetText}>Расскажи о {tellAboutPet} друзьям</span>
         </div>
         <div className={styles.socialsWrapper}>
           <SocialBtns/>

@@ -8,19 +8,29 @@ import styles from '~/styles/components/HomePetInfo.module.scss'
 export default function HomePetInfo({homePets}) {
   const router = useRouter()
 
-  const animal = homePets.find(e => e.name === router.query.name) || {}
-  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(animal.gallery, 1)
+  const [pet, setPet] = useState({})
+  const getLocalPet = () => {
+    let petLocal = JSON.parse(localStorage.getItem('pet'))
+    setPet(petLocal)
+  }
+  console.log('pet', pet)
+
+  useEffect(() => {
+    getLocalPet()
+  }, [])
+
+  // const animal = homePets.find(e => e.name === router.query.name) || {}
+  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(pet.gallery && pet.gallery, 1)
   
-  // animals = curItems
 
   return <>
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
-        <h2>{animal.name}</h2>
+        <h2>{pet.name}</h2>
         {/* <PawLabel animals={homePets} paw={animal.paw[0]}/> */}
       </div>
       <div>
-        {animal.about && animal.about.map((item, index) => (
+        {pet.about && pet.about.map((item, index) => (
           <p key={index} className={styles.aboutPetText}>{item}</p>
         ))}
       </div>
@@ -44,7 +54,7 @@ export default function HomePetInfo({homePets}) {
             </div>
 
             <div className={styles.galleryPhotoIndexBlock}>
-              <span>{activeIndex + 1} / {animal.gallery && animal.gallery.length}</span>
+              <span>{activeIndex + 1} / {pet.gallery && pet.gallery.length}</span>
             </div>
           </div>
           <div onClick={prevSlide} className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}>
