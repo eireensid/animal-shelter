@@ -41,12 +41,11 @@
   // justify-content: space-between;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
   grid-gap: 30px;
 }
-.ourPetsGallery > * {
-  margin-bottom: 155px;
-}
+// .ourPetsGallery > * {
+//   margin-bottom: 155px;
+// }
 
 
 // Tablet styles
@@ -67,12 +66,12 @@
     //   left: 4.5%;
     //   right: 4.5%;
     // }
-    width: 580px;
-    margin: 165px auto 0 auto;
+    // width: 580px;
+    // margin: 165px auto 0 auto;
   }
-  .ourPetsGallery > * {
-    margin-bottom: 105px;
-  }
+  // .ourPetsGallery > * {
+  //   margin-bottom: 105px;
+  // }
 }
 
 
