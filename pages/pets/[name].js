@@ -18,7 +18,7 @@ export default function Pet({title, animals}) {
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
         <div className={styles.breadCrumbsWrapper}>
-          <BreadCrumbs title={`Питомцы / ` + router.query.name}/>
+          {router.query.name && <BreadCrumbs title={`Питомцы / ` + router.query.name}/>}
         </div>
         <div>
           <ShelterPetInfo animals={animals}/>

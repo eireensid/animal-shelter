@@ -60,26 +60,10 @@ export default function SearchInput({animals, searchData}) {
   }
 
 
-  const showResult = () => {
-    // handleChange()
+  const showResult = (e) => {
+    handleChange(e.target.value)
     activeStyle()
   }
-
-  // const handleChange = e => {
-  //   setSearchTerm(e.target.value)
-  //   console.log('searchTerm', searchTerm)
-  // }
-  // console.log('animals', animals)
-  // useEffect(() => {
-  //   const result = animals.filter(animal => {
-  //      return animal.name && animal.name.toLowerCase().includes(searchTerm)
-  //   })
-    
-  //   console.log('animals', animals)
-  //   console.log('result', result)
-  //   setSearchResult(result)
-  //   console.log('searchResult', searchResult)
-  // }, [searchTerm])
 
 
   // handle change event of search input

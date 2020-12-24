@@ -26,7 +26,9 @@ export default function AnimalsList({animals}) {
 
   const setFilter1 = () => {
     let newArr = animals.filter((animal, index) => {
-      return animal.paw.some(p => filter === p)
+      const arr = animal.paw.some(p => filter === p)
+      localStorage.setItem('currentPaw', filter)
+      return arr
     })
     if (!filter) {
       newArr = animals

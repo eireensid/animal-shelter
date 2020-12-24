@@ -9,9 +9,14 @@ import BankCardModal from '~/components/BankCardModal'
 import styles from '~/styles/index.module.scss'
 
 export default function Index({title='Главная', animals}) {
-  const filteredAnimals = animals.filter((item) => {
-    return item.paw && item.paw[0] === "looking-for-home.png"
+  const filteredAnimals = animals.filter((animal) => {
+    const arr = animal.paw.filter(p => {
+      return p === "looking-for-home.png"
+    })
+    return arr
+    // return item.paw && item.paw[0] === "looking-for-home.png"
   })
+  
 
   return <MainLayout>
     <section className={styles.firstBlockSection}>
