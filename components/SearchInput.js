@@ -1,12 +1,14 @@
 import {useState, useEffect} from 'react'
 import styles from '~/styles/components/SearchInput.module.scss'
 
-export default function SearchInput({animals, setSearchResult}) {
+
+export default function SearchInput({animals}) {
   const [searchInputStyle, setSearchInputStyle] = useState({border: "none", flexDirection: "row"})
   const [searchInputImgDivStyle, setSearchInputImgDivStyle] = useState({background: "none"})
   const [searchInputImgStyle, setSearchInputImgStyle] = useState({fill: "#131313"})
 
   const [searchTerm, setSearchTerm] = useState("")
+  const [searchResult, setSearchResult] = useState({})
 
 
   const changeFocusInputStyle = () => {
@@ -58,13 +60,9 @@ export default function SearchInput({animals, setSearchResult}) {
     setSearchInputImgStyle({fill: "white", opacity: "1"})
   }
 
-  const lookForPet = (e) => {
-    setSearchTerm(e.target.value);
-    console.log('searchTerm', searchTerm)
-  }
 
   const showResult = () => {
-    // lookForPet()
+    handleChange()
     activeStyle()
   }
 
@@ -72,12 +70,16 @@ export default function SearchInput({animals, setSearchResult}) {
     setSearchTerm(e.target.value)
     console.log('searchTerm', searchTerm)
   }
-
+  console.log('animals', animals)
   useEffect(() => {
-    const result = animals.map(animal =>
-      animal.name && animal.name.toLowerCase().includes(searchTerm)
-    )
+    const result = animals.filter(animal => {
+       return animal.name && animal.name.toLowerCase().includes(searchTerm)
+    })
+    
+    console.log('animals', animals)
+    console.log('result', result)
     setSearchResult(result)
+    console.log('searchResult', searchResult)
   }, [searchTerm])
 
 
@@ -90,5 +92,11 @@ export default function SearchInput({animals, setSearchResult}) {
       </div>
       <input value={searchTerm} onChange={handleChange} type="text" placeholder="Имя питомца"/>
     </div>
+    <div>
+    {searchResult.map((animal, index) => (
+          <div key={index}>{animal}</div>
+        ))}
+    </div>
   </>
+
 }

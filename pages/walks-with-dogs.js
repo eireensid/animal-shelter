@@ -7,7 +7,7 @@ import styles from '~/styles/walksWithDogs.module.scss'
 
 export default function WalksWithDogs({title='Прогулки с собаками', animals}) {
   const filteredAnimals = animals.filter((item) => {
-    return item.paw === "need-adoptation.png"
+    return item.paw && item.paw[0] === "need-adoptation.png"
   })
   return <MainLayout>
     <section>

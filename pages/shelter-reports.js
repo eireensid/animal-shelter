@@ -6,7 +6,7 @@ import styles from '~/styles/shelterReports.module.scss'
 
 export default function ShelterReports({title='Отчеты', animals}) {
   const filteredAnimals = animals.filter((item) => {
-    return item.paw === "need-adoptation.png"
+    return item.paw && item.paw[0] === "need-adoptation.png"
   })
   return <MainLayout>
     <section>

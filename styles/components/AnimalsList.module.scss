@@ -62,12 +62,13 @@
   }
   .ourPetsGallery {
     grid-template-columns: repeat(2, 275px);
+    grid-auto-rows: auto;
     // padding: {
     //   left: 4.5%;
     //   right: 4.5%;
     // }
-    // width: 580px;
-    margin-top: 165px;
+    width: 580px;
+    margin: 165px auto 0 auto;
   }
   .ourPetsGallery > * {
     margin-bottom: 130px;

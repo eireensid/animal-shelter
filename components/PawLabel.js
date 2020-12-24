@@ -21,7 +21,7 @@ export default function PawLabel({paw, animals, filter, setFilter}) {
     }
   }
 
-  useEffect(changePawMeaning, [])
+  useEffect(changePawMeaning, [paw])
 
 
 
@@ -72,7 +72,7 @@ export default function PawLabel({paw, animals, filter, setFilter}) {
 
   return <>
     <div onClick={doFilter} style={filterStyle} className={filterStyle.background !== "white" ? styles.animalFilterFocus : styles.animalFilter}>
-      <img style={imgStyle} src={'/img/paws/' + paw}/>
+      <img style={imgStyle} src={`/img/paws/${paw}`}/>
       <h4>{pawMeaning}</h4>
     </div>
   </>

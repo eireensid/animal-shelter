@@ -39,7 +39,6 @@ export default function AnimalsList({animals}) {
   }, [filter])
 
 
-  const [searchResult, setSearchResult] = useState([])
   
   return <>
     <div className={styles.animalsListBlock}>
@@ -49,7 +48,7 @@ export default function AnimalsList({animals}) {
             <FindAnimalInput placeholder="Все животные" value={animal} options={["Кошки", "Собаки"]} onChange={v => setAnimal(v)}/>
             <FindAnimalInput placeholder="Все возраста" value={age} options={["до 6 мес.", "6 мес. - 1 год", "1-3 года", "3-7 лет", "от 7 лет"]} onChange={v => setAge(v)}/>
           </div>
-          <SearchInput animals={animals} setSearchResult={setSearchResult}/>
+          <SearchInput animals={animals}/>
         </div>
         <div className={styles.animalFilterWrapper}>
           <div className={styles.animalFilterWrapperTop}>            
@@ -78,9 +77,7 @@ export default function AnimalsList({animals}) {
       </div>
 
       <div className={styles.ourPetsGallery}>
-        {/* {searchResult.map((animal, index) => (
-          <AnimalCard parent="shelter" filter={null} animal={animal} key={index}/>
-        ))} */}
+        
         {sortedAnimals.map((animal, index) => (
           <AnimalCard parent="shelter" filter={filter} animal={animal} key={index}/>
         ))}

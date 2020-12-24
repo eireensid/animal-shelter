@@ -7,7 +7,7 @@ import styles from '~/styles/guardianshipAndAdoptation.module.scss'
 
 export default function GuardianshipAndAdoptation({title='Опекунство и адаптация', animals}) {
   const filteredAnimals = animals.filter((item) => {
-    return item.paw === "need-guardian.png"
+    return item.paw && item.paw[0] === "need-guardian.png"
   })
   return <MainLayout>
     <section>
