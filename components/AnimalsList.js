@@ -38,6 +38,23 @@ export default function AnimalsList({animals}) {
     setFilter1()
   }, [filter])
 
+  // exclude column list from filter
+  const excludeColumns = ["id", "paw", "type", "sex", "age", "about", "personality", "photo", "gallery"]
+
+  // filter records by search text
+  const searchData = (value) => {
+    const lowercasedValue = value.toLowerCase().trim();
+    if (lowercasedValue === "") setSortedAnimals(animals);
+    else {
+      const filteredData = animals.filter(item => {
+        return Object.keys(item).some(key =>
+          excludeColumns.includes(key) ? false : item[key].toString().toLowerCase().includes(lowercasedValue)
+        );
+      });
+      setSortedAnimals(filteredData);
+    }
+  }
+
 
   
   return <>
@@ -48,7 +65,7 @@ export default function AnimalsList({animals}) {
             <FindAnimalInput placeholder="Все животные" value={animal} options={["Кошки", "Собаки"]} onChange={v => setAnimal(v)}/>
             <FindAnimalInput placeholder="Все возраста" value={age} options={["до 6 мес.", "6 мес. - 1 год", "1-3 года", "3-7 лет", "от 7 лет"]} onChange={v => setAge(v)}/>
           </div>
-          <SearchInput animals={animals}/>
+          <SearchInput animals={animals} searchData={searchData}/>
         </div>
         <div className={styles.animalFilterWrapper}>
           <div className={styles.animalFilterWrapperTop}>            
