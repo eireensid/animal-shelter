@@ -5,9 +5,13 @@ import BankCard from '~/components/BankCard'
 import styles from '~/styles/shelterReports.module.scss'
 
 export default function ShelterReports({title='Отчеты', animals}) {
-  const filteredAnimals = animals.filter((item) => {
-    return item.paw && item.paw[0] === "need-adoptation.png"
+  const filteredAnimals = animals.filter((animal) => {
+    const arr = animal.paw.filter(p => {
+      return p === "need-adoptation.png"
+    })
+    return arr.length
   })
+
   return <MainLayout>
     <section>
       <div className={styles.reportsBlock}>
@@ -31,7 +35,7 @@ export default function ShelterReports({title='Отчеты', animals}) {
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:" paw="need-adoptation.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

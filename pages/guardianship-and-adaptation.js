@@ -6,9 +6,13 @@ import BankCard from '~/components/BankCard'
 import styles from '~/styles/guardianshipAndAdoptation.module.scss'
 
 export default function GuardianshipAndAdoptation({title='Опекунство и адаптация', animals}) {
-  const filteredAnimals = animals.filter((item) => {
-    return item.paw && item.paw[0] === "need-guardian.png"
+  const filteredAnimals = animals.filter((animal) => {
+    const arr = animal.paw.filter(p => {
+      return p === "need-guardian.png"
+    })
+    return arr.length
   })
+
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -116,7 +120,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Им нужен опекун:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Им нужен опекун:" paw="need-guardian.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

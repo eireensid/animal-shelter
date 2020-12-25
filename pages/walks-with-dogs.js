@@ -6,9 +6,13 @@ import BankCard from '~/components/BankCard'
 import styles from '~/styles/walksWithDogs.module.scss'
 
 export default function WalksWithDogs({title='Прогулки с собаками', animals}) {
-  const filteredAnimals = animals.filter((item) => {
-    return item.paw && item.paw[0] === "need-adoptation.png"
+  const filteredAnimals = animals.filter((animal) => {
+    const arr = animal.paw.filter(p => {
+      return p === "need-adoptation.png"
+    })
+    return arr.length
   })
+
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -96,7 +100,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:" paw="need-adoptation.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

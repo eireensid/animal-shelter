@@ -13,8 +13,7 @@ export default function Index({title='Главная', animals}) {
     const arr = animal.paw.filter(p => {
       return p === "looking-for-home.png"
     })
-    return arr
-    // return item.paw && item.paw[0] === "looking-for-home.png"
+    return arr.length
   })
   
 
@@ -44,7 +43,7 @@ export default function Index({title='Главная', animals}) {
     </section>
     <section className={styles.findHomeBlockSection}>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:" paw="looking-for-home.png"/>
 
         <div className={styles.videoBlock}>
           <div className={styles.videoText}>

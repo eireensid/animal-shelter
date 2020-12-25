@@ -16,8 +16,15 @@ export default function ShelterPetInfo({animals}) {
   }
   console.log('pet', pet)
 
+  const [paw, setPaw] = useState("")
+  const getLocalPaw = () => {
+    let petPaw = JSON.parse(localStorage.getItem('currentPaw'))
+    setPaw(petPaw)
+  }
+
   useEffect(() => {
     getLocalPet()
+    getLocalPaw()
   }, [])
 
   // const animal = animals.find(e => e.name === router.query.name) || {}
@@ -41,7 +48,8 @@ export default function ShelterPetInfo({animals}) {
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{pet.name}</h2>
-        <PawLabel animals={animals} paw={pet.paw && pet.paw[0]}/>
+        {/* <PawLabel animals={animals} paw={pet.paw && pet.paw[0]}/> */}
+        <PawLabel animals={animals} paw={paw}/>
       </div>
       <div>
         {pet.about && pet.about.map((item, index) => (

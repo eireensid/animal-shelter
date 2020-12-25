@@ -18,9 +18,7 @@ export default function AnimalCard({animal, filter, parent}) {
 
   useEffect(lastRowShow, [])
 
-  // useEffect(() => {
-  //   saveLocalPet()
-  // }, [animal])
+
 
   let linkHref = { pathname: '/pets/[name]', query: { name: name }}
 
@@ -45,14 +43,7 @@ export default function AnimalCard({animal, filter, parent}) {
   const saveLocalPet = () => { 
     localStorage.setItem('pet', JSON.stringify(animal))
   }
-  // const getLocalPet = () => {
-  //   if (localStorage.getItem('pet') === null) {
-  //     localStorage.setItem('pet', JSON.stringify([]))
-  //   } else {
-  //     let petLocal = JSON.parse(localStorage.getItem('pet'))
-  //     setPet(petLocal)
-  //   }
-  // }
+
 
   return <>
     <Link href={linkHref}>

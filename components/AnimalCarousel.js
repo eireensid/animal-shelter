@@ -3,10 +3,23 @@ import useCarousel from '~/hooks/useCarousel'
 import AnimalCard from '~/components/AnimalCard'
 import styles from '~/styles/components/AnimalCarousel.module.scss'
 
-export default function AnimalCarousel({animals, title}) {
+export default function AnimalCarousel({animals, title, paw}) {
   const [count, setCount] = useState(3)
   const { curItems, prevSlide, nextSlide } = useCarousel(animals, count)
   const [filter, setFilter] = useState(null)
+  // const [paw, setPaw] = useState("")
+
+  // const changePawMeaning = () => {
+  //   if (title = "Сейчас ищут дом:") {
+  //     setPaw("looking-for-home.png")
+  //   } else if (title = "Им нужен опекун:") {
+  //     setPaw("need-guardian.png")
+  //   } else if (title = "Им срочно нужна адаптация:") {
+  //     setPaw("need-adoptation.png")
+  //   }
+  // }
+
+  // useEffect(changePawMeaning, [title])
 
   function setCountByWidth () {
     let count = 3
@@ -23,6 +36,29 @@ export default function AnimalCarousel({animals, title}) {
       window.removeEventListener('resize', setCountByWidth)
     }
   }, [])
+
+
+  const doFilter = () => {
+    if (filter !== paw) {
+      setFilter(paw)
+    }
+  }
+
+  useEffect(() => {
+    doFilter()
+  }, [filter])
+
+  const setFilter1 = () => {
+    animals.filter((animal, index) => {
+      const arr = animal.paw.some(p => filter === p)
+      localStorage.setItem('currentPaw', JSON.stringify(filter))
+      return arr
+    })
+  }
+
+  useEffect(() => {
+    setFilter1()
+  }, [filter])
 
   
 
