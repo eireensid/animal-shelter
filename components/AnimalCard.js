@@ -29,7 +29,7 @@ export default function AnimalCard({animal, filter, parent}) {
   let pawSrc = ""
 
   if (parent !== "home") {
-    let curPaw = paw && paw[0]
+    let curPaw = paw ? paw[0] : ''
     if (paw && paw.includes(filter)) {
       curPaw = filter
     }
@@ -42,6 +42,8 @@ export default function AnimalCard({animal, filter, parent}) {
   // save to local
   const saveLocalPet = () => { 
     localStorage.setItem('pet', JSON.stringify(animal))
+    localStorage.setItem('currentPaw', animal.paw[0])
+    document.dispatchEvent(new Event('change-storage-pet'))
   }
 
 

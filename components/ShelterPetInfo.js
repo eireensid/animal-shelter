@@ -10,27 +10,27 @@ export default function ShelterPetInfo({animals}) {
   const router = useRouter()
 
   const [pet, setPet] = useState({})
-  const getLocalPet = () => {
+  const [paw, setPaw] = useState()
+
+  const setStateByLocalStorage = () => {
     let petLocal = JSON.parse(localStorage.getItem('pet'))
     setPet(petLocal)
-  }
-  console.log('pet', pet)
-
-  const [paw, setPaw] = useState("")
-  const getLocalPaw = () => {
-    let petPaw = JSON.parse(localStorage.getItem('currentPaw'))
+    let petPaw = localStorage.getItem('currentPaw')
     setPaw(petPaw)
   }
 
   useEffect(() => {
-    getLocalPet()
-    getLocalPaw()
+    setStateByLocalStorage()
+    document.addEventListener('change-storage-pet', setStateByLocalStorage)
+    return () => {
+      document.removeEventListener('change-storage-pet', setStateByLocalStorage)
+    }
   }, [])
 
   // const animal = animals.find(e => e.name === router.query.name) || {}
   const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(pet.gallery && pet.gallery, 1)
 
-  const [tellAboutPet, setTellAboutPet] = useState(pet.name && pet.name)
+  const [tellAboutPet, setTellAboutPet] = useState(pet.name)
 
   const changeTellAboutPet = () => {
     const lastChar = pet.name && pet.name.charAt(pet.name.length-1)
@@ -49,7 +49,7 @@ export default function ShelterPetInfo({animals}) {
       <div className={styles.titleBlock}>
         <h2>{pet.name}</h2>
         {/* <PawLabel animals={animals} paw={pet.paw && pet.paw[0]}/> */}
-        <PawLabel animals={animals} paw={paw}/>
+        <PawLabel animals={animals} paw={paw} disable={true}/>
       </div>
       <div>
         {pet.about && pet.about.map((item, index) => (

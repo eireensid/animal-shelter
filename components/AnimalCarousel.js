@@ -49,11 +49,9 @@ export default function AnimalCarousel({animals, title, paw}) {
   }, [filter])
 
   const setFilter1 = () => {
-    animals.filter((animal, index) => {
-      const arr = animal.paw.some(p => filter === p)
-      localStorage.setItem('currentPaw', JSON.stringify(filter))
-      return arr
-    })
+    if (filter) {
+      localStorage.setItem('currentPaw', filter)
+    }
   }
 
   useEffect(() => {

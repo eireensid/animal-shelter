@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import styles from '~/styles/components/PawLabel.module.scss'
 
-export default function PawLabel({paw, animals, filter, setFilter}) {
+export default function PawLabel({paw, filter, setFilter, disable}) {
   const [filterStyle, setFilterStyle] = useState({background: "white"})
   const [imgStyle, setImgStyle] = useState({display: "inline-block"})
 
@@ -56,6 +56,7 @@ export default function PawLabel({paw, animals, filter, setFilter}) {
 
 
   const doFilter = () => {
+    if (disable) return
     changeStyle()
     if (filter !== paw) {
       setFilter(paw)
