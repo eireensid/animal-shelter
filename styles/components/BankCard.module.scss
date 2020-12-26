@@ -59,9 +59,49 @@
   }
 }
 
+@media (max-width: 767px) {
+  .bankCard {
+    width: 400px;
+    margin-left: 0px;
+    height: 250px;
+    background-size: 55%;
+  }
+  .btnTextDesktop {
+    display: none;
+  }
+  .bankCardNumber {
+    justify-content: center;
+    padding: {
+      top: 7px;
+      bottom: 7px;
+      left: 15px;
+      right: 15px;
+    }
+    font-size: 1rem;
+  }
+  .bankCardNumber img {
+    width: 16.5%;
+    padding-right: 9px;
+  }
+  .bankCardBtn {
+    padding-top: 20px;
+  }
+  .bankCardBtn button {
+    width: 156px;
+    padding: {
+      top: 10px;
+      bottom: 10px;
+    }
+  }
+  .btnTextMobile {
+    display: block;
+    font-size: 14px;
+  }
+}
+
 
 // Mobile styles
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .bankCard {
     width: 290px;
     margin-left: 0px;

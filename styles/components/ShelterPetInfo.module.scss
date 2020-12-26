@@ -223,6 +223,23 @@
   }
 }
 
+@media (max-width: 767px) {
+  .galleryPhotos {
+    width: 550px;
+  }
+  .galleryPhoto {
+    width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .galleryPhotos {
+    width: 400px;
+  }
+  .galleryPhoto {
+    width: 300px;
+  }
+}
 
 // Mobile styles
 @media (max-width: 480px) {
