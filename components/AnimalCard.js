@@ -42,7 +42,9 @@ export default function AnimalCard({animal, filter, parent}) {
   // save to local
   const saveLocalPet = () => { 
     localStorage.setItem('pet', JSON.stringify(animal))
-    localStorage.setItem('currentPaw', animal.paw[0])
+    if (animal.paw) {
+      localStorage.setItem('currentPaw', animal.paw[0])
+    }
     document.dispatchEvent(new Event('change-storage-pet'))
   }
 
