@@ -13,9 +13,9 @@
     top: 15px;
   }
 }
-.logoWrapperHeader {
-  flex-basis: 17%;
-}
+// .logoWrapperHeader {
+//   flex-basis: 17%;
+// }
 .logoHeader {
   cursor: pointer;
 }
@@ -149,6 +149,11 @@
   .headerBlock {
     padding-left: 35px;
     padding-right: 45px;
+    padding-top: 40px;
+  }
+  .logoWrapperHeader svg {
+    width: 116px;
+    height: 100px;
   }
   .btnWrapper {
     display: none;
@@ -207,6 +212,11 @@
   .headerBlock {
     padding-left: 10px;
     padding-right: 14px;
+    padding-top: 20px;
+  }
+  .logoWrapperHeader svg {
+    width: 34px;
+    height: 29px;
   }
   .logoHeader {
     width: 54px;
@@ -214,6 +224,9 @@
   }
   .navBlock {
     padding-bottom: 100px;
+  }
+  .openBtn {
+    width: 19px;
   }
   .burger {
     width: 19px;
