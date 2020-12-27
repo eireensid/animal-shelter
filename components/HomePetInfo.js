@@ -27,7 +27,7 @@ export default function HomePetInfo({homePets}) {
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{pet.name}</h2>
-        {/* <PawLabel animals={homePets} paw={animal.paw[0]}/> */}
+        <PawLabel animals={homePets} paw="heart.png"  disable={true}/>
       </div>
       <div>
         {pet.about && pet.about.map((item, index) => (

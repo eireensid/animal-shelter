@@ -48,7 +48,6 @@ export default function ShelterPetInfo({animals}) {
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{pet.name}</h2>
-        {/* <PawLabel animals={animals} paw={pet.paw && pet.paw[0]}/> */}
         <PawLabel animals={animals} paw={paw} disable={true}/>
       </div>
       <div>

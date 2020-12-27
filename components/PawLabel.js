@@ -18,6 +18,8 @@ export default function PawLabel({paw, filter, setFilter, disable}) {
       setPawMeaning("Проходят лечение")
     } else if (paw === "baby-pets.png") {
       setPawMeaning("Малыши")
+    } else if (paw === "heart.png") {
+      setPawMeaning("Уже дома")
     }
   }
 
