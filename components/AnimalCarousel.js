@@ -7,19 +7,6 @@ export default function AnimalCarousel({animals, title, paw}) {
   const [count, setCount] = useState(3)
   const { curItems, prevSlide, nextSlide } = useCarousel(animals, count)
   const [filter, setFilter] = useState(null)
-  // const [paw, setPaw] = useState("")
-
-  // const changePawMeaning = () => {
-  //   if (title = "Сейчас ищут дом:") {
-  //     setPaw("looking-for-home.png")
-  //   } else if (title = "Им нужен опекун:") {
-  //     setPaw("need-guardian.png")
-  //   } else if (title = "Им срочно нужна адаптация:") {
-  //     setPaw("need-adoptation.png")
-  //   }
-  // }
-
-  // useEffect(changePawMeaning, [title])
 
   function setCountByWidth () {
     let count = 3
