@@ -3,11 +3,11 @@ import BreadCrumbs from '~/components/BreadCrumbs'
 import CallWriteBtns from '~/components/CallWriteBtns'
 import styles from '~/styles/takeThePet.module.scss'
 
-export default function TakeThePet({title='Забрать к себе', animals}) {
+export default function TakeThePet({animals}) {
   return <MainLayout>
     <section>
       <div className={styles.aboutPetBlock}>
-        <BreadCrumbs title={title}/>
+        <BreadCrumbs title={"Питомцы / "} take="Забрать к себе"/>
         <div className={styles.aboutPetWrapper}>
           <div>
             <img src="" alt="питомец"/>

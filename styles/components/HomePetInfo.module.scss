@@ -129,6 +129,18 @@
   }
 }
 
+@media (max-width: 767px) {
+  .galleryPhoto {
+    width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .galleryPhoto {
+    width: 300px;
+  }
+}
+
 
 // Mobile styles
 @media (max-width: 480px) {
@@ -172,10 +184,10 @@
     top: 47%;
   }
   .carouselArrowLeftMobile {
-    left: -1%; 
+    left: -4%; 
   }
   .carouselArrowRightMobile {
-    right: -1%;
+    right: -4%;
   }
   
   .carouselArrowLeftMobile img {
@@ -206,11 +218,12 @@
   
   .galleryPhotosArrows {
     justify-content: center;
-    position: relative;
+    
   }
 
   .galleryPhoto {
     width: 276px;
+    position: relative;
   }
   
   .galleryPhotoIndexBlock {

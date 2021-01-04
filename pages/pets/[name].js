@@ -1,5 +1,6 @@
 import {useRouter} from 'next/router'
 import Router from 'next/router'
+import {useState, useEffect} from 'react'
 import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import ShelterPetInfo from '~/components/ShelterPetInfo'
@@ -7,7 +8,7 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/pet.module.scss'
 
-export default function Pet({title, animals}) {
+export default function Pet({animals}) {
   const router = useRouter()
 
   const filteredAnimals = animals.filter((animal) => {
@@ -17,14 +18,63 @@ export default function Pet({title, animals}) {
     return arr.length
   })
 
+  const [pet, setPet] = useState({})
+  const [paw, setPaw] = useState()
+
+  const setStateByLocalStorage = () => {
+    let petLocal = JSON.parse(localStorage.getItem('pet'))
+    setPet(petLocal)
+    let petPaw = localStorage.getItem('currentPaw')
+    setPaw(petPaw)
+  }
+
+  const [petType, setPetType] = useState(pet.type)
+  const breadCrumbsPetType = () => {
+    if (pet.type === "cat") {
+      setPetType("Кошки")
+    } else if (pet.type === "dog") {
+      setPetType("Собаки")
+    }
+  }
+  const [petPaw, setPetPaw] = useState(paw)
+  const breadCrumbsPetPaw = () => {
+    if (paw === "looking-for-home.png") {
+      setPetPaw("Ищут дом")
+    } else if (paw === "need-adoptation.png") {
+      setPetPaw("Нужна адаптация")
+    } else if (paw === "need-guardian.png") {
+      setPetPaw("Нужен опекун")
+    } else if (paw === "undergo-treatment.png") {
+      setPetPaw("Проходят лечение")
+    } else if (paw === "baby-pets.png") {
+      setPetPaw("Малыши")
+    }
+  }
+
+  useEffect(() => {
+    setStateByLocalStorage()
+    document.addEventListener('change-storage-pet', setStateByLocalStorage)
+    
+    return () => {
+      document.removeEventListener('change-storage-pet', setStateByLocalStorage)
+    }
+  }, [])
+
+  useEffect(() => {
+    breadCrumbsPetType()
+  }, [pet])
+  useEffect(() => {
+    breadCrumbsPetPaw()
+  }, [paw])
+
   return <MainLayout>
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
         <div className={styles.breadCrumbsWrapper}>
-          {router.query.name && <BreadCrumbs title={`Питомцы / ` + router.query.name}/>}
+          {router.query.name && petType && petPaw && <BreadCrumbs title={"Питомцы / "} petPaw={petPaw + " / "} petType={petType + " / "}/>}
         </div>
         <div>
-          <ShelterPetInfo animals={animals}/>
+          <ShelterPetInfo animals={animals} pet={pet} paw={paw}/>
         </div>
         <div className={styles.walkingsBlock}>
           <p>Так же вы можете прийти к питомцу в гости, принести ему вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>
