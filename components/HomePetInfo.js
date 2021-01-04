@@ -36,35 +36,32 @@ export default function HomePetInfo({homePets}) {
       </div>
     </div>
     <div className={styles.photoDescBlock}>
-      <div className={styles.photoCarouselBlock}>
-        <div className={styles.galleryPhotosWrapper}>
-          <div className={styles.galleryPhotos}>
-            <div className={styles.galleryPhotosTablet}>
-              <div onClick={prevSlide} className={`${styles.carouselArrowTablet} ${styles.carouselArrowLeftTablet}`}>
-                <img src="/img/arrow-left.svg" alt="влево"/>
-              </div>
-              <div className={styles.galleryPhoto}>
-              {curItems && curItems.map((a, index) => (
-                <img src={a} key={index} alt="питомец"/>
-              ))}
-              </div>
-              <div onClick={nextSlide} className={`${styles.carouselArrowTablet} ${styles.carouselArrowRightTablet}`}>
-                <img src="/img/arrow-right.svg" alt="вправо"/>
-              </div>
-            </div>
-
-            <div className={styles.galleryPhotoIndexBlock}>
-              <span>{activeIndex + 1} / {pet.gallery && pet.gallery.length}</span>
-            </div>
-          </div>
+      <div className={styles.galleryPhotosWrapper}>
+        <div className={styles.galleryPhotosArrows}>
           <div onClick={prevSlide} className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}>
             <img src="/img/arrow-left.svg" alt="влево"/>
           </div>
+
+          <div className={styles.galleryPhoto}>
+            <div onClick={prevSlide} className={`${styles.carouselArrowMobile} ${styles.carouselArrowLeftMobile}`}>
+              <img src="/img/arrow-left.svg" alt="влево"/>
+            </div>
+            {curItems && curItems.map((a, index) => (
+              <img src={a} key={index} alt="питомец"/>
+            ))}
+            <div onClick={nextSlide} className={`${styles.carouselArrowMobile} ${styles.carouselArrowRightMobile}`}>
+              <img src="/img/arrow-right.svg" alt="вправо"/>
+            </div>
+          </div>
+
           <div onClick={nextSlide} className={`${styles.carouselArrow} ${styles.carouselArrowRight}`}>
             <img src="/img/arrow-right.svg" alt="вправо"/>
           </div>
         </div>
-        
+
+        <div className={styles.galleryPhotoIndexBlock}>
+          <span>{activeIndex + 1} / {pet.gallery && pet.gallery.length}</span>
+        </div>
       </div>
       
     </div>

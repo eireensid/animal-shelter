@@ -16,26 +16,14 @@
   padding-bottom: 25px;
 }
 .photoDescBlock {
-  display: flex;
-  justify-content: center;
   padding: {
     top: 100px;
     bottom: 100px;
   };
 }
 
-.carouselArrowTablet {
+.carouselArrowMobile {
   display: none;
-}
-.carouselArrow {
-  position: absolute;
-  top: 38%;
-}
-.carouselArrowLeft {
-  left: -4%; 
-}
-.carouselArrowRight {
-  right: -4%;
 }
 .carouselArrow img {
   background: #fff;
@@ -66,15 +54,18 @@
   background: #E48244;
 }
 
-.galleryPhotosWrapper {
-  position: relative;
-}
-.galleryPhotos {
-  width: 472px;
-  // height: 576px;
+
+.galleryPhotosArrows {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
+}
+.galleryPhoto {
+  width: 470px;
+  margin: {
+    left: 70px;
+    right: 70px;
+  }
 }
 
 
@@ -103,34 +94,9 @@
   .aboutPetText:not(:last-child) {
     padding-bottom: 20px;
   }
-  .photoDescBlock {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .galleryPhotosTablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .carouselArrow {
-    display: none;
-  }
-  .carouselArrowTablet {
-    display: block;
-  }
-  .carouselArrowTablet img:hover {
-    background: #FFB78E;
-  }
-  .carouselArrowTablet img:active {
-    background: #E48244;
-  }
-  .carouselArrowTablet img {
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
-  }
-  .carouselArrowLeftTablet img {
+  
+  .carouselArrowLeft img {
     padding: {
       top: 9px;
       right: 14px;
@@ -138,7 +104,7 @@
       left: 10px;
     }
   }
-  .carouselArrowRightTablet img {
+  .carouselArrowRight img {
     padding: {
       top: 9px;
       right: 10px;
@@ -147,15 +113,11 @@
     }
   }
 
-
-  .galleryPhotos {
-    width: 678px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  .galleryPhotosArrows {
+    justify-content: space-between;
   }
   .galleryPhoto {
-    width: 472px;
+    margin: 0;
   }
   
   
@@ -190,29 +152,29 @@
     padding: {
       top: 78px;
       bottom: 80px;
-    };
+    }
   }
 
 
   .carouselArrow {
-    display: block;
-  }
-  .carouselArrowTablet {
     display: none;
   }
+  .carouselArrowMobile {
+    display: block;
+  }
 
-  .carouselArrow {
+  .carouselArrowMobile {
     position: absolute;
-    top: 40%;
+    top: 45%;
   }
-  .carouselArrowLeft {
-    left: -4%; 
+  .carouselArrowLeftMobile {
+    left: -2%; 
   }
-  .carouselArrowRight {
-    right: -4%;
+  .carouselArrowRightMobile {
+    right: -2%;
   }
   
-  .carouselArrowLeft img {
+  .carouselArrowLeftMobile img {
     padding: {
       top: 5px;
       right: 10px;
@@ -220,7 +182,7 @@
       left: 7px;
     }
   }
-  .carouselArrowRight img {
+  .carouselArrowRightMobile img {
     padding: {
       top: 5px;
       right: 7px;
@@ -229,13 +191,24 @@
     }
   }
 
+  .carouselArrowMobile img:hover {
+    background: #FFB78E;
+  }
+  .carouselArrowMobile img:active {
+    background: #E48244;
+  }
+  .carouselArrowMobile img {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  }
+
   
-  .galleryPhotosWrapper {
+  .galleryPhotosArrows {
+    justify-content: center;
     position: relative;
   }
-  .galleryPhotos {
-    width: 276px;
-  }
+
   .galleryPhoto {
     width: 276px;
   }

@@ -25,10 +25,6 @@ export default function HomePet({title, animals, homePets}) {
         <div>
           <HomePetInfo homePets={homePets}/>
         </div>
-        <div className={styles.walkingsBlock}>
-          <p>Так же вы можете прийти к питомцу в гости, принести ей вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>
-          <button onClick={() => Router.push('/walks-with-dogs').then(() => window.scrollTo(0, 0))} className={styles.aboutWalkingsBtn}>Подробнее</button>
-        </div>
       </div>
     </section>
     <section>
