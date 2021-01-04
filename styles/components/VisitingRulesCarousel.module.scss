@@ -203,25 +203,24 @@
   .visitingRulesArrowMobile {
     display: block;
     position: absolute;
-    z-index: 100;
-    
+    z-index: 100; 
   }
 
   .visitingRulesArrowRightMobile {
     top: 45%;
-    right: -5%;
+    right: -4%;
   }
   .visitingRulesArrowLeftMobile  {
     top: 45%;
-    left: -5%;
+    left: -4%;
   }
 
   .visitingRulesArrowMobile img {
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 4px 5px rgba(0,0,0,0.1);
-    width: auto;
-    height: auto;
+    width: 20px;
+    height: 20px;
   }
   .visitingRulesArrowMobile img:hover {
     background: #FFB78E;
@@ -233,17 +232,13 @@
   .visitingRulesArrowRightMobile  img {
     padding: {
       top: 5px;
-      right: 7px;
       bottom: 5px;
-      left: 10px;
     }
   }
   .visitingRulesArrowLeftMobile  img {
     padding: {
       top: 5px;
-      right: 10px;
       bottom: 5px;
-      left: 7px;
     }
   }
 }

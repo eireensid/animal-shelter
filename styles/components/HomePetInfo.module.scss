@@ -162,32 +162,32 @@
   .carouselArrowMobile {
     display: block;
   }
+  .carouselArrowMobile img {
+    height: 20px;
+    width: 20px;
+  }
 
   .carouselArrowMobile {
     position: absolute;
-    top: 45%;
+    top: 47%;
   }
   .carouselArrowLeftMobile {
-    left: -2%; 
+    left: -1%; 
   }
   .carouselArrowRightMobile {
-    right: -2%;
+    right: -1%;
   }
   
   .carouselArrowLeftMobile img {
     padding: {
       top: 5px;
-      right: 10px;
       bottom: 5px;
-      left: 7px;
     }
   }
   .carouselArrowRightMobile img {
     padding: {
       top: 5px;
-      right: 7px;
       bottom: 5px;
-      left: 10px;
     }
   }
 

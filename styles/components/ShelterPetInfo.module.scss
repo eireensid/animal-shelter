@@ -312,6 +312,10 @@
     position: absolute;
     top: 40%;
   }
+  .carouselArrow img {
+    height: 20px;
+    width: 20px;
+  }
   .carouselArrowLeft {
     left: -4%; 
   }
@@ -322,17 +326,17 @@
   .carouselArrowLeft img {
     padding: {
       top: 5px;
-      right: 10px;
       bottom: 5px;
-      left: 7px;
+      left: 0;
+      right: 0;
     }
   }
   .carouselArrowRight img {
     padding: {
       top: 5px;
-      right: 7px;
       bottom: 5px;
-      left: 10px;
+      left: 0;
+      right: 0;
     }
   }
 
