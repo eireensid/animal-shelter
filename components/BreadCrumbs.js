@@ -3,7 +3,7 @@ import styles from '~/styles/components/BreadCrumbs.module.scss'
 import {useRouter} from 'next/router'
 import {useState, useEffect} from 'react'
 
-export default function BreadCrumbs({title, petType, petPaw, take}) {
+export default function BreadCrumbs({title, petType, petPaw, petName, take}) {
   const router = useRouter()
 
   const [titleUrl, setTitleUrl] = useState({ pathname: '/', query: {}})
@@ -21,7 +21,7 @@ export default function BreadCrumbs({title, petType, petPaw, take}) {
   
   return <>   
     <div className={styles.breadCrumbs}>
-      <Link href="/"><span>Главная /</span></Link> <Link href={titleUrl}><span>{title}</span></Link>  <span>{petPaw}</span> <span>{petType}</span> <span>{router.query.name}</span> <span>{take}</span>
+      <Link href="/"><span>Главная /</span></Link> <Link href={titleUrl}><span>{title}</span></Link>  <span>{petPaw}</span> <span>{petType}</span> <span>{petName}</span> <span>{router.query.name}</span> <span>{take}</span>
     </div>
   </>
 }

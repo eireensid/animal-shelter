@@ -1,18 +1,72 @@
 import {MainLayout} from '~/components/MainLayout'
+import {useState, useEffect} from 'react'
 import BreadCrumbs from '~/components/BreadCrumbs'
+import PawLabel from '~/components/PawLabel'
 import CallWriteBtns from '~/components/CallWriteBtns'
 import styles from '~/styles/takeThePet.module.scss'
 
 export default function TakeThePet({animals}) {
+
+  const [pet, setPet] = useState({})
+  const [paw, setPaw] = useState()
+
+  const setStateByLocalStorage = () => {
+    let petLocal = JSON.parse(localStorage.getItem('pet'))
+    setPet(petLocal)
+    let petPaw = localStorage.getItem('currentPaw')
+    setPaw(petPaw)
+  }
+
+  const [petType, setPetType] = useState(pet.type)
+  const breadCrumbsPetType = () => {
+    if (pet.type === "cat") {
+      setPetType("Кошки")
+    } else if (pet.type === "dog") {
+      setPetType("Собаки")
+    }
+  }
+  const [petPaw, setPetPaw] = useState(paw)
+  const breadCrumbsPetPaw = () => {
+    if (paw === "looking-for-home.png") {
+      setPetPaw("Ищут дом")
+    } else if (paw === "need-adoptation.png") {
+      setPetPaw("Нужна адаптация")
+    } else if (paw === "need-guardian.png") {
+      setPetPaw("Нужен опекун")
+    } else if (paw === "undergo-treatment.png") {
+      setPetPaw("Проходят лечение")
+    } else if (paw === "baby-pets.png") {
+      setPetPaw("Малыши")
+    }
+  }
+
+  useEffect(() => {
+    setStateByLocalStorage()
+    document.addEventListener('change-storage-pet', setStateByLocalStorage)
+    
+    return () => {
+      document.removeEventListener('change-storage-pet', setStateByLocalStorage)
+    }
+  }, [])
+
+  useEffect(() => {
+    breadCrumbsPetType()
+  }, [pet])
+  useEffect(() => {
+    breadCrumbsPetPaw()
+  }, [paw])
+
+
   return <MainLayout>
     <section>
       <div className={styles.aboutPetBlock}>
-        <BreadCrumbs title={"Питомцы / "} take="Забрать к себе"/>
-        <div className={styles.aboutPetWrapper}>
-          <div>
-            <img src="" alt="питомец"/>
+        {petType && petPaw && pet.name && <BreadCrumbs title={"Питомцы / "} petPaw={petPaw + " / "} petType={petType + " / "} petName={pet.name + " / "} take="Забрать к себе"/>}
+        <div className={styles.aboutPetWrapper}>   
+          <img className={styles.petPhoto} src={pet.photo} alt="питомец"/>
+          <div className={styles.nameLabelWrapper}>
+            <h2 className={styles.petName}>{pet.name}</h2>         
+            <PawLabel animals={animals} paw={paw} disable={true}/>
           </div>
-          <span></span>
         </div>
       </div>
     </section>
