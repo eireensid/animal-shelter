@@ -61,12 +61,12 @@
     margin-top: 40px;
   }
   .ourPetsGallery {
-    grid-template-columns: repeat(2, 275px);
-    grid-auto-rows: auto;
-    // padding: {
-    //   left: 4.5%;
-    //   right: 4.5%;
-    // }
+    // grid-template-columns: repeat(2, 275px);
+    // grid-auto-rows: auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 580px;
     margin: 165px auto 0 auto;
   }
