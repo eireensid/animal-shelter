@@ -1,8 +1,8 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import useDropdown from '~/hooks/useDropdown'
 import styles from '~/styles/components/FindAnimalInput.module.scss'
 
-export default function FindAnimalInput({value, placeholder, options, onChange}) {
+export default function FindAnimalInput({animals, value, options, onChange}) {
   const { dropdownStyles, openDropdownClicks, wrapperRefs, closeDropdown } = useDropdown(1)
 
   const handleChange = selectedValue => {
@@ -10,10 +10,11 @@ export default function FindAnimalInput({value, placeholder, options, onChange})
     closeDropdown()
   }
 
+
   return <>
     <div ref={wrapperRefs[0]} className={styles.animalFilterInputBlock}>
         <div onClick={openDropdownClicks[0]} className={dropdownStyles[0].display === "none" ? styles.animalFilterInput : styles.animalFilterInputBorder}>
-          <h4>{value || placeholder}</h4>
+          <h4>{value}</h4>
           <img src="img/input-arrow-down.png"/>
         </div>       
         <ul style={dropdownStyles[0]} className={styles.dropdownMenu}>
