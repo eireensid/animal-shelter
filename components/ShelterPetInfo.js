@@ -7,25 +7,6 @@ import styles from '~/styles/components/ShelterPetInfo.module.scss'
 
 export default function ShelterPetInfo({animals, pet, paw}) {
 
-  // const [pet, setPet] = useState({})
-  // const [paw, setPaw] = useState()
-
-  // const setStateByLocalStorage = () => {
-  //   let petLocal = JSON.parse(localStorage.getItem('pet'))
-  //   setPet(petLocal)
-  //   let petPaw = localStorage.getItem('currentPaw')
-  //   setPaw(petPaw)
-  // }
-
-  // useEffect(() => {
-  //   setStateByLocalStorage()
-  //   document.addEventListener('change-storage-pet', setStateByLocalStorage)
-  //   return () => {
-  //     document.removeEventListener('change-storage-pet', setStateByLocalStorage)
-  //   }
-  // }, [])
-
-  // const animal = animals.find(e => e.name === router.query.name) || {}
   const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(pet.gallery && pet.gallery, 1)
 
   const [tellAboutPet, setTellAboutPet] = useState(pet.name)

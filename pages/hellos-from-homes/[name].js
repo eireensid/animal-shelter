@@ -20,7 +20,7 @@ export default function HomePet({title, animals, homePets}) {
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
         <div className={styles.breadCrumbsWrapper}>
-          <BreadCrumbs title={`Привет из дома / `}/>
+          <BreadCrumbs title={"Привет из дома / "}/>
         </div>
         <div>
           <HomePetInfo homePets={homePets}/>
