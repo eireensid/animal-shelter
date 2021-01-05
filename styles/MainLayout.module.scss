@@ -117,24 +117,24 @@
   font-weight: $mediumWeight;
 }
 .footerBlock h4 {
-  padding-bottom: 20px;
-  padding-top: 50px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 .footerBlock ul {
   line-height: 2.2;
 }
 .contacts h4 {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .phone {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .address {
   font-weight: $mediumWeight;
 }
 .prHelp {
-  padding-bottom: 25px!important;
-  padding-top: 35px!important;
+  margin-bottom: 25px!important;
+  margin-top: 35px!important;
 }
 .socialsBlockFooter {
   padding-bottom: 5px;
@@ -197,7 +197,7 @@
     margin-bottom: -5px;
   }
   .contacts h4 {
-    padding-top: 20px;
+    margin-top: 20px;
   }
 }
 
@@ -242,9 +242,9 @@
     flex-basis: 100%;
   }
   .aboutShelter h4 {
-    padding-top: 55px;
+    margin-top: 55px;
   }
   .contacts h4 {
-    padding-top: 40px;
+    margin-top: 40px;
   }
 }
