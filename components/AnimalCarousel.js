@@ -10,7 +10,7 @@ export default function AnimalCarousel({animals, title, paw}) {
 
   function setCountByWidth () {
     let count = 3
-    if (window.screen.width > 414 && window.screen.width <= 1200) {
+    if (window.screen.width > 414 && window.screen.width <= 1279) {
       count = 2 
     }
     setCount(count)
