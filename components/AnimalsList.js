@@ -72,10 +72,15 @@ export default function AnimalsList({animals}) {
   // filter records by search text
   const searchData = (value) => {
     const lowercasedValue = value.toLowerCase().trim();
-    if (lowercasedValue === "") setSortedAnimals(animals);
-    else {
+    console.log('searchData lowercasedValue', lowercasedValue)
+    if (lowercasedValue === "") {
+      console.log('searchData set all')
+      setFilter(null)
+      setAnimal('all')
+      setSortedAnimals(animals);
+    } else {
       const filteredData = animals.filter(item => {
-        return item.name.toLowerCase().includes(value)
+        return item.name.toLowerCase().includes(lowercasedValue)
       });
       setSortedAnimals(filteredData);
     }
