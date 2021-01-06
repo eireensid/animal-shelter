@@ -110,7 +110,11 @@
 // Mobile styles
 @media (max-width: 480px) {
   .searchInput {
-    height: 45px;
+    height: 37px;
+    padding: {
+      top: 5px;
+      bottom: 5px;
+    }
   }
   .searchInput img {
     height: 12px;
