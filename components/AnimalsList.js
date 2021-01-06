@@ -1,10 +1,12 @@
 import {useState, useEffect} from 'react'
 import usePagination from '~/hooks/usePagination'
+import Pagination from '~/components/Pagination'
 import AnimalCard from '~/components/AnimalCard'
 import FindAnimalInput from '~/components/FindAnimalInput'
 import SearchInput from '~/components/SearchInput'
 import PawLabel from '~/components/PawLabel'
 import styles from '~/styles/components/AnimalsList.module.scss'
+
 
 export default function AnimalsList({animals}) {
 
@@ -84,6 +86,7 @@ export default function AnimalsList({animals}) {
     {title: "Собаки", value: "dog"},
     {title: "Все", value: "all"}
   ]
+
   
   return <>
     <div id="gallery" className={styles.animalsListBlock}>
@@ -126,6 +129,9 @@ export default function AnimalsList({animals}) {
         {sortedAnimals.map((animal, index) => (
           <AnimalCard parent="shelter" filter={filter} animal={animal} key={index}/>
         ))}
+      </div>
+      <div className={styles.paginationBlock}>
+        <Pagination />
       </div>
     </div>
   </>

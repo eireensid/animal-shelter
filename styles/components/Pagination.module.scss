@@ -1,5 +1,26 @@
-.paginationPages {
+.paginationBlock {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-top: -75px;
+}
+.ulPagination {
+  display: flex;
+  align-items: center;
+  margin: {
+    left: 35px;
+    right: 35px;
+  };
+}
+.paginationBtn {
+  background: none;
+  color: black;
+  width: 100%;
+  padding: 5px;
+}
+.paginationBtn:hover {
+  background: none;
+}
+bu.paginationBtntton:active {
+  background: none;
 }
