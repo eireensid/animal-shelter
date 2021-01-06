@@ -93,6 +93,18 @@ export default function AnimalsList({animals}) {
     {title: "Все", value: "all"}
   ]
 
+  // Pagination
+  let [page, setPage] = useState(1);
+  const PER_PAGE = 3;
+
+  const count = Math.ceil(animals.length / PER_PAGE);
+  const _DATA = usePagination(animals, PER_PAGE);
+
+  const handleChange = (e, p) => {
+    setPage(p);
+    _DATA.jump(p);
+  }
+
   
   return <>
     <div id="gallery" className={styles.animalsListBlock}>
@@ -137,7 +149,7 @@ export default function AnimalsList({animals}) {
         ))}
       </div>
       <div className={styles.paginationBlock}>
-        <Pagination />
+        <Pagination count={count} page={page} onChange={handleChange} />
       </div>
     </div>
   </>

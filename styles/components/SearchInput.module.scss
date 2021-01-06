@@ -31,7 +31,7 @@
   }
   input::placeholder {
     color: white;
-    height: 48px;
+    height: 100%;
   }
   svg {
     width: 21px;
@@ -118,6 +118,6 @@
   }
   .searchInput input::placeholder {
     font-size: 11px;
-    height: 37px;
+    height: 100%;
   }
 }

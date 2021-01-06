@@ -3,10 +3,9 @@ import React from 'react';
 import { usePagination } from '@material-ui/lab/Pagination';
 
 
-export default function UsePagination() {
+export default function UsePagination({count, page}) {
   const { items } = usePagination({
-    count: 10,
-    
+    count: count,
   })
 
   return (
