@@ -9,7 +9,7 @@ export default function BreadCrumbs({title, petType, petPaw, petName, take}) {
   const [titleUrl, setTitleUrl] = useState({ pathname: '/', query: {}})
 
   const changeTitleUrl = () => {
-    if (title === "Питомцы / ") {
+    if (title === "Питомцы / " || title === "Питомцы") {
       setTitleUrl({ pathname: '/pets', query: {}})
     } else if (title === "Привет из дома / ") {
       setTitleUrl({ pathname: '/hellos-from-homes', query: {}})
