@@ -26,6 +26,7 @@ export default function Pet({animals}) {
     setPet(petLocal)
     let petPaw = localStorage.getItem('currentPaw')
     setPaw(petPaw)
+    console.log('setStateByLocalStorage petPaw', petPaw)
   }
 
   const [petType, setPetType] = useState(pet.type)

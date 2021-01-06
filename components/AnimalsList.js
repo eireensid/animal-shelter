@@ -75,9 +75,10 @@ export default function AnimalsList({animals}) {
     console.log('searchData lowercasedValue', lowercasedValue)
     if (lowercasedValue === "") {
       console.log('searchData set all')
-      setFilter(null)
-      setAnimal('all')
-      setSortedAnimals(animals);
+      // setFilter(null)
+      // setAnimal('all')
+      // setSortedAnimals(animals);
+      setFilter1()
     } else {
       const filteredData = animals.filter(item => {
         return item.name.toLowerCase().includes(lowercasedValue)

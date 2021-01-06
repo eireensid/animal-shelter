@@ -51,6 +51,22 @@ export default function PawLabel({paw, filter, setFilter, disable}) {
     }
   }
 
+  const changeStyleOn = () => {
+    console.log('changeStyleOn paw', paw)
+    if (paw === "looking-for-home.png") {
+      setFilterStyle({background: "#108D0D"})
+    } else if (paw === "need-adoptation.png") {
+      setFilterStyle({background: "#FF6B00"})
+    } else if (paw === "need-guardian.png") {
+      setFilterStyle({background: "#0038FF"})
+    } else if (paw === "undergo-treatment.png") {
+      setFilterStyle({background: "#E4000E"})
+    } else if (paw === "baby-pets.png") {
+      setFilterStyle({background: "#FF3093"})
+    }
+    setImgStyle({display: "none"})
+  }
+
   const changeStyleOff = () => {
     setFilterStyle({background: "white"})
     setImgStyle({display: "inline-block"})
@@ -67,11 +83,28 @@ export default function PawLabel({paw, filter, setFilter, disable}) {
     }
   }
 
+  const changeByUrlParam = () => {
+    const urlParams = new URLSearchParams(window.location.search)
+    if (urlParams.has('filter')) {
+      const newFilter = urlParams.get('filter') + '.png'
+      if (newFilter === paw) {
+        console.log('changeStyleOn changeByUrlParam work')
+        changeStyleOn()
+      }
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('change-url-param', changeByUrlParam)
+    
+    return () => {
+      document.removeEventListener('change-url-param', changeByUrlParam)
+    }
+  }, [])
+
   useEffect(() => {
     if (filter !== paw) {
       changeStyleOff()
-    } else {
-      changeStyle()
     }
   }, [filter])
 
