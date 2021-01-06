@@ -7,10 +7,36 @@ import PawLabel from '~/components/PawLabel'
 import styles from '~/styles/components/AnimalsList.module.scss'
 
 export default function AnimalsList({animals}) {
-  // const galleryAnimals = animals.slice(0, 12)
 
-  const [animal, setAnimal] = useState("Все животные")
-  const [age, setAge] = useState(undefined)
+  const [filter, setFilter] = useState(null)
+  const [animal, setAnimal] = useState("all")
+  const [age, setAge] = useState("Все возраста")
+
+  const changeByUrlParam = () => {
+    console.log('changeByUrlParam')
+    const urlParams = new URLSearchParams(window.location.search)
+    if (urlParams.has('animal')) {
+      console.log('set animal')
+      const newAnimal = urlParams.get('animal')
+      setFilter(null)
+      setAnimal(newAnimal)
+    }
+    if (urlParams.has('filter')) {
+      const newFilter = urlParams.get('filter') + '.png'
+      console.log('set filter', newFilter)
+      setAnimal("all")
+      setFilter(newFilter)
+    }
+  }
+
+  useEffect(() => {
+    changeByUrlParam()
+    document.addEventListener('change-url-param', changeByUrlParam)
+    
+    return () => {
+      document.removeEventListener('change-url-param', changeByUrlParam)
+    }
+  }, [])
 
   // const _animals = [...animals]
   // while (_animals.length % 3 !== 0) {
@@ -23,15 +49,15 @@ export default function AnimalsList({animals}) {
     setSortedAnimals(animals)
   }, [animals])
 
-  const [filter, setFilter] = useState(null)
   const setFilter1 = () => {
     if (filter) {
       localStorage.setItem('currentPaw', filter)
     }
     let newArr = animals.filter((item, index) => {
       const isPaw = !filter || item.paw.some(p => filter === p)
-      const isType = !animal || ((item.type === 'cat' && animal === 'Кошки') || (item.type === 'dog' && animal === 'Собаки') || animal === 'Все животные') 
-      return isPaw && isType
+      const isType = !animal || ((item.type === animal) || animal === 'all') 
+      // const isAge = !age || (item.age === "1 год" || item.age === "2 года" || item.age === "3 года" && age === "1-3 года")
+      return isPaw && isType// && isAge
     })
     setSortedAnimals(newArr)
   }
@@ -53,14 +79,19 @@ export default function AnimalsList({animals}) {
     }
   }
 
+  const animalOptions = [
+    {title: "Кошки", value: "cat"},
+    {title: "Собаки", value: "dog"},
+    {title: "Все", value: "all"}
+  ]
   
   return <>
-    <div className={styles.animalsListBlock}>
+    <div id="gallery" className={styles.animalsListBlock}>
       <div className={styles.animalFiltersBlock}>
         <div className={styles.animalInputsBlock}>
           <div className={styles.findAnimalInputBlock}>
-            <FindAnimalInput animals={animals} value={animal} options={["Кошки", "Собаки", "Все животные"]} onChange={v => setAnimal(v)}/>
-            <FindAnimalInput animals={animals} placeholder="Все возраста" value={age} options={["до 6 мес.", "6 мес. - 1 год", "1-3 года", "3-7 лет", "от 7 лет"]} onChange={v => setAge(v)}/>
+            <FindAnimalInput value={animal} options={animalOptions} onChange={v => setAnimal(v)}/>
+            <FindAnimalInput value={age} options={["до 6 мес.", "6 мес. - 1 год", "1-3 года", "3-7 лет", "от 7 лет", "Все"]} onChange={v => setAge(v)}/>
           </div>
           <SearchInput animals={animals} searchData={searchData}/>
         </div>

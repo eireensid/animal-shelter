@@ -70,6 +70,8 @@ export default function PawLabel({paw, filter, setFilter, disable}) {
   useEffect(() => {
     if (filter !== paw) {
       changeStyleOff()
+    } else {
+      changeStyle()
     }
   }, [filter])
 

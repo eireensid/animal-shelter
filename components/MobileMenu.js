@@ -7,6 +7,12 @@ import styles from '~/styles/components/MobileMenu.module.scss'
 export default function MobileMenu({closeMenu}) {
   const { dropdownStyles, openDropdownClicks, wrapperRefs } = useDropdown(2)
 
+  const load = async (path) => {
+    console.log('load')
+    await Router.push(path)
+    document.dispatchEvent(new Event('change-url-param'))
+  }
+
   return <>
     <div className={styles.mobileMenuBlock}>
       <div className={styles.menuAndBtnBlock}>
@@ -28,13 +34,13 @@ export default function MobileMenu({closeMenu}) {
             <a onClick={openDropdownClicks[1]} className={styles.menuPetsLink}>Питомцы</a>
             <div style={dropdownStyles[1]} className={styles.menuDropdownMobile}>
               <ul className={styles.menuDropdownMobileUl}>
-                <li><Link href="/cats"><a>Кошки</a></Link></li>
-                <li><Link href="/dogs"><a>Собаки</a></Link></li>
-                <li><Link href="/basic-needs-of-teremok"><a>Ищут дом</a></Link></li>
-                <li><Link href="/undergo-treatment"><a>Проходят лечение</a></Link></li>
-                <li><Link href="/need-guardian"><a>Нужен опекун</a></Link></li>
-                <li><Link href="/need-adoptation"><a>Нужна адаптация</a></Link></li>
-                <li><Link href="/baby-pets"><a>Малыши</a></Link></li>
+                <li><a onClick={() => load('/pets/?animal=cat#gallery')}>Кошки</a></li>
+                <li><a onClick={() => load('/pets/?animal=dog#gallery')}>Собаки</a></li>
+                <li><a onClick={() => load('/pets/?filter=looking-for-home#gallery')}>Ищут дом</a></li>
+                <li><a onClick={() => load('/pets/?filter=undergo-treatment#gallery')}>Проходят лечение</a></li>
+                <li><a onClick={() => load('/pets/?filter=need-guardian#gallery')}>Нужен опекун</a></li>
+                <li><a onClick={() => load('/pets/?filter=need-adoptation#gallery')}>Нужна адаптация</a></li>
+                <li><a onClick={() => load('/pets/?filter=baby-pets#gallery')}>Малыши</a></li>
               </ul>
             </div>
           </div>
