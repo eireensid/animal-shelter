@@ -19,7 +19,7 @@ try {
     storageBucket: process.env.firebase_bucket_url
   })
 } catch (_) {
-  console.error('firebase initializeApp n times serviceAccount1', serviceAccount)
+  console.error('firebase initializeApp n times serviceAccount', serviceAccount)
 }
 
 export default admin
