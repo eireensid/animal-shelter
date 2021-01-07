@@ -128,7 +128,7 @@ export default function AddPet() {
         headers: {'Content-Type': 'multipart/form-data'}
       })
       setErrorText('')
-      window.location.reload()
+      Router.push('/admin')
     } catch (err) {
       const isMessage = err.response && err.response.data && err.response.data.message
       const message = isMessage ? err.response.data.message : 'Что-то пошло не так'
@@ -208,12 +208,12 @@ export default function AddPet() {
           <InputLabel className={styles.label}>Галерея</InputLabel>
           <InputBase inputRef={filesRef} type="file" inputProps={{multiple: true}}/>
           {errorText && <div className={styles.errorText}>{errorText}</div>}
-          <Button className={styles.button} variant="contained" color="primary" disableElevation
-            onClick={formPet} disabled={!canEdit}>
+          <Button className={styles.button} variant="contained" disableElevation
+            onClick={formPet} disabled={!canEdit} component="div">
             {saveText}
           </Button>
           {id !== '' && <Button className={styles.button} variant="contained" color="secondary" disableElevation
-            onClick={deletePet} disabled={!canEdit}>
+            onClick={deletePet} disabled={!canEdit} component="div">
             Удалить
           </Button>}
         </Paper>

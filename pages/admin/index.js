@@ -20,8 +20,8 @@ export default function Admin() {
     </Head>
     <Container>
       <Box className={styles.mainBox}>
-        <Button className={styles.mainButton} variant="contained" color="primary" disableElevation
-          onClick={formPet}>
+        <Button className={styles.mainButton} variant="contained" disableElevation
+          onClick={formPet} component="div">
           Добавить питомца
         </Button>
       </Box>

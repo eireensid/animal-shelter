@@ -42,8 +42,8 @@ export default function Auth() {
           <TextField className={styles.inputField} label="Пароль" variant="outlined" type="password"
             value={password} onChange={e => setPassword(e.target.value)} />
           {errorText && <div className={styles.errorText}>{errorText}</div>}
-          <Button className={styles.button} variant="contained" color="primary" disableElevation
-            onClick={doLogin}>
+          <Button className={styles.button} variant="contained" disableElevation
+            onClick={doLogin} component="div">
             Вход
           </Button>
         </Paper>
