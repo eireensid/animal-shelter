@@ -2,21 +2,18 @@ import '~/styles/main.scss'
 import axios from 'axios'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { testAnimals, transformPets, homePets, shelterPets } from '~/modules/front/app'
+import { transformPets } from '~/modules/front/app'
 
 export default function MyApp({Component, pageProps}) {
-  const [_animals, setAnimals] = useState([])
   const [_homePets, setHomePets] = useState([])
   const [_shelterPets, setShelterPets] = useState([])
   
   useEffect(async () => {
-    setAnimals(testAnimals)
-    setHomePets(homePets)
-    setShelterPets(shelterPets)
     const res = await axios.get('/api/pet/all')
     const pets = res.data.map(transformPets)
     console.log('pets', pets)
-    // setAnimals(pets)
+    setHomePets(pets.filter(p => p.foundHome))
+    setShelterPets(pets.filter(p => !p.foundHome))
   }, [])
 
 
