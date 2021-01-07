@@ -36,7 +36,7 @@ button {
   border: none;
   color: #fff;
   border-radius: 100px;
-  font-size: 20px;
+  font-size: 1.111em;
   font-family: 'Montserrat Medium', sans-serif;
   padding: {
     top: 23px;
@@ -113,6 +113,15 @@ h4 {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
   }
+
+  button {
+    padding: {
+      top: 19px;
+      bottom: 19px;
+    }
+    letter-spacing: 1px;
+    width: 260px;
+  }
 }
 
 // Mobile styles
@@ -139,6 +148,16 @@ h4 {
     font-size: 1.154em;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
+  }
+
+  button {
+    padding: {
+      top: 16px;
+      bottom: 16px;
+    }
+    width: 213px;
+    font-size: 0.722rem;
+    letter-spacing: 0;
   }
 }
 

@@ -14,9 +14,10 @@ const customStyles = {
     border: 'none',
     borderRadius: '0',
     width: '77%',
-    height: '90vh',
+    // height: '90vh',
     background: '#FFF5DA'
   },
+  overlay: {zIndex: 1000}
 }
 
 Modal.setAppElement('#__next')
@@ -42,6 +43,7 @@ export default function BankCardModal({parent}) {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
+        className={styles.modal}
         style={customStyles}
         contentLabel="Bank Card Modal"
       >

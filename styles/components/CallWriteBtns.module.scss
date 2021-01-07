@@ -4,16 +4,51 @@
   margin-bottom: 20px;
 }
 .callBtn, .whatsappBtn {
+  padding: {
+    top: 14px;
+    bottom: 14px;
+  };
+  display: block;
+}
+.callBtnDiv, .whatsappBtnDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: {
-    top: 13px;
-    bottom: 13px;
-  };
 }
 
 .callBtn span, .whatsappBtn span {
   color: #fff;
   margin-left: 15px;
+}
+
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .callBtn, .whatsappBtn {
+    padding: {
+      top: 10px;
+      bottom: 10px;
+    };
+  }
+  .callBtn span, .whatsappBtn span {
+    margin-left: 10px;
+    font-size: 1em;
+  } 
+}
+
+// Mobile styles
+@media (max-width: 480px) {
+  .callBtn, .whatsappBtn {
+    padding: {
+      top: 9px;
+      bottom: 9px;
+    };
+  }
+  .callBtn span, .whatsappBtn span {
+    margin-left: 8px;
+    font-size: 15px;
+  } 
+  .callBtn img, .whatsappBtn img {
+    height: 30px;
+  }
 }

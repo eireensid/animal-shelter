@@ -1,0 +1,358 @@
+.titleBlock {
+  display: flex;
+  align-items: center;
+  padding: {
+    top: 40px;
+    bottom: 30px;
+  }
+  h2 {
+    margin-right: 50px;
+  }
+}
+.aboutPetText {
+  width: 58%;
+}
+.aboutPetText:not(:last-child) {
+  padding-bottom: 25px;
+}
+.photoDescBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: {
+    top: 100px;
+    bottom: 100px;
+  };
+}
+.petDescBlock {
+  background: #fff;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  border-radius: 30px;
+  padding: 50px;
+  width: 570px;
+  .petDescRow {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+  .petDescRow span {
+    font-weight: 500;
+    font-size: 1.389rem;
+  }
+  .petInfo {
+    color: rgba(66,41,4,0.7)
+  }
+  .takePet {
+    margin: {
+      top: 15px;
+      bottom: 55px;
+    }
+    letter-spacing: 2px;
+  }
+  .socialsWrapper {
+    margin-top: -7px;
+  }
+}
+
+.carouselArrowTablet {
+  display: none;
+}
+.carouselArrow {
+  position: absolute;
+  top: 38%;
+}
+.carouselArrowLeft {
+  left: -4%; 
+}
+.carouselArrowRight {
+  right: -4%;
+}
+.carouselArrow img {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+.carouselArrowLeft img {
+  padding: {
+    top: 11px;
+    right: 15px;
+    bottom: 11px;
+    left: 13px;
+  }
+}
+.carouselArrowRight img {
+  padding: {
+    top: 11px;
+    right: 13px;
+    bottom: 11px;
+    left: 15px;
+  }
+}
+
+.carouselArrow img:hover {
+  background: #FFB78E;
+}
+.carouselArrow img:active {
+  background: #E48244;
+}
+
+.galleryPhotosWrapper {
+  position: relative;
+}
+.galleryPhotos {
+  width: 472px;
+  // height: 576px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.galleryPhotoIndexBlock {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.389rem;
+  padding-top: 65px;
+}
+
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .titleBlock {
+    padding: {
+      top: 40px;
+      bottom: 25px;
+    }
+    h2 {
+      margin-right: 33px;
+    }
+  }
+  .aboutPetText {
+    width: 70%;
+  }
+  .aboutPetText:not(:last-child) {
+    padding-bottom: 20px;
+  }
+  .photoDescBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+  .petDescBlock {
+    margin-top: 100px;
+    width: 100%;
+    .petDescRow {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 40px;
+    }
+    .petDescRow span {
+      font-weight: 500;
+      font-size: 1.389rem;
+    }
+    .petInfo {
+      color: rgba(66,41,4,0.7)
+    }
+    .takePet {
+      margin: {
+        top: 15px;
+        bottom: 55px;
+      }
+      letter-spacing: 2px;
+    }
+    .socialsWrapper {
+      margin-top: -7px;
+    }
+  }
+
+  .galleryPhotosTablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .carouselArrow {
+    display: none;
+  }
+  .carouselArrowTablet {
+    display: block;
+  }
+  .carouselArrowTablet img:hover {
+    background: #FFB78E;
+  }
+  .carouselArrowTablet img:active {
+    background: #E48244;
+  }
+  .carouselArrowTablet img {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  }
+  .carouselArrowLeftTablet img {
+    padding: {
+      top: 9px;
+      right: 14px;
+      bottom: 9px;
+      left: 10px;
+    }
+  }
+  .carouselArrowRightTablet img {
+    padding: {
+      top: 9px;
+      right: 10px;
+      bottom: 9px;
+      left: 14px;
+    }
+  }
+
+
+  .galleryPhotos {
+    width: 678px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .galleryPhoto {
+    width: 472px;
+  }
+  
+  
+  .galleryPhotoIndexBlock {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.389rem;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .galleryPhotos {
+    width: 550px;
+  }
+  .galleryPhoto {
+    width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .galleryPhotos {
+    width: 400px;
+  }
+  .galleryPhoto {
+    width: 300px;
+  }
+}
+
+// Mobile styles
+@media (max-width: 480px) {
+  .titleBlock {
+    padding: {
+      top: 30px;
+      bottom: 30px;
+    }
+    h2 {
+      margin-right: 30px;
+    }
+  }
+  .aboutPetText {
+    width: 90%;
+  }
+  .aboutPetText:not(:last-child) {
+    padding-bottom: 23px;
+  }
+
+  .photoDescBlock {
+    padding: {
+      top: 78px;
+      bottom: 80px;
+    };
+  }
+
+  .petDescBlock {
+    margin-top: 44px;
+    width: 100%;
+    padding: 20px;
+    .petDescRow {
+      padding-bottom: 20px;
+    }
+    .petDescRow span {
+      font-weight: 500;
+      font-size: 0.722rem;
+    }
+    .petDescRow img {
+      width: 19px;
+      height: 13px;
+    }
+    .petInfo {
+      color: rgba(66,41,4,0.7)
+    }
+    .takePet {
+      margin: {
+        top: 28px;
+        bottom: 38px;
+      }
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+    .tellAboutPetText {
+      font-size: 15px!important;
+      width: 70%;
+    }
+    .socialsWrapper {
+      margin-top: -2px;
+    }
+  }
+
+  .carouselArrow {
+    display: block;
+  }
+  .carouselArrowTablet {
+    display: none;
+  }
+
+  .carouselArrow {
+    position: absolute;
+    top: 40%;
+  }
+  .carouselArrow img {
+    height: 20px;
+    width: 20px;
+  }
+  .carouselArrowLeft {
+    left: -4%; 
+  }
+  .carouselArrowRight {
+    right: -4%;
+  }
+  
+  .carouselArrowLeft img {
+    padding: {
+      top: 5px;
+      bottom: 5px;
+      left: 0;
+      right: 0;
+    }
+  }
+  .carouselArrowRight img {
+    padding: {
+      top: 5px;
+      bottom: 5px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  
+  .galleryPhotosWrapper {
+    position: relative;
+  }
+  .galleryPhotos {
+    width: 276px;
+  }
+  .galleryPhoto {
+    width: 276px;
+  }
+  
+  .galleryPhotoIndexBlock {
+    font-size: 0.833rem;
+    padding-top: 20px;
+  }
+}

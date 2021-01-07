@@ -15,10 +15,13 @@
   flex-basis: 84%;
 }
 .visitingRulesCard img {
-  margin-right: 3.3%;
+  margin-right: 30px;
 }
 
 // Arrows
+.visitingRulesArrowMobile {
+  display: none;
+}
 .visitingRulesArrow img {
   background: #fff;
   border-radius: 50%;
@@ -52,6 +55,7 @@
   display: flex;
   justify-content: center;
   padding-top: 20px;
+  user-select: none;  
 }
 .visitingRulesRound {
   width: 11px;
@@ -64,4 +68,177 @@
 }
 .visitingRulesRound:not(:last-child) {
   margin-right: 10px;
+}
+
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .visitingRulesCarousel {  
+    justify-content: center;
+    position: relative;
+  }
+  .visitingRulesCard {
+    height: 309px;
+    width: 598px;
+    padding: 35px;
+  }
+  .visitingRulesCard img {
+    margin-right: 30px;
+    width: 242px;
+    height: 239px;
+  }
+  .visitingRulesCard p {
+    font-size: 0.833rem;
+    width: 255px;
+  }
+
+  .visitingRulesArrow {
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+  }
+  .visitingRulesArrowRight {
+    right: -3%;
+  }
+  .visitingRulesArrowLeft {
+    left: -3%;
+  }
+
+  .visitingRulesArrowRight img {
+    padding: {
+      top: 9px;
+      right: 10px;
+      bottom: 9px;
+      left: 14px;
+    }
+  }
+  .visitingRulesArrowLeft img {
+    padding: {
+      top: 9px;
+      right: 14px;
+      bottom: 9px;
+      left: 10px;
+    }
+  }
+
+  .visitingRulesRounds {
+    padding-top: 14px;
+  }
+  .visitingRulesRound {
+    width: 7px;
+    height: 7px;
+  }
+  .visitingRulesRound:not(:last-child) {
+    margin-right: 7px;
+  }
+}
+
+@media (max-width: 767px) {
+  .visitingRulesCard img {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .visitingRulesCard img {
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 559px) {
+  .visitingRulesCard {
+    padding: {
+      top: 30px;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+    }
+    flex-direction: column;
+    width: 276px;
+    margin: 0 auto;
+  }
+  .visitingRulesCard img {
+    margin-right: 0px;
+    width: 180px;
+    height: 180px;
+    padding-bottom: 15px;
+  }
+}
+
+
+// Mobile styles
+@media (max-width: 480px) {
+  .visitingRulesCarousel {  
+    display: block;
+  }
+  .visitingRulesCard {
+    height: 278px;
+    padding: {
+      top: 30px;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+    }
+    flex-direction: column;
+    width: 276px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .visitingRulesCard img {
+    margin-right: 0;
+    width: 130px;
+    height: 130px;
+    border-radius: 30px;
+    margin-bottom: 18px;
+  }
+  .visitingRulesCard p {
+    font-size: 0.722rem;
+  }
+
+  .visitingRulesArrow {
+    display: none;
+  }
+  .visitingRulesArrowMobile {
+    display: block;
+    position: absolute;
+    z-index: 100; 
+  }
+
+  .visitingRulesArrowRightMobile {
+    top: 45%;
+    right: -4%;
+  }
+  .visitingRulesArrowLeftMobile  {
+    top: 45%;
+    left: -4%;
+  }
+
+  .visitingRulesArrowMobile img {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+    width: 20px;
+    height: 20px;
+  }
+  .visitingRulesArrowMobile img:hover {
+    background: #FFB78E;
+  }
+  .visitingRulesArrowMobile img:active {
+    background: #E48244;
+  }
+
+  .visitingRulesArrowRightMobile  img {
+    padding: {
+      top: 5px;
+      bottom: 5px;
+    }
+  }
+  .visitingRulesArrowLeftMobile  img {
+    padding: {
+      top: 5px;
+      bottom: 5px;
+    }
+  }
 }

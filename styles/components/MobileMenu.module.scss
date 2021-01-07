@@ -1,0 +1,170 @@
+@import 'variables.scss';
+
+
+
+// Tablet styles
+@media (max-width: 1024px) {
+  .mobileMenuBlock {
+    display: flex;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: $pageBg;
+  }
+
+  .menuAndBtnBlock {
+    border-radius: 20px 0 0 20px;
+    background: white;
+    flex-basis: 85%;
+    padding: {
+      top: 80px;
+      bottom: 80px;
+      left: 48px;
+    };
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+  }
+  .menuWrapperMobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .menuWrapperMobile a {
+    color: $textColor;
+    font-size: 30px!important;
+    font-weight: $mediumWeight;
+  }
+  .menuWrapperMobile >*:not(:first-child) {
+    margin-top: 45px;
+  }
+  .btnWrapper * {
+    letter-spacing: 0;
+    font-size: 18px;
+  }
+
+  .closeAndSocialsBlock {
+    background: $navBg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 43px;
+    border-radius: 0 20px 20px 0;
+    flex-basis: 15%;
+    padding-bottom: 80px;
+  }
+  .btnClose {
+    background: none;
+    padding: 0;
+    width: 35px;
+    border-radius: 0;
+  }
+  .btnClose:hover {
+    background: none;
+  }
+  .btnClose:active {
+    background: none;
+  }
+  .socialsWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .socialsWrapper a {
+    cursor: pointer;
+  }
+  .socialsWrapper a:not(:last-child) {
+    margin-bottom: 13px;
+    margin-right: 0!important;
+  }
+  .socialsWrapper img {
+    height: 40px;
+    width: 40px;
+  }
+
+
+
+  // Dropdown for menu
+  .menuDropdownMobile {
+    z-index: 200;
+    display: none;
+  }
+  .menuDropdownMobileUl {
+    padding: {
+      top: 27px;
+      bottom: 8px;
+    };
+  }
+  
+  .menuDropdownMobile a {
+    font-size: 18px!important;
+    font-weight: normal;
+  }
+  .menuDropdownMobile li:not(:last-child) {
+    padding-bottom: 15px;
+  }
+
+}
+
+
+// Mobile styles
+@media (max-width: 767px) {
+  .mobileMenuBlock {
+    min-height: 90vh;
+  }
+  .menuAndBtnBlock {
+    flex-basis: 81%;
+    padding: {
+      top: 30px;
+      bottom: 50px;
+      left: 20px;
+    }
+  }
+  .menuWrapperMobile a {
+    color: $textColor;
+    font-size: 20px!important;
+  }
+  .menuWrapperMobile >*:not(:first-child) {
+    margin-top: 30px;
+  }
+  .btnWrapper * {
+    font-size: 15px;
+  }
+
+  .closeAndSocialsBlock {
+    padding-top: 15px;
+    flex-basis: 19%;
+    padding-bottom: 50px;
+  }
+  .btnClose {
+    width: 15px;
+  }
+  .socialsWrapper a:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .socialsWrapper img {
+    height: 30px;
+    width: 30px;
+  }
+
+  // Dropdown for menu
+  .menuDropdownMobileUl {
+    padding: {
+      top: 20px;
+    };
+  }
+  
+  .menuDropdownMobile a {
+    font-size: 13px!important;
+    font-weight: normal;
+  }
+  .menuDropdownMobile li:not(:last-child) {
+    padding-bottom: 15px;
+  }
+
+}

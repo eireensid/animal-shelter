@@ -10,16 +10,15 @@
   background-image: url(/img/paws-top.png), url(/img/paws-bottom.png);
   background-repeat: no-repeat;
   background-position: top center, bottom center;
+  // background-size: 55%;
   display: flex;
   align-items: center;
-  width: 59%;
+  width: 648px;
+  height: 405px;
   flex-direction: column;
   border-radius: 20px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-  padding: {
-    top: 13%;
-    bottom: 10%;
-  }
+  justify-content: center;
 }
 .bankCardNumber {
   display: flex;
@@ -36,12 +35,108 @@
 .bankCardNumber img {
   padding-right: 20px;
 }
-.bankCardNumber span {
+.bankCardNumber  {
   color: #131313;
   font-family: 'Montserrat', sans-serif;
   font-weight: $mediumWeight;
-  font-size: 30px;
+  font-size: 1.667em;
 }
 .bankCardBtn {
   padding-top: 30px;
+}
+.btnTextMobile {
+  display: none;
+}
+
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .bankCard {
+    width: 648px;
+    // margin-left: 15px;
+    height: 405px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .bankCard {
+    width: 400px;
+    margin-left: 0px;
+    height: 250px;
+    background-size: 55%;
+  }
+  .btnTextDesktop {
+    display: none;
+  }
+  .bankCardNumber {
+    justify-content: center;
+    padding: {
+      top: 7px;
+      bottom: 7px;
+      left: 15px;
+      right: 15px;
+    }
+    font-size: 1rem;
+  }
+  .bankCardNumber img {
+    width: 16.5%;
+    padding-right: 9px;
+  }
+  .bankCardBtn {
+    padding-top: 20px;
+  }
+  .bankCardBtn button {
+    width: 156px;
+    padding: {
+      top: 10px;
+      bottom: 10px;
+    }
+  }
+  .btnTextMobile {
+    display: block;
+    font-size: 14px;
+  }
+}
+
+
+// Mobile styles
+@media (max-width: 480px) {
+  .bankCard {
+    width: 290px;
+    margin-left: 0px;
+    height: 182px;
+    background-size: 50%;
+  }
+  .btnTextDesktop {
+    display: none;
+  }
+  .bankCardNumber {
+    justify-content: center;
+    padding: {
+      top: 7px;
+      bottom: 7px;
+      left: 15px;
+      right: 15px;
+    }
+    font-size: 0.722rem;
+  }
+  .bankCardNumber img {
+    width: 16.5%;
+    padding-right: 9px;
+  }
+  .bankCardBtn {
+    padding-top: 10px;
+  }
+  .bankCardBtn button {
+    width: 156px;
+    padding: {
+      top: 10px;
+      bottom: 10px;
+    }
+  }
+  .btnTextMobile {
+    display: block;
+    font-size: 13px;
+  }
 }

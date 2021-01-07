@@ -8,7 +8,7 @@
 }
 
 
-.needsBlock {
+.firstBlock {
   background: $pageBg;
   padding: {
     left: 11%;
@@ -17,20 +17,25 @@
   }
 }
 
-.needsWrapper {
+.firstWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: -50px;
   padding-bottom: 80px;
 }
-.needsDesc {
+.firstDesc {
   flex-basis: 48%;
-  margin-top: 20px;
 }
-.needsDesc p {
+.breadCrumbsWrapper {
+  padding-top: 40px;
+}
+.firstDesc h2 {
+  margin-top: 50px;
+}
+.firstDesc p {
   width: 85%;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 
@@ -57,14 +62,136 @@
   padding-bottom: 200px;
 }
 
+.bankCardWrapperSection {
+  position: relative;
+}
 .bankCardWrapper {
   background: $pageBg;
   padding-bottom: 290px;
-  background-image: url(/img/orange-wave-cut.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
 }
 .bankCardWrapper h2 {
   padding-bottom: 100px;
+}
+
+.waveDesktop {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.waveTablet {
+  display: none;
+}
+.waveMobile {
+  display: none;
+}
+
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .pagePaddings {
+    padding: {
+      left: 5.9%;
+      right: 5.9%;
+    }
+  }
+  .waveDesktop{
+    display: none;
+  }
+  .waveTablet {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .firstWrapper {
+    flex-direction: column;
+    padding-bottom: 200px;
+  }
+  .firstBlock {
+    padding-left: 5.9%;
+  }
+  .firstDesc {
+    flex-basis: 0;
+  }
+  .firstDesc h2 {
+    margin-top: 50px;
+  }
+  .firstDesc p {
+    width: 73%;
+    margin-bottom: 40px;
+  }
+  .photoWithPhraseBubbleWrapper {
+    margin: 0 auto;
+  }
+
+  .needsListWrapper {
+    padding-bottom: 190px;
+  }
+  .bankCardWrapper {
+    padding-bottom: 240px;
+  }
+}
+
+
+// Mobile styles
+@media (max-width: 480px) {
+  .pagePaddings {
+    padding: {
+      left: 4.4%;
+      right: 4.4%;
+    }
+  }
+  .waveTablet {
+    display: none;
+  }
+  .waveMobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .firstBlock {
+    padding-left: 4.4%;
+  }
+  .firstWrapper {
+    padding-bottom: 100px;
+  }
+  .firstDesc h2 {
+    margin-top: 25px;
+    width: 85%;
+  }
+  .firstDesc p {
+    width: 85%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .breadCrumbsWrapper {
+    padding-top: 0;
+  }
+
+  .needsListWrapper {
+    padding-bottom: 95px;
+  }
+  .needsListItem img {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
+  .visitingRulesWrapper {
+    padding-bottom: 95px;
+  }
+  .animalCarouselWrapper {
+    padding-bottom: 100px;
+  }
+  .bankCardWrapper {
+    padding-bottom: 160px;
+  }
+  .bankCardWrapper h2 {
+    padding-bottom: 80px;
+  }
 }

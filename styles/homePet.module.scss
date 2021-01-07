@@ -1,0 +1,116 @@
+@import 'variables.scss';
+
+.pagePaddings {
+  padding: {
+    left: 11%;
+    right: 11%;
+  }
+}
+
+.petInfoBlock {
+  background: $pageBg;
+}
+.titleBlock {
+  display: flex;
+  align-items: center;
+}
+
+.breadCrumbsWrapper {
+  padding-top: 95px;
+}
+
+
+.animalCarouselWrapper {
+  background: $pageBg;
+  padding-bottom: 200px;
+}
+
+.bankCardWrapperSection {
+  position: relative;
+}
+.bankCardWrapper {
+  background: $pageBg;
+  padding-bottom: 290px;
+}
+.bankCardWrapper h2 {
+  padding-bottom: 100px;
+}
+
+.waveDesktop {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.waveTablet {
+  display: none;
+}
+.waveMobile {
+  display: none;
+}
+
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .pagePaddings {
+    padding: {
+      left: 5.9%;
+      right: 5.9%;
+    }
+  }
+  .waveDesktop{
+    display: none;
+  }
+  .waveTablet {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+  .photoWithPhraseBubbleWrapper {
+    margin: 0 auto;
+  }
+
+  .bankCardWrapper {
+    padding-bottom: 240px;
+  }
+}
+
+
+// Mobile styles
+@media (max-width: 480px) {
+  .pagePaddings {
+    padding: {
+      left: 4.4%;
+      right: 4.4%;
+    }
+  }
+  .waveTablet {
+    display: none;
+  }
+  .waveMobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+  .breadCrumbsWrapper {
+    padding-top: 50px;
+  }
+
+  .animalCarouselWrapper {
+    padding-bottom: 100px;
+  }
+  .bankCardWrapper {
+    padding-bottom: 160px;
+  }
+  .bankCardWrapper h2 {
+    padding-bottom: 80px;
+  }
+}

@@ -6,15 +6,21 @@ import BankCard from '~/components/BankCard'
 import styles from '~/styles/guardianshipAndAdoptation.module.scss'
 
 export default function GuardianshipAndAdoptation({title='Опекунство и адаптация', animals}) {
-  const filteredAnimals = animals.filter((item) => {
-    return item.paw === "need-guardian.png"
+  const filteredAnimals = animals.filter((animal) => {
+    const arr = animal.paw.filter(p => {
+      return p === "need-guardian.png"
+    })
+    return arr.length
   })
+
   return <MainLayout>
     <section>
-      <div className={styles.guardianshipAdoptationBlock}>
-        <BreadCrumbs title={title}/>
-        <div className={styles.guardianshipAdoptationWrapper}>
-          <div className={styles.guardianshipAdoptationDesc}>
+      <div className={styles.firstBlock}>
+        <div className={styles.firstWrapper}>
+          <div className={styles.firstDesc}>
+            <div className={styles.breadCrumbsWrapper}>
+              <BreadCrumbs title={title}/>
+            </div>
             <h2>{title}</h2>
             <p>Питомцы Теремка сильно нуждаются в человеческом внимании и заботе. Многие живут здесь годами и могут совсем зачахнуть без ласки, 
               прогулок и общения с человеком хотя бы раз в неделю. Решайтесь, станьте опекуном одного из питомцев! Или помогите адаптироваться пугляшу.</p>
@@ -44,7 +50,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
               </div>
             </div>
 
-            <div className={styles.aboutGuardianshipGalleryRow}>
+            <div className={`${styles.aboutGuardianshipGalleryRow} ${styles.aboutGuardianshipGalleryRowReverse}`}>
               <div className={styles.aboutGuardianshipGalleryRowTextLeft}>
                 <h3>Что нужно делать?</h3>
                 <p>Вместе вы будете гулять, общаться, обниматься, учить новые команды, обмениваться позитивными эмоциями.</p>
@@ -64,10 +70,10 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
               </div>
             </div>
 
-            <div className={styles.aboutGuardianshipGalleryRow}>
+            <div className={`${styles.aboutGuardianshipGalleryRow} ${styles.aboutGuardianshipGalleryRowReverse}`}>
               <div className={styles.aboutGuardianshipGalleryRowTextLeft}>
                 <h3>Если я живу в другом городе или просто нет времени приехать?</h3>
-                <p>Не все опекуны могут навещать своих подопечных:<br/> в таких случаях мы присылаем им «приветы»<br/> от питомцев в виде фото и видео, чтобы опекуны 
+                <p>Не все опекуны могут навещать своих подопечных: в таких случаях мы присылаем им «приветы» от питомцев в виде фото и видео, чтобы опекуны 
                   могли убедиться, что у их животных всё хорошо. </p>
               </div>
               <img src="/img/guardianshipPage/if-live-far.png" alt="нет времени приехать"/>
@@ -81,10 +87,10 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
               </div>
             </div>
 
-            <div>
+            <div className={styles.whereWeAreBlock}>
               <p className={styles.afterGuardianshipGalleryDesc}>Мы находимся под Гатчиной, к нам без проблем можно добраться как на машине, так и на общественном транспорте. Если вы хотите в ближайшее время 
                 попробовать себя в роли опекуна, пишите, мы будем вам очень рады!</p>
-              <button>Выбрать подопечного</button>
+              <button className={styles.choosePetBtn}>Выбрать подопечного</button>
             </div>
           </div>
         </div>
@@ -100,7 +106,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
                 поможет ему радоваться и жить полноценной жизнью. </p>
               <p>А когда вы увидите чудесное превращение запуганной собаки в счастливую и жизнерадостную, вы ощутите всю значимость своей помощи и сами станете 
                 ещё счастливее.</p>
-              <button>Выбрать подопечного</button>
+              <button className={styles.choosePetBtn}>Выбрать подопечного</button>
             </div>
           </div>
         </div>
@@ -114,14 +120,23 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Им нужен опекун:"/>
+        <AnimalCarousel animals={filteredAnimals} title="Им нужен опекун:" paw="need-guardian.png"/>
       </div>
     </section>
-    <section>
+    <section className={styles.bankCardWrapperSection}>
       <div className={`${styles.bankCardWrapper} ${styles.pagePaddings}`}>
         <h2>Для пожертвований:</h2>
         <BankCard/>
       </div>
+      <svg className={styles.waveDesktop} viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M848.411 95.4772C629.058 70.6965 450.479 -28.8145 221.037 8.13269C105.85 26.6814 58.8155 59.5476 0.200227 95.551L0.184691 253.285L1444.17 253.16L1444.19 30.473C1320.11 -28.8791 1035.12 116.57 848.411 95.4772Z" fill="#FFC393"/>
+      </svg>
+      <svg className={styles.waveTablet} viewBox="0 0 768 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M552.395 157.261C357.504 133.91 194.806 47.9331 0.0122231 56.5781L-0.0400326 324.797L767.936 324.648L767.973 133.971C691.53 151.895 616.219 164.908 552.395 157.261Z" fill="#FFC393"/>
+      </svg>
+      <svg className={styles.waveMobile} viewBox="0 0 320 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M199.367 70.208C128.68 61.7028 65.1238 39.2865 -0.000403353 24.2984L-0.000388884 169.869L320 169.869L320 58.071C277.157 67.8307 235.212 74.5209 199.367 70.208Z" fill="#FFC393"/>
+      </svg>
     </section>
   </MainLayout>
 }

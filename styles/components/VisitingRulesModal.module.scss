@@ -1,0 +1,85 @@
+@import 'variables.scss';
+
+.modal {
+  position: absolute;
+  outline: none;
+}
+
+.visitingRulesModalWrapper {
+  background: $pageBg;
+  padding-bottom: 5%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.visitingRulesModalClose {
+  display: flex;
+  justify-content: flex-end;
+  padding: {
+    right: 20px;
+    top: 45px;
+    bottom: 6%;
+  };
+}
+
+.btnClose {
+  background: none;
+  padding: 0;
+  width: 35px;
+  border-radius: 0;
+}
+.btnClose:hover {
+  background: none;
+}
+.btnClose:active {
+  background: none;
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    width: 100%!important;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100vh;
+  }
+  .visitingRulesModalWrapper {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .visitingRulesModalClose {
+    display: flex;
+    justify-content: flex-end;
+    padding: {
+      right: 0;
+      top: 45px;
+      bottom: 27%;
+    };
+  }
+  
+  .btnClose {
+    background: none;
+    padding: 0;
+    width: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    height: 90vh;
+  }
+  .visitingRulesModalClose {
+    padding: {
+      top: 20px;
+      right: 20px;
+      bottom: 33%;
+    };
+  }
+  .visitingRulesModalWrapper {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+  .btnClose {
+    width: 15px;
+  }
+}

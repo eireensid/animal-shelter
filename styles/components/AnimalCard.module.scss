@@ -2,6 +2,7 @@
 
 .findCarouselCard {
   position: relative;
+  width: 350px;
 }
 .findCarouselCardDesc {
   background: #fff;
@@ -16,9 +17,6 @@
 }
 .findCarouselCardDesc h3 {
   display: inline-block;
-}
-.findCarouselCard {
-  width: 31%;
 }
 .findCarouselCardDescRow {
   display: flex;
@@ -35,6 +33,66 @@
   display: flex;
   justify-content: center;
 }
+.petImgBlock img {
+  border-radius: 30px;
+  width: 270px;
+  height: 270px;
+}
 .petSex {
   padding-right: 12px;
+  color: rgba(19,19,19,0.6);;
+}
+
+// Tablet styles
+@media (max-width: 1289px) {
+  .findCarouselCard {
+    width: 275px;
+  }
+  .petImgBlock img {
+    width: 80%;
+    height: 212px;
+  }
+  .findCarouselCardDesc {
+    padding-top: 140px;
+    padding-bottom: 35px;
+    height: 248px;
+  }
+  .findCarouselCardDescRow img {
+    height: 30px;
+  }
+  .findCarouselCardDescRow:first-child {
+    padding-bottom: 25px;
+  }
+  .petSex {
+    padding-right: 8.5px;
+  }
+}
+
+// Mobile styles
+@media (max-width: 480px) {
+  .findCarouselCard {
+    width: 250px;
+  }
+  .petImgBlock img {
+    width: 85%; 
+  }
+  .findCarouselCardDesc {
+    height: 208px;
+    padding-top: 120px;
+  }
+  .findCarouselCardDesc h3 {
+    font-size: 1rem;
+  }
+  .findCarouselCardDescRow:first-child {
+    padding-bottom: 20px;
+  }
+  .findCarouselCardDescRow img {
+    height: 20px;
+  }
+  .findCarouselCardDescRow span {
+    font-size: 0.722rem;
+  }
+  .petSex {
+    padding-right: 5px;
+  }
 }

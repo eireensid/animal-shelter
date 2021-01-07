@@ -6,7 +6,7 @@
 .visitingRulesBlock h3 {
   padding-bottom: 40px;
 }
-.visitingRulesBlock p {
+.visitingRule {
   padding-bottom: 45px;
   width: 47%;
 }
@@ -14,7 +14,36 @@
   padding-bottom: 100px;
 }
 
-// .visitingRulesCarouselWrapper {
-//   display: flex;
-// }
+
+// Tablet styles
+@media (max-width: 1200px) {
+  .visitingRulesBlock h3 {
+    padding-bottom: 30px;
+  } 
+  .visitingRule {
+    padding-bottom: 40px;
+    width: 65%;
+  }
+  .callWriteBtnsWrapper {
+    padding-bottom: 90px;
+  }
+}
+
+// Mobile styles
+@media (max-width: 480px) {
+  .visitingRulesBlock h2 {
+    padding-bottom: 80px;
+  } 
+  .visitingRulesBlock h3 {
+    padding-bottom: 20px;
+  } 
+  .visitingRule {
+    padding-bottom: 25px;
+    width: 95%;
+  }
+  .callWriteBtnsWrapper {
+    padding-bottom: 80px;
+  }
+}
+
 

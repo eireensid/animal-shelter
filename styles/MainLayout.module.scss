@@ -10,13 +10,10 @@
     left: 20px;
     right: 40px;
     bottom: 15px;
-    top: 15px;
+    top: 25px;
   }
 }
-.logoWrapperHeader {
-  flex-basis: 17%;
-}
-.logoHeader {
+.logoWrapperHeader svg {
   cursor: pointer;
 }
 .menuWrapperBurger {
@@ -43,7 +40,7 @@
 }
 .menuDropdown {
   position: absolute;
-  z-index: 100;
+  z-index: 200;
   display: none;
 }
 .menuAboutDropdown {
@@ -76,6 +73,21 @@
   display: block;
 }
 
+.mobileMenuWrapper {
+  display: none;
+}
+.openBtn {
+  background: none!important;
+  padding: 0;
+  width: 59px;
+  border-radius: 0;
+}
+.openBtn:hover {
+  background: none
+}
+.openBtn:active {
+  background: none;
+}
 
 // Footer
 .footerBlock {
@@ -96,8 +108,8 @@
   align-items: flex-start;
   padding-bottom: 200px;
 }
-.logoFooter {
-  width: 9.1%;
+.footerBlock svg {
+  margin-left: 10px;
   cursor: pointer;
 }
 .footerBlock a {
@@ -105,23 +117,24 @@
   font-weight: $mediumWeight;
 }
 .footerBlock h4 {
-  padding-bottom: 20px;
-  padding-top: 40px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 .footerBlock ul {
   line-height: 2.2;
 }
 .contacts h4 {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .phone {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .address {
   font-weight: $mediumWeight;
 }
 .prHelp {
-  padding-bottom: 25px!important;
+  margin-bottom: 25px!important;
+  margin-top: 35px!important;
 }
 .socialsBlockFooter {
   padding-bottom: 5px;
@@ -131,6 +144,15 @@
 // Tablet styles
 @media (max-width: 1024px) {
   // Header
+  .headerBlock {
+    padding-left: 35px;
+    padding-right: 45px;
+    padding-top: 40px;
+  }
+  .logoWrapperHeader svg {
+    width: 116px;
+    height: 100px;
+  }
   .btnWrapper {
     display: none;
   }
@@ -140,18 +162,18 @@
   .menuWrapperBurger {
     display: block;
   }
-  .logoHeader {
-    width: 156px;
-    height: 140px;
-  }
   .burger {
     width: 59px;
     height: 39px;
   }
 
   // Footer
-  .logoFooter {
-    width: 26%;
+  .footerBlock {
+    padding-bottom: 150px;
+  }
+  .footerBlock svg {
+    width: 116px;
+    height: 100px;
   }
   .navBlock {
     flex-wrap: wrap;
@@ -175,19 +197,27 @@
     margin-bottom: -5px;
   }
   .contacts h4 {
-    padding-top: 20px;
+    margin-top: 20px;
   }
 }
 
 // Mobile styles
-@media (max-width: 414px) {
+@media (max-width: 767px) {
   // Header
-  .logoHeader {
-    width: 54px;
-    height: 49px;
+  .headerBlock {
+    padding-left: 10px;
+    padding-right: 14px;
+    padding-top: 20px;
+  }
+  .logoWrapperHeader svg {
+    width: 34px;
+    height: 29px;
   }
   .navBlock {
     padding-bottom: 100px;
+  }
+  .openBtn {
+    width: 19px;
   }
   .burger {
     width: 19px;
@@ -195,9 +225,15 @@
   }
 
   // Footer
-  .logoFooter {
-    width: 33%;
+  .footerBlock {
+    padding-bottom: 100px;
+  }
+  .footerBlock svg {
+    margin-left: 0px;
+    width: 62px;
+    height: 54px;
     margin: 0 auto;
+    margin-bottom: 10px;
   }
   .contactsPrBlock {
     flex-wrap: wrap;
@@ -206,9 +242,9 @@
     flex-basis: 100%;
   }
   .aboutShelter h4 {
-    padding-top: 55px;
+    margin-top: 55px;
   }
   .contacts h4 {
-    padding-top: 40px;
+    margin-top: 40px;
   }
 }
