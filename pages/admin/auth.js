@@ -17,7 +17,7 @@ export default function Auth() {
   const doLogin = async () => {
     try {
       console.log('doLogin login', login, 'password', password)
-      const res = await axios.post('/api/user/auth', {login, password})
+      const res = await axios.post('/api/user/auth', {name: login, password})
       setErrorText('')
       localStorage.setItem('token', res.data.token)
       Router.push('/admin')
