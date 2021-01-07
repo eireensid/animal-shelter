@@ -94,7 +94,7 @@ export default function AnimalsList({animals}) {
   ]
 
   // Pagination
-  const PER_PAGE = 3
+  const PER_PAGE = 12
   const count = Math.ceil(sortedAnimals.length / PER_PAGE)
   const _DATA = usePagination(sortedAnimals, PER_PAGE)
   

@@ -11,8 +11,16 @@ export default function BreadCrumbs({title, petType, petPaw, petName, take}) {
   const changeTitleUrl = () => {
     if (title === "Питомцы / " || title === "Питомцы") {
       setTitleUrl({ pathname: '/pets', query: {}})
-    } else if (title === "Привет из дома / ") {
+    } else if (title === "Привет из дома / " || title === "Привет из дома") {
       setTitleUrl({ pathname: '/hellos-from-homes', query: {}})
+    } else if (title === "Нужды приюта") {
+      setTitleUrl({ pathname: '/basic-needs-of-teremok', query: {}})
+    } else if (title === "Опекунство и адаптация") {
+      setTitleUrl({ pathname: '/guardianship-and-adaptation', query: {}})
+    } else if (title === "Прогулки с собаками") {
+      setTitleUrl({ pathname: '/walks-with-dogs', query: {}})
+    } else if (title === "Отчеты") {
+      setTitleUrl({ pathname: '/shelter-reports', query: {}})
     }
   }
 
