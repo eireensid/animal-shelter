@@ -1,9 +1,10 @@
 import bcrypt from 'bcrypt'
-
-const Datastore = require('nedb')
-const usersDb: Nedb = new Datastore({ filename: './public/databases/users.db', autoload: true})
+import admin from './db'
+import { v4 as uuidv4 } from 'uuid'
+const db = admin.firestore()
 
 export type User = {
+  id: string,
   login: string,
   password: string,
   role: string,
@@ -11,42 +12,54 @@ export type User = {
 }
 
 export function findUser (obj: any): Promise<User> {
-  return new Promise((resolve, reject) => {
-    usersDb.findOne(obj, (err, doc) => {
-      if (err) return reject(err)
-      resolve(doc)
-    })
+  return new Promise(async (resolve, reject) => {
+    try {
+      const usersRef = db.collection('users')
+      let usersNext:any = usersRef
+      for (const key in obj) {
+        console.log('findUser add where', key, '==', obj[key])
+        usersNext = usersNext.where(key, '==', obj[key])
+      }
+      const findUsers = await usersNext.get()
+      const user: User = findUsers.docs.length ? findUsers.docs[0].data() : null
+      resolve(user)
+    } catch (err) {
+      reject(err)
+    }
   })
 }
 
 export function createUser (login: string, password: string, role: string): Promise<User> {
   return new Promise(async (resolve, reject) => {
     const hashPassword = await bcrypt.hash(password, 12)
-    const user: User = {login, password: hashPassword, role, token: null}
-    usersDb.insert(user, (err, doc) => {
-      if (err) return reject(err)
-      resolve(doc)
-    })
-  })
-}
-
-export function getSuperUser (): Promise<User> {
-  return new Promise(async (resolve, reject) => {
-    const login = process.env.SUPER_USER_LOGIN
-    const password = process.env.SUPER_USER_PASSWORD
-    let user: User = await findUser({login})
-    if (!user) {
-      user = await createUser(login, password, 'admin')
+    const user: User = {id: uuidv4(), login, password: hashPassword, role, token: null}
+    const usersRef = db.collection('users')
+    try {
+      const dbUser: any = await usersRef.add(user)
+      resolve(dbUser.data())
+    } catch (err) {
+      reject(err)
     }
-    resolve(user)
   })
 }
 
-export function saveUser (user): Promise<void> {
+export function saveUser (user: User): Promise<void> {
   return new Promise(async (resolve, reject) => {
-    usersDb.update({ _id: user._id }, user, { multi: true }, (err, doc) => {
-      if (err) return reject(err)
+    console.log('saveUser user', user)
+    const usersRef = db.collection('users')
+    const snapshot = await usersRef.where('id', '==', user.id).get()
+    if (!snapshot.docs.length) {
+      return reject(new Error('doc not exists'))
+    }
+    const docId = snapshot.docs[0].id
+    console.log('saveUser user', user)
+    try {
+      await usersRef.doc(docId).update(user)
+      console.log('saveUser success save')
       resolve()
-    })
+    } catch (err) {
+      console.log('saveUser fail err', err)
+      reject(err)
+    }
   })
 }

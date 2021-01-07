@@ -29,6 +29,11 @@
   margin-top: 15px !important;
 }
 
+.label {
+  margin-top: 15px !important;
+  margin-bottom: 5px !important;
+}
+
 .button {
   margin-top: 15px !important;
   width: 35%;
@@ -42,5 +47,35 @@
 }
 
 .mr10 {
+  margin-right: 10px;
+}
+
+.formImg {
+  width: 50px;
+  height: 50px;
+}
+
+.formImgRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.listImgRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.listImg {
+  width: 100px;
+  height: 100px;
+}
+
+.listName {
+  margin-left: 10px;
   margin-right: 10px;
 }
