@@ -10,18 +10,16 @@
 
 
 // Tablet styles
-@media (max-width: 1200px) {
+@media (max-width: 1289px) {
   .ourPetsGallery {
-    grid-template-columns: 1fr 1fr;
-    // padding: {
-    //   left: 4.5%;
-    //   right: 4.5%;
-    // }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 580px;
     margin: 165px auto 0 auto;
   }
   .ourPetsGallery > * {
-    margin-bottom: 105px;
+    margin-bottom: 130px;
   }
 }
 
@@ -32,5 +30,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 251px;
+  }
+  .ourPetsGallery > * {
+    margin-bottom: 145px;
   }
 }
