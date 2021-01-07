@@ -17,12 +17,15 @@ import axios from 'axios'
 import DeleteIcon from '@material-ui/icons/Delete'
 import Switch from '@material-ui/core/Switch'
 import moment from 'moment'
+import useAdmin from '~/hooks/useAdmin'
 
 export default function AddPet() {
+  useAdmin(true)
   const [foundHome, setFoundHome] = useState(false)
   const [name, setName] = useState('')
-  const [character, setСharacter] = useState('')
-  const [sex, setSex] = useState('male')
+  const [type, setType] = useState('cat')
+  const [personality, setPersonality] = useState('')
+  const [sex, setSex] = useState('М')
   const [date, setDate] = useState(moment().format('YYYY-MM-DD'))
   const [year, setYear] = useState(0)
   const [mounth, setMounth] = useState(0)
@@ -52,7 +55,8 @@ export default function AddPet() {
         console.log('edit pet', pet)
         setFoundHome(pet.foundHome)
         setName(pet.name)
-        setСharacter(pet.character)
+        setType(pet.type)
+        setPersonality(pet.personality)
         setSex(pet.sex)
         setDate(pet.date)
         setYear(pet.year)
@@ -95,7 +99,8 @@ export default function AddPet() {
       formData.append('id', id)
       formData.append('foundHome', foundHome)
       formData.append('name', name)
-      formData.append('character', character)
+      formData.append('type', type)
+      formData.append('personality', personality)
       formData.append('sex', sex)
       formData.append('date', date)
       formData.append('year', year)
@@ -110,6 +115,8 @@ export default function AddPet() {
       if (isPhoto) {
         formData.append('photoFile', fileRef.current.files[0])
       }
+      const isGallery = filesRef.current.files.length !== 0
+      formData.append('isGallery', isGallery)
       for (let i = 0; i < filesRef.current.files.length; i++) {
         formData.append('galleryFiles', filesRef.current.files[i])
       }
@@ -148,11 +155,15 @@ export default function AddPet() {
           <TextField className={styles.inputField} label="Кличка" variant="outlined"
             value={name} onChange={e => setName(e.target.value)} />
           {!foundHome && <Box component="div" m={1}>
-            <InputLabel id="label1">Пол</InputLabel>
+            <Select labelId="label1" className={styles.mr10}
+              value={type} onChange={e => setType(e.target.value)}>
+              <MenuItem value="cat">Кошка</MenuItem>
+              <MenuItem value="dog">Собака</MenuItem>
+            </Select>
             <Select labelId="label1" className={styles.mr10}
               value={sex} onChange={e => setSex(e.target.value)}>
-              <MenuItem value="male">М</MenuItem>
-              <MenuItem value="female">Ж</MenuItem>
+              <MenuItem value="М">М</MenuItem>
+              <MenuItem value="Ж">Ж</MenuItem>
             </Select>
             <FormControlLabel className={styles.mr10}
               control={<Checkbox checked={grafting} onChange={e => setGrafting(e.target.checked)} />}
@@ -169,7 +180,7 @@ export default function AddPet() {
           />
           </Box>}
           {!foundHome && <TextField className={styles.inputField} label="Характер" variant="outlined"
-            value={character} onChange={e => setСharacter(e.target.value)} />}
+            value={personality} onChange={e => setPersonality(e.target.value)} />}
           <TextField className={styles.inputField} label="Описание" variant="outlined" multiline={true}
             value={description} onChange={e => setDescription(e.target.value)} />
           {!foundHome && <Box component="div" m={2}>
@@ -177,9 +188,10 @@ export default function AddPet() {
             <Select labelId="label2" className={styles.mr10} multiple={true}
               value={statuses} onChange={e => setStatuses(e.target.value)}>
               <MenuItem value="looking-for-home">Ищут дом</MenuItem>
-              <MenuItem value="adaptation-needed">Нужна адаптация</MenuItem>
+              <MenuItem value="need-adoptation">Нужна адаптация</MenuItem>
               <MenuItem value="need-guardian">Нужен опекун</MenuItem>
-              <MenuItem value="undergoing-treatment">Проходят лечение</MenuItem>
+              <MenuItem value="undergo-treatment">Проходят лечение</MenuItem>
+              <MenuItem value="baby-pets">Малыши</MenuItem>
             </Select>
           </Box>}
           {id !== '' && files.map((f, i) => 

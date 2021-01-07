@@ -4,8 +4,11 @@ import {useState, useEffect} from 'react'
 import {useRouter} from 'next/router'
 import useCarousel from '~/hooks/useCarousel'
 import styles from '~/styles/components/HomePetInfo.module.scss'
+import EditIcon from '@material-ui/icons/Edit'
+import useAdmin from '~/hooks/useAdmin'
 
 export default function HomePetInfo({homePets}) {
+  const { isAdmin } = useAdmin()
   const router = useRouter()
 
   const [pet, setPet] = useState({})
@@ -28,6 +31,7 @@ export default function HomePetInfo({homePets}) {
       <div className={styles.titleBlock}>
         <h2>{pet.name}</h2>
         <PawLabel animals={homePets} paw="heart.png"  disable={true}/>
+        {isAdmin && <EditIcon style={{marginLeft: "10px", cursor: "pointer"}} onClick={() => Router.push('/admin/form?id=' + pet.id)} />}
       </div>
       <div>
         {pet.about && pet.about.map((item, index) => (

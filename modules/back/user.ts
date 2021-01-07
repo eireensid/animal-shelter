@@ -5,7 +5,7 @@ const db = admin.firestore()
 
 export type User = {
   id: string,
-  login: string,
+  name: string,
   password: string,
   role: string,
   token: string
@@ -32,7 +32,7 @@ export function findUser (obj: any): Promise<User> {
 export function createUser (login: string, password: string, role: string): Promise<User> {
   return new Promise(async (resolve, reject) => {
     const hashPassword = await bcrypt.hash(password, 12)
-    const user: User = {id: uuidv4(), login, password: hashPassword, role, token: null}
+    const user: User = {id: uuidv4(), name: login, password: hashPassword, role, token: null}
     const usersRef = db.collection('users')
     try {
       const dbUser: any = await usersRef.add(user)
@@ -47,7 +47,7 @@ export function saveUser (user: User): Promise<void> {
   return new Promise(async (resolve, reject) => {
     console.log('saveUser user', user)
     const usersRef = db.collection('users')
-    const snapshot = await usersRef.where('id', '==', user.id).get()
+    const snapshot = await usersRef.where('name', '==', user.name).get()
     if (!snapshot.docs.length) {
       return reject(new Error('doc not exists'))
     }

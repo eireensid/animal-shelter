@@ -33,6 +33,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       console.log('form post files', files)
       for (let field of [
         'name',
+        'type',
         'description'
       ]) {
         if (!data[field]) {
@@ -44,7 +45,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       if (!data.foundHome) {
         for (let field of [
-          'character',
+          'personality',
           'date',
           'sex',
           'statuses'  
@@ -58,6 +59,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       data.grafting = data.grafting === 'true'
       data.sterilization = data.sterilization === 'true'
       data.isPhoto = data.isPhoto === 'true'
+      data.isGallery = data.isGallery === 'true'
       data.statuses = data.statuses.split(',')
       data.files = data.files ? data.files.split(',') : []
       data.year = Number(data.year)
@@ -112,7 +114,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           }
           pet.foundHome = data.foundHome
           pet.name = data.name
-          pet.character = data.character
+          pet.type = data.type
+          pet.personality = data.personality
           pet.date = data.date
           pet.sex = data.sex
           pet.year = data.year
@@ -124,6 +127,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           await editPet(pet)
         }
       } else {
+        if (!data.isPhoto) {
+          return res.status(400).json({ message: 'Необходимо выбрать фотографию' })
+        }
+        if (!data.isGallery) {
+          return res.status(400).json({ message: 'Необходимо выбрать галерею' })
+        }
         data.photo = null
         data.gallery = []
         data.files = []
@@ -148,9 +157,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             data.gallery.push(photoUrl)
           }
           console.log('end save file', name, 'photoUrl', photoUrl)
-        }
-        if (!data.photo) {
-          return res.status(400).json({ message: 'Необходимо выбрать фотографию' })
         }
         await createPet(data)
       }

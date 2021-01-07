@@ -6,6 +6,7 @@ import styles from '~/styles/admin.module.scss'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 import EditIcon from '@material-ui/icons/Edit'
+import AnimalsList from '~/components/AnimalsList'
 
 export default function List() {
   const [pets, setPets] = useState([])
@@ -20,7 +21,7 @@ export default function List() {
   }, [])
 
   function formPet (id) {
-    Router.push('/admin/pet/form?id=' + id)
+    Router.push('/admin/form?id=' + id)
   }
 
   return <>

@@ -4,8 +4,11 @@ import SocialBtns from '~/components/SocialBtns'
 import {useState, useEffect} from 'react'
 import useCarousel from '~/hooks/useCarousel'
 import styles from '~/styles/components/ShelterPetInfo.module.scss'
+import EditIcon from '@material-ui/icons/Edit'
+import useAdmin from '~/hooks/useAdmin'
 
 export default function ShelterPetInfo({animals, pet, paw}) {
+  const { isAdmin } = useAdmin()
 
   const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(pet.gallery && pet.gallery, 1)
 
@@ -28,6 +31,7 @@ export default function ShelterPetInfo({animals, pet, paw}) {
       <div className={styles.titleBlock}>
         <h2>{pet.name}</h2>
         <PawLabel animals={animals} paw={paw} disable={true}/>
+        {isAdmin && <EditIcon style={{marginLeft: "10px", cursor: "pointer"}} onClick={() => Router.push('/admin/form?id=' + pet.id)} />}
       </div>
       <div>
         {pet.about && pet.about.map((item, index) => (
