@@ -58,7 +58,7 @@ export default function AnimalsList({animals}) {
     let newArr = animals.filter((item, index) => {
       const isPaw = !filter || item.paw.some(p => filter === p)
       const isType = !animal || ((item.type === animal) || animal === 'all') 
-      // const isAge = !age || (item.age === "1 год" || item.age === "2 года" || item.age === "3 года" && age === "1-3 года")
+      // const isAge 
       return isPaw && isType// && isAge
     })
     setSortedAnimals(newArr)
@@ -66,6 +66,7 @@ export default function AnimalsList({animals}) {
 
   useEffect(() => {
     console.log('animal watch', animal)
+    _DATA.jump(1)
     setFilter1()
   }, [filter, animal])
 

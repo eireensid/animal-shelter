@@ -11,6 +11,10 @@ export default function MyApp({Component, pageProps}) {
   useEffect(async () => {
     const res = await axios.get('/api/pet/all')
     const pets = res.data.map(transformPets)
+    // for (let i = pets.length - 1; i > 0; i--) {
+    //   const j = Math.floor(Math.random() * (i + 1))
+    //   [pets[i], pets[j]] = [pets[j], pets[i]]
+    // }
     console.log('pets', pets)
     setHomePets(pets.filter(p => p.foundHome))
     setShelterPets(pets.filter(p => !p.foundHome))

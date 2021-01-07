@@ -15,7 +15,7 @@ function ageEnding (val, measure) {
   return res
 }
 
-export function transformPets ({id, name, type, sex, statuses, date, personality, description, photo, gallery, year, mounth}) {
+export function transformPets ({id, name, type, sex, statuses, date, personality, description, photo, gallery, year, mounth, foundHome}) {
   let age = ''
   const nowDate = moment()
   const birthDate = moment(date)
@@ -45,6 +45,7 @@ export function transformPets ({id, name, type, sex, statuses, date, personality
     photo: photo,
     gallery: gallery,
     personality: personality,
-    about: description.split('\n')
+    about: description.split('\n'),
+    foundHome
   }
 }
