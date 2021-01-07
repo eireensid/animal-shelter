@@ -104,6 +104,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             const photoUrl = `https://firebasestorage.googleapis.com/v0/b/animal-shelter-c3f16.appspot.com/o/${fileName}?alt=media`
             if (data.isPhoto) {
               pet.photo = photoUrl
+              pet.gallery.unshift(photoUrl)
               pet.files.unshift(fileName)
               console.log('isPhoto end save file', name, 'photoUrl', photoUrl)
             } else {
@@ -130,9 +131,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         if (!data.isPhoto) {
           return res.status(400).json({ message: 'Необходимо выбрать фотографию' })
         }
-        if (!data.isGallery) {
-          return res.status(400).json({ message: 'Необходимо выбрать галерею' })
-        }
+        // if (!data.isGallery) {
+        //   return res.status(400).json({ message: 'Необходимо выбрать галерею' })
+        // }
         data.photo = null
         data.gallery = []
         data.files = []
@@ -153,6 +154,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           const photoUrl = `https://firebasestorage.googleapis.com/v0/b/animal-shelter-c3f16.appspot.com/o/${fileName}?alt=media`
           if (!data.photo) {
             data.photo = photoUrl
+            data.gallery.unshift(photoUrl)
           } else {
             data.gallery.push(photoUrl)
           }
