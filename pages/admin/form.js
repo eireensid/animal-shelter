@@ -194,15 +194,21 @@ export default function AddPet() {
               <MenuItem value="baby-pets">Малыши</MenuItem>
             </Select>
           </Box>}
-          {id !== '' && files.map((f, i) => 
-            <div className={styles.formImgRow}>
-              <img className={styles.formImg} src={`https://firebasestorage.googleapis.com/v0/b/animal-shelter-c3f16.appspot.com/o/${f}?alt=media`} />
-              {f} 
-              <span onClick={() => setFiles(files.filter((e, ind) => ind !== i))}>
-                <DeleteIcon />
-              </span>
-            </div>
-          )}
+          {id !== '' &&
+            <Box>
+              {
+                files.map((f, i) => 
+                  <div className={styles.formImgRow}>
+                    <img className={styles.formImg} src={`https://firebasestorage.googleapis.com/v0/b/animal-shelter-c3f16.appspot.com/o/${f}?alt=media`} />
+                    {f} 
+                    <span onClick={() => setFiles(files.filter((e, ind) => ind !== i))}>
+                      <DeleteIcon />
+                    </span>
+                  </div>
+                )
+              }
+            </Box>
+          }
           <InputLabel className={styles.label}>Фото</InputLabel>
           <InputBase inputRef={fileRef} type="file" />
           <InputLabel className={styles.label}>Галерея</InputLabel>
