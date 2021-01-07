@@ -94,17 +94,9 @@ export default function AnimalsList({animals}) {
   ]
 
   // Pagination
-  let [page, setPage] = useState(1);
-  const PER_PAGE = 3;
-
-  const count = Math.ceil(animals.length / PER_PAGE);
-  const _DATA = usePagination(animals, PER_PAGE);
-
-  const handleChange = (e, p) => {
-    setPage(p);
-    _DATA.jump(p);
-  }
-
+  const PER_PAGE = 3
+  const count = Math.ceil(sortedAnimals.length / PER_PAGE)
+  const _DATA = usePagination(sortedAnimals, PER_PAGE)
   
   return <>
     <div id="gallery" className={styles.animalsListBlock}>
@@ -144,12 +136,12 @@ export default function AnimalsList({animals}) {
 
       <div className={styles.ourPetsGallery}>
         
-        {sortedAnimals.map((animal, index) => (
+        {_DATA.currentData().map((animal, index) => (
           <AnimalCard parent="shelter" filter={filter} animal={animal} key={index}/>
         ))}
       </div>
       <div className={styles.paginationBlock}>
-        <Pagination count={count} page={page} onChange={handleChange} />
+        <Pagination count={count} _DATA={_DATA} />
       </div>
     </div>
   </>

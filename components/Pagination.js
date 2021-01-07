@@ -3,7 +3,7 @@ import React from 'react';
 import { usePagination } from '@material-ui/lab/Pagination';
 
 
-export default function UsePagination({count, page}) {
+export default function UsePagination({count, _DATA}) {
   const { items } = usePagination({
     count: count,
   })
@@ -14,21 +14,26 @@ export default function UsePagination({count, page}) {
         {items.map(({ page, type, selected, ...item }, index) => {
           let children = null;
 
+          let fun = () => {}
+
           if (type === 'start-ellipsis' || type === 'end-ellipsis') {
             children = '…';
           } else if (type === 'page') {
+            fun = () => _DATA.jump(page)
             children = (
               <button className={styles.paginationBtn} type="button" style={{ fontWeight: selected ? 'bold' : undefined }} {...item}>
                 {page}
               </button>
             );
           } else if (type === 'next') {
+            fun = () => _DATA.next()
             children = (
               <button className={styles.paginationBtn} type="button" {...item}>
                 <img src="/img/pagination-arrow-right.svg" alt=""/>
               </button>
             );
           } else if (type === 'previous') {
+            fun = () => _DATA.prev()
             children = (
               <button className={styles.paginationBtn} type="button" {...item}>
                 <img src="/img/pagination-arrow-left.svg" alt=""/>
@@ -36,7 +41,7 @@ export default function UsePagination({count, page}) {
             );
           }
 
-          return <li key={index}>{children}</li>;
+          return <li onClick={fun} key={index}>{children}</li>;
         })}
       </ul>
     </nav>
