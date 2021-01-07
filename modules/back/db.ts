@@ -18,9 +18,8 @@ try {
     credential: admin.credential.cert(serviceAccount),
     storageBucket: process.env.firebase_bucket_url
   })
-} catch (err) {
-  console.error('firebase initializeApp n times serviceAccount', serviceAccount)
-  console.error('firebase initializeApp n times err', err)
+} catch (_) {
+  console.error('firebase initializeApp n times')
 }
 
 export default admin
