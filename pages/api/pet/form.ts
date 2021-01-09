@@ -62,6 +62,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       data.isGallery = data.isGallery === 'true'
       data.statuses = data.statuses.split(',')
       data.files = data.files ? data.files.split(',') : []
+      console.log('data.files', data.files)
       data.year = Number(data.year)
       data.mounth = Number(data.mounth)
 
@@ -88,9 +89,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             return data.files.some(f => s.includes(f))
           })
           pet.files = data.files
-          for (let name in files) {
+          let isFirst = true
+          for (let obj of files) {
+            const name = obj.name
             console.log('start save file', name)
-            const buffer = files[name]
+            const buffer = obj.buffer
             const token = uuidv4()
             const fileName = token + '.' + name.split('.')[1]
             const file = bucket.file(fileName)
@@ -102,7 +105,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
               }
             }).end(buffer)
             const photoUrl = `https://firebasestorage.googleapis.com/v0/b/animal-shelter-c3f16.appspot.com/o/${fileName}?alt=media`
-            if (data.isPhoto) {
+            if (data.isPhoto && isFirst) {
+              isFirst = false
               pet.photo = photoUrl
               pet.gallery.unshift(photoUrl)
               pet.files.unshift(fileName)

@@ -9,7 +9,7 @@ export default function (req): Promise<IForm> {
   return new Promise((resolve, reject) => {
     console.log('form parse start')
     const form = formidable({ multiples: true })
-    const files = {}
+    const files = []
     form.onPart = function(part) {
       if (!part.filename) {
         form.handlePart(part)
@@ -21,7 +21,10 @@ export default function (req): Promise<IForm> {
       })
       part.on('end', function() {
         console.log('end read file', part.filename)
-        files[part.filename] = Buffer.concat(chunks)
+        files.push({
+          name: part.filename,
+          buffer: Buffer.concat(chunks)
+        })
       })
       part.on('error', function(err) {
         console.log('read file err', err)
