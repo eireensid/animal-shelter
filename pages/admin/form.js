@@ -23,7 +23,7 @@ export default function AddPet() {
   useAdmin(true)
   const [foundHome, setFoundHome] = useState(false)
   const [name, setName] = useState('')
-  const [type, setType] = useState('cat')
+  const [type, setType] = useState('dog')
   const [personality, setPersonality] = useState('')
   const [sex, setSex] = useState('М')
   const [date, setDate] = useState(moment().format('YYYY-MM-DD'))
@@ -209,8 +209,12 @@ export default function AddPet() {
               }
             </Box>
           }
-          <InputLabel className={styles.label}>Фото</InputLabel>
-          <InputBase inputRef={fileRef} type="file" />
+          {id !== '' && 
+            <>
+              <InputLabel className={styles.label}>Фото</InputLabel>
+              <InputBase inputRef={fileRef} type="file" />
+            </>
+          }
           <InputLabel className={styles.label}>Галерея</InputLabel>
           <InputBase inputRef={filesRef} type="file" inputProps={{multiple: true}}/>
           {errorText && <div className={styles.errorText}>{errorText}</div>}

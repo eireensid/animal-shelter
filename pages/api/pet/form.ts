@@ -128,12 +128,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           await editPet(pet)
         }
       } else {
-        if (!data.isPhoto) {
-          return res.status(400).json({ message: 'Необходимо выбрать фотографию' })
-        }
-        // if (!data.isGallery) {
-        //   return res.status(400).json({ message: 'Необходимо выбрать галерею' })
+        // if (!data.isPhoto) {
+        //   return res.status(400).json({ message: 'Необходимо выбрать фотографию' })
         // }
+        if (!data.isGallery) {
+          return res.status(400).json({ message: 'Необходимо выбрать галерею' })
+        }
         data.photo = null
         data.gallery = []
         data.files = []
