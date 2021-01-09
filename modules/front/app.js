@@ -16,6 +16,7 @@ function ageEnding (val, measure) {
 }
 
 export function transformPets ({id, name, type, sex, statuses, date, personality, description, photo, gallery, year, mounth, foundHome}) {
+  let _month = 0
   let age = ''
   const nowDate = moment()
   const birthDate = moment(date)
@@ -23,6 +24,7 @@ export function transformPets ({id, name, type, sex, statuses, date, personality
     const yearDiff = nowDate.diff(birthDate, 'year')
     let newYear = year + yearDiff
     age += `${newYear} ${ageEnding(newYear, 'year')}`
+    _month += newYear * 12
   }
   if (mounth) {
     const monthsDiff = nowDate.diff(birthDate, 'months')
@@ -30,6 +32,7 @@ export function transformPets ({id, name, type, sex, statuses, date, personality
     if (newMounth <= 11) {
       if (age) age += ' '
       age += `${newMounth} ${ageEnding(newMounth, 'months')}`
+      _month += newMounth
     }
   }
   if (!age) age = '-'
@@ -41,6 +44,7 @@ export function transformPets ({id, name, type, sex, statuses, date, personality
       return status + '.png' 
     }),
     age: age,
+    month: _month,
     sex: sex,
     photo: photo,
     gallery: gallery,

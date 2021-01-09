@@ -12,7 +12,7 @@ export default function AnimalsList({animals}) {
 
   const [filter, setFilter] = useState(null)
   const [animal, setAnimal] = useState("all")
-  const [age, setAge] = useState("Все возраста")
+  const [age, setAge] = useState("all")
 
   const changeByUrlParam = () => {
     console.log('changeByUrlParam')
@@ -51,24 +51,43 @@ export default function AnimalsList({animals}) {
     setSortedAnimals(animals)
   }, [animals])
 
+  const ageOptions = [
+    {title: "до 6 мес.", value: '1', filter: {to: 6}},
+    {title: "6 мес. - 1 год", value: '2', filter: {from: 6, to: 12}},
+    {title: "1-3 года", value: '3', filter: {from: 12, to: 36}},
+    {title: "3-7 лет", value: '4', filter: {from: 36, to: 84}},
+    {title: "от 7 лет", value: '5', filter: {from: 84}},
+    {title: "Все возраста", value: 'all', filter: {}}
+  ]
+
   const setFilter1 = () => {
     if (filter) {
       localStorage.setItem('currentPaw', filter)
     }
+    let _age = ageOptions.find(a => a.value === age)
+    _age = _age ? _age.filter : null
+    console.log('_age', _age)
     let newArr = animals.filter((item, index) => {
       const isPaw = !filter || item.paw.some(p => filter === p)
-      const isType = !animal || ((item.type === animal) || animal === 'all') 
-      // const isAge 
-      return isPaw && isType// && isAge
+      const isType = !animal || ((item.type === animal) || animal === 'all')
+      const isAge = !_age || (item.month && ((!_age.from && !_age.to) || ((!_age.from || item.month > _age.from) && (!_age.to || item.month <= _age.to))))
+      return isPaw && isType && isAge
     })
     setSortedAnimals(newArr)
   }
 
+  // Pagination
+  const PER_PAGE = 12
+  const count = Math.ceil(sortedAnimals.length / PER_PAGE)
+  const _DATA = usePagination(sortedAnimals, PER_PAGE)
+
   useEffect(() => {
     console.log('animal watch', animal)
-    _DATA.jump(1)
+    if (_DATA.currentPage !== 1) {
+      _DATA.jump(1)
+    }
     setFilter1()
-  }, [filter, animal])
+  }, [filter, animal, age])
 
   // filter records by search text
   const searchData = (value) => {
@@ -91,13 +110,8 @@ export default function AnimalsList({animals}) {
   const animalOptions = [
     {title: "Кошки", value: "cat"},
     {title: "Собаки", value: "dog"},
-    {title: "Все", value: "all"}
+    {title: "Все животные", value: "all"}
   ]
-
-  // Pagination
-  const PER_PAGE = 12
-  const count = Math.ceil(sortedAnimals.length / PER_PAGE)
-  const _DATA = usePagination(sortedAnimals, PER_PAGE)
   
   return <>
     <div id="gallery" className={styles.animalsListBlock}>
@@ -105,7 +119,7 @@ export default function AnimalsList({animals}) {
         <div className={styles.animalInputsBlock}>
           <div className={styles.findAnimalInputBlock}>
             <FindAnimalInput value={animal} options={animalOptions} onChange={v => setAnimal(v)}/>
-            <FindAnimalInput value={age} options={["до 6 мес.", "6 мес. - 1 год", "1-3 года", "3-7 лет", "от 7 лет", "Все"]} onChange={v => setAge(v)}/>
+            <FindAnimalInput value={age} options={ageOptions} onChange={v => setAge(v)}/>
           </div>
           <SearchInput animals={animals} searchData={searchData}/>
         </div>
@@ -136,7 +150,6 @@ export default function AnimalsList({animals}) {
       </div>
 
       <div className={styles.ourPetsGallery}>
-        
         {_DATA.currentData().map((animal, index) => (
           <AnimalCard parent="shelter" filter={filter} animal={animal} key={index}/>
         ))}
