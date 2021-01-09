@@ -110,7 +110,7 @@ export default function AddPet() {
       formData.append('description', description)
       formData.append('statuses', statuses)
       formData.append('files', files)
-      const isPhoto = fileRef.current.files.length !== 0
+      const isPhoto = fileRef.current && fileRef.current.files.length !== 0
       formData.append('isPhoto', isPhoto)
       if (isPhoto) {
         formData.append('photoFile', fileRef.current.files[0])
