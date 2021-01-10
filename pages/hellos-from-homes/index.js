@@ -31,7 +31,7 @@ export default function HellosFromHomes({title='Привет из дома', ani
       </div>
     </section>
     <section>
-      <div className={`${styles.foundHomeBlock} ${styles.pagePaddings}`}>
+      <div id="gallery" className={`${styles.foundHomeBlock} ${styles.pagePaddings}`}>
         <h2>Они обрели семью:</h2>
         <FoundHomeList pets={homePets}/>
       </div>
