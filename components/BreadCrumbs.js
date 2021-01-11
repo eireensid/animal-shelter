@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Router from 'next/router'
 import styles from '~/styles/components/BreadCrumbs.module.scss'
 import {useRouter} from 'next/router'
 import {useState, useEffect} from 'react'
@@ -28,12 +29,42 @@ export default function BreadCrumbs({title, petType, petPaw, petName, take}) {
 
   let petNameUrl = { pathname: '/pets/[name]', query: { name: petName }}
 
+  const load = async (path) => {
+    console.log('load')
+    await Router.push(path)
+  }
+
+  let petPawFilter = ''
+  if (petPaw === "Ищут дом / ") {
+    petPawFilter = '?filter=looking-for-home#gallery'
+  } else if (petPaw === "Нужен опекун / ") {
+    petPawFilter = '?filter=need-guardian#gallery'
+  } else if (petPaw === "Нужна адаптация / ") {
+    petPawFilter = '?filter=need-adoptation#gallery'
+  } else if (petPaw === "Проходят лечение / ") {
+    petPawFilter = '?filter=undergo-treatment#gallery'
+  } else if (petPaw === "Малыши / ") {
+    petPawFilter = '?filter=baby-pets#gallery'
+  }
+
+  let petTypeFilter = ''
+  if (petType === "Кошки / ") {
+    petTypeFilter = '?animal=cat#gallery'
+  } else if (petType === "Собаки / ") {
+    petTypeFilter = '?animal=dog#gallery'
+  }
+
   
   return <>   
     <div className={styles.breadCrumbs}>
       <Link href="/"><span>Главная /</span></Link>
       <Link href={titleUrl}><span>{title}</span></Link>
-      <span>{petPaw}</span> <span>{petType}</span>
+      <a onClick={() => load(`/pets/${petPawFilter}`)}>
+        <span>{petPaw}</span>
+      </a>
+      <a onClick={() => load(`/pets/${petTypeFilter}`)}>
+        <span>{petType}</span>
+      </a>
       <Link href={petNameUrl}><span>{petName}</span></Link>
       <span>{router.query.name}</span>
       <span>{take}</span>

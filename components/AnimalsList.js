@@ -125,26 +125,26 @@ export default function AnimalsList({animals}) {
         </div>
         <div className={styles.animalFilterWrapper}>
           <div className={styles.animalFilterWrapperTop}>            
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="looking-for-home.png"/>
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="need-adoptation.png"/>
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="baby-pets.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="looking-for-home.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="need-adoptation.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="baby-pets.png"/>
           </div>
           <div className={styles.animalFilterWrapperBottom}>
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="need-guardian.png"/>
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="undergo-treatment.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="need-guardian.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="undergo-treatment.png"/>
           </div>
         </div>
         <div className={styles.animalFilterWrapperMobile}>
           <div className={styles.animalFilterWrapperTopMobile}>            
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="looking-for-home.png"/>
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="need-adoptation.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="looking-for-home.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="need-adoptation.png"/>
           </div>
           <div className={styles.animalFilterWrapperMiddleMobile}>
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="need-guardian.png"/>
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="baby-pets.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="need-guardian.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="baby-pets.png"/>
           </div>
           <div className={styles.animalFilterWrapperBottomMobile}>
-            <PawLabel animals={animals} filter={filter} setFilter={setFilter} paw="undergo-treatment.png"/>
+            <PawLabel isSetOn={true} animals={animals} filter={filter} setFilter={setFilter} paw="undergo-treatment.png"/>
           </div>
         </div>
       </div>
