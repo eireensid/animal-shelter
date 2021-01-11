@@ -1,5 +1,4 @@
 import {MainLayout} from '~/components/MainLayout'
-import Image from 'next/image'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
@@ -27,13 +26,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
               А сколько радости они дают в ответ, не передать словами. Мы с пёсиками ждем вас!</p>
           </div>
           <div className={styles.photoWithPhraseBubbleWrapper}>
-            <Image
-              src="/img/walksPage/walks-dog-with-bubble.svg"
-              alt="прогулки с собаками"
-              width={583}
-              height={409}
-            />
-            {/* <img className={styles.photoWithPhraseBubble} src="/img/walksPage/walks-dog-with-bubble.svg" alt="гулять"/> */}
+            <img className={styles.photoWithPhraseBubble} src="/img/walksPage/walks-dog-with-bubble.svg" alt="гулять"/>
           </div>
         </div>       
       </div>

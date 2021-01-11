@@ -1,5 +1,4 @@
 import {MainLayout} from '~/components/MainLayout'
-import Image from 'next/image'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import AnimalsList from '~/components/AnimalsList'
 import BankCard from '~/components/BankCard'
@@ -20,13 +19,7 @@ export default function Pets({title='Питомцы', animals}) {
               домашнюю жизнь одному из наших подопечных?</p>
           </div>
           <div className={styles.photoWithPhraseBubbleWrapper}>
-            <Image
-              src="/img/pets-cat-with-bubble.svg"
-              alt="питомцы"
-              width={584}
-              height={405}
-            />
-            {/* <img className={styles.photoWithPhraseBubble} src="/img/pets-cat-with-bubble.svg" alt="спасибо"/> */}
+            <img className={styles.photoWithPhraseBubble} src="/img/pets-cat-with-bubble.svg" alt="питомцы"/>
           </div>
         </div>
       </div>

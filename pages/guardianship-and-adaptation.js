@@ -1,5 +1,4 @@
 import {MainLayout} from '~/components/MainLayout'
-import Image from 'next/image'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
@@ -27,13 +26,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
               прогулок и общения с человеком хотя бы раз в неделю. Решайтесь, станьте опекуном одного из питомцев! Или помогите адаптироваться пугляшу.</p>
           </div>
           <div className={styles.photoWithPhraseBubbleWrapper}>
-            <Image
-              src="/img/guardianshipPage/guardianship-dog-with-bubble.svg"
-              alt="опекунство и адаптация"
-              width={587}
-              height={404}
-            />
-            {/* <img className={styles.photoWithPhraseBubble} src="/img/guardianshipPage/guardianship-dog-with-bubble.svg" alt="спасибо"/> */}
+            <img className={styles.photoWithPhraseBubble} src="/img/guardianshipPage/guardianship-dog-with-bubble.svg" alt="опекунство и адаптация"/>
           </div>
         </div>
       </div>
