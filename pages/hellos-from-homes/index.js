@@ -1,4 +1,5 @@
 import {MainLayout} from '~/components/MainLayout'
+import Image from 'next/image'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import FoundHomeList from '~/components/FoundHomeList'
@@ -25,7 +26,13 @@ export default function HellosFromHomes({title='Привет из дома', ani
               Вы тоже можете подарить билетик в домашнюю жизнь одному из наших подопечных.</p>
           </div>
           <div className={styles.photoWithPhraseBubbleWrapper}>
-            <img className={styles.photoWithPhraseBubble} src="/img/hellos-from-homes-dog-with-bubble.svg" alt="привет из дома"/>
+            <Image
+              src="/img/hellos-from-homes-dog-with-bubble.svg"
+              alt="привет из дома"
+              width={586}
+              height={405}
+            />
+            {/* <img className={styles.photoWithPhraseBubble} src="/img/hellos-from-homes-dog-with-bubble.svg" alt="привет из дома"/> */}
           </div>
         </div>
       </div>

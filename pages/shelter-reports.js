@@ -1,4 +1,5 @@
 import {MainLayout} from '~/components/MainLayout'
+import Image from 'next/image'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
@@ -28,7 +29,15 @@ export default function ShelterReports({title='Отчеты', animals}) {
               <button onClick={() => window.open('https://vk.com/topic-188970721_40039637', '_blank')}><span>ФО Лечение</span></button>
               <button onClick={() => window.open('https://vk.com/topic-188970721_40010432', '_blank')}><span>ФО Опилки</span></button>
             </div>
-            <img src="/img/reports-photo.png" alt="отчеты"/>
+            <div className={styles.reportsImg}>
+              <Image
+               className={styles.reportsImg}
+                src="/img/reports-photo.png"
+                alt="отчеты"
+                layout="fill"
+              />
+            </div>
+            {/* <img src="/img/reports-photo.png" alt="отчеты"/> */}
           </div>
         </div>
       </div>

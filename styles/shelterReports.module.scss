@@ -42,6 +42,11 @@
 .reportsBtns span {
   color: #fff;
 }
+.reportsImg {
+  position: relative;
+  width: 660px;
+  height: 439px;
+}
 
 
 
@@ -107,7 +112,7 @@
   .reportsDesc p {
     margin-top: 30px;
   }
-  .reports img {
+  .reportsImg {
     width: 354px;
     height: 257px;
     border-radius: 30px;
@@ -163,7 +168,7 @@
     flex-direction: column-reverse;
     margin-top: 75px;
   }
-  .reports img {
+  .reportsImg {
     width: 276px;
     height: 199px;
     margin-bottom: 50px;
