@@ -7,10 +7,6 @@
 .ulPagination {
   display: flex;
   align-items: center;
-  margin: {
-    left: 35px;
-    right: 35px;
-  };
 }
 .paginationBtn {
   background: none;
@@ -18,9 +14,28 @@
   width: 100%;
   padding: 5px;
 }
+.paginationBtnImgRight {
+  margin-left: 25px;
+}
+.paginationBtnImgLeft {
+  margin-right: 25px;
+}
 .paginationBtn:hover {
   background: none;
 }
-bu.paginationBtntton:active {
+.paginationBtn:active {
   background: none;
+}
+
+// Mobile styles
+@media (max-width: 480px) {
+  .paginationBtn img {
+    width: 15px;
+  }
+  .paginationBtnImgRight {
+    margin-left: 20px;
+  }
+  .paginationBtnImgLeft {
+    margin-right: 20px;
+  }
 }

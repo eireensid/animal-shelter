@@ -1,5 +1,6 @@
 import Router from 'next/router'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MainLayout } from '~/components/MainLayout'
 import AnimalCarousel from '~/components/AnimalCarousel'
 import AnimalsList from '~/components/AnimalsList'
@@ -25,13 +26,19 @@ export default function Index({title='Главная', animals}) {
           <h3 className={styles.titleDesc}>Подари хвостикам надежду на новую жизнь с командой волонтеров “Теремка”</h3>
         </div>
         <div className={styles.firstBlockImg}>
-          <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/>
+          {/* <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/> */}
+          <Image
+            src="/img/first-block-animals-cut-nobg.png"
+            alt="животные"
+            width={848}
+            height={634}
+          />
         </div>
         <div className={styles.firstBlockImgTablet}>
           <img src="/img/tablet/first-block-animals-tablet-cut1.png" alt="животные"/>
         </div>
       </div>
-      <svg className={styles.waveDesktop} viewBox="0 0 1440 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={styles.waveDesktop} viewBox="0 0 1440 175" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M848.411 95.4772C629.058 70.6965 450.479 -28.8145 221.037 8.13269C105.85 26.6814 58.8155 59.5476 0.200227 95.551L0.184691 253.285L1444.17 253.16L1444.19 30.473C1320.11 -28.8791 1035.12 116.57 848.411 95.4772Z" fill="#FFF5DA"/>
       </svg>  
       <svg className={styles.waveTablet} viewBox="0 0 768 230" fill="none" xmlns="http://www.w3.org/2000/svg">

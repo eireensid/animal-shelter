@@ -28,14 +28,14 @@ export default function UsePagination({count, _DATA}) {
             fun = () => _DATA.next()
             children = (
               <button className={styles.paginationBtn} type="button" {...item}>
-                <img src="/img/pagination-arrow-right.svg" alt=""/>
+                <img className={styles.paginationBtnImgRight} src="/img/pagination-arrow-right.svg" alt=""/>
               </button>
             )
           } else if (type === 'previous') {
             fun = () => _DATA.prev()
             children = (
               <button className={styles.paginationBtn} type="button" {...item}>
-                <img src="/img/pagination-arrow-left.svg" alt=""/>
+                <img className={styles.paginationBtnImgLeft} src="/img/pagination-arrow-left.svg" alt=""/>
               </button>
             )
           }
