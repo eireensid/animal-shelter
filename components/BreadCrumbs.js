@@ -26,10 +26,17 @@ export default function BreadCrumbs({title, petType, petPaw, petName, take}) {
 
   useEffect(changeTitleUrl, [title]) 
 
+  let petNameUrl = { pathname: '/pets/[name]', query: { name: petName }}
+
   
   return <>   
     <div className={styles.breadCrumbs}>
-      <Link href="/"><span>Главная /</span></Link> <Link href={titleUrl}><span>{title}</span></Link>  <span>{petPaw}</span> <span>{petType}</span> <span>{petName}</span> <span>{router.query.name}</span> <span>{take}</span>
+      <Link href="/"><span>Главная /</span></Link>
+      <Link href={titleUrl}><span>{title}</span></Link>
+      <span>{petPaw}</span> <span>{petType}</span>
+      <Link href={petNameUrl}><span>{petName}</span></Link>
+      <span>{router.query.name}</span>
+      <span>{take}</span>
     </div>
   </>
 }

@@ -6,7 +6,7 @@ export default function AnimalCard({animal, filter, parent}) {
   if (!animal) return <>
     <div className={styles.findCarouselCard} style={{ opacity: 0 }}></div>
   </>
-  const {photo, name, paw, age, sex} = animal
+  const {id, photo, name, paw, age, sex} = animal
 
   const [lastRowVisibility, setLastRowVisibility] = useState({visibility: "visible"})
 

@@ -60,7 +60,7 @@ export default function TakeThePet({animals}) {
   return <MainLayout>
     <section>
       <div className={styles.aboutPetBlock}>
-        {petType && petPaw && pet.name && <BreadCrumbs title={"Питомцы / "} petPaw={petPaw + " / "} petType={petType + " / "} petName={pet.name + " / "} take="Забрать к себе"/>}
+        {petType && petPaw && pet.name && <BreadCrumbs title={"Питомцы / "} petPaw={petPaw + " / "} petType={petType + " / "} petName={pet.name} take=" / Забрать к себе"/>}
         <div className={styles.aboutPetWrapper}>   
           <img className={styles.petPhoto} src={pet.photo} alt="питомец"/>
           <div className={styles.nameLabelWrapper}>

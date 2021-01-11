@@ -33,8 +33,8 @@ export function MainLayout({children, title='Теремок'}) {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="keywords" content="next, react,javascript" />
-        <meta name="description" content="This is next tutorial" />
+        <meta name="keywords" content="pet, animal, home" />
+        <meta name="description" content='Сайт приюта для животных "Теремок"' />
         <meta charSet="utf-8" />
       </Head>
       <header>
