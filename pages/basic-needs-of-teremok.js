@@ -1,4 +1,5 @@
 import {MainLayout} from '~/components/MainLayout'
+import Image from 'next/image'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import VisitingRules from '~/components/VisitingRules'
 import AnimalCarousel from '~/components/AnimalCarousel'
@@ -26,7 +27,13 @@ export default function BasicNeedsOfTeremok({title='Нужды приюта', an
               или отправить в помощь приюту. На этой странице вы найдете список вещей, в которых постоянно нуждаются животные.</p>
           </div>
           <div className={styles.photoWithPhraseBubbleWrapper}>
-            <img className={styles.photoWithPhraseBubble} src="/img/needs-dog-with-bubble.svg" alt="спасибо"/>
+            <Image
+              src="/img/needs-dog-with-bubble.svg"
+              alt="нужды теремка"
+              width={538}
+              height={409}
+            />
+            {/* <img className={styles.photoWithPhraseBubble} src="/img/needs-dog-with-bubble.svg" alt="спасибо"/> */}
           </div>
         </div>
 
