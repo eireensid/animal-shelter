@@ -37,7 +37,7 @@ export function MainLayout({children, title='Теремок'}) {
         <meta name="description" content='Сайт приюта для животных "Теремок"' />
         <meta charSet="utf-8" />
       </Head>
-      <header>
+      <header className={styles.header}>
         <div className={styles.headerBlock}>
           <div className={styles.logoWrapperHeader}>
             <Link href="/">
