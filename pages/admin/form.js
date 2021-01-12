@@ -37,6 +37,7 @@ export default function AddPet() {
   const [gallery, setGallery] = useState([])
   const [errorText, setErrorText] = useState('')
   const [canEdit, setCanEdit] = useState(true)
+  const [isFirstGallery, setIsFirstGallery] = useState(true)
   const fileRef = useRef()
   const filesRef = useRef()
 
@@ -110,6 +111,7 @@ export default function AddPet() {
       formData.append('description', description)
       formData.append('statuses', statuses)
       formData.append('files', files)
+      formData.append('isFirstGallery', isFirstGallery)
       const isPhoto = fileRef.current && fileRef.current.files.length !== 0
       formData.append('isPhoto', isPhoto)
       if (isPhoto) {
@@ -209,6 +211,9 @@ export default function AddPet() {
               }
             </Box>
           }
+          <FormControlLabel className={styles.mr10}
+              control={<Checkbox checked={isFirstGallery} onChange={e => setIsFirstGallery(e.target.checked)} />}
+              label="Добавлять первое фото в галлерею"/>
           {id !== '' && 
             <>
               <InputLabel className={styles.label}>Фото</InputLabel>
