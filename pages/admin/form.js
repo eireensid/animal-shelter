@@ -213,7 +213,7 @@ export default function AddPet() {
           }
           <FormControlLabel className={styles.mr10}
               control={<Checkbox checked={isFirstGallery} onChange={e => setIsFirstGallery(e.target.checked)} />}
-              label="Добавлять первое фото в галлерею"/>
+              label="Добавлять первое фото в галерею"/>
           {id !== '' && 
             <>
               <InputLabel className={styles.label}>Фото</InputLabel>
