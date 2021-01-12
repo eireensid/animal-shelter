@@ -57,7 +57,7 @@ export default function BreadCrumbs({title, petType, petPaw, petName, take}) {
   
   return <>   
     <div className={styles.breadCrumbs}>
-      <Link href="/"><span>Главная /</span></Link>
+      <Link href="/"><span>Главная / </span></Link>
       <Link href={titleUrl}><span>{title}</span></Link>
       <a onClick={() => load(`/pets/${petPawFilter}`)}>
         <span>{petPaw}</span>
