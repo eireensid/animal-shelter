@@ -56,6 +56,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         }
       }
 
+      data.isFirstGallery = data.isFirstGallery === 'true'
       data.grafting = data.grafting === 'true'
       data.sterilization = data.sterilization === 'true'
       data.isPhoto = data.isPhoto === 'true'
@@ -108,7 +109,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             if (data.isPhoto && isFirst) {
               isFirst = false
               pet.photo = photoUrl
-              pet.gallery.unshift(photoUrl)
+              if (data.isFirstGallery) {
+                pet.gallery.unshift(photoUrl)
+              }
               pet.files.unshift(fileName)
               console.log('isPhoto end save file', name, 'photoUrl', photoUrl)
             } else {
@@ -141,9 +144,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         data.photo = null
         data.gallery = []
         data.files = []
-        for (let name in files) {
+        for (let obj of files) {
+          const name = obj.name
           console.log('start save file', name)
-          const buffer = files[name]
+          const buffer = obj.buffer
           const token = uuidv4()
           const fileName = token + '.' + name.split('.')[1]
           const file = bucket.file(fileName)
@@ -158,7 +162,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           const photoUrl = `https://firebasestorage.googleapis.com/v0/b/animal-shelter-c3f16.appspot.com/o/${fileName}?alt=media`
           if (!data.photo) {
             data.photo = photoUrl
-            data.gallery.unshift(photoUrl)
+            if (data.isFirstGallery) {
+              data.gallery.unshift(photoUrl)
+            }
           } else {
             data.gallery.push(photoUrl)
           }
