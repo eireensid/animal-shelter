@@ -9,6 +9,7 @@
 
 .petInfoBlock {
   background: $pageBg;
+  padding-top: 127px;
 }
 .titleBlock {
   display: flex;
@@ -79,6 +80,9 @@
     width: 100%;
   }
 
+  .petInfoBlock {
+    padding-top: 169px;
+  }
   .walkingsBlock {
     padding-bottom: 200px;
     p {
@@ -118,6 +122,9 @@
     width: 100%;
   }
 
+  .petInfoBlock {
+    padding-top: 77px;
+  }
   .walkingsBlock {
     padding-bottom: 100px;
     p {

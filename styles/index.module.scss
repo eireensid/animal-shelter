@@ -3,6 +3,7 @@
 // Hero
 .firstBlockSection {
   position: relative;
+  padding-top: 127px;
 }
 .firstBlock {
   background: $navBg;
@@ -204,6 +205,9 @@
 
 // Tablet styles
 @media (max-width: 1200px) {
+  .firstBlockSection {
+    padding-top: 169px;
+  }
   .firstBlock {
     flex-direction: column;
     padding-left: 5.9%;
@@ -346,6 +350,9 @@
     width: 100%;
   }
 
+  .firstBlockSection {
+    padding-top: 77px;
+  }
   .firstBlock {
     padding-left: 4.4%;
     padding-top: 100px;

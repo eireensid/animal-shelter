@@ -9,6 +9,7 @@
 
 .petInfoBlock {
   background: $pageBg;
+  padding-top: 127px;
 }
 .titleBlock {
   display: flex;
@@ -69,7 +70,9 @@
     width: 100%;
   }
 
-
+  .petInfoBlock {
+    padding-top: 169px;
+  }
   .photoWithPhraseBubbleWrapper {
     margin: 0 auto;
   }
@@ -100,6 +103,9 @@
   }
 
 
+  .petInfoBlock {
+    padding-top: 77px;
+  }
   .breadCrumbsWrapper {
     padding-top: 50px;
   }
