@@ -92,7 +92,7 @@ export default function ShelterPetInfo({animals, pet, paw}) {
           <span>Стерилизация</span>
           <img src="/img/yes.png"/>
         </div>
-        <button onClick={() => Router.push('/take-the-pet').then(() => window.scrollTo(0, 0))} className={styles.takePet}>Забрать к себе</button>
+        <button onClick={() => Router.push('/take-the-pet').then(() => window.scrollTo(0, 0))} className={styles.takePet}>Забрать себе</button>
         <div className={styles.petDescRow}>
           <span className={styles.tellAboutPetText}>Расскажи о {tellAboutPet} друзьям</span>
         </div>

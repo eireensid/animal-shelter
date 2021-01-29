@@ -57,7 +57,7 @@ export default function AnimalsList({animals}) {
     {title: "1-3 года", value: '3', filter: {from: 12, to: 36}},
     {title: "3-7 лет", value: '4', filter: {from: 36, to: 84}},
     {title: "от 7 лет", value: '5', filter: {from: 84}},
-    {title: "Все возраста", value: 'all', filter: {}}
+    {title: "Все возрасты", value: 'all', filter: {}}
   ]
 
   const setFilter1 = () => {

@@ -60,7 +60,7 @@ export default function TakeThePet({animals}) {
   return <MainLayout>
     <section>
       <div className={styles.aboutPetBlock}>
-        {petType && petPaw && pet.name && <BreadCrumbs title={"Питомцы / "} petPaw={petPaw + " / "} petType={petType + " / "} petName={pet.name} take=" / Забрать к себе"/>}
+        {petType && petPaw && pet.name && <BreadCrumbs title={"Питомцы / "} petPaw={petPaw + " / "} petType={petType + " / "} petName={pet.name} take=" / Забрать себе"/>}
         <div className={styles.aboutPetWrapper}>   
           <img className={styles.petPhoto} src={pet.photo} alt="питомец"/>
           <div className={styles.nameLabelWrapper}>
@@ -73,7 +73,7 @@ export default function TakeThePet({animals}) {
     
     <section className={styles.takeThePetWrapperSection}>
       <div className={`${styles.takeThePetWrapper} ${styles.pagePaddings}`}>
-        <p>Для того, что бы забрать питомца к себе, свяжитесь с нами удобным способом:</p>
+        <p>Для того, что бы забрать питомца, свяжитесь с нами удобным способом:</p>
         <CallWriteBtns/>
       </div>
       <svg className={styles.waveDesktop} viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">

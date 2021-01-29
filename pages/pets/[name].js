@@ -78,7 +78,7 @@ export default function Pet({animals}) {
           <ShelterPetInfo animals={animals} pet={pet} paw={paw}/>
         </div>
         <div className={styles.walkingsBlock}>
-          <p>Так же вы можете прийти к питомцу в гости, принести ему вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>
+          <p>Также вы можете прийти к питомцу в гости, принести ему вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>
           <button onClick={() => Router.push('/walks-with-dogs').then(() => window.scrollTo(0, 0))} className={styles.aboutWalkingsBtn}>Подробнее</button>
         </div>
       </div>
