@@ -73,7 +73,7 @@ export default function TakeThePet({animals}) {
     
     <section className={styles.takeThePetWrapperSection}>
       <div className={`${styles.takeThePetWrapper} ${styles.pagePaddings}`}>
-        <p>Для того, что бы забрать питомца, свяжитесь с нами удобным способом:</p>
+        <p>Для того, чтобы забрать питомца, свяжитесь с нами удобным способом:</p>
         <CallWriteBtns/>
       </div>
       <svg className={styles.waveDesktop} viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
