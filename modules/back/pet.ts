@@ -37,6 +37,43 @@ export function getAllPets (): Promise<Array<Pet>> {
   })
 }
 
+export type PagePetRes = {
+  pageNum: number,
+  pageCount: number,
+  count: number,
+  items: Array<Pet>
+}
+
+export type PetFilter = [string, any];
+
+export function getPagePets (itemCount: number, pageNum: number, filter: PetFilter): Promise<PagePetRes> {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let ref: any = db.collection('pets')
+      const offset: number = itemCount * (pageNum - 1)
+      if (filter !== null) {
+        ref = ref.where(filter[0], '==', filter[1])
+      }
+      const allItemsCount = await (await ref.get()).size
+      const pageCount: number = Math.ceil(allItemsCount / itemCount)
+      const snapshot = await ref.offset(offset).limit(itemCount).get()
+      const pets = new Array<Pet>()
+      snapshot.forEach((doc) => {
+        pets.push(doc.data() as Pet)
+      })
+      const res: PagePetRes = {
+        pageNum: pageNum,
+        pageCount: pageCount,
+        count: pets.length,
+        items: pets
+      }
+      resolve(res)
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
 export function findPet (obj: any): Promise<Pet> {
   return new Promise(async (resolve, reject) => {
     try {
