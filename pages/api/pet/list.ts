@@ -8,10 +8,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       for (let field of [
         'itemCount',
         'pageNum',
-        'type'
+        'type',
+        'statuses'
       ]) {
         if (!fields[field]) {
+          if (field === 'statuses') {
+            continue
+          }
           return res.status(400).json({ message: `Поле ${field} не должно быть пустым` })
+        }
+        if (field === 'statuses' && !Array.isArray(fields[field])) {
+          return res.status(400).json({ message: `Поле ${field} должно быть массивом` })
         }
         if (field === 'type') {
           if (![
@@ -23,14 +30,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           }
         }
       }
-      const { itemCount, pageNum, type } = fields
-      let filter: PetFilter = null
+      const { itemCount, pageNum, type, statuses } = fields
+      let filters: PetFilter[] = []
       if (type === 'home') {
-        filter = ['foundHome', true]
+        filters.push(['foundHome', true])
       } else if (type === 'shelter') {
-        filter = ['foundHome', false]
+        filters.push(['foundHome', false])
       }
-      let result: PagePetRes = await getPagePets(itemCount, pageNum, filter)
+      if (statuses) {
+        filters.push(['statuses', statuses])
+      }
+      let result: PagePetRes = await getPagePets(itemCount, pageNum, filters)
       res.status(200).json(result)
     } else {
       res.status(404).end()

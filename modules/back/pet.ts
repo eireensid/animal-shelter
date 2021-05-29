@@ -44,15 +44,18 @@ export type PagePetRes = {
   items: Array<Pet>
 }
 
-export type PetFilter = [string, any];
+export type PetFilter = [string, any[] | any]
 
-export function getPagePets (itemCount: number, pageNum: number, filter: PetFilter): Promise<PagePetRes> {
+export function getPagePets (itemCount: number, pageNum: number, filters: PetFilter[]): Promise<PagePetRes> {
   return new Promise(async (resolve, reject) => {
     try {
       let ref: any = db.collection('pets')
       const offset: number = itemCount * (pageNum - 1)
-      if (filter !== null) {
-        ref = ref.where(filter[0], '==', filter[1])
+      if (filters !== null) {
+        filters.forEach(filter => {
+          const operator = Array.isArray(filter[1]) ? 'array-contains-any' : '=='
+          ref = ref.where(filter[0], operator, filter[1])
+        })
       }
       const allItemsCount = await (await ref.get()).size
       const pageCount: number = Math.ceil(allItemsCount / itemCount)
