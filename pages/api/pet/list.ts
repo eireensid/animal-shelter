@@ -4,7 +4,7 @@ import { getPagePets, PagePetRes, PetFilter } from '~/modules/back/pet'
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (req.method === 'POST') {
-      const fields = JSON.parse(req.body)
+      const fields = typeof req.body === 'string' ? JSON.parse(req.body) : req.body
       for (let field of [
         'itemCount',
         'pageNum',
@@ -36,6 +36,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(404).end()
     }
   } catch (err) {
+    console.error(err)
     res.status(500).end()
   } 
 }

@@ -9,8 +9,8 @@ export default function MyApp({Component, pageProps}) {
   const [_shelterPets, setShelterPets] = useState([])
   
   useEffect(async () => {
-    const res = await axios.get('/api/pet/all')
-    const pets = res.data.map(transformPets)
+    const res = await axios.post('/api/pet/list', { type: 'all', itemCount: 1000, pageNum: 1 })
+    const pets = res.data.items.map(transformPets)
     // for (let i = pets.length - 1; i > 0; i--) {
     //   const j = Math.floor(Math.random() * (i + 1))
     //   [pets[i], pets[j]] = [pets[j], pets[i]]
