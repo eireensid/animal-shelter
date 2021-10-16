@@ -149,7 +149,7 @@ export function MainLayout({children, title='Теремок'}) {
             <div className={styles.contactsPrBlock}>
               <div className={styles.contacts}>
                 <h4>Контакты</h4>
-                <p className={styles.phone}><a href="tel:+79214320035">+7 (921) 432-00-35</a></p>
+                <p className={styles.phone}><a href="tel:+79118278445">+7 (911) 827-84-45</a></p>
                 <p className={styles.address}>г. Санкт-Петербург,<br/>поселок под Гатчиной</p>             
               </div>
               <div className={styles.pr}>

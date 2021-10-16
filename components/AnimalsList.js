@@ -15,17 +15,17 @@ export default function AnimalsList({animals}) {
   const [age, setAge] = useState("all")
 
   const changeByUrlParam = () => {
-    console.log('changeByUrlParam')
+    // console.log('changeByUrlParam')
     const urlParams = new URLSearchParams(window.location.search)
     if (urlParams.has('animal')) {
-      console.log('set animal')
+      // console.log('set animal')
       const newAnimal = urlParams.get('animal')
       setFilter(null)
       setAnimal(newAnimal)
     }
     if (urlParams.has('filter')) {
       const newFilter = urlParams.get('filter') + '.png'
-      console.log('set filter', newFilter)
+      // console.log('set filter', newFilter)
       setAnimal("all")
       setFilter(newFilter)
     }
@@ -66,7 +66,7 @@ export default function AnimalsList({animals}) {
     }
     let _age = ageOptions.find(a => a.value === age)
     _age = _age ? _age.filter : null
-    console.log('_age', _age)
+    // console.log('_age', _age)
     let newArr = animals.filter((item, index) => {
       const isPaw = !filter || item.paw.some(p => filter === p)
       const isType = !animal || ((item.type === animal) || animal === 'all')
@@ -82,7 +82,7 @@ export default function AnimalsList({animals}) {
   const _DATA = usePagination(sortedAnimals, PER_PAGE)
 
   useEffect(() => {
-    console.log('animal watch', animal)
+    // console.log('animal watch', animal)
     if (_DATA.currentPage !== 1) {
       _DATA.jump(1)
     }
@@ -92,9 +92,9 @@ export default function AnimalsList({animals}) {
   // filter records by search text
   const searchData = (value) => {
     const lowercasedValue = value.toLowerCase().trim();
-    console.log('searchData lowercasedValue', lowercasedValue)
+    // console.log('searchData lowercasedValue', lowercasedValue)
     if (lowercasedValue === "") {
-      console.log('searchData set all')
+      // console.log('searchData set all')
       // setFilter(null)
       // setAnimal('all')
       // setSortedAnimals(animals);

@@ -2,10 +2,10 @@ import styles from '~/styles/components/CallWriteBtns.module.scss'
 
 export default function CallWriteBtns() {
   const whatsappClick = () => {
-    window.open('https://wa.me/+79214320035', '_blank')
+    window.open('https://wa.me/+79118278445', '_blank')
   }
   const callClick = () => {
-    window.location.href = 'tel:+79214320035'
+    window.location.href = 'tel:+79118278445'
   }
 
   return <>
