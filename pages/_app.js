@@ -15,7 +15,7 @@ export default function MyApp({Component, pageProps}) {
     //   const j = Math.floor(Math.random() * (i + 1))
     //   [pets[i], pets[j]] = [pets[j], pets[i]]
     // }
-    // console.log('pets', pets)
+    console.log('pets', pets)
     setHomePets(pets.filter(p => p.foundHome))
     setShelterPets(pets.filter(p => !p.foundHome))
   }, [])

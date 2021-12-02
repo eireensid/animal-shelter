@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
@@ -44,6 +46,8 @@ button {
   }
   width: 300px;
   outline: none;
+  cursor: pointer;
+  transition: $transition;
 }
 button:hover {
   background: #E48244;

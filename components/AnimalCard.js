@@ -7,6 +7,7 @@ export default function AnimalCard({animal, filter, parent}) {
     <div className={styles.findCarouselCard} style={{ opacity: 0 }}></div>
   </>
   const {id, photo, name, paw, age, sex} = animal
+  const [photoSrc, setPhotoSrc] = useState('')
 
   const [lastRowVisibility, setLastRowVisibility] = useState({visibility: "visible"})
 
@@ -17,6 +18,12 @@ export default function AnimalCard({animal, filter, parent}) {
   }
 
   useEffect(lastRowShow, [])
+  useEffect(() => {
+    setPhotoSrc('')
+    setTimeout(() => {
+      setPhotoSrc(photo)
+    }, 1000);
+  }, [photo])
 
 
 
@@ -53,7 +60,11 @@ export default function AnimalCard({animal, filter, parent}) {
     <Link href={linkHref}>
       <div onClick={saveLocalPet} className={styles.findCarouselCard}>
         <div className={styles.petImgBlock}>
-          <img className={styles.petImg} src={photo} alt="питомец"/>
+          <div className={styles.petImgWr}>
+          {photoSrc &&  
+            <img className={styles.petImg} src={photoSrc} alt="питомец"/>
+          }  
+          </div>  
         </div>
         <div className={styles.findCarouselCardDesc}>
           <div className={styles.findCarouselCardDescRow}>

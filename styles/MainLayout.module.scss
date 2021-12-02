@@ -22,6 +22,10 @@
 }
 .logoWrapperHeader svg {
   cursor: pointer;
+  transition: transform .5s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .menuWrapperBurger {
   display: none;
@@ -30,6 +34,8 @@
   color: $textColor;
   font-size: 0.833em;
   font-weight: $mediumWeight;
+  cursor: pointer;
+  transition: $transition;
 }
 .headerBlock a:not(:last-child) {
   margin-right: 40px;

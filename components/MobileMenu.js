@@ -9,7 +9,6 @@ export default function MobileMenu({closeMenu}) {
   const { dropdownStyles, openDropdownClicks, wrapperRefs } = useDropdown(2)
 
   const load = async (path) => {
-    console.log('load')
     await Router.push(path)
     document.dispatchEvent(new Event('change-url-param'))
   }
