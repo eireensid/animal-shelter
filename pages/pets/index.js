@@ -25,7 +25,6 @@ export default function Pets({title='Питомцы', animals}) {
               width={584}
               height={405}
             />
-            {/* <img className={styles.photoWithPhraseBubble} src="/img/pets-cat-with-bubble.svg" alt="питомцы"/> */}
           </div>
         </div>
       </div>
@@ -37,7 +36,7 @@ export default function Pets({title='Питомцы', animals}) {
         <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
         <p className={`${styles.ourPetsDesc} ${styles.ourPetsPadding}`}>Если вы уже знаете имя питомца, который вас заинтересовал, воспользуйтесь поиском по имени.</p>
         
-        <AnimalsList animals={animals}/>
+        {/* <AnimalsList animals={animals}/> */}
       </div>
     </section>
 

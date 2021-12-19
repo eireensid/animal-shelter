@@ -6,14 +6,7 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/basicNeedsOfTeremok.module.scss'
 
-export default function BasicNeedsOfTeremok({title='Нужды приюта', animals}) {
-  const filteredAnimals = animals.filter((animal) => {
-    const arr = animal.paw.filter(p => {
-      return p === "looking-for-home.png"
-    })
-    return arr.length
-  })
-
+export default function BasicNeedsOfTeremok({title='Нужды приюта'}) {
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -33,7 +26,6 @@ export default function BasicNeedsOfTeremok({title='Нужды приюта', an
               width={538}
               height={409}
             />
-            {/* <img className={styles.photoWithPhraseBubble} src="/img/needs-dog-with-bubble.svg" alt="спасибо"/> */}
           </div>
         </div>
 
@@ -109,7 +101,7 @@ export default function BasicNeedsOfTeremok({title='Нужды приюта', an
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:" paw="looking-for-home.png"/>
+        <AnimalCarousel status="looking-for-home" title="Сейчас ищут дом:" paw="looking-for-home.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

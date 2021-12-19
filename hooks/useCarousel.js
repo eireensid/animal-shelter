@@ -6,7 +6,7 @@ export default function useCarousel (items, count) {
   const [curItems, setCurItems] = useState(items && items.slice(0, count))
 
   useEffect(() => {
-    setActiveIndex(0)
+    //setActiveIndex(0)
     setCurItems(items && items.slice(0, count))
   }, [items, count])
 

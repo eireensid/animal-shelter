@@ -11,13 +11,6 @@ import styles from '~/styles/pet.module.scss'
 export default function Pet({animals}) {
   const router = useRouter()
 
-  const filteredAnimals = animals.filter((animal) => {
-    const arr = animal.paw.filter(p => {
-      return p === "looking-for-home.png"
-    })
-    return arr.length
-  })
-
   const [pet, setPet] = useState({})
   const [paw, setPaw] = useState()
 
@@ -85,7 +78,7 @@ export default function Pet({animals}) {
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:" paw="looking-for-home.png"/>
+        <AnimalCarousel filter="looking-for-home" title="Сейчас ищут дом:" paw="looking-for-home.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

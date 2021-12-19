@@ -6,14 +6,7 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/walksWithDogs.module.scss'
 
-export default function WalksWithDogs({title='Прогулки с собаками', animals}) {
-  const filteredAnimals = animals.filter((animal) => {
-    const arr = animal.paw.filter(p => {
-      return p === "need-adoptation.png"
-    })
-    return arr.length
-  })
-
+export default function WalksWithDogs({title='Прогулки с собаками'}) {
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -107,7 +100,7 @@ export default function WalksWithDogs({title='Прогулки с собакам
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:" paw="need-adoptation.png"/>
+        <AnimalCarousel status="need-adoptation" title="Им срочно нужна адаптация:" paw="need-adoptation.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

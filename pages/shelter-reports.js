@@ -5,14 +5,7 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/shelterReports.module.scss'
 
-export default function ShelterReports({title='Отчеты', animals}) {
-  const filteredAnimals = animals.filter((animal) => {
-    const arr = animal.paw.filter(p => {
-      return p === "need-adoptation.png"
-    })
-    return arr.length
-  })
-
+export default function ShelterReports({title='Отчеты'}) {
   return <MainLayout>
     <section>
       <div className={styles.reportsBlock}>
@@ -37,14 +30,13 @@ export default function ShelterReports({title='Отчеты', animals}) {
                 layout="fill"
               />
             </div>
-            {/* <img src="/img/reports-photo.png" alt="отчеты"/> */}
           </div>
         </div>
       </div>
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Им срочно нужна адаптация:" paw="need-adoptation.png"/>
+        <AnimalCarousel status="need-adoptation" title="Им срочно нужна адаптация:" paw="need-adoptation.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

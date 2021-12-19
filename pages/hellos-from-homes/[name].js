@@ -7,15 +7,8 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/homePet.module.scss'
 
-export default function HomePet({title, animals, homePets}) {
+export default function HomePet({title, homePets}) {
   const router = useRouter()
-  const filteredAnimals = animals.filter((animal) => {
-    const arr = animal.paw.filter(p => {
-      return p === "looking-for-home.png"
-    })
-    return arr.length
-  })
-
   return <MainLayout>
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
@@ -29,7 +22,7 @@ export default function HomePet({title, animals, homePets}) {
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:" paw="looking-for-home.png"/>
+        <AnimalCarousel status="looking-for-home" title="Сейчас ищут дом:" paw="looking-for-home.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

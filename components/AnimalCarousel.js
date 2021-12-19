@@ -1,11 +1,15 @@
 import {useEffect, useState} from 'react'
+import axios from 'axios'
 import useCarousel from '~/hooks/useCarousel'
 import AnimalCard from '~/components/AnimalCard'
 import styles from '~/styles/components/AnimalCarousel.module.scss'
+import { transformPets } from '~/modules/front/app'
 
-export default function AnimalCarousel({animals, title, paw}) {
+export default function AnimalCarousel({title, status, paw}) {
+  const [animals, setAnimals] = useState([])
   const [count, setCount] = useState(3)
-  const { curItems, prevSlide, nextSlide } = useCarousel(animals, count)
+  // const [totalPages, setTotalPages] = useState(0)
+  const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(animals, count)
   const [filter, setFilter] = useState(null)
 
   function setCountByWidth () {
@@ -22,6 +26,13 @@ export default function AnimalCarousel({animals, title, paw}) {
     return () => {
       window.removeEventListener('resize', setCountByWidth)
     }
+  }, [])
+
+  useEffect(async () => {
+    const res = await axios.post('/api/pet/list', { type: 'shelter', itemCount: 100, pageNum: activeIndex + 1, statuses: [status] })
+    // too many items
+    setAnimals(res.data.items.map(transformPets))
+    // setTotalPages(res.pageCount)
   }, [])
 
 

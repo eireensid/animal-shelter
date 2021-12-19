@@ -6,13 +6,7 @@ import FoundHomeList from '~/components/FoundHomeList'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/hellosFromHomes.module.scss'
 
-export default function HellosFromHomes({title='Привет из дома', animals, homePets}) {
-  const filteredAnimals = animals.filter((animal) => {
-    const arr = animal.paw.filter(p => {
-      return p === "looking-for-home.png"
-    })
-    return arr.length
-  })
+export default function HellosFromHomes({title='Привет из дома', homePets}) {
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -32,7 +26,6 @@ export default function HellosFromHomes({title='Привет из дома', ani
               width={586}
               height={405}
             />
-            {/* <img className={styles.photoWithPhraseBubble} src="/img/hellos-from-homes-dog-with-bubble.svg" alt="привет из дома"/> */}
           </div>
         </div>
       </div>
@@ -40,12 +33,12 @@ export default function HellosFromHomes({title='Привет из дома', ani
     <section>
       <div id="gallery" className={`${styles.foundHomeBlock} ${styles.pagePaddings}`}>
         <h2>Они обрели семью:</h2>
-        <FoundHomeList pets={homePets}/>
+        {/* <FoundHomeList pets={homePets}/> */}
       </div>
     </section>
     <section>
       <div className={`${styles.animalCarouselWrapper} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:" paw="looking-for-home.png"/>
+        <AnimalCarousel status="looking-for-home" title="Сейчас ищут дом:" paw="looking-for-home.png"/>
       </div>
     </section>
     <section className={styles.bankCardWrapperSection}>

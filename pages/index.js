@@ -9,15 +9,7 @@ import BankCard from '~/components/BankCard'
 import BankCardModal from '~/components/BankCardModal'
 import styles from '~/styles/index.module.scss'
 
-export default function Index({title='Главная', animals}) {
-  const filteredAnimals = animals.filter((animal) => {
-    const arr = animal.paw.filter(p => {
-      return p === "looking-for-home.png"
-    })
-    return arr.length
-  })
-  
-
+export default function Index({title='Главная'}) {
   return <MainLayout>
     <section className={styles.firstBlockSection}>
       <div className={styles.firstBlock}>
@@ -50,7 +42,7 @@ export default function Index({title='Главная', animals}) {
     </section>
     <section className={styles.findHomeBlockSection}>
       <div className={`${styles.findHomeBlock} ${styles.pagePaddings}`}>
-        <AnimalCarousel animals={filteredAnimals} title="Сейчас ищут дом:" paw="looking-for-home.png"/>
+        <AnimalCarousel status="looking-for-home" title="Сейчас ищут дом:" paw="looking-for-home.png"/>
 
         <div className={styles.videoBlock}>
           <div className={styles.videoText}>
@@ -203,7 +195,7 @@ export default function Index({title='Главная', animals}) {
         <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
         <p className={`${styles.ourPetsDesc} ${styles.ourPetsPadding}`}>Если вы уже знаете имя питомца, который вас заинтересовал, воспользуйтесь поиском по имени.</p>
         
-        <AnimalsList animals={animals}/>
+        {/* <AnimalsList animals={animals}/> */}
 
         <div className={styles.morePetsBtn}>
           <button onClick={() => Router.push('/pets').then(() => window.scrollTo(0, 0))}>Больше питомцев</button>
