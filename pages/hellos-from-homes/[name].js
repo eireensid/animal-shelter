@@ -1,5 +1,3 @@
-import {useRouter} from 'next/router'
-import Router from 'next/router'
 import {MainLayout} from '~/components/MainLayout'
 import BreadCrumbs from '~/components/BreadCrumbs'
 import HomePetInfo from '~/components/HomePetInfo'
@@ -7,8 +5,7 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/homePet.module.scss'
 
-export default function HomePet({title, homePets}) {
-  const router = useRouter()
+export default function HomePet({title}) {
   return <MainLayout>
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
@@ -16,7 +13,7 @@ export default function HomePet({title, homePets}) {
           <BreadCrumbs title={"Привет из дома / "}/>
         </div>
         <div>
-          <HomePetInfo homePets={homePets}/>
+          <HomePetInfo/>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import axios from 'axios'
 import usePagination from '~/hooks/usePagination'
 import Pagination from '~/components/Pagination'
 import AnimalCard from '~/components/AnimalCard'
@@ -6,44 +7,41 @@ import FindAnimalInput from '~/components/FindAnimalInput'
 import SearchInput from '~/components/SearchInput'
 import PawLabel from '~/components/PawLabel'
 import styles from '~/styles/components/AnimalsList.module.scss'
+import { transformPets } from '~/modules/front/app'
 
 
-export default function AnimalsList({animals}) {
+export default function AnimalsList() {
 
+  const [animals, setAnimals] = useState([])
   const [filter, setFilter] = useState(null)
   const [animal, setAnimal] = useState("all")
   const [age, setAge] = useState("all")
 
   const changeByUrlParam = () => {
-    // console.log('changeByUrlParam')
     const urlParams = new URLSearchParams(window.location.search)
     if (urlParams.has('animal')) {
-      // console.log('set animal')
       const newAnimal = urlParams.get('animal')
       setFilter(null)
       setAnimal(newAnimal)
     }
     if (urlParams.has('filter')) {
       const newFilter = urlParams.get('filter') + '.png'
-      // console.log('set filter', newFilter)
       setAnimal("all")
       setFilter(newFilter)
     }
   }
 
-  useEffect(() => {
+  useEffect(async () => {
     changeByUrlParam()
     document.addEventListener('change-url-param', changeByUrlParam)
+
+    const res = await axios.post('/api/pet/list', { type: 'shelter', itemCount: 300, pageNum: 1})
+    setAnimals(res.data.items.map(transformPets))
     
     return () => {
       document.removeEventListener('change-url-param', changeByUrlParam)
     }
   }, [])
-
-  // const _animals = [...animals]
-  // while (_animals.length % 3 !== 0) {
-  //   _animals.push(null)
-  // }
 
   const [sortedAnimals, setSortedAnimals] = useState(animals)
 

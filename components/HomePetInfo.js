@@ -1,15 +1,13 @@
 import Router from 'next/router'
 import PawLabel from '~/components/PawLabel'
 import {useState, useEffect} from 'react'
-import {useRouter} from 'next/router'
 import useCarousel from '~/hooks/useCarousel'
 import styles from '~/styles/components/HomePetInfo.module.scss'
 import EditIcon from '@material-ui/icons/Edit'
 import useAdmin from '~/hooks/useAdmin'
 
-export default function HomePetInfo({homePets}) {
+export default function HomePetInfo() {
   const { isAdmin } = useAdmin()
-  const router = useRouter()
 
   const [pet, setPet] = useState({})
   const getLocalPet = () => {
@@ -22,7 +20,6 @@ export default function HomePetInfo({homePets}) {
     getLocalPet()
   }, [])
 
-  // const animal = homePets.find(e => e.name === router.query.name) || {}
   const { activeIndex, curItems, prevSlide, nextSlide } = useCarousel(pet.gallery && pet.gallery, 1)
   
 
@@ -30,7 +27,7 @@ export default function HomePetInfo({homePets}) {
     <div className={styles.shelterPetInfoBlock}>
       <div className={styles.titleBlock}>
         <h2>{pet.name}</h2>
-        <PawLabel animals={homePets} paw="heart.png"  disable={true}/>
+        <PawLabel paw="heart.png"  disable={true}/>
         {isAdmin && <EditIcon style={{marginLeft: "10px", cursor: "pointer"}} onClick={() => Router.push('/admin/form?id=' + pet.id)} />}
       </div>
       <div>

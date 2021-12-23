@@ -8,7 +8,7 @@ import AnimalCarousel from '~/components/AnimalCarousel'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/pet.module.scss'
 
-export default function Pet({animals}) {
+export default function Pet() {
   const router = useRouter()
 
   const [pet, setPet] = useState({})
@@ -68,7 +68,7 @@ export default function Pet({animals}) {
           {router.query.name && petType && petPaw && <BreadCrumbs title={"Питомцы / "} petPaw={petPaw + " / "} petType={petType + " / "}/>}
         </div>
         <div>
-          <ShelterPetInfo animals={animals} pet={pet} paw={paw}/>
+          <ShelterPetInfo pet={pet} paw={paw}/>
         </div>
         <div className={styles.walkingsBlock}>
           <p>Также вы можете прийти к питомцу в гости, принести ему вкусняшку или выйти на прогулку. Подробнее о прогулках и посещении приюта можно прочитать здесь:</p>

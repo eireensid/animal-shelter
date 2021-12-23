@@ -18,7 +18,6 @@ export default function Index({title='Главная'}) {
           <h3 className={styles.titleDesc}>Подари хвостикам надежду на новую жизнь с командой волонтеров “Теремка”</h3>
         </div>
         <div className={styles.firstBlockImg}>
-          {/* <img src="/img/first-block-animals-cut-nobg.png" alt="животные"/> */}
           <Image
             src="/img/first-block-animals-cut-nobg.png"
             alt="животные"
@@ -195,7 +194,7 @@ export default function Index({title='Главная'}) {
         <p className={styles.ourPetsDesc}>Знакомьтесь с нашими питомцами! Мы уверены, что здесь вы найдёте того самого друга. Воспользуйтесь фильтрами для удобства поиска.</p>
         <p className={`${styles.ourPetsDesc} ${styles.ourPetsPadding}`}>Если вы уже знаете имя питомца, который вас заинтересовал, воспользуйтесь поиском по имени.</p>
         
-        {/* <AnimalsList animals={animals}/> */}
+        <AnimalsList/>
 
         <div className={styles.morePetsBtn}>
           <button onClick={() => Router.push('/pets').then(() => window.scrollTo(0, 0))}>Больше питомцев</button>

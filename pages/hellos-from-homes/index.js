@@ -6,7 +6,7 @@ import FoundHomeList from '~/components/FoundHomeList'
 import BankCard from '~/components/BankCard'
 import styles from '~/styles/hellosFromHomes.module.scss'
 
-export default function HellosFromHomes({title='Привет из дома', homePets}) {
+export default function HellosFromHomes({title='Привет из дома'}) {
   return <MainLayout>
     <section>
       <div className={styles.firstBlock}>
@@ -33,7 +33,7 @@ export default function HellosFromHomes({title='Привет из дома', hom
     <section>
       <div id="gallery" className={`${styles.foundHomeBlock} ${styles.pagePaddings}`}>
         <h2>Они обрели семью:</h2>
-        {/* <FoundHomeList pets={homePets}/> */}
+        <FoundHomeList/>
       </div>
     </section>
     <section>
