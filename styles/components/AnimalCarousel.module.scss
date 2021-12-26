@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 .findHomeTitle {
   padding: {
     bottom: 230px;
@@ -8,6 +10,7 @@
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
+  min-height: 342px;
 }
 
 .findCarouselArrow {
@@ -117,6 +120,19 @@
     }
     justify-content: space-around;
   }
+}
+
+.preloader {
+  position: absolute;
+  top: -200px;
+  left: -4px;
+  width: 102%;
+  height: 550px;
+  background-color: $pageBg;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
