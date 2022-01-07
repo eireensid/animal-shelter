@@ -31,12 +31,10 @@ export default function AnimalsList() {
     }
   }
 
-  useEffect(async () => {
+  useEffect(() => {
     changeByUrlParam()
     document.addEventListener('change-url-param', changeByUrlParam)
-
-    const res = await axios.post('/api/pet/list', { type: 'shelter', itemCount: 300, pageNum: 1})
-    setAnimals(res.data.items.map(transformPets))
+    localStorage.removeItem('currentPaw')
     
     return () => {
       document.removeEventListener('change-url-param', changeByUrlParam)
@@ -60,7 +58,10 @@ export default function AnimalsList() {
 
   const setFilter1 = () => {
     if (filter) {
-      localStorage.setItem('currentPaw', filter)
+      let filterNew = filter.replace('.png', '')
+      localStorage.setItem('currentPaw', filterNew)
+    } else {
+      localStorage.removeItem('currentPaw')
     }
     let _age = ageOptions.find(a => a.value === age)
     _age = _age ? _age.filter : null
@@ -76,16 +77,30 @@ export default function AnimalsList() {
 
   // Pagination
   const PER_PAGE = 12
-  const count = Math.ceil(sortedAnimals.length / PER_PAGE)
-  const _DATA = usePagination(sortedAnimals, PER_PAGE)
+  // const count = Math.ceil(sortedAnimals.length / PER_PAGE)
+  const [count, setCount] = useState(null)
+  const _DATA = usePagination(sortedAnimals, PER_PAGE, count)
 
-  useEffect(() => {
+  useEffect(async () => {
     // console.log('animal watch', animal)
     if (_DATA.currentPage !== 1) {
       _DATA.jump(1)
     }
     setFilter1()
-  }, [filter, animal, age])
+
+    let statuses = []
+
+    if (localStorage.getItem("currentPaw") !== null) {
+      statuses.push(localStorage.getItem('currentPaw'))
+    } else {
+      statuses.push('looking-for-home', 'need-adoptation', 'baby-pets', 'need-guardian', 'undergo-treatment')
+    }
+
+    const res = await axios.post('/api/pet/list', { type: 'shelter', itemCount: PER_PAGE, pageNum: _DATA.currentPage, statuses})
+    setAnimals(res.data.items.map(transformPets))
+    setCount(res.data.pageCount)
+
+  }, [filter, animal, age, _DATA.currentPage])
 
   // filter records by search text
   const searchData = (value) => {
