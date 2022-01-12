@@ -5,6 +5,7 @@ import { usePagination } from '@material-ui/lab/Pagination';
 export default function UsePagination({count, _DATA}) {
   const { items } = usePagination({
     count: count,
+    page: _DATA.currentPage
   })
 
   return (

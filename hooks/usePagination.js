@@ -1,15 +1,10 @@
 import { useState } from "react";
 
-export default function usePagination(data, itemsPerPage, totalCount) {
+export default function usePagination(data, totalCount) {
   const [currentPage, setCurrentPage] = useState(1)
-  // const maxPage = Math.ceil(data.length / itemsPerPage)
   const maxPage = totalCount
 
   function currentData() {
-    // const begin = (currentPage - 1) * itemsPerPage
-    // const end = begin + itemsPerPage
-    // console.log(data)
-    // return data.slice(begin, end)
     return data
   }
 

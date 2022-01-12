@@ -65,7 +65,6 @@ export default function AnimalsList() {
     }
     let _age = ageOptions.find(a => a.value === age)
     _age = _age ? _age.filter : null
-    // console.log('_age', _age)
     let newArr = animals.filter((item, index) => {
       const isPaw = !filter || item.paw.some(p => filter === p)
       const isType = !animal || ((item.type === animal) || animal === 'all')
@@ -79,13 +78,9 @@ export default function AnimalsList() {
   const PER_PAGE = 12
   // const count = Math.ceil(sortedAnimals.length / PER_PAGE)
   const [count, setCount] = useState(null)
-  const _DATA = usePagination(sortedAnimals, PER_PAGE, count)
+  const _DATA = usePagination(sortedAnimals, count)
 
-  useEffect(async () => {
-    // console.log('animal watch', animal)
-    if (_DATA.currentPage !== 1) {
-      _DATA.jump(1)
-    }
+  const getFilteredPets = async () => {
     setFilter1()
 
     let statuses = []
@@ -96,21 +91,31 @@ export default function AnimalsList() {
       statuses.push('looking-for-home', 'need-adoptation', 'baby-pets', 'need-guardian', 'undergo-treatment')
     }
 
+    console.log('cur', _DATA.currentPage)
+
     const res = await axios.post('/api/pet/list', { type: 'shelter', itemCount: PER_PAGE, pageNum: _DATA.currentPage, statuses})
     setAnimals(res.data.items.map(transformPets))
     setCount(res.data.pageCount)
+  }
 
-  }, [filter, animal, age, _DATA.currentPage])
+  useEffect(() => {
+
+    getFilteredPets()
+
+  }, [_DATA.currentPage])
+
+  useEffect(() => {
+
+    if (_DATA.currentPage !== 1) {
+      _DATA.jump(1)
+    }
+
+  }, [filter, animal, age])
 
   // filter records by search text
   const searchData = (value) => {
     const lowercasedValue = value.toLowerCase().trim();
-    // console.log('searchData lowercasedValue', lowercasedValue)
     if (lowercasedValue === "") {
-      // console.log('searchData set all')
-      // setFilter(null)
-      // setAnimal('all')
-      // setSortedAnimals(animals);
       setFilter1()
     } else {
       const filteredData = animals.filter(item => {
