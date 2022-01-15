@@ -30,7 +30,12 @@ export default function AnimalCarousel({title, status, paw}) {
   }, [])
 
   useEffect(async () => {
-    const res = await axios.post('/api/pet/list', { type: 'shelter', itemCount: 100, pageNum: activeIndex + 1, statuses: [status] })
+    const res = await axios.post('/api/pet/list', {
+      foundHome: false,
+      itemCount: 100,
+      pageNum: activeIndex + 1,
+      statuses: [status]
+    })
     // too many items
     setAnimals(res.data.items.map(transformPets))
     setPreloader(false)

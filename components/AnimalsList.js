@@ -17,6 +17,7 @@ export default function AnimalsList() {
   const [animal, setAnimal] = useState("all")
   const [age, setAge] = useState("all")
   const [preloader, setPreloader] = useState(true)
+  const [name, setName] = useState(null)
 
   const changeByUrlParam = () => {
     const urlParams = new URLSearchParams(window.location.search)
@@ -49,12 +50,12 @@ export default function AnimalsList() {
   }, [animals])
 
   const ageOptions = [
-    {title: "до 6 мес.", value: '1', filter: {to: 6}},
-    {title: "6 мес. - 1 год", value: '2', filter: {from: 6, to: 12}},
-    {title: "1-3 года", value: '3', filter: {from: 12, to: 36}},
-    {title: "3-7 лет", value: '4', filter: {from: 36, to: 84}},
-    {title: "от 7 лет", value: '5', filter: {from: 84}},
-    {title: "Все возрасты", value: 'all', filter: {}}
+    {title: "до 6 мес.", value: '1', range: {from: null, to: 6}},
+    {title: "6 мес. - 1 год", value: '2', range: {from: 6, to: 12}},
+    {title: "1-3 года", value: '3', range: {from: 12, to: 36}},
+    {title: "3-7 лет", value: '4', range: {from: 36, to: 84}},
+    {title: "от 7 лет", value: '5', range: {from: 84, to: null}},
+    {title: "Все возрасты", value: 'all', range: {from: null, to: null}}
   ]
 
   const setFilter1 = () => {
@@ -64,15 +65,6 @@ export default function AnimalsList() {
     } else {
       localStorage.removeItem('currentPaw')
     }
-    let _age = ageOptions.find(a => a.value === age)
-    _age = _age ? _age.filter : null
-    let newArr = animals.filter((item, index) => {
-      const isPaw = !filter || item.paw.some(p => filter === p)
-      const isType = !animal || ((item.type === animal) || animal === 'all')
-      const isAge = !_age || (item.month && ((!_age.from && !_age.to) || ((!_age.from || item.month > _age.from) && (!_age.to || item.month <= _age.to))))
-      return isPaw && isType && isAge
-    })
-    setSortedAnimals(newArr)
   }
 
   // Pagination
@@ -90,10 +82,29 @@ export default function AnimalsList() {
     if (localStorage.getItem("currentPaw") !== null) {
       statuses.push(localStorage.getItem('currentPaw'))
     } else {
-      statuses.push('looking-for-home', 'need-adoptation', 'baby-pets', 'need-guardian', 'undergo-treatment')
+      statuses = null
     }
 
-    const res = await axios.post('/api/pet/list', { type: 'shelter', itemCount: PER_PAGE, pageNum: _DATA.currentPage, statuses})
+    const ageFilter = ageOptions.find(a => a.value === age)
+    const ageRange = ageFilter ? ageFilter.range : {from: null, to: null}
+
+    const type = animal && animal !== 'all' ? animal : null
+    const minYear = ageRange.from
+    const maxYear = ageRange.to
+
+    // console.log('/api/pet/list type', type, 'statuses', statuses, 'minYear', minYear, 'maxYear', maxYear)
+
+    const res = await axios.post('/api/pet/list', {
+      foundHome: false,
+      itemCount: PER_PAGE,
+      pageNum: _DATA.currentPage,
+      name,
+      type,
+      statuses,
+      // minYear,
+      // maxYear
+    })
+    // console.log('/api/pet/list items', res.data.items)
     setAnimals(res.data.items.map(transformPets))
     setCount(res.data.pageCount)
     setPreloader(false)
@@ -103,7 +114,7 @@ export default function AnimalsList() {
 
     getFilteredPets()
 
-  }, [_DATA.currentPage])
+  }, [_DATA.currentPage, filter, animal, age, name])
 
   useEffect(() => {
 
@@ -111,19 +122,13 @@ export default function AnimalsList() {
       _DATA.jump(1)
     }
 
-  }, [filter, animal, age])
+  }, [filter, animal, age, name])
 
   // filter records by search text
   const searchData = (value) => {
+    console.log('searchData', value)
     const lowercasedValue = value.toLowerCase().trim();
-    if (lowercasedValue === "") {
-      setFilter1()
-    } else {
-      const filteredData = animals.filter(item => {
-        return item.name.toLowerCase().includes(lowercasedValue)
-      });
-      setSortedAnimals(filteredData);
-    }
+    setName(lowercasedValue || null)
   }
 
   const animalOptions = [

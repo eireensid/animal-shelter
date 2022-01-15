@@ -44,26 +44,57 @@ export type PagePetRes = {
   items: Array<Pet>
 }
 
-export type PetFilter = [string, any[] | any]
+export type PetFilter = [string, any]
 
 export function getPagePets (itemCount: number, pageNum: number, filters: PetFilter[]): Promise<PagePetRes> {
   return new Promise(async (resolve, reject) => {
     try {
       let ref: any = db.collection('pets')
       const offset: number = itemCount * (pageNum - 1)
+      let nameFilter
       if (filters !== null) {
-        filters.forEach(filter => {
-          const operator = Array.isArray(filter[1]) ? 'array-contains-any' : '=='
-          ref = ref.where(filter[0], operator, filter[1])
-        })
+        for (let [name, value] of filters) {
+          let operator = '=='
+          if (name === 'statuses') {
+            operator = 'array-contains-any'
+          }
+          if (name === 'minYear') {
+            name = 'year'
+            operator = '>='
+          }
+          if (name === 'maxYear') {
+            name = 'year'
+            operator = '<='
+          }
+          if (name === 'name') {
+            nameFilter = value.toLowerCase()
+            continue
+          }
+          ref = ref.where(name, operator, value)
+        }
       }
-      const allItemsCount = await (await ref.get()).size
-      const pageCount: number = Math.ceil(allItemsCount / itemCount)
-      const snapshot = await ref.offset(offset).limit(itemCount).get()
-      const pets = new Array<Pet>()
+      let allItemsCount = await (await ref.get()).size
+      if (!nameFilter) {
+        ref = ref.offset(offset).limit(itemCount)
+      }
+      const snapshot = await ref.get()
+      let pets = new Array<Pet>()
       snapshot.forEach((doc) => {
         pets.push(doc.data() as Pet)
       })
+      if (nameFilter) {
+        pets = pets.filter(pet => {
+          const petName = pet.name.toLowerCase()
+          return petName.includes(nameFilter)
+        })
+        allItemsCount = pets.length
+        let endIndex = offset + itemCount
+        if (endIndex > allItemsCount) {
+          endIndex = allItemsCount
+        }
+        pets = pets.slice(offset, endIndex)
+      }
+      const pageCount: number = Math.ceil(allItemsCount / itemCount)
       const res: PagePetRes = {
         pageNum: pageNum,
         pageCount: pageCount,

@@ -10,7 +10,11 @@ export default function FoundHomeList() {
   const [pets, setPets] = useState([])
 
   useEffect(async () => {
-    const res = await axios.post('/api/pet/list', { type: 'home', itemCount: 100, pageNum: 1})
+    const res = await axios.post('/api/pet/list', {
+      foundHome: true,
+      itemCount: 100,
+      pageNum: 1
+    })
     setPets(res.data.items.map(transformPets))
   }, [])
 
