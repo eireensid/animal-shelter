@@ -89,10 +89,10 @@ export default function AnimalsList() {
     const ageRange = ageFilter ? ageFilter.range : {from: null, to: null}
 
     const type = animal && animal !== 'all' ? animal : null
-    const minYear = ageRange.from
-    const maxYear = ageRange.to
+    const minAge = ageRange.from
+    const maxAge = ageRange.to
 
-    // console.log('/api/pet/list type', type, 'statuses', statuses, 'minYear', minYear, 'maxYear', maxYear)
+    console.log('/api/pet/list type', type, 'statuses', statuses, 'minAge', minAge, 'maxAge', maxAge)
 
     const res = await axios.post('/api/pet/list', {
       foundHome: false,
@@ -101,10 +101,10 @@ export default function AnimalsList() {
       name,
       type,
       statuses,
-      // minYear,
-      // maxYear
+      minAge,
+      maxAge
     })
-    // console.log('/api/pet/list items', res.data.items)
+    console.log('/api/pet/list items', res.data.items)
     setAnimals(res.data.items.map(transformPets))
     setCount(res.data.pageCount)
     setPreloader(false)

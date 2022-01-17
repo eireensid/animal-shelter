@@ -48,18 +48,18 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         filters.push(['name', fields.name])
       }
       // Возраст от
-      if (fields.minYear) {
-        if (typeof fields.minYear !== 'number') {
-          return res.status(400).json({ message: `Поле minYear должно быть числом` })
+      if (fields.minAge) {
+        if (typeof fields.minAge !== 'number') {
+          return res.status(400).json({ message: `Поле minAge должно быть числом` })
         }
-        filters.push(['minYear', fields.minYear])
+        filters.push(['minAge', fields.minAge])
       }
       // Возраст до
-      if (fields.maxYear) {
-        if (typeof fields.maxYear !== 'number') {
-          return res.status(400).json({ message: `Поле maxYear должно быть числом` })
+      if (fields.maxAge) {
+        if (typeof fields.maxAge !== 'number') {
+          return res.status(400).json({ message: `Поле maxAge должно быть числом` })
         }
-        filters.push(['maxYear', fields.maxYear])
+        filters.push(['maxAge', fields.maxAge])
       }
 
       let result: PagePetRes = await getPagePets(fields.itemCount, fields.pageNum, filters)

@@ -1,25 +1,7 @@
 import admin from './db'
 import { v4 as uuidv4 } from 'uuid'
+import { getPetAgeInMounth, Pet } from '../common/Pet'
 const db = admin.firestore()
-
-export type Pet = {
-  id: string,
-  foundHome: boolean,
-  name: string,
-  type: string,
-  personality: string,
-  sex: string,
-  date: string,
-  year: number,
-  mounth: number,
-  grafting: boolean,
-  sterilization: boolean,
-  description: string,
-  statuses: Array<string>,
-  photo: string,
-  gallery: Array<string>,
-  files: Array<string>
-}
 
 export function getAllPets (): Promise<Array<Pet>> {
   return new Promise(async (resolve, reject) => {
@@ -51,20 +33,20 @@ export function getPagePets (itemCount: number, pageNum: number, filters: PetFil
     try {
       let ref: any = db.collection('pets')
       const offset: number = itemCount * (pageNum - 1)
-      let nameFilter
+      let nameFilter, minAge, maxAge
       if (filters !== null) {
         for (let [name, value] of filters) {
           let operator = '=='
           if (name === 'statuses') {
             operator = 'array-contains-any'
           }
-          if (name === 'minYear') {
-            name = 'year'
-            operator = '>='
+          if (name === 'minAge') {
+            minAge = value
+            continue
           }
-          if (name === 'maxYear') {
-            name = 'year'
-            operator = '<='
+          if (name === 'maxAge') {
+            maxAge = value
+            continue
           }
           if (name === 'name') {
             nameFilter = value.toLowerCase()
@@ -82,11 +64,25 @@ export function getPagePets (itemCount: number, pageNum: number, filters: PetFil
       snapshot.forEach((doc) => {
         pets.push(doc.data() as Pet)
       })
-      if (nameFilter) {
-        pets = pets.filter(pet => {
-          const petName = pet.name.toLowerCase()
-          return petName.includes(nameFilter)
-        })
+      if (nameFilter || maxAge || minAge) {
+        if (nameFilter) {
+          pets = pets.filter(pet => {
+            const petName = pet.name.toLowerCase()
+            return petName.includes(nameFilter)
+          })
+        }
+        if (maxAge) {
+          pets = pets.filter(pet => {
+            const petAge = getPetAgeInMounth(pet)
+            return petAge <= maxAge
+          })
+        }
+        if (minAge) {
+          pets = pets.filter(pet => {
+            const petAge = getPetAgeInMounth(pet)
+            return petAge >= minAge
+          })
+        }
         allItemsCount = pets.length
         let endIndex = offset + itemCount
         if (endIndex > allItemsCount) {
