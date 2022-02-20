@@ -1,4 +1,4 @@
-import { getPetAgeInMounth, Pet } from '../common/Pet'
+import { getPetAgeInMounth, Pet } from '../common/pet'
 
 
 function ageEnding (val, measure) {

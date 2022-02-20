@@ -1,6 +1,6 @@
 import admin from './db'
 import { v4 as uuidv4 } from 'uuid'
-import { getPetAgeInMounth, Pet } from '../common/Pet'
+import { getPetAgeInMounth, Pet } from '../common/pet'
 const db = admin.firestore()
 
 export function getAllPets (): Promise<Array<Pet>> {
