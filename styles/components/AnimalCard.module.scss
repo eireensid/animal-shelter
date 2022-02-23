@@ -14,6 +14,7 @@
   };
   border-radius: 10px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  max-height: 342px;
 }
 .findCarouselCardDesc h3 {
   display: inline-block;
@@ -35,8 +36,13 @@
 }
 .petImgBlock img {
   border-radius: 30px;
-  width: 270px;
-  height: 270px;
+  // width: 270px;
+  // height: 270px;
+  background: $navBg;
+}
+.petImgBlock span {
+  display: flex!important;
+  justify-content: center;
 }
 .petSex {
   padding-right: 12px;
@@ -48,10 +54,10 @@
   .findCarouselCard {
     width: 275px;
   }
-  .petImgBlock img {
-    width: 80%;
-    height: 212px;
-  }
+  // .petImgBlock img {
+  //   width: 80%;
+  //   height: 212px;
+  // }
   .findCarouselCardDesc {
     padding-top: 140px;
     padding-bottom: 35px;
@@ -73,9 +79,9 @@
   .findCarouselCard {
     width: 250px;
   }
-  .petImgBlock img {
-    width: 85%; 
-  }
+  // .petImgBlock img {
+  //   width: 85%; 
+  // }
   .findCarouselCardDesc {
     height: 208px;
     padding-top: 120px;

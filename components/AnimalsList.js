@@ -15,17 +15,14 @@ export default function AnimalsList({animals}) {
   const [age, setAge] = useState("all")
 
   const changeByUrlParam = () => {
-    // console.log('changeByUrlParam')
     const urlParams = new URLSearchParams(window.location.search)
     if (urlParams.has('animal')) {
-      // console.log('set animal')
       const newAnimal = urlParams.get('animal')
       setFilter(null)
       setAnimal(newAnimal)
     }
     if (urlParams.has('filter')) {
       const newFilter = urlParams.get('filter') + '.png'
-      // console.log('set filter', newFilter)
       setAnimal("all")
       setFilter(newFilter)
     }
@@ -39,11 +36,6 @@ export default function AnimalsList({animals}) {
       document.removeEventListener('change-url-param', changeByUrlParam)
     }
   }, [])
-
-  // const _animals = [...animals]
-  // while (_animals.length % 3 !== 0) {
-  //   _animals.push(null)
-  // }
 
   const [sortedAnimals, setSortedAnimals] = useState(animals)
 
@@ -82,7 +74,6 @@ export default function AnimalsList({animals}) {
   const _DATA = usePagination(sortedAnimals, PER_PAGE)
 
   useEffect(() => {
-    // console.log('animal watch', animal)
     if (_DATA.currentPage !== 1) {
       _DATA.jump(1)
     }
@@ -92,12 +83,7 @@ export default function AnimalsList({animals}) {
   // filter records by search text
   const searchData = (value) => {
     const lowercasedValue = value.toLowerCase().trim();
-    // console.log('searchData lowercasedValue', lowercasedValue)
     if (lowercasedValue === "") {
-      // console.log('searchData set all')
-      // setFilter(null)
-      // setAnimal('all')
-      // setSortedAnimals(animals);
       setFilter1()
     } else {
       const filteredData = animals.filter(item => {

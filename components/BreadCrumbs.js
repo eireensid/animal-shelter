@@ -30,7 +30,6 @@ export default function BreadCrumbs({title, petType, petPaw, petName, take}) {
   let petNameUrl = { pathname: '/pets/[name]', query: { name: petName }}
 
   const load = async (path) => {
-    console.log('load')
     await Router.push(path)
   }
 

@@ -36,9 +36,6 @@
 }
 .ourPetsGallery {
   margin-top: 165px;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 30px;
@@ -46,10 +43,6 @@
 .ourPetsGallery > * {
   margin-bottom: 155px;
 }
-
-// .MuiPagination-ul {
-//   background: red;
-// }
 
 
 // Tablet styles

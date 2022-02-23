@@ -23,7 +23,6 @@ export function MainLayout({children, title='Теремок'}) {
   }
 
   const load = async (path) => {
-    console.log('load')
     await Router.push(path)
     document.dispatchEvent(new Event('change-url-param'))
   }

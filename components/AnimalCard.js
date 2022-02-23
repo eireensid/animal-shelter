@@ -1,12 +1,14 @@
 import styles from '~/styles/components/AnimalCard.module.scss'
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
+import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component'
 
-export default function AnimalCard({animal, filter, parent}) {
+function AnimalCard({animal, filter, parent, scrollPosition}) {
   if (!animal) return <>
     <div className={styles.findCarouselCard} style={{ opacity: 0 }}></div>
   </>
   const {id, photo, name, paw, age, sex} = animal
+  const [photoSrc, setPhotoSrc] = useState('')
 
   const [lastRowVisibility, setLastRowVisibility] = useState({visibility: "visible"})
 
@@ -18,7 +20,22 @@ export default function AnimalCard({animal, filter, parent}) {
 
   useEffect(lastRowShow, [])
 
+  useEffect(() => {
+    process.nextTick(() => {
+      setPhotoSrc(photo)
+    })
 
+    return () => {
+      setPhotoSrc('')
+    }
+  }, [photo])
+
+  let photoWidth = 270
+  let photoHeight = 270
+  if (screen.width <= 1289) {
+    photoWidth = 200
+    photoHeight = 200
+  } 
 
   let linkHref = { pathname: '/pets/[name]', query: { name: name }}
 
@@ -53,7 +70,11 @@ export default function AnimalCard({animal, filter, parent}) {
     <Link href={linkHref}>
       <div onClick={saveLocalPet} className={styles.findCarouselCard}>
         <div className={styles.petImgBlock}>
-          <img className={styles.petImg} src={photo} alt="питомец"/>
+          <LazyLoadImage
+            scrollPosition={scrollPosition}
+            effect="blur"
+            alt={name}
+            src={photoSrc} width={photoWidth} height={photoHeight} />
         </div>
         <div className={styles.findCarouselCardDesc}>
           <div className={styles.findCarouselCardDescRow}>
@@ -69,3 +90,5 @@ export default function AnimalCard({animal, filter, parent}) {
     </Link>
   </>
 }
+
+export default trackWindowScroll(AnimalCard)

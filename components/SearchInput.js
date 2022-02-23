@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import styles from '~/styles/components/SearchInput.module.scss'
 
 
@@ -11,21 +11,18 @@ export default function SearchInput({searchData}) {
 
 
   const changeFocusInputStyle = () => {
-    console.log('changeFocusInputStyle')
     setSearchInputStyle({border: "1px solid #EA4D08", flexDirection: "row-reverse"})
     setSearchInputImgStyle({fill: "white", opacity: "1"})
     setSearchInputImgDivStyle({background: "#EA4D08"})
   }
   const changeBlurInputStyle = () => {
     setTimeout(() => {
-      console.log('changeBlurInputStyle')
       setSearchInputStyle({border: "none", flexDirection: "row"})
       setSearchInputImgStyle({fill: "#131313"})
       setSearchInputImgDivStyle({background: "none"})
     }, 500)
   }
   const changeStyleHover = () => {
-    console.log('changeStyleHover')
     if (searchInputImgDivStyle.background === "#EA4D08") {
       setSearchInputImgDivStyle({background: "#E48244"})
     } else {
@@ -39,7 +36,6 @@ export default function SearchInput({searchData}) {
     setSearchInputImgStyle({fill: "white", opacity: "1"})
   }
   const removeHover = () => {
-    console.log('removeHover')
     if (searchInputImgDivStyle.background === "#E48244") {
       setSearchInputImgDivStyle({background: "#EA4D08"})
     } else {
@@ -52,7 +48,6 @@ export default function SearchInput({searchData}) {
     }
   }
   const activeStyle = () => {
-    console.log('activeStyle')
     if (searchInputImgDivStyle.background === "#E48244") {
       setSearchInputImgDivStyle({background: "#131313"})
     } else {
@@ -68,7 +63,6 @@ export default function SearchInput({searchData}) {
 
 
   const showResult = (e) => {
-    console.log('showResult')
     searchData(searchText)
     activeStyle()
   }
