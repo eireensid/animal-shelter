@@ -13,7 +13,7 @@ export default function HellosFromHomes({title='Привет из дома', ani
     })
     return arr.length
   })
-  return <MainLayout>
+  return <MainLayout title={title}>
     <section>
       <div className={styles.firstBlock}>
         <div className={styles.firstWrapper}>

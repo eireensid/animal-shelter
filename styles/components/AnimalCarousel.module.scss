@@ -13,6 +13,8 @@
 .findCarouselArrow {
   position: absolute;
   top: 24%;
+  cursor: pointer;
+  transition: all .25ms ease-in-out;
 }
 .findCarouselArrowLeft {
   left: -7%;

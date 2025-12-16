@@ -16,7 +16,7 @@ export default function HomePet({title, animals, homePets}) {
     return arr.length
   })
 
-  return <MainLayout>
+  return <MainLayout title='Привет из дома'>
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
         <div className={styles.breadCrumbsWrapper}>

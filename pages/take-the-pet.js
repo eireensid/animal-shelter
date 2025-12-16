@@ -57,7 +57,7 @@ export default function TakeThePet({animals}) {
   }, [paw])
 
 
-  return <MainLayout>
+  return <MainLayout title='Забрать питомца'>
     <section>
       <div className={styles.aboutPetBlock}>
         {petType && petPaw && pet.name && <BreadCrumbs title={"Питомцы / "} petPaw={petPaw + " / "} petType={petType + " / "} petName={pet.name} take=" / Забрать себе"/>}

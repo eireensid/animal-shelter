@@ -13,7 +13,7 @@ export default function ShelterReports({title='Отчеты', animals}) {
     return arr.length
   })
 
-  return <MainLayout>
+  return <MainLayout title={title}>
     <section>
       <div className={styles.reportsBlock}>
         <BreadCrumbs title={title}/>

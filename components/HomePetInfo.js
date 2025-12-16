@@ -16,7 +16,6 @@ export default function HomePetInfo({homePets}) {
     let petLocal = JSON.parse(localStorage.getItem('pet'))
     setPet(petLocal)
   }
-  console.log('pet', pet)
 
   useEffect(() => {
     getLocalPet()

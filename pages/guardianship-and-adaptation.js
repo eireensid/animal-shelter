@@ -14,7 +14,7 @@ export default function GuardianshipAndAdoptation({title='Опекунство �
     return arr.length
   })
 
-  return <MainLayout>
+  return <MainLayout title={title}>
     <section>
       <div className={styles.firstBlock}>
         <div className={styles.firstWrapper}>

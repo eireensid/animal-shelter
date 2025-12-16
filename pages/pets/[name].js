@@ -68,7 +68,7 @@ export default function Pet({animals}) {
     breadCrumbsPetPaw()
   }, [paw])
 
-  return <MainLayout>
+  return <MainLayout title='Питомцы'>
     <section>
       <div className={`${styles.petInfoBlock} ${styles.pagePaddings}`}>
         <div className={styles.breadCrumbsWrapper}>

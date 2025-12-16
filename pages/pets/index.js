@@ -7,7 +7,7 @@ import styles from '~/styles/pets.module.scss'
 
 export default function Pets({title='Питомцы', animals}) {
 
-  return <MainLayout>
+  return <MainLayout title={title}>
     <section>
       <div className={styles.firstBlock}>
         <div className={styles.firstWrapper}>
